@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -106,8 +108,7 @@ public class ApplicationDescription implements Serializable {
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * User-defined description of the application.
      * <p>
@@ -149,8 +150,7 @@ public class ApplicationDescription implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The date when the application was created.
      *
@@ -183,8 +183,7 @@ public class ApplicationDescription implements Serializable {
         this.dateCreated = dateCreated;
         return this;
     }
-    
-    
+
     /**
      * The date when the application was last modified.
      *
@@ -217,15 +216,13 @@ public class ApplicationDescription implements Serializable {
         this.dateUpdated = dateUpdated;
         return this;
     }
-    
-    
+
     /**
      * The names of the versions for this application.
      *
      * @return The names of the versions for this application.
      */
     public java.util.List<String> getVersions() {
-        
         if (versions == null) {
               versions = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               versions.setAutoConstruct(true);
@@ -287,7 +284,7 @@ public class ApplicationDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The names of the configuration templates associated with this
      * application.
@@ -296,7 +293,6 @@ public class ApplicationDescription implements Serializable {
      *         application.
      */
     public java.util.List<String> getConfigurationTemplates() {
-        
         if (configurationTemplates == null) {
               configurationTemplates = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               configurationTemplates.setAutoConstruct(true);
@@ -364,7 +360,7 @@ public class ApplicationDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.MonitorInstancesRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#monitorInstances(MonitorInstancesRequest) MonitorInstances operation}.
@@ -39,8 +41,6 @@ public class MonitorInstancesRequest extends AmazonWebServiceRequest implements 
      */
     public MonitorInstancesRequest() {}
     
-
-
     /**
      * Constructs a new MonitorInstancesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -53,15 +53,12 @@ public class MonitorInstancesRequest extends AmazonWebServiceRequest implements 
         setInstanceIds(instanceIds);
     }
 
-    
-    
     /**
      * The list of Amazon EC2 instances on which to enable monitoring.
      *
      * @return The list of Amazon EC2 instances on which to enable monitoring.
      */
     public java.util.List<String> getInstanceIds() {
-        
         if (instanceIds == null) {
               instanceIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               instanceIds.setAutoConstruct(true);
@@ -123,7 +120,7 @@ public class MonitorInstancesRequest extends AmazonWebServiceRequest implements 
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#suspendProcesses(SuspendProcessesRequest) SuspendProcesses operation}.
@@ -24,10 +26,10 @@ import java.io.Serializable;
  * </p>
  * <p>
  * <b>IMPORTANT:</b> Suspending either of the two primary process types, Launch or Terminate, can prevent other process types from functioning properly.
- * For more information about processes and their dependencies, see ProcessType.
  * </p>
  * <p>
- * To resume processes that have been suspended, use ResumeProcesses.
+ * To resume processes that have been suspended, use ResumeProcesses For more information on suspending and resuming Auto Scaling process, see <a
+ * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/US_SuspendResume.html"> Suspend and Resume Auto Scaling Process </a> .
  * </p>
  *
  * @see com.amazonaws.services.autoscaling.AmazonAutoScaling#suspendProcesses(SuspendProcessesRequest)
@@ -97,8 +99,7 @@ public class SuspendProcessesRequest extends AmazonWebServiceRequest implements 
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The processes that you want to suspend or resume, which can include
      * one or more of the following: <ul> <li>Launch</li> <li>Terminate</li>
@@ -115,7 +116,6 @@ public class SuspendProcessesRequest extends AmazonWebServiceRequest implements 
      *         omit this parameter.
      */
     public java.util.List<String> getScalingProcesses() {
-        
         if (scalingProcesses == null) {
               scalingProcesses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               scalingProcesses.setAutoConstruct(true);
@@ -207,7 +207,7 @@ public class SuspendProcessesRequest extends AmazonWebServiceRequest implements 
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

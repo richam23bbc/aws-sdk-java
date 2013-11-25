@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.GetConsoleOutputRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#getConsoleOutput(GetConsoleOutputRequest) GetConsoleOutput operation}.
@@ -43,8 +45,6 @@ public class GetConsoleOutputRequest extends AmazonWebServiceRequest implements 
      */
     public GetConsoleOutputRequest() {}
     
-
-
     /**
      * Constructs a new GetConsoleOutputRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -57,8 +57,6 @@ public class GetConsoleOutputRequest extends AmazonWebServiceRequest implements 
         setInstanceId(instanceId);
     }
 
-    
-    
     /**
      * The ID of the instance for which you want console output.
      *
@@ -91,8 +89,7 @@ public class GetConsoleOutputRequest extends AmazonWebServiceRequest implements 
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

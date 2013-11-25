@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -42,7 +44,6 @@ public class VerifyDomainDkimResult implements Serializable {
      *         DNS records pointing to DKIM public keys hosted by Amazon SES.
      */
     public java.util.List<String> getDkimTokens() {
-        
         if (dkimTokens == null) {
               dkimTokens = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               dkimTokens.setAutoConstruct(true);
@@ -122,7 +123,7 @@ public class VerifyDomainDkimResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

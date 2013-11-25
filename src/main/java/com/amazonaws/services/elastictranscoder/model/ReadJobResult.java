@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -66,8 +68,7 @@ public class ReadJobResult implements Serializable {
         this.job = job;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

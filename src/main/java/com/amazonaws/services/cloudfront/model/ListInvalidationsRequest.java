@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#listInvalidations(ListInvalidationsRequest) ListInvalidations operation}.
@@ -55,8 +57,6 @@ public class ListInvalidationsRequest extends AmazonWebServiceRequest implements
      */
     public ListInvalidationsRequest() {}
     
-
-
     /**
      * Constructs a new ListInvalidationsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -68,8 +68,6 @@ public class ListInvalidationsRequest extends AmazonWebServiceRequest implements
         setDistributionId(distributionId);
     }
 
-    
-    
     /**
      * The distribution's id.
      *
@@ -102,8 +100,7 @@ public class ListInvalidationsRequest extends AmazonWebServiceRequest implements
         this.distributionId = distributionId;
         return this;
     }
-    
-    
+
     /**
      * Use this parameter when paginating results to indicate where to begin
      * in your list of invalidation batches. Because the results are returned
@@ -178,8 +175,7 @@ public class ListInvalidationsRequest extends AmazonWebServiceRequest implements
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of invalidation batches you want in the response
      * body.
@@ -218,8 +214,7 @@ public class ListInvalidationsRequest extends AmazonWebServiceRequest implements
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.dynamodbv2.AmazonDynamoDB#createTable(CreateTableRequest) CreateTable operation}.
@@ -124,8 +126,6 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
      */
     public CreateTableRequest() {}
     
-
-
     /**
      * Constructs a new CreateTableRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -156,8 +156,46 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
         setKeySchema(keySchema);
     }
 
-    
-    
+    /**
+     * Constructs a new CreateTableRequest object.
+     * Callers should use the setter or fluent setter (with...) methods to
+     * initialize any additional object members.
+     * 
+     * @param attributeDefinitions An array of attributes that describe the
+     * key schema for the table and indexes.
+     * @param tableName The name of the table to create.
+     * @param keySchema Specifies the attributes that make up the primary key
+     * for the table. The attributes in <i>KeySchema</i> must also be defined
+     * in the <i>AttributeDefinitions</i> array. For more information, see <a
+     * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html">Data
+     * Model</a> in the Amazon DynamoDB Developer Guide. <p>Each
+     * <i>KeySchemaElement</i> in the array is composed of: <ul> <li>
+     * <p><i>AttributeName</i> - The name of this key attribute. </li> <li>
+     * <p><i>KeyType</i> - Determines whether the key attribute is
+     * <code>HASH</code> or <code>RANGE</code>. </li> </ul> <p>For a primary
+     * key that consists of a hash attribute, you must specify exactly one
+     * element with a <i>KeyType</i> of <code>HASH</code>. <p>For a primary
+     * key that consists of hash and range attributes, you must specify
+     * exactly two elements, in this order: The first element must have a
+     * <i>KeyType</i> of <code>HASH</code>, and the second element must have
+     * a <i>KeyType</i> of <code>RANGE</code>. <p>For more information, see
+     * <a
+     * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithDDTables.html#WorkingWithDDTables.primary.key">Specifying
+     * the Primary Key</a> in the Amazon DynamoDB Developer Guide.
+     * @param provisionedThroughput The provisioned throughput settings for
+     * the specified table. The settings can be modified using the
+     * <i>UpdateTable</i> operation. <p>For current minimum and maximum
+     * provisioned throughput values, see <a
+     * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+     * in the Amazon DynamoDB Developer Guide.
+     */
+    public CreateTableRequest(java.util.List<AttributeDefinition> attributeDefinitions, String tableName, java.util.List<KeySchemaElement> keySchema, ProvisionedThroughput provisionedThroughput) {
+        setAttributeDefinitions(attributeDefinitions);
+        setTableName(tableName);
+        setKeySchema(keySchema);
+        setProvisionedThroughput(provisionedThroughput);
+    }
+
     /**
      * An array of attributes that describe the key schema for the table and
      * indexes.
@@ -166,7 +204,6 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
      *         indexes.
      */
     public java.util.List<AttributeDefinition> getAttributeDefinitions() {
-        
         return attributeDefinitions;
     }
     
@@ -230,7 +267,7 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * The name of the table to create.
      * <p>
@@ -275,8 +312,7 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
         this.tableName = tableName;
         return this;
     }
-    
-    
+
     /**
      * Specifies the attributes that make up the primary key for the table.
      * The attributes in <i>KeySchema</i> must also be defined in the
@@ -320,7 +356,6 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
      *         the Primary Key</a> in the Amazon DynamoDB Developer Guide.
      */
     public java.util.List<KeySchemaElement> getKeySchema() {
-        
         return keySchema;
     }
     
@@ -489,7 +524,7 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * One or more secondary indexes (the maximum is five) to be created on
      * the table. Each index is scoped to a given hash key value. There is a
@@ -544,7 +579,6 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
      *         determining the total. </li> </ul> </li> </ul>
      */
     public java.util.List<LocalSecondaryIndex> getLocalSecondaryIndexes() {
-        
         return localSecondaryIndexes;
     }
     
@@ -746,7 +780,7 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * The provisioned throughput settings for the specified table. The
      * settings can be modified using the <i>UpdateTable</i> operation.
@@ -809,8 +843,7 @@ public class CreateTableRequest extends AmazonWebServiceRequest implements Seria
         this.provisionedThroughput = provisionedThroughput;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,19 +13,14 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
  * A JSON object containing the following fields:
  * </p>
- * 
- * <ul>
- * <li> CreateStorediSCSIVolumeOutput$TargetARN </li>
- * <li> CreateStorediSCSIVolumeOutput$VolumeARN </li>
- * <li> CreateStorediSCSIVolumeOutput$VolumeSizeInBytes </li>
- * 
- * </ul>
  */
 public class CreateStorediSCSIVolumeResult implements Serializable {
 
@@ -92,8 +87,7 @@ public class CreateStorediSCSIVolumeResult implements Serializable {
         this.volumeARN = volumeARN;
         return this;
     }
-    
-    
+
     /**
      * The size of the volume in bytes.
      *
@@ -126,8 +120,7 @@ public class CreateStorediSCSIVolumeResult implements Serializable {
         this.volumeSizeInBytes = volumeSizeInBytes;
         return this;
     }
-    
-    
+
     /**
      * he Amazon Resource Name (ARN) of the volume target that includes the
      * iSCSI name that initiators can use to connect to the target.
@@ -175,8 +168,7 @@ public class CreateStorediSCSIVolumeResult implements Serializable {
         this.targetARN = targetARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

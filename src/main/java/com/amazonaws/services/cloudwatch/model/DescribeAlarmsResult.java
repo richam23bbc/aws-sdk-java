@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -38,7 +40,6 @@ public class DescribeAlarmsResult implements Serializable {
      * @return A list of information for the specified alarms.
      */
     public java.util.List<MetricAlarm> getMetricAlarms() {
-        
         if (metricAlarms == null) {
               metricAlarms = new com.amazonaws.internal.ListWithAutoConstructFlag<MetricAlarm>();
               metricAlarms.setAutoConstruct(true);
@@ -100,7 +101,7 @@ public class DescribeAlarmsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A string that marks the start of the next batch of returned results.
      *
@@ -133,8 +134,7 @@ public class DescribeAlarmsResult implements Serializable {
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

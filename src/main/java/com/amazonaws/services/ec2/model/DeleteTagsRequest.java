@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DeleteTagsRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#deleteTags(DeleteTagsRequest) DeleteTags operation}.
@@ -47,8 +49,6 @@ public class DeleteTagsRequest extends AmazonWebServiceRequest implements Serial
      */
     public DeleteTagsRequest() {}
     
-
-
     /**
      * Constructs a new DeleteTagsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -61,8 +61,6 @@ public class DeleteTagsRequest extends AmazonWebServiceRequest implements Serial
         setResources(resources);
     }
 
-    
-    
     /**
      * A list of one or more resource IDs. This could be the ID of an AMI, an
      * instance, an EBS volume, or snapshot, etc.
@@ -71,7 +69,6 @@ public class DeleteTagsRequest extends AmazonWebServiceRequest implements Serial
      *         instance, an EBS volume, or snapshot, etc.
      */
     public java.util.List<String> getResources() {
-        
         if (resources == null) {
               resources = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               resources.setAutoConstruct(true);
@@ -139,7 +136,7 @@ public class DeleteTagsRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * The tags to delete from the specified resources. Each tag item
      * consists of a key-value pair. <p> If a tag is specified without a
@@ -150,7 +147,6 @@ public class DeleteTagsRequest extends AmazonWebServiceRequest implements Serial
      *         value, the tag and all of its values are deleted.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -224,7 +220,7 @@ public class DeleteTagsRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

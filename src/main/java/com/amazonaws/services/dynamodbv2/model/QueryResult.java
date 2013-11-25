@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -63,7 +65,6 @@ public class QueryResult implements Serializable {
      *         that attribute.
      */
     public java.util.List<java.util.Map<String,AttributeValue>> getItems() {
-        
         return items;
     }
     
@@ -133,7 +134,7 @@ public class QueryResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The number of items in the response.
      *
@@ -166,8 +167,7 @@ public class QueryResult implements Serializable {
         this.count = count;
         return this;
     }
-    
-    
+
     /**
      * The primary key of the item where the operation stopped, inclusive of
      * the previous result set. Use this value to start a new operation,
@@ -225,8 +225,7 @@ public class QueryResult implements Serializable {
         setLastEvaluatedKey(lastEvaluatedKey);
         return this;
     }
-    
-   	
+
     /**
      * The primary key of the item where the operation stopped, inclusive of
      * the previous result set. Use this value to start a new operation,
@@ -250,7 +249,7 @@ public class QueryResult implements Serializable {
 		this.lastEvaluatedKey.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into LastEvaluatedKey.
 	 * <p>
@@ -323,8 +322,7 @@ public class QueryResult implements Serializable {
         this.consumedCapacity = consumedCapacity;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

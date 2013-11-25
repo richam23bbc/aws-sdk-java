@@ -13,11 +13,13 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * A JSON object containing a DescribeChapCredentialsOutput$ChapCredentials.
+ * A JSON object containing a .
  * </p>
  */
 public class DescribeChapCredentialsResult implements Serializable {
@@ -69,7 +71,6 @@ public class DescribeChapCredentialsResult implements Serializable {
      *         volume. </li> </ul>
      */
     public java.util.List<ChapInfo> getChapCredentials() {
-        
         if (chapCredentials == null) {
               chapCredentials = new com.amazonaws.internal.ListWithAutoConstructFlag<ChapInfo>();
               chapCredentials.setAutoConstruct(true);
@@ -203,7 +204,7 @@ public class DescribeChapCredentialsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

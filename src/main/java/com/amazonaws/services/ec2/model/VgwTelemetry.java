@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Vgw Telemetry
@@ -62,12 +64,16 @@ public class VgwTelemetry implements Serializable {
         this.outsideIpAddress = outsideIpAddress;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>UP, DOWN
      *
      * @return The value of the Status property for this object.
+     *
+     * @see TelemetryStatus
      */
     public String getStatus() {
         return status;
@@ -75,8 +81,13 @@ public class VgwTelemetry implements Serializable {
     
     /**
      * Sets the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>UP, DOWN
      *
      * @param status The new value for the Status property for this object.
+     *
+     * @see TelemetryStatus
      */
     public void setStatus(String status) {
         this.status = status;
@@ -86,18 +97,56 @@ public class VgwTelemetry implements Serializable {
      * Sets the value of the Status property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>UP, DOWN
      *
      * @param status The new value for the Status property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see TelemetryStatus
      */
     public VgwTelemetry withStatus(String status) {
         this.status = status;
         return this;
     }
+
+    /**
+     * Sets the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>UP, DOWN
+     *
+     * @param status The new value for the Status property for this object.
+     *
+     * @see TelemetryStatus
+     */
+    public void setStatus(TelemetryStatus status) {
+        this.status = status.toString();
+    }
     
-    
+    /**
+     * Sets the value of the Status property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>UP, DOWN
+     *
+     * @param status The new value for the Status property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see TelemetryStatus
+     */
+    public VgwTelemetry withStatus(TelemetryStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
     /**
      * Returns the value of the LastStatusChange property for this object.
      *
@@ -130,8 +179,7 @@ public class VgwTelemetry implements Serializable {
         this.lastStatusChange = lastStatusChange;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the StatusMessage property for this object.
      *
@@ -164,8 +212,7 @@ public class VgwTelemetry implements Serializable {
         this.statusMessage = statusMessage;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AcceptedRouteCount property for this object.
      *
@@ -198,8 +245,7 @@ public class VgwTelemetry implements Serializable {
         this.acceptedRouteCount = acceptedRouteCount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

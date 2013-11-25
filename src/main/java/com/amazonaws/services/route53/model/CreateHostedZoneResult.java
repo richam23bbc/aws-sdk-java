@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -87,8 +89,7 @@ public class CreateHostedZoneResult implements Serializable {
         this.hostedZone = hostedZone;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about the request to create a
      * hosted zone. This includes an ID that you use when you call the
@@ -139,8 +140,7 @@ public class CreateHostedZoneResult implements Serializable {
         this.changeInfo = changeInfo;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains name server information.
      *
@@ -173,8 +173,7 @@ public class CreateHostedZoneResult implements Serializable {
         this.delegationSet = delegationSet;
         return this;
     }
-    
-    
+
     /**
      * The unique URL representing the new hosted zone.
      * <p>
@@ -216,8 +215,7 @@ public class CreateHostedZoneResult implements Serializable {
         this.location = location;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

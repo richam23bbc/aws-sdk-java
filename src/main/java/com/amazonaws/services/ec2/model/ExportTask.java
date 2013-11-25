@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Export Task
@@ -64,8 +66,7 @@ public class ExportTask implements Serializable {
         this.exportTaskId = exportTaskId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -98,12 +99,16 @@ public class ExportTask implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
      *
      * @return The value of the State property for this object.
+     *
+     * @see ExportTaskState
      */
     public String getState() {
         return state;
@@ -111,8 +116,13 @@ public class ExportTask implements Serializable {
     
     /**
      * Sets the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
      *
      * @param state The new value for the State property for this object.
+     *
+     * @see ExportTaskState
      */
     public void setState(String state) {
         this.state = state;
@@ -122,18 +132,56 @@ public class ExportTask implements Serializable {
      * Sets the value of the State property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
      *
      * @param state The new value for the State property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see ExportTaskState
      */
     public ExportTask withState(String state) {
         this.state = state;
         return this;
     }
+
+    /**
+     * Sets the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
+     *
+     * @param state The new value for the State property for this object.
+     *
+     * @see ExportTaskState
+     */
+    public void setState(ExportTaskState state) {
+        this.state = state.toString();
+    }
     
-    
+    /**
+     * Sets the value of the State property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
+     *
+     * @param state The new value for the State property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see ExportTaskState
+     */
+    public ExportTask withState(ExportTaskState state) {
+        this.state = state.toString();
+        return this;
+    }
+
     /**
      * Returns the value of the StatusMessage property for this object.
      *
@@ -166,8 +214,7 @@ public class ExportTask implements Serializable {
         this.statusMessage = statusMessage;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the InstanceExportDetails property for this
      * object.
@@ -201,8 +248,7 @@ public class ExportTask implements Serializable {
         this.instanceExportDetails = instanceExportDetails;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the ExportToS3Task property for this object.
      *
@@ -235,8 +281,7 @@ public class ExportTask implements Serializable {
         this.exportToS3Task = exportToS3Task;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.importexport.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -150,8 +152,7 @@ public class GetStatusResult implements Serializable {
         this.jobId = jobId;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the job to initiate is an import or export job.
      * <p>
@@ -199,8 +200,7 @@ public class GetStatusResult implements Serializable {
         this.jobType = jobType;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the job to initiate is an import or export job.
      * <p>
@@ -234,7 +234,7 @@ public class GetStatusResult implements Serializable {
         this.jobType = jobType.toString();
         return this;
     }
-    
+
     /**
      * Address you ship your storage device to.
      *
@@ -267,8 +267,7 @@ public class GetStatusResult implements Serializable {
         this.awsShippingAddress = awsShippingAddress;
         return this;
     }
-    
-    
+
     /**
      * A token representing the location of the storage device, such as
      * "AtAWS".
@@ -307,8 +306,7 @@ public class GetStatusResult implements Serializable {
         this.locationCode = locationCode;
         return this;
     }
-    
-    
+
     /**
      * A more human readable form of the physical location of the storage
      * device.
@@ -347,8 +345,7 @@ public class GetStatusResult implements Serializable {
         this.locationMessage = locationMessage;
         return this;
     }
-    
-    
+
     /**
      * A token representing the state of the job, such as "Started".
      *
@@ -381,8 +378,7 @@ public class GetStatusResult implements Serializable {
         this.progressCode = progressCode;
         return this;
     }
-    
-    
+
     /**
      * A more human readable form of the job status.
      *
@@ -415,8 +411,7 @@ public class GetStatusResult implements Serializable {
         this.progressMessage = progressMessage;
         return this;
     }
-    
-    
+
     /**
      * Name of the shipping company. This value is included when the
      * LocationCode is "Returned".
@@ -455,8 +450,7 @@ public class GetStatusResult implements Serializable {
         this.carrier = carrier;
         return this;
     }
-    
-    
+
     /**
      * The shipping tracking number assigned by AWS Import/Export to the
      * storage device when it's returned to you. We return this value when
@@ -501,8 +495,7 @@ public class GetStatusResult implements Serializable {
         this.trackingNumber = trackingNumber;
         return this;
     }
-    
-    
+
     /**
      * Amazon S3 bucket for user logs.
      *
@@ -535,8 +528,7 @@ public class GetStatusResult implements Serializable {
         this.logBucket = logBucket;
         return this;
     }
-    
-    
+
     /**
      * The key where the user logs were stored.
      *
@@ -569,8 +561,7 @@ public class GetStatusResult implements Serializable {
         this.logKey = logKey;
         return this;
     }
-    
-    
+
     /**
      * Number of errors. We return this value when the ProgressCode is
      * Success or SuccessWithErrors.
@@ -609,8 +600,7 @@ public class GetStatusResult implements Serializable {
         this.errorCount = errorCount;
         return this;
     }
-    
-    
+
     /**
      * An encrypted code used to authenticate the request and response, for
      * example, "DV+TpDfx1/TdSE9ktyK9k/bDTVI=". Only use this value is you
@@ -661,8 +651,7 @@ public class GetStatusResult implements Serializable {
         this.signature = signature;
         return this;
     }
-    
-    
+
     /**
      * An encrypted code used to authenticate the request and response, for
      * example, "DV+TpDfx1/TdSE9ktyK9k/bDTVI=". Only use this value is you
@@ -713,8 +702,7 @@ public class GetStatusResult implements Serializable {
         this.signatureFileContents = signatureFileContents;
         return this;
     }
-    
-    
+
     /**
      * The last manifest submitted, which will be used to process the job.
      *
@@ -747,8 +735,7 @@ public class GetStatusResult implements Serializable {
         this.currentManifest = currentManifest;
         return this;
     }
-    
-    
+
     /**
      * Timestamp of the CreateJob request in ISO8601 date format. For example
      * "2010-03-28T20:27:35Z".
@@ -787,8 +774,7 @@ public class GetStatusResult implements Serializable {
         this.creationDate = creationDate;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

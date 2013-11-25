@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -78,8 +80,7 @@ public class PendingTaskCount implements Serializable {
         this.count = count;
         return this;
     }
-    
-    
+
     /**
      * If set to true, indicates that the actual count was more than the
      * maximum supported by this API and the count returned is the truncated
@@ -124,8 +125,7 @@ public class PendingTaskCount implements Serializable {
         this.truncated = truncated;
         return this;
     }
-    
-    
+
     /**
      * If set to true, indicates that the actual count was more than the
      * maximum supported by this API and the count returned is the truncated
@@ -138,7 +138,7 @@ public class PendingTaskCount implements Serializable {
     public Boolean getTruncated() {
         return truncated;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

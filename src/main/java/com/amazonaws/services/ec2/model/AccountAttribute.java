@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Account Attribute
@@ -56,15 +58,13 @@ public class AccountAttribute implements Serializable {
         this.attributeName = attributeName;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AttributeValues property for this object.
      *
      * @return The value of the AttributeValues property for this object.
      */
     public java.util.List<AccountAttributeValue> getAttributeValues() {
-        
         if (attributeValues == null) {
               attributeValues = new com.amazonaws.internal.ListWithAutoConstructFlag<AccountAttributeValue>();
               attributeValues.setAutoConstruct(true);
@@ -126,7 +126,7 @@ public class AccountAttribute implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -83,8 +85,7 @@ public class InstanceBlockDeviceMappingSpecification implements Serializable {
         this.deviceName = deviceName;
         return this;
     }
-    
-    
+
     /**
      * The EBS instance block device specification describing the EBS block
      * device to map to the specified device name on a running instance.
@@ -123,8 +124,7 @@ public class InstanceBlockDeviceMappingSpecification implements Serializable {
         this.ebs = ebs;
         return this;
     }
-    
-    
+
     /**
      * The virtual device name.
      *
@@ -157,8 +157,7 @@ public class InstanceBlockDeviceMappingSpecification implements Serializable {
         this.virtualName = virtualName;
         return this;
     }
-    
-    
+
     /**
      * When set to the empty string, specifies that the device name in this
      * object should not be mapped to any real device.
@@ -197,8 +196,7 @@ public class InstanceBlockDeviceMappingSpecification implements Serializable {
         this.noDevice = noDevice;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

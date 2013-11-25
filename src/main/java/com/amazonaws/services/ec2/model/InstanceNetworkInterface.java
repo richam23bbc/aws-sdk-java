@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Instance Network Interface
@@ -78,8 +80,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the SubnetId property for this object.
      *
@@ -112,8 +113,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.subnetId = subnetId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the VpcId property for this object.
      *
@@ -146,8 +146,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -180,8 +179,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the OwnerId property for this object.
      *
@@ -214,12 +212,16 @@ public class InstanceNetworkInterface implements Serializable {
         this.ownerId = ownerId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>available, attaching, in-use, detaching
      *
      * @return The value of the Status property for this object.
+     *
+     * @see NetworkInterfaceStatus
      */
     public String getStatus() {
         return status;
@@ -227,8 +229,13 @@ public class InstanceNetworkInterface implements Serializable {
     
     /**
      * Sets the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>available, attaching, in-use, detaching
      *
      * @param status The new value for the Status property for this object.
+     *
+     * @see NetworkInterfaceStatus
      */
     public void setStatus(String status) {
         this.status = status;
@@ -238,18 +245,56 @@ public class InstanceNetworkInterface implements Serializable {
      * Sets the value of the Status property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>available, attaching, in-use, detaching
      *
      * @param status The new value for the Status property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see NetworkInterfaceStatus
      */
     public InstanceNetworkInterface withStatus(String status) {
         this.status = status;
         return this;
     }
+
+    /**
+     * Sets the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>available, attaching, in-use, detaching
+     *
+     * @param status The new value for the Status property for this object.
+     *
+     * @see NetworkInterfaceStatus
+     */
+    public void setStatus(NetworkInterfaceStatus status) {
+        this.status = status.toString();
+    }
     
-    
+    /**
+     * Sets the value of the Status property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>available, attaching, in-use, detaching
+     *
+     * @param status The new value for the Status property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see NetworkInterfaceStatus
+     */
+    public InstanceNetworkInterface withStatus(NetworkInterfaceStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
     /**
      * Returns the value of the PrivateIpAddress property for this object.
      *
@@ -282,8 +327,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PrivateDnsName property for this object.
      *
@@ -316,8 +360,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.privateDnsName = privateDnsName;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the SourceDestCheck property for this object.
      *
@@ -350,8 +393,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.sourceDestCheck = sourceDestCheck;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the SourceDestCheck property for this object.
      *
@@ -360,14 +402,13 @@ public class InstanceNetworkInterface implements Serializable {
     public Boolean getSourceDestCheck() {
         return sourceDestCheck;
     }
-    
+
     /**
      * Returns the value of the Groups property for this object.
      *
      * @return The value of the Groups property for this object.
      */
     public java.util.List<GroupIdentifier> getGroups() {
-        
         if (groups == null) {
               groups = new com.amazonaws.internal.ListWithAutoConstructFlag<GroupIdentifier>();
               groups.setAutoConstruct(true);
@@ -429,7 +470,7 @@ public class InstanceNetworkInterface implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the Attachment property for this object.
      *
@@ -462,8 +503,7 @@ public class InstanceNetworkInterface implements Serializable {
         this.attachment = attachment;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Association property for this object.
      *
@@ -496,15 +536,13 @@ public class InstanceNetworkInterface implements Serializable {
         this.association = association;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PrivateIpAddresses property for this object.
      *
      * @return The value of the PrivateIpAddresses property for this object.
      */
     public java.util.List<InstancePrivateIpAddress> getPrivateIpAddresses() {
-        
         if (privateIpAddresses == null) {
               privateIpAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<InstancePrivateIpAddress>();
               privateIpAddresses.setAutoConstruct(true);
@@ -566,7 +604,7 @@ public class InstanceNetworkInterface implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

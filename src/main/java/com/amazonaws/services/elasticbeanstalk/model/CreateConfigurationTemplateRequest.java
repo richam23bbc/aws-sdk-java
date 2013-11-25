@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#createConfigurationTemplate(CreateConfigurationTemplateRequest) CreateConfigurationTemplate operation}.
@@ -117,8 +119,6 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
      */
     public CreateConfigurationTemplateRequest() {}
     
-
-
     /**
      * Constructs a new CreateConfigurationTemplateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -138,8 +138,6 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         setTemplateName(templateName);
     }
 
-    
-    
     /**
      * The name of the application to associate with this configuration
      * template. If no application is found with this name, AWS Elastic
@@ -193,8 +191,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * The name of the configuration template. <p>Constraint: This name must
      * be unique per application. <p>Default: If a configuration template
@@ -254,8 +251,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.templateName = templateName;
         return this;
     }
-    
-    
+
     /**
      * The name of the solution stack used by this configuration. The
      * solution stack specifies the operating system, architecture, and
@@ -357,8 +353,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.solutionStackName = solutionStackName;
         return this;
     }
-    
-    
+
     /**
      * If specified, AWS Elastic Beanstalk uses the configuration values from
      * the specified configuration template to create a new configuration.
@@ -451,8 +446,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.sourceConfiguration = sourceConfiguration;
         return this;
     }
-    
-    
+
     /**
      * The ID of the environment used with this configuration template.
      *
@@ -485,8 +479,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.environmentId = environmentId;
         return this;
     }
-    
-    
+
     /**
      * Describes this configuration.
      * <p>
@@ -528,8 +521,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * If specified, AWS Elastic Beanstalk sets the specified configuration
      * option to the requested value. The new value overrides the value
@@ -540,7 +532,6 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
      *         obtained from the solution stack or the source configuration template.
      */
     public java.util.List<ConfigurationOptionSetting> getOptionSettings() {
-        
         if (optionSettings == null) {
               optionSettings = new com.amazonaws.internal.ListWithAutoConstructFlag<ConfigurationOptionSetting>();
               optionSettings.setAutoConstruct(true);
@@ -614,7 +605,7 @@ public class CreateConfigurationTemplateRequest extends AmazonWebServiceRequest 
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

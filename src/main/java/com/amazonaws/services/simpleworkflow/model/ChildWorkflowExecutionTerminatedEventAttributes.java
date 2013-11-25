@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -81,8 +83,7 @@ public class ChildWorkflowExecutionTerminatedEventAttributes implements Serializ
         this.workflowExecution = workflowExecution;
         return this;
     }
-    
-    
+
     /**
      * The type of the child workflow execution.
      *
@@ -115,8 +116,7 @@ public class ChildWorkflowExecutionTerminatedEventAttributes implements Serializ
         this.workflowType = workflowType;
         return this;
     }
-    
-    
+
     /**
      * The id of the <code>StartChildWorkflowExecutionInitiated</code> event
      * corresponding to the <code>StartChildWorkflowExecution</code>
@@ -173,8 +173,7 @@ public class ChildWorkflowExecutionTerminatedEventAttributes implements Serializ
         this.initiatedEventId = initiatedEventId;
         return this;
     }
-    
-    
+
     /**
      * The Id of the <code>ChildWorkflowExecutionStarted</code> event
      * recorded when this child workflow execution was started. This
@@ -225,8 +224,7 @@ public class ChildWorkflowExecutionTerminatedEventAttributes implements Serializ
         this.startedEventId = startedEventId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

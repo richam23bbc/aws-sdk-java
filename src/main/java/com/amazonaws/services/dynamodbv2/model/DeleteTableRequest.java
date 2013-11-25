@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.dynamodbv2.AmazonDynamoDB#deleteTable(DeleteTableRequest) DeleteTable operation}.
@@ -55,8 +57,6 @@ public class DeleteTableRequest extends AmazonWebServiceRequest implements Seria
      */
     public DeleteTableRequest() {}
     
-
-
     /**
      * Constructs a new DeleteTableRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -68,8 +68,6 @@ public class DeleteTableRequest extends AmazonWebServiceRequest implements Seria
         setTableName(tableName);
     }
 
-    
-    
     /**
      * The name of the table to delete.
      * <p>
@@ -114,8 +112,7 @@ public class DeleteTableRequest extends AmazonWebServiceRequest implements Seria
         this.tableName = tableName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

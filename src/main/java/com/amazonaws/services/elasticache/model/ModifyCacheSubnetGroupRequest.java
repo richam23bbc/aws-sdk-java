@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#modifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest) ModifyCacheSubnetGroup operation}.
@@ -94,8 +96,7 @@ public class ModifyCacheSubnetGroupRequest extends AmazonWebServiceRequest imple
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
     }
-    
-    
+
     /**
      * A description for the cache subnet group.
      *
@@ -128,15 +129,13 @@ public class ModifyCacheSubnetGroupRequest extends AmazonWebServiceRequest imple
         this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
         return this;
     }
-    
-    
+
     /**
      * The EC2 subnet IDs for the cache subnet group.
      *
      * @return The EC2 subnet IDs for the cache subnet group.
      */
     public java.util.List<String> getSubnetIds() {
-        
         if (subnetIds == null) {
               subnetIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               subnetIds.setAutoConstruct(true);
@@ -198,7 +197,7 @@ public class ModifyCacheSubnetGroupRequest extends AmazonWebServiceRequest imple
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

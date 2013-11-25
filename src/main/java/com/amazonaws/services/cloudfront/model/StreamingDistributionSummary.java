@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -126,8 +128,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Indicates the current status of the distribution. When the status is
      * Deployed, the distribution's information is fully propagated
@@ -172,8 +173,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The date and time the distribution was last modified.
      *
@@ -206,8 +206,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
-    
-    
+
     /**
      * The domain name corresponding to the distribution. For example:
      * d604721fxaaqy9.cloudfront.net.
@@ -246,8 +245,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about the Amazon S3 bucket
      * from which you want CloudFront to get your media files for
@@ -292,8 +290,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.s3Origin = s3Origin;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about CNAMEs (alternate
      * domain names), if any, for this streaming distribution.
@@ -332,8 +329,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.aliases = aliases;
         return this;
     }
-    
-    
+
     /**
      * A complex type that specifies the AWS accounts, if any, that you want
      * to allow to create signed URLs for private content. If you want to
@@ -438,8 +434,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.trustedSigners = trustedSigners;
         return this;
     }
-    
-    
+
     /**
      * The comment originally specified when this distribution was created.
      *
@@ -472,8 +467,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.comment = comment;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PriceClass property for this object.
      * <p>
@@ -521,8 +515,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.priceClass = priceClass;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the PriceClass property for this object.
      * <p>
@@ -556,7 +549,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.priceClass = priceClass.toString();
         return this;
     }
-    
+
     /**
      * Whether the distribution is enabled to accept end user requests for
      * content.
@@ -595,8 +588,7 @@ public class StreamingDistributionSummary implements Serializable {
         this.enabled = enabled;
         return this;
     }
-    
-    
+
     /**
      * Whether the distribution is enabled to accept end user requests for
      * content.
@@ -607,7 +599,7 @@ public class StreamingDistributionSummary implements Serializable {
     public Boolean getEnabled() {
         return enabled;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

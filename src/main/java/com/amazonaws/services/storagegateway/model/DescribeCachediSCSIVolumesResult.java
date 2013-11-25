@@ -13,35 +13,31 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
  * A JSON object containing the following fields:
  * </p>
- * 
- * <ul>
- * <li> DescribeCachediSCSIVolumesOutput$CachediSCSIVolumes </li>
- * 
- * </ul>
  */
 public class DescribeCachediSCSIVolumesResult implements Serializable {
 
     /**
-     * An array of <a>CachediSCSIVolume</a> objects where each object
-     * contains metadata about one cached volume.
+     * An array of objects where each object contains metadata about one
+     * cached volume.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<CachediSCSIVolume> cachediSCSIVolumes;
 
     /**
-     * An array of <a>CachediSCSIVolume</a> objects where each object
-     * contains metadata about one cached volume.
+     * An array of objects where each object contains metadata about one
+     * cached volume.
      *
-     * @return An array of <a>CachediSCSIVolume</a> objects where each object
-     *         contains metadata about one cached volume.
+     * @return An array of objects where each object contains metadata about one
+     *         cached volume.
      */
     public java.util.List<CachediSCSIVolume> getCachediSCSIVolumes() {
-        
         if (cachediSCSIVolumes == null) {
               cachediSCSIVolumes = new com.amazonaws.internal.ListWithAutoConstructFlag<CachediSCSIVolume>();
               cachediSCSIVolumes.setAutoConstruct(true);
@@ -50,11 +46,11 @@ public class DescribeCachediSCSIVolumesResult implements Serializable {
     }
     
     /**
-     * An array of <a>CachediSCSIVolume</a> objects where each object
-     * contains metadata about one cached volume.
+     * An array of objects where each object contains metadata about one
+     * cached volume.
      *
-     * @param cachediSCSIVolumes An array of <a>CachediSCSIVolume</a> objects where each object
-     *         contains metadata about one cached volume.
+     * @param cachediSCSIVolumes An array of objects where each object contains metadata about one
+     *         cached volume.
      */
     public void setCachediSCSIVolumes(java.util.Collection<CachediSCSIVolume> cachediSCSIVolumes) {
         if (cachediSCSIVolumes == null) {
@@ -67,13 +63,13 @@ public class DescribeCachediSCSIVolumesResult implements Serializable {
     }
     
     /**
-     * An array of <a>CachediSCSIVolume</a> objects where each object
-     * contains metadata about one cached volume.
+     * An array of objects where each object contains metadata about one
+     * cached volume.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param cachediSCSIVolumes An array of <a>CachediSCSIVolume</a> objects where each object
-     *         contains metadata about one cached volume.
+     * @param cachediSCSIVolumes An array of objects where each object contains metadata about one
+     *         cached volume.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -87,13 +83,13 @@ public class DescribeCachediSCSIVolumesResult implements Serializable {
     }
     
     /**
-     * An array of <a>CachediSCSIVolume</a> objects where each object
-     * contains metadata about one cached volume.
+     * An array of objects where each object contains metadata about one
+     * cached volume.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param cachediSCSIVolumes An array of <a>CachediSCSIVolume</a> objects where each object
-     *         contains metadata about one cached volume.
+     * @param cachediSCSIVolumes An array of objects where each object contains metadata about one
+     *         cached volume.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -109,7 +105,7 @@ public class DescribeCachediSCSIVolumesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

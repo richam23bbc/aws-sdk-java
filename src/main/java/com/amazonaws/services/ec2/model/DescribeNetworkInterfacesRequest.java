@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DescribeNetworkInterfacesRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#describeNetworkInterfaces(DescribeNetworkInterfacesRequest) DescribeNetworkInterfaces operation}.
@@ -36,7 +38,6 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
      * @return The value of the NetworkInterfaceIds property for this object.
      */
     public java.util.List<String> getNetworkInterfaceIds() {
-        
         if (networkInterfaceIds == null) {
               networkInterfaceIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               networkInterfaceIds.setAutoConstruct(true);
@@ -98,14 +99,13 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * Returns the value of the Filters property for this object.
      *
      * @return The value of the Filters property for this object.
      */
     public java.util.List<Filter> getFilters() {
-        
         if (filters == null) {
               filters = new com.amazonaws.internal.ListWithAutoConstructFlag<Filter>();
               filters.setAutoConstruct(true);
@@ -167,7 +167,7 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

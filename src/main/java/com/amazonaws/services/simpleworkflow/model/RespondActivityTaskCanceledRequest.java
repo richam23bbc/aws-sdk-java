@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#respondActivityTaskCanceled(RespondActivityTaskCanceledRequest) RespondActivityTaskCanceled operation}.
@@ -142,8 +144,7 @@ public class RespondActivityTaskCanceledRequest extends AmazonWebServiceRequest 
         this.taskToken = taskToken;
         return this;
     }
-    
-    
+
     /**
      * Optional information about the cancellation.
      * <p>
@@ -185,8 +186,7 @@ public class RespondActivityTaskCanceledRequest extends AmazonWebServiceRequest 
         this.details = details;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

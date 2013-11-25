@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -113,8 +115,7 @@ public class Source implements Serializable {
         this.type = type;
         return this;
     }
-    
-    
+
     /**
      * The repository type.
      * <p>
@@ -148,7 +149,7 @@ public class Source implements Serializable {
         this.type = type.toString();
         return this;
     }
-    
+
     /**
      * The source URL.
      *
@@ -181,8 +182,7 @@ public class Source implements Serializable {
         this.url = url;
         return this;
     }
-    
-    
+
     /**
      * This parameter depends on the repository type. <ul> <li>For Amazon S3
      * bundles, set <code>Username</code> to the appropriate AWS access
@@ -233,8 +233,7 @@ public class Source implements Serializable {
         this.username = username;
         return this;
     }
-    
-    
+
     /**
      * This parameter depends on the repository type. <ul> <li>For Amazon S3
      * bundles, set <code>Password</code> to the appropriate AWS secret
@@ -285,8 +284,7 @@ public class Source implements Serializable {
         this.password = password;
         return this;
     }
-    
-    
+
     /**
      * The repository's SSH key.
      *
@@ -319,8 +317,7 @@ public class Source implements Serializable {
         this.sshKey = sshKey;
         return this;
     }
-    
-    
+
     /**
      * The application's version. AWS OpsWorks enables you to easily deploy
      * new versions of an application. One of the simplest approaches is to
@@ -371,8 +368,7 @@ public class Source implements Serializable {
         this.revision = revision;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

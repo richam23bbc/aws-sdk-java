@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Import Instance Task Details
@@ -34,7 +36,6 @@ public class ImportInstanceTaskDetails implements Serializable {
      * @return The value of the Volumes property for this object.
      */
     public java.util.List<ImportInstanceVolumeDetailItem> getVolumes() {
-        
         if (volumes == null) {
               volumes = new com.amazonaws.internal.ListWithAutoConstructFlag<ImportInstanceVolumeDetailItem>();
               volumes.setAutoConstruct(true);
@@ -96,7 +97,7 @@ public class ImportInstanceTaskDetails implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the InstanceId property for this object.
      *
@@ -129,12 +130,16 @@ public class ImportInstanceTaskDetails implements Serializable {
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Platform property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Windows
      *
      * @return The value of the Platform property for this object.
+     *
+     * @see PlatformValues
      */
     public String getPlatform() {
         return platform;
@@ -142,8 +147,13 @@ public class ImportInstanceTaskDetails implements Serializable {
     
     /**
      * Sets the value of the Platform property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Windows
      *
      * @param platform The new value for the Platform property for this object.
+     *
+     * @see PlatformValues
      */
     public void setPlatform(String platform) {
         this.platform = platform;
@@ -153,18 +163,56 @@ public class ImportInstanceTaskDetails implements Serializable {
      * Sets the value of the Platform property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Windows
      *
      * @param platform The new value for the Platform property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see PlatformValues
      */
     public ImportInstanceTaskDetails withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
+
+    /**
+     * Sets the value of the Platform property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Windows
+     *
+     * @param platform The new value for the Platform property for this object.
+     *
+     * @see PlatformValues
+     */
+    public void setPlatform(PlatformValues platform) {
+        this.platform = platform.toString();
+    }
     
-    
+    /**
+     * Sets the value of the Platform property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Windows
+     *
+     * @param platform The new value for the Platform property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see PlatformValues
+     */
+    public ImportInstanceTaskDetails withPlatform(PlatformValues platform) {
+        this.platform = platform.toString();
+        return this;
+    }
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -197,8 +245,7 @@ public class ImportInstanceTaskDetails implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -42,8 +44,6 @@ public class Item implements Serializable {
      */
     public Item() {}
     
-
-
     /**
      * Constructs a new Item object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -57,8 +57,6 @@ public class Item implements Serializable {
         setAttributes(attributes);
     }
 
-    
-    
     /**
      * The name of the item.
      *
@@ -91,8 +89,7 @@ public class Item implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * 
      *
@@ -125,15 +122,13 @@ public class Item implements Serializable {
         this.alternateNameEncoding = alternateNameEncoding;
         return this;
     }
-    
-    
+
     /**
      * A list of attributes.
      *
      * @return A list of attributes.
      */
     public java.util.List<Attribute> getAttributes() {
-        
         if (attributes == null) {
               attributes = new com.amazonaws.internal.ListWithAutoConstructFlag<Attribute>();
               attributes.setAutoConstruct(true);
@@ -195,7 +190,7 @@ public class Item implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

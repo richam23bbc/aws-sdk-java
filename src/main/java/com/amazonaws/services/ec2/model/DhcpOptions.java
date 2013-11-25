@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -69,15 +71,13 @@ public class DhcpOptions implements Serializable {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
     }
-    
-    
+
     /**
      * Contains information about the set of DHCP options.
      *
      * @return Contains information about the set of DHCP options.
      */
     public java.util.List<DhcpConfiguration> getDhcpConfigurations() {
-        
         if (dhcpConfigurations == null) {
               dhcpConfigurations = new com.amazonaws.internal.ListWithAutoConstructFlag<DhcpConfiguration>();
               dhcpConfigurations.setAutoConstruct(true);
@@ -139,14 +139,13 @@ public class DhcpOptions implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of tags for the DhcpOptions.
      *
      * @return A list of tags for the DhcpOptions.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -208,7 +207,7 @@ public class DhcpOptions implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

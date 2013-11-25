@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -34,7 +36,7 @@ public class DBInstanceStatusInfo implements Serializable {
     private Boolean normal;
 
     /**
-     * Status of the DB instance. For a StatusType of Read Replica, the
+     * Status of the DB instance. For a StatusType of read replica, the
      * values can be replicating, error, stopped, or terminated.
      */
     private String status;
@@ -77,8 +79,7 @@ public class DBInstanceStatusInfo implements Serializable {
         this.statusType = statusType;
         return this;
     }
-    
-    
+
     /**
      * Boolean value that is true if the instance is operating normally, or
      * false if the instance is in an error state.
@@ -117,8 +118,7 @@ public class DBInstanceStatusInfo implements Serializable {
         this.normal = normal;
         return this;
     }
-    
-    
+
     /**
      * Boolean value that is true if the instance is operating normally, or
      * false if the instance is in an error state.
@@ -129,12 +129,12 @@ public class DBInstanceStatusInfo implements Serializable {
     public Boolean getNormal() {
         return normal;
     }
-    
+
     /**
-     * Status of the DB instance. For a StatusType of Read Replica, the
+     * Status of the DB instance. For a StatusType of read replica, the
      * values can be replicating, error, stopped, or terminated.
      *
-     * @return Status of the DB instance. For a StatusType of Read Replica, the
+     * @return Status of the DB instance. For a StatusType of read replica, the
      *         values can be replicating, error, stopped, or terminated.
      */
     public String getStatus() {
@@ -142,10 +142,10 @@ public class DBInstanceStatusInfo implements Serializable {
     }
     
     /**
-     * Status of the DB instance. For a StatusType of Read Replica, the
+     * Status of the DB instance. For a StatusType of read replica, the
      * values can be replicating, error, stopped, or terminated.
      *
-     * @param status Status of the DB instance. For a StatusType of Read Replica, the
+     * @param status Status of the DB instance. For a StatusType of read replica, the
      *         values can be replicating, error, stopped, or terminated.
      */
     public void setStatus(String status) {
@@ -153,12 +153,12 @@ public class DBInstanceStatusInfo implements Serializable {
     }
     
     /**
-     * Status of the DB instance. For a StatusType of Read Replica, the
+     * Status of the DB instance. For a StatusType of read replica, the
      * values can be replicating, error, stopped, or terminated.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param status Status of the DB instance. For a StatusType of Read Replica, the
+     * @param status Status of the DB instance. For a StatusType of read replica, the
      *         values can be replicating, error, stopped, or terminated.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -168,8 +168,7 @@ public class DBInstanceStatusInfo implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Details of the error if there is an error for the instance. If the
      * instance is not in an error state, this value is blank.
@@ -208,8 +207,7 @@ public class DBInstanceStatusInfo implements Serializable {
         this.message = message;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

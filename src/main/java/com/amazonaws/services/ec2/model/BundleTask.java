@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -34,6 +36,9 @@ public class BundleTask implements Serializable {
 
     /**
      * The state of this task.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>pending, waiting-for-shutdown, bundling, storing, cancelling, complete, failed
      */
     private String state;
 
@@ -94,8 +99,7 @@ public class BundleTask implements Serializable {
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * Unique identifier for this task.
      *
@@ -128,12 +132,16 @@ public class BundleTask implements Serializable {
         this.bundleId = bundleId;
         return this;
     }
-    
-    
+
     /**
      * The state of this task.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>pending, waiting-for-shutdown, bundling, storing, cancelling, complete, failed
      *
      * @return The state of this task.
+     *
+     * @see BundleTaskState
      */
     public String getState() {
         return state;
@@ -141,8 +149,13 @@ public class BundleTask implements Serializable {
     
     /**
      * The state of this task.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>pending, waiting-for-shutdown, bundling, storing, cancelling, complete, failed
      *
      * @param state The state of this task.
+     *
+     * @see BundleTaskState
      */
     public void setState(String state) {
         this.state = state;
@@ -152,18 +165,56 @@ public class BundleTask implements Serializable {
      * The state of this task.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>pending, waiting-for-shutdown, bundling, storing, cancelling, complete, failed
      *
      * @param state The state of this task.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see BundleTaskState
      */
     public BundleTask withState(String state) {
         this.state = state;
         return this;
     }
+
+    /**
+     * The state of this task.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>pending, waiting-for-shutdown, bundling, storing, cancelling, complete, failed
+     *
+     * @param state The state of this task.
+     *
+     * @see BundleTaskState
+     */
+    public void setState(BundleTaskState state) {
+        this.state = state.toString();
+    }
     
-    
+    /**
+     * The state of this task.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>pending, waiting-for-shutdown, bundling, storing, cancelling, complete, failed
+     *
+     * @param state The state of this task.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see BundleTaskState
+     */
+    public BundleTask withState(BundleTaskState state) {
+        this.state = state.toString();
+        return this;
+    }
+
     /**
      * The time this task started.
      *
@@ -196,8 +247,7 @@ public class BundleTask implements Serializable {
         this.startTime = startTime;
         return this;
     }
-    
-    
+
     /**
      * The time of the most recent update for the task.
      *
@@ -230,8 +280,7 @@ public class BundleTask implements Serializable {
         this.updateTime = updateTime;
         return this;
     }
-    
-    
+
     /**
      * Amazon S3 storage locations.
      *
@@ -264,8 +313,7 @@ public class BundleTask implements Serializable {
         this.storage = storage;
         return this;
     }
-    
-    
+
     /**
      * The level of task completion, in percent (e.g., 20%).
      *
@@ -298,8 +346,7 @@ public class BundleTask implements Serializable {
         this.progress = progress;
         return this;
     }
-    
-    
+
     /**
      * If the task fails, a description of the error.
      *
@@ -332,8 +379,7 @@ public class BundleTask implements Serializable {
         this.bundleTaskError = bundleTaskError;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

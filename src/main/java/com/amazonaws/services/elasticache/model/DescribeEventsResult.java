@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -65,8 +67,7 @@ public class DescribeEventsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * A list of events. Each element in the list contains detailed
      * information about one event.
@@ -75,7 +76,6 @@ public class DescribeEventsResult implements Serializable {
      *         information about one event.
      */
     public java.util.List<Event> getEvents() {
-        
         if (events == null) {
               events = new com.amazonaws.internal.ListWithAutoConstructFlag<Event>();
               events.setAutoConstruct(true);
@@ -143,7 +143,7 @@ public class DescribeEventsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

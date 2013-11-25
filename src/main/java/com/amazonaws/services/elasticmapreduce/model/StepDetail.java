@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -38,8 +40,6 @@ public class StepDetail implements Serializable {
      */
     public StepDetail() {}
     
-
-
     /**
      * Constructs a new StepDetail object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -53,8 +53,6 @@ public class StepDetail implements Serializable {
         setExecutionStatusDetail(executionStatusDetail);
     }
 
-    
-    
     /**
      * The step configuration.
      *
@@ -87,8 +85,7 @@ public class StepDetail implements Serializable {
         this.stepConfig = stepConfig;
         return this;
     }
-    
-    
+
     /**
      * The description of the step status.
      *
@@ -121,8 +118,7 @@ public class StepDetail implements Serializable {
         this.executionStatusDetail = executionStatusDetail;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

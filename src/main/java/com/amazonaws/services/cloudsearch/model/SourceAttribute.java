@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -104,8 +106,7 @@ public class SourceAttribute implements Serializable {
         this.sourceDataFunction = sourceDataFunction;
         return this;
     }
-    
-    
+
     /**
      * Identifies the transformation to apply when copying data from a source
      * attribute.
@@ -143,7 +144,7 @@ public class SourceAttribute implements Serializable {
         this.sourceDataFunction = sourceDataFunction.toString();
         return this;
     }
-    
+
     /**
      * Copies data from a source document attribute to an
      * <code>IndexField</code>.
@@ -182,8 +183,7 @@ public class SourceAttribute implements Serializable {
         this.sourceDataCopy = sourceDataCopy;
         return this;
     }
-    
-    
+
     /**
      * Trims common title words from a source document attribute when
      * populating an <code>IndexField</code>. This can be used to create an
@@ -228,8 +228,7 @@ public class SourceAttribute implements Serializable {
         this.sourceDataTrimTitle = sourceDataTrimTitle;
         return this;
     }
-    
-    
+
     /**
      * Maps source document attribute values to new values when populating
      * the <code>IndexField</code>.
@@ -268,8 +267,7 @@ public class SourceAttribute implements Serializable {
         this.sourceDataMap = sourceDataMap;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

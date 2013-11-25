@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#describeEngineDefaultParameters(DescribeEngineDefaultParametersRequest) DescribeEngineDefaultParameters operation}.
@@ -54,8 +56,6 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
      */
     public DescribeEngineDefaultParametersRequest() {}
     
-
-
     /**
      * Constructs a new DescribeEngineDefaultParametersRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -69,8 +69,6 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         setCacheParameterGroupFamily(cacheParameterGroupFamily);
     }
 
-    
-    
     /**
      * The name of the cache parameter group family. Valid values are:
      * <code>memcached1.4</code> | <code>redis2.6</code>
@@ -109,8 +107,7 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -161,8 +158,7 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned from a prior request. Use this marker for
      * pagination of results from this operation. If this parameter is
@@ -213,8 +209,7 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

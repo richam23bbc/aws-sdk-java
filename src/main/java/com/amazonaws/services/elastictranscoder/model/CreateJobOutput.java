@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -112,6 +114,24 @@ public class CreateJobOutput implements Serializable {
     private com.amazonaws.internal.ListWithAutoConstructFlag<JobWatermark> watermarks;
 
     /**
+     * Information about the album art that you want Elastic Transcoder to
+     * add to the file during transcoding. You can specify up to twenty album
+     * artworks for each output. Settings for each artwork must be defined in
+     * the job for the current output.
+     */
+    private JobAlbumArt albumArt;
+
+    /**
+     * You can create an output file that contains an excerpt from the input
+     * file. This excerpt, called a clip, can come from the beginning,
+     * middle, or end of the file. The Composition object contains settings
+     * for the clips that make up an output file. For the current release,
+     * you can only specify settings for a single clip per output file. The
+     * Composition object cannot be null.
+     */
+    private com.amazonaws.internal.ListWithAutoConstructFlag<Clip> composition;
+
+    /**
      * The name to assign to the transcoded file. Elastic Transcoder saves
      * the file in the Amazon S3 bucket specified by the
      * <code>OutputBucket</code> object in the pipeline that is specified by
@@ -176,8 +196,7 @@ public class CreateJobOutput implements Serializable {
         this.key = key;
         return this;
     }
-    
-    
+
     /**
      * Whether you want Elastic Transcoder to create thumbnails for your
      * videos and, if so, how you want Elastic Transcoder to name the files.
@@ -381,8 +400,7 @@ public class CreateJobOutput implements Serializable {
         this.thumbnailPattern = thumbnailPattern;
         return this;
     }
-    
-    
+
     /**
      * The number of degrees clockwise by which you want Elastic Transcoder
      * to rotate the output relative to the input. Enter one of the following
@@ -454,8 +472,7 @@ public class CreateJobOutput implements Serializable {
         this.rotate = rotate;
         return this;
     }
-    
-    
+
     /**
      * The <code>Id</code> of the preset to use for this job. The preset
      * determines the audio, video, and thumbnail settings that Elastic
@@ -509,8 +526,7 @@ public class CreateJobOutput implements Serializable {
         this.presetId = presetId;
         return this;
     }
-    
-    
+
     /**
      * If you specify a preset in <code>PresetId</code> for which the value
      * of <code>Container</code> is ts (MPEG-TS), SegmentDuration is the
@@ -570,8 +586,7 @@ public class CreateJobOutput implements Serializable {
         this.segmentDuration = segmentDuration;
         return this;
     }
-    
-    
+
     /**
      * Information about the watermarks that you want Elastic Transcoder to
      * add to the video during transcoding. You can specify up to four
@@ -584,7 +599,6 @@ public class CreateJobOutput implements Serializable {
      *         defined in the preset for the current output.
      */
     public java.util.List<JobWatermark> getWatermarks() {
-        
         if (watermarks == null) {
               watermarks = new com.amazonaws.internal.ListWithAutoConstructFlag<JobWatermark>();
               watermarks.setAutoConstruct(true);
@@ -664,7 +678,166 @@ public class CreateJobOutput implements Serializable {
 
         return this;
     }
+
+    /**
+     * Information about the album art that you want Elastic Transcoder to
+     * add to the file during transcoding. You can specify up to twenty album
+     * artworks for each output. Settings for each artwork must be defined in
+     * the job for the current output.
+     *
+     * @return Information about the album art that you want Elastic Transcoder to
+     *         add to the file during transcoding. You can specify up to twenty album
+     *         artworks for each output. Settings for each artwork must be defined in
+     *         the job for the current output.
+     */
+    public JobAlbumArt getAlbumArt() {
+        return albumArt;
+    }
     
+    /**
+     * Information about the album art that you want Elastic Transcoder to
+     * add to the file during transcoding. You can specify up to twenty album
+     * artworks for each output. Settings for each artwork must be defined in
+     * the job for the current output.
+     *
+     * @param albumArt Information about the album art that you want Elastic Transcoder to
+     *         add to the file during transcoding. You can specify up to twenty album
+     *         artworks for each output. Settings for each artwork must be defined in
+     *         the job for the current output.
+     */
+    public void setAlbumArt(JobAlbumArt albumArt) {
+        this.albumArt = albumArt;
+    }
+    
+    /**
+     * Information about the album art that you want Elastic Transcoder to
+     * add to the file during transcoding. You can specify up to twenty album
+     * artworks for each output. Settings for each artwork must be defined in
+     * the job for the current output.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param albumArt Information about the album art that you want Elastic Transcoder to
+     *         add to the file during transcoding. You can specify up to twenty album
+     *         artworks for each output. Settings for each artwork must be defined in
+     *         the job for the current output.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public CreateJobOutput withAlbumArt(JobAlbumArt albumArt) {
+        this.albumArt = albumArt;
+        return this;
+    }
+
+    /**
+     * You can create an output file that contains an excerpt from the input
+     * file. This excerpt, called a clip, can come from the beginning,
+     * middle, or end of the file. The Composition object contains settings
+     * for the clips that make up an output file. For the current release,
+     * you can only specify settings for a single clip per output file. The
+     * Composition object cannot be null.
+     *
+     * @return You can create an output file that contains an excerpt from the input
+     *         file. This excerpt, called a clip, can come from the beginning,
+     *         middle, or end of the file. The Composition object contains settings
+     *         for the clips that make up an output file. For the current release,
+     *         you can only specify settings for a single clip per output file. The
+     *         Composition object cannot be null.
+     */
+    public java.util.List<Clip> getComposition() {
+        if (composition == null) {
+              composition = new com.amazonaws.internal.ListWithAutoConstructFlag<Clip>();
+              composition.setAutoConstruct(true);
+        }
+        return composition;
+    }
+    
+    /**
+     * You can create an output file that contains an excerpt from the input
+     * file. This excerpt, called a clip, can come from the beginning,
+     * middle, or end of the file. The Composition object contains settings
+     * for the clips that make up an output file. For the current release,
+     * you can only specify settings for a single clip per output file. The
+     * Composition object cannot be null.
+     *
+     * @param composition You can create an output file that contains an excerpt from the input
+     *         file. This excerpt, called a clip, can come from the beginning,
+     *         middle, or end of the file. The Composition object contains settings
+     *         for the clips that make up an output file. For the current release,
+     *         you can only specify settings for a single clip per output file. The
+     *         Composition object cannot be null.
+     */
+    public void setComposition(java.util.Collection<Clip> composition) {
+        if (composition == null) {
+            this.composition = null;
+            return;
+        }
+        com.amazonaws.internal.ListWithAutoConstructFlag<Clip> compositionCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<Clip>(composition.size());
+        compositionCopy.addAll(composition);
+        this.composition = compositionCopy;
+    }
+    
+    /**
+     * You can create an output file that contains an excerpt from the input
+     * file. This excerpt, called a clip, can come from the beginning,
+     * middle, or end of the file. The Composition object contains settings
+     * for the clips that make up an output file. For the current release,
+     * you can only specify settings for a single clip per output file. The
+     * Composition object cannot be null.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param composition You can create an output file that contains an excerpt from the input
+     *         file. This excerpt, called a clip, can come from the beginning,
+     *         middle, or end of the file. The Composition object contains settings
+     *         for the clips that make up an output file. For the current release,
+     *         you can only specify settings for a single clip per output file. The
+     *         Composition object cannot be null.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public CreateJobOutput withComposition(Clip... composition) {
+        if (getComposition() == null) setComposition(new java.util.ArrayList<Clip>(composition.length));
+        for (Clip value : composition) {
+            getComposition().add(value);
+        }
+        return this;
+    }
+    
+    /**
+     * You can create an output file that contains an excerpt from the input
+     * file. This excerpt, called a clip, can come from the beginning,
+     * middle, or end of the file. The Composition object contains settings
+     * for the clips that make up an output file. For the current release,
+     * you can only specify settings for a single clip per output file. The
+     * Composition object cannot be null.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param composition You can create an output file that contains an excerpt from the input
+     *         file. This excerpt, called a clip, can come from the beginning,
+     *         middle, or end of the file. The Composition object contains settings
+     *         for the clips that make up an output file. For the current release,
+     *         you can only specify settings for a single clip per output file. The
+     *         Composition object cannot be null.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public CreateJobOutput withComposition(java.util.Collection<Clip> composition) {
+        if (composition == null) {
+            this.composition = null;
+        } else {
+            com.amazonaws.internal.ListWithAutoConstructFlag<Clip> compositionCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<Clip>(composition.size());
+            compositionCopy.addAll(composition);
+            this.composition = compositionCopy;
+        }
+
+        return this;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -682,7 +855,9 @@ public class CreateJobOutput implements Serializable {
         if (getRotate() != null) sb.append("Rotate: " + getRotate() + ",");
         if (getPresetId() != null) sb.append("PresetId: " + getPresetId() + ",");
         if (getSegmentDuration() != null) sb.append("SegmentDuration: " + getSegmentDuration() + ",");
-        if (getWatermarks() != null) sb.append("Watermarks: " + getWatermarks() );
+        if (getWatermarks() != null) sb.append("Watermarks: " + getWatermarks() + ",");
+        if (getAlbumArt() != null) sb.append("AlbumArt: " + getAlbumArt() + ",");
+        if (getComposition() != null) sb.append("Composition: " + getComposition() );
         sb.append("}");
         return sb.toString();
     }
@@ -698,6 +873,8 @@ public class CreateJobOutput implements Serializable {
         hashCode = prime * hashCode + ((getPresetId() == null) ? 0 : getPresetId().hashCode()); 
         hashCode = prime * hashCode + ((getSegmentDuration() == null) ? 0 : getSegmentDuration().hashCode()); 
         hashCode = prime * hashCode + ((getWatermarks() == null) ? 0 : getWatermarks().hashCode()); 
+        hashCode = prime * hashCode + ((getAlbumArt() == null) ? 0 : getAlbumArt().hashCode()); 
+        hashCode = prime * hashCode + ((getComposition() == null) ? 0 : getComposition().hashCode()); 
         return hashCode;
     }
     
@@ -721,6 +898,10 @@ public class CreateJobOutput implements Serializable {
         if (other.getSegmentDuration() != null && other.getSegmentDuration().equals(this.getSegmentDuration()) == false) return false; 
         if (other.getWatermarks() == null ^ this.getWatermarks() == null) return false;
         if (other.getWatermarks() != null && other.getWatermarks().equals(this.getWatermarks()) == false) return false; 
+        if (other.getAlbumArt() == null ^ this.getAlbumArt() == null) return false;
+        if (other.getAlbumArt() != null && other.getAlbumArt().equals(this.getAlbumArt()) == false) return false; 
+        if (other.getComposition() == null ^ this.getComposition() == null) return false;
+        if (other.getComposition() != null && other.getComposition().equals(this.getComposition()) == false) return false; 
         return true;
     }
     

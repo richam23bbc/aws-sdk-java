@@ -13,19 +13,14 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
  * A JSON object containing the following fields:
  * </p>
- * 
- * <ul>
- * <li> GatewayARN </li>
- * <li> DescribeBandwidthRateLimitOutput$AverageDownloadRateLimitInBitsPerSec </li>
- * <li> DescribeBandwidthRateLimitOutput$AverageDownloadRateLimitInBitsPerSec </li>
- * 
- * </ul>
  */
 public class DescribeBandwidthRateLimitResult implements Serializable {
 
@@ -111,8 +106,7 @@ public class DescribeBandwidthRateLimitResult implements Serializable {
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
      * The average upload bandwidth rate limit in bits per second. This field
      * does not appear in the response if the upload rate limit is not set.
@@ -160,8 +154,7 @@ public class DescribeBandwidthRateLimitResult implements Serializable {
         this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
         return this;
     }
-    
-    
+
     /**
      * The average download bandwidth rate limit in bits per second. This
      * field does not appear in the response if the download rate limit is
@@ -215,8 +208,7 @@ public class DescribeBandwidthRateLimitResult implements Serializable {
         this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

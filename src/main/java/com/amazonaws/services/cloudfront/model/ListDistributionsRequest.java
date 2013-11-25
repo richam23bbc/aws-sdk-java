@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#listDistributions(ListDistributionsRequest) ListDistributions operation}.
@@ -102,8 +104,7 @@ public class ListDistributionsRequest extends AmazonWebServiceRequest implements
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of distributions you want in the response body.
      *
@@ -136,8 +137,7 @@ public class ListDistributionsRequest extends AmazonWebServiceRequest implements
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

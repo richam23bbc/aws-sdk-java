@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -97,8 +99,7 @@ public class FailWorkflowExecutionDecisionAttributes implements Serializable {
         this.reason = reason;
         return this;
     }
-    
-    
+
     /**
      * Optional details of the failure.
      * <p>
@@ -140,8 +141,7 @@ public class FailWorkflowExecutionDecisionAttributes implements Serializable {
         this.details = details;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

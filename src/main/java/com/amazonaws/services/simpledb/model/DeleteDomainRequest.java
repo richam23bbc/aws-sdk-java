@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#deleteDomain(DeleteDomainRequest) DeleteDomain operation}.
@@ -42,8 +44,6 @@ public class DeleteDomainRequest extends AmazonWebServiceRequest implements Seri
      */
     public DeleteDomainRequest() {}
     
-
-
     /**
      * Constructs a new DeleteDomainRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -55,8 +55,6 @@ public class DeleteDomainRequest extends AmazonWebServiceRequest implements Seri
         setDomainName(domainName);
     }
 
-    
-    
     /**
      * The name of the domain to delete.
      *
@@ -89,8 +87,7 @@ public class DeleteDomainRequest extends AmazonWebServiceRequest implements Seri
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,13 +13,18 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describeApps(DescribeAppsRequest) DescribeApps operation}.
  * <p>
  * Requests a description of a specified set of apps.
+ * </p>
+ * <p>
+ * <b>NOTE:</b>You must specify at least one of the parameters.
  * </p>
  *
  * @see com.amazonaws.services.opsworks.AWSOpsWorks#describeApps(DescribeAppsRequest)
@@ -77,8 +82,7 @@ public class DescribeAppsRequest extends AmazonWebServiceRequest implements Seri
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * An array of app IDs for the apps to be described. If you use this
      * parameter, <code>DescribeApps</code> returns a description of the
@@ -89,7 +93,6 @@ public class DescribeAppsRequest extends AmazonWebServiceRequest implements Seri
      *         specified apps. Otherwise, it returns a description of every app.
      */
     public java.util.List<String> getAppIds() {
-        
         if (appIds == null) {
               appIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               appIds.setAutoConstruct(true);
@@ -163,7 +166,7 @@ public class DescribeAppsRequest extends AmazonWebServiceRequest implements Seri
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

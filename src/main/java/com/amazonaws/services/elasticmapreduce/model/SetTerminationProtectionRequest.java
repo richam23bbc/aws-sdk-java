@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduce#setTerminationProtection(SetTerminationProtectionRequest) SetTerminationProtection operation}.
@@ -64,7 +66,6 @@ public class SetTerminationProtectionRequest extends AmazonWebServiceRequest imp
      *         obtained from <a>DescribeJobFlows</a> .
      */
     public java.util.List<String> getJobFlowIds() {
-        
         if (jobFlowIds == null) {
               jobFlowIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               jobFlowIds.setAutoConstruct(true);
@@ -138,7 +139,7 @@ public class SetTerminationProtectionRequest extends AmazonWebServiceRequest imp
 
         return this;
     }
-    
+
     /**
      * A Boolean that indicates whether to protect the job flow and prevent
      * the Amazon EC2 instances in the cluster from shutting down due to API
@@ -183,8 +184,7 @@ public class SetTerminationProtectionRequest extends AmazonWebServiceRequest imp
         this.terminationProtected = terminationProtected;
         return this;
     }
-    
-    
+
     /**
      * A Boolean that indicates whether to protect the job flow and prevent
      * the Amazon EC2 instances in the cluster from shutting down due to API
@@ -197,7 +197,7 @@ public class SetTerminationProtectionRequest extends AmazonWebServiceRequest imp
     public Boolean getTerminationProtected() {
         return terminationProtected;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,17 +13,17 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#listVirtualMFADevices(ListVirtualMFADevicesRequest) ListVirtualMFADevices operation}.
  * <p>
  * Lists the virtual MFA devices under the AWS account by assignment status. If you do not specify an assignment status, the action returns a list of
  * all virtual MFA devices. Assignment status can be <code>Assigned</code> ,
- * 
  * <code>Unassigned</code> , or <code>Any</code> .
- * 
  * </p>
  * <p>
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters.
@@ -60,7 +60,8 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -132,8 +133,7 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
         this.assignmentStatus = assignmentStatus;
         return this;
     }
-    
-    
+
     /**
      * The status (unassigned or assigned) of the devices to list. If you do
      * not specify an <code>AssignmentStatus</code>, the action defaults to
@@ -179,7 +179,7 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
         this.assignmentStatus = assignmentStatus.toString();
         return this;
     }
-    
+
     /**
      * Use this parameter only when paginating results, and only in a
      * subsequent request after you've received a response where the results
@@ -242,13 +242,13 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -256,7 +256,8 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
      * @return Use this parameter only when paginating results to indicate the
      *         maximum number of user names you want in the response. If there are
      *         additional user names beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -266,7 +267,8 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -274,7 +276,8 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
      * @param maxItems Use this parameter only when paginating results to indicate the
      *         maximum number of user names you want in the response. If there are
      *         additional user names beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -284,7 +287,8 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -294,7 +298,8 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
      * @param maxItems Use this parameter only when paginating results to indicate the
      *         maximum number of user names you want in the response. If there are
      *         additional user names beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -303,8 +308,7 @@ public class ListVirtualMFADevicesRequest extends AmazonWebServiceRequest implem
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

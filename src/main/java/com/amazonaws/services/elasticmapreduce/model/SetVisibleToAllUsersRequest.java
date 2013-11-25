@@ -13,14 +13,16 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduce#setVisibleToAllUsers(SetVisibleToAllUsersRequest) SetVisibleToAllUsers operation}.
  * <p>
- * Sets whether all AWS Identity and Access Management (IAM) users under your account can access the specifed job flows. This action works on running job
- * flows. You can also set the visibility of a job flow when you launch it using the <code>VisibleToAllUsers</code> parameter of RunJobFlow. The
+ * Sets whether all AWS Identity and Access Management (IAM) users under your account can access the specified job flows. This action works on running
+ * job flows. You can also set the visibility of a job flow when you launch it using the <code>VisibleToAllUsers</code> parameter of RunJobFlow. The
  * SetVisibleToAllUsers action can be called only by an IAM user who created the job flow or the AWS account that owns the job flow.
  * </p>
  *
@@ -49,7 +51,6 @@ public class SetVisibleToAllUsersRequest extends AmazonWebServiceRequest impleme
      * @return Identifiers of the job flows to receive the new visibility setting.
      */
     public java.util.List<String> getJobFlowIds() {
-        
         if (jobFlowIds == null) {
               jobFlowIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               jobFlowIds.setAutoConstruct(true);
@@ -111,7 +112,7 @@ public class SetVisibleToAllUsersRequest extends AmazonWebServiceRequest impleme
 
         return this;
     }
-    
+
     /**
      * Whether the specified job flows are visible to all IAM users of the
      * AWS account associated with the job flow. If this value is set to
@@ -174,8 +175,7 @@ public class SetVisibleToAllUsersRequest extends AmazonWebServiceRequest impleme
         this.visibleToAllUsers = visibleToAllUsers;
         return this;
     }
-    
-    
+
     /**
      * Whether the specified job flows are visible to all IAM users of the
      * AWS account associated with the job flow. If this value is set to
@@ -194,7 +194,7 @@ public class SetVisibleToAllUsersRequest extends AmazonWebServiceRequest impleme
     public Boolean getVisibleToAllUsers() {
         return visibleToAllUsers;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

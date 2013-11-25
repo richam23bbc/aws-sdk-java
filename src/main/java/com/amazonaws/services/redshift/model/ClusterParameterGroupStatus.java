@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,7 @@ public class ClusterParameterGroupStatus implements Serializable {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The status of parameter updates.
      *
@@ -98,8 +99,7 @@ public class ClusterParameterGroupStatus implements Serializable {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

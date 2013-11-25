@@ -13,20 +13,22 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#listAccessKeys(ListAccessKeysRequest) ListAccessKeys operation}.
  * <p>
- * Returns information about the Access Key IDs associated with the specified user. If there are none, the action returns an empty list.
+ * Returns information about the access key IDs associated with the specified user. If there are none, the action returns an empty list.
  * </p>
  * <p>
  * Although each user is limited to a small number of keys, you can still paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  * parameters.
  * </p>
  * <p>
- * If the <code>UserName</code> field is not specified, the UserName is determined implicitly based on the AWS Access Key ID used to sign the request.
+ * If the <code>UserName</code> field is not specified, the UserName is determined implicitly based on the AWS access key ID used to sign the request.
  * Because this action works for access keys under the AWS account, this API can be used to manage root credentials even if the AWS account has no
  * associated users.
  * </p>
@@ -63,7 +65,8 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
      * Use this parameter only when paginating results to indicate the
      * maximum number of keys you want in the response. If there are
      * additional keys beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -120,8 +123,7 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * Use this parameter only when paginating results, and only in a
      * subsequent request after you've received a response where the results
@@ -184,13 +186,13 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this parameter only when paginating results to indicate the
      * maximum number of keys you want in the response. If there are
      * additional keys beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -198,7 +200,8 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
      * @return Use this parameter only when paginating results to indicate the
      *         maximum number of keys you want in the response. If there are
      *         additional keys beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -208,7 +211,8 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
      * Use this parameter only when paginating results to indicate the
      * maximum number of keys you want in the response. If there are
      * additional keys beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -216,7 +220,8 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
      * @param maxItems Use this parameter only when paginating results to indicate the
      *         maximum number of keys you want in the response. If there are
      *         additional keys beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -226,7 +231,8 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
      * Use this parameter only when paginating results to indicate the
      * maximum number of keys you want in the response. If there are
      * additional keys beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -236,7 +242,8 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
      * @param maxItems Use this parameter only when paginating results to indicate the
      *         maximum number of keys you want in the response. If there are
      *         additional keys beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -245,8 +252,7 @@ public class ListAccessKeysRequest extends AmazonWebServiceRequest implements Se
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

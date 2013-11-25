@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Conversion Task
@@ -66,8 +68,7 @@ public class ConversionTask implements Serializable {
         this.conversionTaskId = conversionTaskId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the ExpirationTime property for this object.
      *
@@ -100,8 +101,7 @@ public class ConversionTask implements Serializable {
         this.expirationTime = expirationTime;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the ImportInstance property for this object.
      *
@@ -134,8 +134,7 @@ public class ConversionTask implements Serializable {
         this.importInstance = importInstance;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the ImportVolume property for this object.
      *
@@ -168,12 +167,16 @@ public class ConversionTask implements Serializable {
         this.importVolume = importVolume;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
      *
      * @return The value of the State property for this object.
+     *
+     * @see ConversionTaskState
      */
     public String getState() {
         return state;
@@ -181,8 +184,13 @@ public class ConversionTask implements Serializable {
     
     /**
      * Sets the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
      *
      * @param state The new value for the State property for this object.
+     *
+     * @see ConversionTaskState
      */
     public void setState(String state) {
         this.state = state;
@@ -192,18 +200,56 @@ public class ConversionTask implements Serializable {
      * Sets the value of the State property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
      *
      * @param state The new value for the State property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see ConversionTaskState
      */
     public ConversionTask withState(String state) {
         this.state = state;
         return this;
     }
+
+    /**
+     * Sets the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
+     *
+     * @param state The new value for the State property for this object.
+     *
+     * @see ConversionTaskState
+     */
+    public void setState(ConversionTaskState state) {
+        this.state = state.toString();
+    }
     
-    
+    /**
+     * Sets the value of the State property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, cancelling, cancelled, completed
+     *
+     * @param state The new value for the State property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see ConversionTaskState
+     */
+    public ConversionTask withState(ConversionTaskState state) {
+        this.state = state.toString();
+        return this;
+    }
+
     /**
      * Returns the value of the StatusMessage property for this object.
      *
@@ -236,15 +282,13 @@ public class ConversionTask implements Serializable {
         this.statusMessage = statusMessage;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Tags property for this object.
      *
      * @return The value of the Tags property for this object.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -306,7 +350,7 @@ public class ConversionTask implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

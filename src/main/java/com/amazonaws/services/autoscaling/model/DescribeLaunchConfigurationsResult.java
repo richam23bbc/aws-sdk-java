@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -41,7 +43,6 @@ public class DescribeLaunchConfigurationsResult implements Serializable {
      * @return A list of launch configurations.
      */
     public java.util.List<LaunchConfiguration> getLaunchConfigurations() {
-        
         if (launchConfigurations == null) {
               launchConfigurations = new com.amazonaws.internal.ListWithAutoConstructFlag<LaunchConfiguration>();
               launchConfigurations.setAutoConstruct(true);
@@ -103,7 +104,7 @@ public class DescribeLaunchConfigurationsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A string that marks the start of the next batch of returned results.
      * <p>
@@ -145,8 +146,7 @@ public class DescribeLaunchConfigurationsResult implements Serializable {
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

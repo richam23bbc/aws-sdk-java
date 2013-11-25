@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#describeEnvironmentResources(DescribeEnvironmentResourcesRequest) DescribeEnvironmentResources operation}.
@@ -101,8 +103,7 @@ public class DescribeEnvironmentResourcesRequest extends AmazonWebServiceRequest
         this.environmentId = environmentId;
         return this;
     }
-    
-    
+
     /**
      * The name of the environment to retrieve AWS resource usage data. <p>
      * Condition: You must specify either this or an EnvironmentId, or both.
@@ -162,8 +163,7 @@ public class DescribeEnvironmentResourcesRequest extends AmazonWebServiceRequest
         this.environmentName = environmentName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

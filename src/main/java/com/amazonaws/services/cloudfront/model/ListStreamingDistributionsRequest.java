@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#listStreamingDistributions(ListStreamingDistributionsRequest) ListStreamingDistributions operation}.
@@ -103,8 +105,7 @@ public class ListStreamingDistributionsRequest extends AmazonWebServiceRequest i
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of streaming distributions you want in the response
      * body.
@@ -143,8 +144,7 @@ public class ListStreamingDistributionsRequest extends AmazonWebServiceRequest i
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

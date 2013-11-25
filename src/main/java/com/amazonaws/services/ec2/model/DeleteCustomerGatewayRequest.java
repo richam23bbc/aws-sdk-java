@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DeleteCustomerGatewayRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#deleteCustomerGateway(DeleteCustomerGatewayRequest) DeleteCustomerGateway operation}.
@@ -43,8 +45,6 @@ public class DeleteCustomerGatewayRequest extends AmazonWebServiceRequest implem
      */
     public DeleteCustomerGatewayRequest() {}
     
-
-
     /**
      * Constructs a new DeleteCustomerGatewayRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -56,8 +56,6 @@ public class DeleteCustomerGatewayRequest extends AmazonWebServiceRequest implem
         setCustomerGatewayId(customerGatewayId);
     }
 
-    
-    
     /**
      * The ID of the customer gateway to delete.
      *
@@ -90,8 +88,7 @@ public class DeleteCustomerGatewayRequest extends AmazonWebServiceRequest implem
         this.customerGatewayId = customerGatewayId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

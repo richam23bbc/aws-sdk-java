@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#updateLoginProfile(UpdateLoginProfileRequest) UpdateLoginProfile operation}.
@@ -50,8 +52,6 @@ public class UpdateLoginProfileRequest extends AmazonWebServiceRequest implement
      */
     public UpdateLoginProfileRequest() {}
     
-
-
     /**
      * Constructs a new UpdateLoginProfileRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -63,8 +63,6 @@ public class UpdateLoginProfileRequest extends AmazonWebServiceRequest implement
         setUserName(userName);
     }
 
-    
-    
     /**
      * Name of the user whose password you want to update.
      * <p>
@@ -109,8 +107,7 @@ public class UpdateLoginProfileRequest extends AmazonWebServiceRequest implement
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The new password for the user name.
      * <p>
@@ -155,8 +152,7 @@ public class UpdateLoginProfileRequest extends AmazonWebServiceRequest implement
         this.password = password;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

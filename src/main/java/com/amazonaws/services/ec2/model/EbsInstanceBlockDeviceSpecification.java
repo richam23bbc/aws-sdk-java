@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -72,8 +74,7 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable {
         this.volumeId = volumeId;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the Amazon EBS volume is deleted on instance
      * termination.
@@ -112,8 +113,7 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable {
         this.deleteOnTermination = deleteOnTermination;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the Amazon EBS volume is deleted on instance
      * termination.
@@ -124,7 +124,7 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable {
     public Boolean getDeleteOnTermination() {
         return deleteOnTermination;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -65,8 +67,7 @@ public class GetStreamingDistributionResult implements Serializable {
         this.streamingDistribution = streamingDistribution;
         return this;
     }
-    
-    
+
     /**
      * The current version of the streaming distribution's information. For
      * example: E2QWRUHAPOMQZL.
@@ -105,8 +106,7 @@ public class GetStreamingDistributionResult implements Serializable {
         this.eTag = eTag;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elastictranscoder.AmazonElasticTranscoder#createJob(CreateJobRequest) CreateJob operation}.
@@ -151,8 +153,7 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
         this.pipelineId = pipelineId;
         return this;
     }
-    
-    
+
     /**
      * A section of the request body that provides information about the file
      * that is being transcoded.
@@ -191,8 +192,7 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
         this.input = input;
         return this;
     }
-    
-    
+
     /**
      * The <code>CreateJobOutput</code> structure.
      *
@@ -225,8 +225,7 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
         this.output = output;
         return this;
     }
-    
-    
+
     /**
      * A section of the request body that provides information about the
      * transcoded (target) files. We recommend that you use the
@@ -240,7 +239,6 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
      *         <code>Outputs</code> syntax instead of the <code>Output</code> syntax.
      */
     public java.util.List<CreateJobOutput> getOutputs() {
-        
         if (outputs == null) {
               outputs = new com.amazonaws.internal.ListWithAutoConstructFlag<CreateJobOutput>();
               outputs.setAutoConstruct(true);
@@ -323,7 +321,7 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
 
         return this;
     }
-    
+
     /**
      * The value, if any, that you want Elastic Transcoder to prepend to the
      * names of all files that this job creates, including output files,
@@ -377,8 +375,7 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
         this.outputKeyPrefix = outputKeyPrefix;
         return this;
     }
-    
-    
+
     /**
      * If you specify a preset in <code>PresetId</code> for which the value
      * of <code>Container</code> is ts (MPEG-TS), Playlists contains
@@ -396,7 +393,6 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
      *         playlist. The maximum number of master playlists in a job is 30.
      */
     public java.util.List<CreateJobPlaylist> getPlaylists() {
-        
         if (playlists == null) {
               playlists = new com.amazonaws.internal.ListWithAutoConstructFlag<CreateJobPlaylist>();
               playlists.setAutoConstruct(true);
@@ -491,7 +487,7 @@ public class CreateJobRequest extends AmazonWebServiceRequest implements Seriali
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

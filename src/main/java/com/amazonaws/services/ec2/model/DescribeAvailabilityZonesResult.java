@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeAvailabilityZonesResult implements Serializable {
      * @return The list of described Amazon EC2 availability zones.
      */
     public java.util.List<AvailabilityZone> getAvailabilityZones() {
-        
         if (availabilityZones == null) {
               availabilityZones = new com.amazonaws.internal.ListWithAutoConstructFlag<AvailabilityZone>();
               availabilityZones.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeAvailabilityZonesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

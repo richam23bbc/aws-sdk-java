@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -46,8 +48,6 @@ public class LoginProfile implements Serializable {
      */
     public LoginProfile() {}
     
-
-
     /**
      * Constructs a new LoginProfile object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -62,8 +62,6 @@ public class LoginProfile implements Serializable {
         setCreateDate(createDate);
     }
 
-    
-    
     /**
      * The name of the user, which can be used for signing into the AWS
      * Management Console.
@@ -114,8 +112,7 @@ public class LoginProfile implements Serializable {
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The date when the password for the user was created.
      *
@@ -148,8 +145,7 @@ public class LoginProfile implements Serializable {
         this.createDate = createDate;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

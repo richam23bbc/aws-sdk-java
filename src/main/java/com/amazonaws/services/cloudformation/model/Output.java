@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -69,8 +71,7 @@ public class Output implements Serializable {
         this.outputKey = outputKey;
         return this;
     }
-    
-    
+
     /**
      * The value associated with the output.
      *
@@ -103,8 +104,7 @@ public class Output implements Serializable {
         this.outputValue = outputValue;
         return this;
     }
-    
-    
+
     /**
      * User defined description associated with the output.
      *
@@ -137,8 +137,7 @@ public class Output implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -97,8 +99,7 @@ public class VolumeiSCSIAttributes implements Serializable {
         this.targetARN = targetARN;
         return this;
     }
-    
-    
+
     /**
      * The network interface identifier.
      * <p>
@@ -140,8 +141,7 @@ public class VolumeiSCSIAttributes implements Serializable {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * The port used to communicate with iSCSI targets.
      *
@@ -174,8 +174,7 @@ public class VolumeiSCSIAttributes implements Serializable {
         this.networkInterfacePort = networkInterfacePort;
         return this;
     }
-    
-    
+
     /**
      * The logical disk number.
      * <p>
@@ -217,8 +216,7 @@ public class VolumeiSCSIAttributes implements Serializable {
         this.lunNumber = lunNumber;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether mutual CHAP is enabled for the iSCSI target.
      *
@@ -251,8 +249,7 @@ public class VolumeiSCSIAttributes implements Serializable {
         this.chapEnabled = chapEnabled;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether mutual CHAP is enabled for the iSCSI target.
      *
@@ -261,7 +258,7 @@ public class VolumeiSCSIAttributes implements Serializable {
     public Boolean getChapEnabled() {
         return chapEnabled;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

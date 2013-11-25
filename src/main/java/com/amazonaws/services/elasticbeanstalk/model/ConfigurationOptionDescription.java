@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -169,8 +171,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.namespace = namespace;
         return this;
     }
-    
-    
+
     /**
      * The name of the configuration option.
      *
@@ -203,8 +204,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The default value for this configuration option.
      *
@@ -237,8 +237,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.defaultValue = defaultValue;
         return this;
     }
-    
-    
+
     /**
      * An indication of which action is required if the value for this
      * configuration option changes: <enumValues> <value
@@ -385,8 +384,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.changeSeverity = changeSeverity;
         return this;
     }
-    
-    
+
     /**
      * An indication of whether the user defined this configuration option:
      * <enumValues> <value name="true"> <p> <code>true</code> : This
@@ -491,8 +489,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.userDefined = userDefined;
         return this;
     }
-    
-    
+
     /**
      * An indication of whether the user defined this configuration option:
      * <enumValues> <value name="true"> <p> <code>true</code> : This
@@ -525,7 +522,7 @@ public class ConfigurationOptionDescription implements Serializable {
     public Boolean getUserDefined() {
         return userDefined;
     }
-    
+
     /**
      * An indication of which type of values this option has and whether it
      * is allowable to select one or more than one of the possible values:
@@ -663,8 +660,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.valueType = valueType;
         return this;
     }
-    
-    
+
     /**
      * An indication of which type of values this option has and whether it
      * is allowable to select one or more than one of the possible values:
@@ -758,7 +754,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.valueType = valueType.toString();
         return this;
     }
-    
+
     /**
      * If specified, values for the configuration option are selected from
      * this list.
@@ -767,7 +763,6 @@ public class ConfigurationOptionDescription implements Serializable {
      *         this list.
      */
     public java.util.List<String> getValueOptions() {
-        
         if (valueOptions == null) {
               valueOptions = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               valueOptions.setAutoConstruct(true);
@@ -835,7 +830,7 @@ public class ConfigurationOptionDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * If specified, the configuration option must be a numeric value greater
      * than this value.
@@ -874,8 +869,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.minValue = minValue;
         return this;
     }
-    
-    
+
     /**
      * If specified, the configuration option must be a numeric value less
      * than this value.
@@ -914,8 +908,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.maxValue = maxValue;
         return this;
     }
-    
-    
+
     /**
      * If specified, the configuration option must be a string value no
      * longer than this value.
@@ -954,8 +947,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.maxLength = maxLength;
         return this;
     }
-    
-    
+
     /**
      * If specified, the configuration option must be a string value that
      * satisfies this regular expression.
@@ -994,8 +986,7 @@ public class ConfigurationOptionDescription implements Serializable {
         this.regex = regex;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

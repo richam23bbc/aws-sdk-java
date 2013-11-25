@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -222,8 +224,7 @@ public class Operator implements Serializable {
         this.type = type;
         return this;
     }
-    
-    
+
     /**
      * The logical operation to be performed: equal (<code>EQ</code>), equal
      * reference (<code>REF_EQ</code>), less than or equal (<code>LE</code>),
@@ -337,14 +338,13 @@ public class Operator implements Serializable {
         this.type = type.toString();
         return this;
     }
-    
+
     /**
      * The value that the actual field value will be compared with.
      *
      * @return The value that the actual field value will be compared with.
      */
     public java.util.List<String> getValues() {
-        
         if (values == null) {
               values = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               values.setAutoConstruct(true);
@@ -406,7 +406,7 @@ public class Operator implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

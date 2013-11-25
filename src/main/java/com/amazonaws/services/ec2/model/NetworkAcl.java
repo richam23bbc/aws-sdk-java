@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Network Acl
@@ -64,8 +66,7 @@ public class NetworkAcl implements Serializable {
         this.networkAclId = networkAclId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the VpcId property for this object.
      *
@@ -98,8 +99,7 @@ public class NetworkAcl implements Serializable {
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the IsDefault property for this object.
      *
@@ -132,8 +132,7 @@ public class NetworkAcl implements Serializable {
         this.isDefault = isDefault;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the IsDefault property for this object.
      *
@@ -142,14 +141,13 @@ public class NetworkAcl implements Serializable {
     public Boolean getIsDefault() {
         return isDefault;
     }
-    
+
     /**
      * Returns the value of the Entries property for this object.
      *
      * @return The value of the Entries property for this object.
      */
     public java.util.List<NetworkAclEntry> getEntries() {
-        
         if (entries == null) {
               entries = new com.amazonaws.internal.ListWithAutoConstructFlag<NetworkAclEntry>();
               entries.setAutoConstruct(true);
@@ -211,14 +209,13 @@ public class NetworkAcl implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the Associations property for this object.
      *
      * @return The value of the Associations property for this object.
      */
     public java.util.List<NetworkAclAssociation> getAssociations() {
-        
         if (associations == null) {
               associations = new com.amazonaws.internal.ListWithAutoConstructFlag<NetworkAclAssociation>();
               associations.setAutoConstruct(true);
@@ -280,14 +277,13 @@ public class NetworkAcl implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the Tags property for this object.
      *
      * @return The value of the Tags property for this object.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -349,7 +345,7 @@ public class NetworkAcl implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

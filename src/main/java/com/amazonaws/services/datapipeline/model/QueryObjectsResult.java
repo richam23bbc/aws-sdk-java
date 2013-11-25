@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -51,7 +53,6 @@ public class QueryObjectsResult implements Serializable {
      * @return A list of identifiers that match the query selectors.
      */
     public java.util.List<String> getIds() {
-        
         if (ids == null) {
               ids = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               ids.setAutoConstruct(true);
@@ -113,7 +114,7 @@ public class QueryObjectsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The starting point for the results to be returned. As long as the
      * action returns <code>HasMoreResults</code> as <code>True</code>, you
@@ -176,8 +177,7 @@ public class QueryObjectsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * If <code>True</code>, there are more results that can be obtained by a
      * subsequent call to <a>QueryObjects</a>.
@@ -216,8 +216,7 @@ public class QueryObjectsResult implements Serializable {
         this.hasMoreResults = hasMoreResults;
         return this;
     }
-    
-    
+
     /**
      * If <code>True</code>, there are more results that can be obtained by a
      * subsequent call to <a>QueryObjects</a>.
@@ -228,7 +227,7 @@ public class QueryObjectsResult implements Serializable {
     public Boolean getHasMoreResults() {
         return hasMoreResults;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

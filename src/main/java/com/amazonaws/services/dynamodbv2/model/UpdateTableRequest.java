@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.dynamodbv2.AmazonDynamoDB#updateTable(UpdateTableRequest) UpdateTable operation}.
@@ -66,8 +68,6 @@ public class UpdateTableRequest extends AmazonWebServiceRequest implements Seria
      */
     public UpdateTableRequest() {}
     
-
-
     /**
      * Constructs a new UpdateTableRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -86,8 +86,6 @@ public class UpdateTableRequest extends AmazonWebServiceRequest implements Seria
         setProvisionedThroughput(provisionedThroughput);
     }
 
-    
-    
     /**
      * The name of the table to be updated.
      * <p>
@@ -132,8 +130,7 @@ public class UpdateTableRequest extends AmazonWebServiceRequest implements Seria
         this.tableName = tableName;
         return this;
     }
-    
-    
+
     /**
      * The provisioned throughput settings for the specified table. The
      * settings can be modified using the <i>UpdateTable</i> operation.
@@ -196,8 +193,7 @@ public class UpdateTableRequest extends AmazonWebServiceRequest implements Seria
         this.provisionedThroughput = provisionedThroughput;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -82,8 +84,7 @@ public class EngineDefaults implements Serializable {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * Provides an identifier to allow retrieval of paginated results.
      *
@@ -116,15 +117,13 @@ public class EngineDefaults implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Contains a list of engine default parameters.
      *
      * @return Contains a list of engine default parameters.
      */
     public java.util.List<Parameter> getParameters() {
-        
         if (parameters == null) {
               parameters = new com.amazonaws.internal.ListWithAutoConstructFlag<Parameter>();
               parameters.setAutoConstruct(true);
@@ -186,7 +185,7 @@ public class EngineDefaults implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of parameters specific to a particular cache node type. Each
      * element in the list contains detailed information about one parameter.
@@ -195,7 +194,6 @@ public class EngineDefaults implements Serializable {
      *         element in the list contains detailed information about one parameter.
      */
     public java.util.List<CacheNodeTypeSpecificParameter> getCacheNodeTypeSpecificParameters() {
-        
         if (cacheNodeTypeSpecificParameters == null) {
               cacheNodeTypeSpecificParameters = new com.amazonaws.internal.ListWithAutoConstructFlag<CacheNodeTypeSpecificParameter>();
               cacheNodeTypeSpecificParameters.setAutoConstruct(true);
@@ -263,7 +261,7 @@ public class EngineDefaults implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

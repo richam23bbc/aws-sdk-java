@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DescribeNetworkInterfaceAttributeRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#describeNetworkInterfaceAttribute(DescribeNetworkInterfaceAttributeRequest) DescribeNetworkInterfaceAttribute operation}.
@@ -68,8 +70,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends AmazonWebServiceRe
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -102,8 +103,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends AmazonWebServiceRe
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the SourceDestCheck property for this object.
      *
@@ -136,8 +136,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends AmazonWebServiceRe
         this.sourceDestCheck = sourceDestCheck;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Groups property for this object.
      *
@@ -170,8 +169,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends AmazonWebServiceRe
         this.groups = groups;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Attachment property for this object.
      *
@@ -204,8 +202,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends AmazonWebServiceRe
         this.attachment = attachment;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

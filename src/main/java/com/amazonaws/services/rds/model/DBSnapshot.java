@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -32,13 +34,13 @@ import java.io.Serializable;
 public class DBSnapshot implements Serializable {
 
     /**
-     * Specifies the identifier for the DB Snapshot.
+     * Specifies the identifier for the DB snapshot.
      */
     private String dBSnapshotIdentifier;
 
     /**
-     * Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     * Snapshot was created from.
+     * Specifies the DB instance identifier of the DB instance this DB
+     * snapshot was created from.
      */
     private String dBInstanceIdentifier;
 
@@ -58,7 +60,7 @@ public class DBSnapshot implements Serializable {
     private Integer allocatedStorage;
 
     /**
-     * Specifies the status of this DB Snapshot.
+     * Specifies the status of this DB snapshot.
      */
     private String status;
 
@@ -69,13 +71,13 @@ public class DBSnapshot implements Serializable {
     private Integer port;
 
     /**
-     * Specifies the name of the Availability Zone the DB Instance was
-     * located in at the time of the DB Snapshot.
+     * Specifies the name of the Availability Zone the DB instance was
+     * located in at the time of the DB snapshot.
      */
     private String availabilityZone;
 
     /**
-     * Provides the Vpc Id associated with the DB Snapshot.
+     * Provides the Vpc Id associated with the DB snapshot.
      */
     private String vpcId;
 
@@ -85,7 +87,7 @@ public class DBSnapshot implements Serializable {
     private java.util.Date instanceCreateTime;
 
     /**
-     * Provides the master username for the DB Snapshot.
+     * Provides the master username for the DB snapshot.
      */
     private String masterUsername;
 
@@ -95,50 +97,60 @@ public class DBSnapshot implements Serializable {
     private String engineVersion;
 
     /**
-     * License model information for the restored DB Instance.
+     * License model information for the restored DB instance.
      */
     private String licenseModel;
 
     /**
-     * Provides the type of the DB Snapshot.
+     * Provides the type of the DB snapshot.
      */
     private String snapshotType;
 
     /**
      * Specifies the Provisioned IOPS (I/O operations per second) value of
-     * the DB Instance at the time of the snapshot.
+     * the DB instance at the time of the snapshot.
      */
     private Integer iops;
 
     /**
-     * Provides the option group name for the DB Snapshot.
+     * Provides the option group name for the DB snapshot.
      */
     private String optionGroupName;
 
     /**
-     * Specifies the identifier for the DB Snapshot.
+     * The percentage of the estimated data that has been transferred.
+     */
+    private Integer percentProgress;
+
+    /**
+     * The region that the DB snapshot was created in or copied from.
+     */
+    private String sourceRegion;
+
+    /**
+     * Specifies the identifier for the DB snapshot.
      *
-     * @return Specifies the identifier for the DB Snapshot.
+     * @return Specifies the identifier for the DB snapshot.
      */
     public String getDBSnapshotIdentifier() {
         return dBSnapshotIdentifier;
     }
     
     /**
-     * Specifies the identifier for the DB Snapshot.
+     * Specifies the identifier for the DB snapshot.
      *
-     * @param dBSnapshotIdentifier Specifies the identifier for the DB Snapshot.
+     * @param dBSnapshotIdentifier Specifies the identifier for the DB snapshot.
      */
     public void setDBSnapshotIdentifier(String dBSnapshotIdentifier) {
         this.dBSnapshotIdentifier = dBSnapshotIdentifier;
     }
     
     /**
-     * Specifies the identifier for the DB Snapshot.
+     * Specifies the identifier for the DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSnapshotIdentifier Specifies the identifier for the DB Snapshot.
+     * @param dBSnapshotIdentifier Specifies the identifier for the DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -147,38 +159,37 @@ public class DBSnapshot implements Serializable {
         this.dBSnapshotIdentifier = dBSnapshotIdentifier;
         return this;
     }
-    
-    
+
     /**
-     * Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     * Snapshot was created from.
+     * Specifies the DB instance identifier of the DB instance this DB
+     * snapshot was created from.
      *
-     * @return Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     *         Snapshot was created from.
+     * @return Specifies the DB instance identifier of the DB instance this DB
+     *         snapshot was created from.
      */
     public String getDBInstanceIdentifier() {
         return dBInstanceIdentifier;
     }
     
     /**
-     * Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     * Snapshot was created from.
+     * Specifies the DB instance identifier of the DB instance this DB
+     * snapshot was created from.
      *
-     * @param dBInstanceIdentifier Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     *         Snapshot was created from.
+     * @param dBInstanceIdentifier Specifies the DB instance identifier of the DB instance this DB
+     *         snapshot was created from.
      */
     public void setDBInstanceIdentifier(String dBInstanceIdentifier) {
         this.dBInstanceIdentifier = dBInstanceIdentifier;
     }
     
     /**
-     * Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     * Snapshot was created from.
+     * Specifies the DB instance identifier of the DB instance this DB
+     * snapshot was created from.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBInstanceIdentifier Specifies the the DBInstanceIdentifier of the DB Instance this DB
-     *         Snapshot was created from.
+     * @param dBInstanceIdentifier Specifies the DB instance identifier of the DB instance this DB
+     *         snapshot was created from.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -187,8 +198,7 @@ public class DBSnapshot implements Serializable {
         this.dBInstanceIdentifier = dBInstanceIdentifier;
         return this;
     }
-    
-    
+
     /**
      * Provides the time (UTC) when the snapshot was taken.
      *
@@ -221,8 +231,7 @@ public class DBSnapshot implements Serializable {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
     }
-    
-    
+
     /**
      * Specifies the name of the database engine.
      *
@@ -255,8 +264,7 @@ public class DBSnapshot implements Serializable {
         this.engine = engine;
         return this;
     }
-    
-    
+
     /**
      * Specifies the allocated storage size in gigabytes (GB).
      *
@@ -289,32 +297,31 @@ public class DBSnapshot implements Serializable {
         this.allocatedStorage = allocatedStorage;
         return this;
     }
-    
-    
+
     /**
-     * Specifies the status of this DB Snapshot.
+     * Specifies the status of this DB snapshot.
      *
-     * @return Specifies the status of this DB Snapshot.
+     * @return Specifies the status of this DB snapshot.
      */
     public String getStatus() {
         return status;
     }
     
     /**
-     * Specifies the status of this DB Snapshot.
+     * Specifies the status of this DB snapshot.
      *
-     * @param status Specifies the status of this DB Snapshot.
+     * @param status Specifies the status of this DB snapshot.
      */
     public void setStatus(String status) {
         this.status = status;
     }
     
     /**
-     * Specifies the status of this DB Snapshot.
+     * Specifies the status of this DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param status Specifies the status of this DB Snapshot.
+     * @param status Specifies the status of this DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -323,8 +330,7 @@ public class DBSnapshot implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Specifies the port that the database engine was listening on at the
      * time of the snapshot.
@@ -363,38 +369,37 @@ public class DBSnapshot implements Serializable {
         this.port = port;
         return this;
     }
-    
-    
+
     /**
-     * Specifies the name of the Availability Zone the DB Instance was
-     * located in at the time of the DB Snapshot.
+     * Specifies the name of the Availability Zone the DB instance was
+     * located in at the time of the DB snapshot.
      *
-     * @return Specifies the name of the Availability Zone the DB Instance was
-     *         located in at the time of the DB Snapshot.
+     * @return Specifies the name of the Availability Zone the DB instance was
+     *         located in at the time of the DB snapshot.
      */
     public String getAvailabilityZone() {
         return availabilityZone;
     }
     
     /**
-     * Specifies the name of the Availability Zone the DB Instance was
-     * located in at the time of the DB Snapshot.
+     * Specifies the name of the Availability Zone the DB instance was
+     * located in at the time of the DB snapshot.
      *
-     * @param availabilityZone Specifies the name of the Availability Zone the DB Instance was
-     *         located in at the time of the DB Snapshot.
+     * @param availabilityZone Specifies the name of the Availability Zone the DB instance was
+     *         located in at the time of the DB snapshot.
      */
     public void setAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
     }
     
     /**
-     * Specifies the name of the Availability Zone the DB Instance was
-     * located in at the time of the DB Snapshot.
+     * Specifies the name of the Availability Zone the DB instance was
+     * located in at the time of the DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param availabilityZone Specifies the name of the Availability Zone the DB Instance was
-     *         located in at the time of the DB Snapshot.
+     * @param availabilityZone Specifies the name of the Availability Zone the DB instance was
+     *         located in at the time of the DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -403,32 +408,31 @@ public class DBSnapshot implements Serializable {
         this.availabilityZone = availabilityZone;
         return this;
     }
-    
-    
+
     /**
-     * Provides the Vpc Id associated with the DB Snapshot.
+     * Provides the Vpc Id associated with the DB snapshot.
      *
-     * @return Provides the Vpc Id associated with the DB Snapshot.
+     * @return Provides the Vpc Id associated with the DB snapshot.
      */
     public String getVpcId() {
         return vpcId;
     }
     
     /**
-     * Provides the Vpc Id associated with the DB Snapshot.
+     * Provides the Vpc Id associated with the DB snapshot.
      *
-     * @param vpcId Provides the Vpc Id associated with the DB Snapshot.
+     * @param vpcId Provides the Vpc Id associated with the DB snapshot.
      */
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
     
     /**
-     * Provides the Vpc Id associated with the DB Snapshot.
+     * Provides the Vpc Id associated with the DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param vpcId Provides the Vpc Id associated with the DB Snapshot.
+     * @param vpcId Provides the Vpc Id associated with the DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -437,8 +441,7 @@ public class DBSnapshot implements Serializable {
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * Specifies the time (UTC) when the snapshot was taken.
      *
@@ -471,32 +474,31 @@ public class DBSnapshot implements Serializable {
         this.instanceCreateTime = instanceCreateTime;
         return this;
     }
-    
-    
+
     /**
-     * Provides the master username for the DB Snapshot.
+     * Provides the master username for the DB snapshot.
      *
-     * @return Provides the master username for the DB Snapshot.
+     * @return Provides the master username for the DB snapshot.
      */
     public String getMasterUsername() {
         return masterUsername;
     }
     
     /**
-     * Provides the master username for the DB Snapshot.
+     * Provides the master username for the DB snapshot.
      *
-     * @param masterUsername Provides the master username for the DB Snapshot.
+     * @param masterUsername Provides the master username for the DB snapshot.
      */
     public void setMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
     }
     
     /**
-     * Provides the master username for the DB Snapshot.
+     * Provides the master username for the DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param masterUsername Provides the master username for the DB Snapshot.
+     * @param masterUsername Provides the master username for the DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -505,8 +507,7 @@ public class DBSnapshot implements Serializable {
         this.masterUsername = masterUsername;
         return this;
     }
-    
-    
+
     /**
      * Specifies the version of the database engine.
      *
@@ -539,32 +540,31 @@ public class DBSnapshot implements Serializable {
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
-     * License model information for the restored DB Instance.
+     * License model information for the restored DB instance.
      *
-     * @return License model information for the restored DB Instance.
+     * @return License model information for the restored DB instance.
      */
     public String getLicenseModel() {
         return licenseModel;
     }
     
     /**
-     * License model information for the restored DB Instance.
+     * License model information for the restored DB instance.
      *
-     * @param licenseModel License model information for the restored DB Instance.
+     * @param licenseModel License model information for the restored DB instance.
      */
     public void setLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
     }
     
     /**
-     * License model information for the restored DB Instance.
+     * License model information for the restored DB instance.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param licenseModel License model information for the restored DB Instance.
+     * @param licenseModel License model information for the restored DB instance.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -573,32 +573,31 @@ public class DBSnapshot implements Serializable {
         this.licenseModel = licenseModel;
         return this;
     }
-    
-    
+
     /**
-     * Provides the type of the DB Snapshot.
+     * Provides the type of the DB snapshot.
      *
-     * @return Provides the type of the DB Snapshot.
+     * @return Provides the type of the DB snapshot.
      */
     public String getSnapshotType() {
         return snapshotType;
     }
     
     /**
-     * Provides the type of the DB Snapshot.
+     * Provides the type of the DB snapshot.
      *
-     * @param snapshotType Provides the type of the DB Snapshot.
+     * @param snapshotType Provides the type of the DB snapshot.
      */
     public void setSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
     }
     
     /**
-     * Provides the type of the DB Snapshot.
+     * Provides the type of the DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param snapshotType Provides the type of the DB Snapshot.
+     * @param snapshotType Provides the type of the DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -607,14 +606,13 @@ public class DBSnapshot implements Serializable {
         this.snapshotType = snapshotType;
         return this;
     }
-    
-    
+
     /**
      * Specifies the Provisioned IOPS (I/O operations per second) value of
-     * the DB Instance at the time of the snapshot.
+     * the DB instance at the time of the snapshot.
      *
      * @return Specifies the Provisioned IOPS (I/O operations per second) value of
-     *         the DB Instance at the time of the snapshot.
+     *         the DB instance at the time of the snapshot.
      */
     public Integer getIops() {
         return iops;
@@ -622,10 +620,10 @@ public class DBSnapshot implements Serializable {
     
     /**
      * Specifies the Provisioned IOPS (I/O operations per second) value of
-     * the DB Instance at the time of the snapshot.
+     * the DB instance at the time of the snapshot.
      *
      * @param iops Specifies the Provisioned IOPS (I/O operations per second) value of
-     *         the DB Instance at the time of the snapshot.
+     *         the DB instance at the time of the snapshot.
      */
     public void setIops(Integer iops) {
         this.iops = iops;
@@ -633,12 +631,12 @@ public class DBSnapshot implements Serializable {
     
     /**
      * Specifies the Provisioned IOPS (I/O operations per second) value of
-     * the DB Instance at the time of the snapshot.
+     * the DB instance at the time of the snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param iops Specifies the Provisioned IOPS (I/O operations per second) value of
-     *         the DB Instance at the time of the snapshot.
+     *         the DB instance at the time of the snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -647,32 +645,31 @@ public class DBSnapshot implements Serializable {
         this.iops = iops;
         return this;
     }
-    
-    
+
     /**
-     * Provides the option group name for the DB Snapshot.
+     * Provides the option group name for the DB snapshot.
      *
-     * @return Provides the option group name for the DB Snapshot.
+     * @return Provides the option group name for the DB snapshot.
      */
     public String getOptionGroupName() {
         return optionGroupName;
     }
     
     /**
-     * Provides the option group name for the DB Snapshot.
+     * Provides the option group name for the DB snapshot.
      *
-     * @param optionGroupName Provides the option group name for the DB Snapshot.
+     * @param optionGroupName Provides the option group name for the DB snapshot.
      */
     public void setOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
     }
     
     /**
-     * Provides the option group name for the DB Snapshot.
+     * Provides the option group name for the DB snapshot.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param optionGroupName Provides the option group name for the DB Snapshot.
+     * @param optionGroupName Provides the option group name for the DB snapshot.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -681,8 +678,73 @@ public class DBSnapshot implements Serializable {
         this.optionGroupName = optionGroupName;
         return this;
     }
+
+    /**
+     * The percentage of the estimated data that has been transferred.
+     *
+     * @return The percentage of the estimated data that has been transferred.
+     */
+    public Integer getPercentProgress() {
+        return percentProgress;
+    }
     
+    /**
+     * The percentage of the estimated data that has been transferred.
+     *
+     * @param percentProgress The percentage of the estimated data that has been transferred.
+     */
+    public void setPercentProgress(Integer percentProgress) {
+        this.percentProgress = percentProgress;
+    }
     
+    /**
+     * The percentage of the estimated data that has been transferred.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param percentProgress The percentage of the estimated data that has been transferred.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public DBSnapshot withPercentProgress(Integer percentProgress) {
+        this.percentProgress = percentProgress;
+        return this;
+    }
+
+    /**
+     * The region that the DB snapshot was created in or copied from.
+     *
+     * @return The region that the DB snapshot was created in or copied from.
+     */
+    public String getSourceRegion() {
+        return sourceRegion;
+    }
+    
+    /**
+     * The region that the DB snapshot was created in or copied from.
+     *
+     * @param sourceRegion The region that the DB snapshot was created in or copied from.
+     */
+    public void setSourceRegion(String sourceRegion) {
+        this.sourceRegion = sourceRegion;
+    }
+    
+    /**
+     * The region that the DB snapshot was created in or copied from.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param sourceRegion The region that the DB snapshot was created in or copied from.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public DBSnapshot withSourceRegion(String sourceRegion) {
+        this.sourceRegion = sourceRegion;
+        return this;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -710,7 +772,9 @@ public class DBSnapshot implements Serializable {
         if (getLicenseModel() != null) sb.append("LicenseModel: " + getLicenseModel() + ",");
         if (getSnapshotType() != null) sb.append("SnapshotType: " + getSnapshotType() + ",");
         if (getIops() != null) sb.append("Iops: " + getIops() + ",");
-        if (getOptionGroupName() != null) sb.append("OptionGroupName: " + getOptionGroupName() );
+        if (getOptionGroupName() != null) sb.append("OptionGroupName: " + getOptionGroupName() + ",");
+        if (getPercentProgress() != null) sb.append("PercentProgress: " + getPercentProgress() + ",");
+        if (getSourceRegion() != null) sb.append("SourceRegion: " + getSourceRegion() );
         sb.append("}");
         return sb.toString();
     }
@@ -736,6 +800,8 @@ public class DBSnapshot implements Serializable {
         hashCode = prime * hashCode + ((getSnapshotType() == null) ? 0 : getSnapshotType().hashCode()); 
         hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode()); 
         hashCode = prime * hashCode + ((getOptionGroupName() == null) ? 0 : getOptionGroupName().hashCode()); 
+        hashCode = prime * hashCode + ((getPercentProgress() == null) ? 0 : getPercentProgress().hashCode()); 
+        hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode()); 
         return hashCode;
     }
     
@@ -779,6 +845,10 @@ public class DBSnapshot implements Serializable {
         if (other.getIops() != null && other.getIops().equals(this.getIops()) == false) return false; 
         if (other.getOptionGroupName() == null ^ this.getOptionGroupName() == null) return false;
         if (other.getOptionGroupName() != null && other.getOptionGroupName().equals(this.getOptionGroupName()) == false) return false; 
+        if (other.getPercentProgress() == null ^ this.getPercentProgress() == null) return false;
+        if (other.getPercentProgress() != null && other.getPercentProgress().equals(this.getPercentProgress()) == false) return false; 
+        if (other.getSourceRegion() == null ^ this.getSourceRegion() == null) return false;
+        if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false) return false; 
         return true;
     }
     

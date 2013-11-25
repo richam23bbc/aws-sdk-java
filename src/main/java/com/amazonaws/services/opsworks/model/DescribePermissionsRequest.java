@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describePermissions(DescribePermissionsRequest) DescribePermissions operation}.
@@ -82,8 +84,7 @@ public class DescribePermissionsRequest extends AmazonWebServiceRequest implemen
         this.iamUserArn = iamUserArn;
         return this;
     }
-    
-    
+
     /**
      * The stack ID.
      *
@@ -116,8 +117,7 @@ public class DescribePermissionsRequest extends AmazonWebServiceRequest implemen
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

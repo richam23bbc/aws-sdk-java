@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#createClusterSubnetGroup(CreateClusterSubnetGroupRequest) CreateClusterSubnetGroup operation}.
@@ -115,8 +117,7 @@ public class CreateClusterSubnetGroupRequest extends AmazonWebServiceRequest imp
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
     }
-    
-    
+
     /**
      * A description for the subnet group.
      *
@@ -149,8 +150,7 @@ public class CreateClusterSubnetGroupRequest extends AmazonWebServiceRequest imp
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * An array of VPC subnet IDs. A maximum of 20 subnets can be modified in
      * a single request.
@@ -159,7 +159,6 @@ public class CreateClusterSubnetGroupRequest extends AmazonWebServiceRequest imp
      *         a single request.
      */
     public java.util.List<String> getSubnetIds() {
-        
         if (subnetIds == null) {
               subnetIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               subnetIds.setAutoConstruct(true);
@@ -227,7 +226,7 @@ public class CreateClusterSubnetGroupRequest extends AmazonWebServiceRequest imp
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

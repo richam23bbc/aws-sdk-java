@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -119,8 +121,7 @@ public class ActivityTask implements Serializable {
         this.taskToken = taskToken;
         return this;
     }
-    
-    
+
     /**
      * The unique ID of the task.
      * <p>
@@ -162,8 +163,7 @@ public class ActivityTask implements Serializable {
         this.activityId = activityId;
         return this;
     }
-    
-    
+
     /**
      * The id of the <code>ActivityTaskStarted</code> event recorded in the
      * history.
@@ -202,8 +202,7 @@ public class ActivityTask implements Serializable {
         this.startedEventId = startedEventId;
         return this;
     }
-    
-    
+
     /**
      * The workflow execution that started this activity task.
      *
@@ -236,8 +235,7 @@ public class ActivityTask implements Serializable {
         this.workflowExecution = workflowExecution;
         return this;
     }
-    
-    
+
     /**
      * The type of this activity task.
      *
@@ -270,8 +268,7 @@ public class ActivityTask implements Serializable {
         this.activityType = activityType;
         return this;
     }
-    
-    
+
     /**
      * The inputs provided when the activity task was scheduled. The form of
      * the input is user defined and should be meaningful to the activity
@@ -325,8 +322,7 @@ public class ActivityTask implements Serializable {
         this.input = input;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

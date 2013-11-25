@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
+
 import java.io.Serializable;
+
 
 /**
  * 
@@ -61,8 +63,7 @@ public class GetQueueAttributesResult implements Serializable {
         setAttributes(attributes);
         return this;
     }
-    
-   	
+
     /**
      * A map of attributes to the respective values.
      * <p>
@@ -82,7 +83,7 @@ public class GetQueueAttributesResult implements Serializable {
 		this.attributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Attributes.
 	 * <p>

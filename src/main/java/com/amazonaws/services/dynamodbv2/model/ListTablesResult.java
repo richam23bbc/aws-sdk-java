@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -49,7 +51,6 @@ public class ListTablesResult implements Serializable {
      *         current endpoint.
      */
     public java.util.List<String> getTableNames() {
-        
         return tableNames;
     }
     
@@ -113,7 +114,7 @@ public class ListTablesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The name of the last table in the current list, only if some tables
      * for the account and endpoint have not been returned. This value does
@@ -182,8 +183,7 @@ public class ListTablesResult implements Serializable {
         this.lastEvaluatedTableName = lastEvaluatedTableName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

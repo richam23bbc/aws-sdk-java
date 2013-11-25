@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#describeConfigurationSettings(DescribeConfigurationSettingsRequest) DescribeConfigurationSettings operation}.
@@ -80,8 +82,6 @@ public class DescribeConfigurationSettingsRequest extends AmazonWebServiceReques
      */
     public DescribeConfigurationSettingsRequest() {}
     
-
-
     /**
      * Constructs a new DescribeConfigurationSettingsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -94,8 +94,6 @@ public class DescribeConfigurationSettingsRequest extends AmazonWebServiceReques
         setApplicationName(applicationName);
     }
 
-    
-    
     /**
      * The application for the environment or configuration template.
      * <p>
@@ -137,8 +135,7 @@ public class DescribeConfigurationSettingsRequest extends AmazonWebServiceReques
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * The name of the configuration template to describe. <p> Conditional:
      * You must specify either this parameter or an EnvironmentName, but not
@@ -210,8 +207,7 @@ public class DescribeConfigurationSettingsRequest extends AmazonWebServiceReques
         this.templateName = templateName;
         return this;
     }
-    
-    
+
     /**
      * The name of the environment to describe. <p> Condition: You must
      * specify either this or a TemplateName, but not both. If you specify
@@ -283,8 +279,7 @@ public class DescribeConfigurationSettingsRequest extends AmazonWebServiceReques
         this.environmentName = environmentName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

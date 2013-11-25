@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -51,8 +53,6 @@ public class PlacementGroup implements Serializable {
      */
     public PlacementGroup() {}
     
-
-
     /**
      * Constructs a new PlacementGroup object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -64,8 +64,6 @@ public class PlacementGroup implements Serializable {
         setGroupName(groupName);
     }
 
-    
-    
     /**
      * The name of this <code>PlacementGroup</code>.
      *
@@ -98,8 +96,7 @@ public class PlacementGroup implements Serializable {
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * The strategy to use when allocating Amazon EC2 instances for the
      * <code>PlacementGroup</code>.
@@ -153,8 +150,7 @@ public class PlacementGroup implements Serializable {
         this.strategy = strategy;
         return this;
     }
-    
-    
+
     /**
      * The strategy to use when allocating Amazon EC2 instances for the
      * <code>PlacementGroup</code>.
@@ -192,7 +188,7 @@ public class PlacementGroup implements Serializable {
         this.strategy = strategy.toString();
         return this;
     }
-    
+
     /**
      * The state of this <code>PlacementGroup</code>.
      * <p>
@@ -240,8 +236,7 @@ public class PlacementGroup implements Serializable {
         this.state = state;
         return this;
     }
-    
-    
+
     /**
      * The state of this <code>PlacementGroup</code>.
      * <p>
@@ -275,7 +270,7 @@ public class PlacementGroup implements Serializable {
         this.state = state.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#describeApplications(DescribeApplicationsRequest) DescribeApplications operation}.
@@ -46,7 +48,6 @@ public class DescribeApplicationsRequest extends AmazonWebServiceRequest impleme
      *         descriptions to only include those with the specified names.
      */
     public java.util.List<String> getApplicationNames() {
-        
         if (applicationNames == null) {
               applicationNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               applicationNames.setAutoConstruct(true);
@@ -114,7 +115,7 @@ public class DescribeApplicationsRequest extends AmazonWebServiceRequest impleme
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

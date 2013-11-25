@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudsearch.AmazonCloudSearch#defineRankExpression(DefineRankExpressionRequest) DefineRankExpression operation}.
@@ -114,8 +116,7 @@ public class DefineRankExpressionRequest extends AmazonWebServiceRequest impleme
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A named expression that can be evaluated at search time and used for
      * ranking or thresholding in a search query.
@@ -154,8 +155,7 @@ public class DefineRankExpressionRequest extends AmazonWebServiceRequest impleme
         this.rankExpression = rankExpression;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

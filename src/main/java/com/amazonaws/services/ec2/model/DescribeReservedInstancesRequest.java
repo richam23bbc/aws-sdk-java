@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DescribeReservedInstancesRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#describeReservedInstances(DescribeReservedInstancesRequest) DescribeReservedInstances operation}.
@@ -44,6 +46,9 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
 
     /**
      * The Reserved Instance offering type.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Heavy Utilization, Medium Utilization, Light Utilization
      */
     private String offeringType;
 
@@ -53,7 +58,6 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
      * @return The optional list of Reserved Instance IDs to describe.
      */
     public java.util.List<String> getReservedInstancesIds() {
-        
         if (reservedInstancesIds == null) {
               reservedInstancesIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               reservedInstancesIds.setAutoConstruct(true);
@@ -115,7 +119,7 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * A list of filters used to match properties for ReservedInstances. For
      * a complete reference to the available filter keys for this operation,
@@ -130,7 +134,6 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
      *         EC2 API reference</a>.
      */
     public java.util.List<Filter> getFilters() {
-        
         if (filters == null) {
               filters = new com.amazonaws.internal.ListWithAutoConstructFlag<Filter>();
               filters.setAutoConstruct(true);
@@ -216,11 +219,16 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * The Reserved Instance offering type.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Heavy Utilization, Medium Utilization, Light Utilization
      *
      * @return The Reserved Instance offering type.
+     *
+     * @see OfferingTypeValues
      */
     public String getOfferingType() {
         return offeringType;
@@ -228,8 +236,13 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
     
     /**
      * The Reserved Instance offering type.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Heavy Utilization, Medium Utilization, Light Utilization
      *
      * @param offeringType The Reserved Instance offering type.
+     *
+     * @see OfferingTypeValues
      */
     public void setOfferingType(String offeringType) {
         this.offeringType = offeringType;
@@ -239,18 +252,56 @@ public class DescribeReservedInstancesRequest extends AmazonWebServiceRequest im
      * The Reserved Instance offering type.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Heavy Utilization, Medium Utilization, Light Utilization
      *
      * @param offeringType The Reserved Instance offering type.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see OfferingTypeValues
      */
     public DescribeReservedInstancesRequest withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
     }
+
+    /**
+     * The Reserved Instance offering type.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Heavy Utilization, Medium Utilization, Light Utilization
+     *
+     * @param offeringType The Reserved Instance offering type.
+     *
+     * @see OfferingTypeValues
+     */
+    public void setOfferingType(OfferingTypeValues offeringType) {
+        this.offeringType = offeringType.toString();
+    }
     
-    
+    /**
+     * The Reserved Instance offering type.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>Heavy Utilization, Medium Utilization, Light Utilization
+     *
+     * @param offeringType The Reserved Instance offering type.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see OfferingTypeValues
+     */
+    public DescribeReservedInstancesRequest withOfferingType(OfferingTypeValues offeringType) {
+        this.offeringType = offeringType.toString();
+        return this;
+    }
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

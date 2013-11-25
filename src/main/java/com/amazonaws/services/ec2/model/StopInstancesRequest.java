@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.StopInstancesRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#stopInstances(StopInstancesRequest) StopInstances operation}.
@@ -54,8 +56,6 @@ public class StopInstancesRequest extends AmazonWebServiceRequest implements Ser
      */
     public StopInstancesRequest() {}
     
-
-
     /**
      * Constructs a new StopInstancesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -67,15 +67,12 @@ public class StopInstancesRequest extends AmazonWebServiceRequest implements Ser
         setInstanceIds(instanceIds);
     }
 
-    
-    
     /**
      * The list of Amazon EC2 instances to stop.
      *
      * @return The list of Amazon EC2 instances to stop.
      */
     public java.util.List<String> getInstanceIds() {
-        
         if (instanceIds == null) {
               instanceIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               instanceIds.setAutoConstruct(true);
@@ -137,7 +134,7 @@ public class StopInstancesRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
-    
+
     /**
      * Forces the instance to stop. The instance will not have an opportunity
      * to flush file system caches nor file system meta data. If you use this
@@ -188,8 +185,7 @@ public class StopInstancesRequest extends AmazonWebServiceRequest implements Ser
         this.force = force;
         return this;
     }
-    
-    
+
     /**
      * Forces the instance to stop. The instance will not have an opportunity
      * to flush file system caches nor file system meta data. If you use this
@@ -204,7 +200,7 @@ public class StopInstancesRequest extends AmazonWebServiceRequest implements Ser
     public Boolean getForce() {
         return force;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

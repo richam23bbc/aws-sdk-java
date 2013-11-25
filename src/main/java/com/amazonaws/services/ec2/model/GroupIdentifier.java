@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -61,8 +63,7 @@ public class GroupIdentifier implements Serializable {
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the GroupId property for this object.
      *
@@ -95,8 +96,7 @@ public class GroupIdentifier implements Serializable {
         this.groupId = groupId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

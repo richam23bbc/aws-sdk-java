@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#listDomains(ListDomainsRequest) ListDomains operation}.
@@ -85,8 +87,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.maxNumberOfDomains = maxNumberOfDomains;
         return this;
     }
-    
-    
+
     /**
      * A string informing Amazon SimpleDB where to start the next list of
      * domain names.
@@ -125,8 +126,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

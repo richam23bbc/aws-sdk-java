@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -38,8 +40,6 @@ public class PutRequest implements Serializable {
      */
     public PutRequest() {}
     
-
-
     /**
      * Constructs a new PutRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -56,8 +56,6 @@ public class PutRequest implements Serializable {
         setItem(item);
     }
 
-    
-    
     /**
      * A map of attribute name to attribute values, representing the primary
      * key of an item to be processed by <i>PutItem</i>. All of the table's
@@ -121,8 +119,7 @@ public class PutRequest implements Serializable {
         setItem(item);
         return this;
     }
-    
-   	
+
     /**
      * A map of attribute name to attribute values, representing the primary
      * key of an item to be processed by <i>PutItem</i>. All of the table's
@@ -147,7 +144,7 @@ public class PutRequest implements Serializable {
 		this.item.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Item.
 	 * <p>

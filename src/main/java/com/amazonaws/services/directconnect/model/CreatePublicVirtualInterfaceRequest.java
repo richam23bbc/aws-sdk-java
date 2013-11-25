@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.directconnect.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.directconnect.AmazonDirectConnect#createPublicVirtualInterface(CreatePublicVirtualInterfaceRequest) CreatePublicVirtualInterface operation}.
@@ -33,7 +35,7 @@ public class CreatePublicVirtualInterfaceRequest extends AmazonWebServiceRequest
     private String connectionId;
 
     /**
-     * Detailed information of the public virtual interface to be created.
+     * Detailed information for the public virtual interface to be created.
      * <p>Default: None
      */
     private NewPublicVirtualInterface newPublicVirtualInterface;
@@ -70,13 +72,12 @@ public class CreatePublicVirtualInterfaceRequest extends AmazonWebServiceRequest
         this.connectionId = connectionId;
         return this;
     }
-    
-    
+
     /**
-     * Detailed information of the public virtual interface to be created.
+     * Detailed information for the public virtual interface to be created.
      * <p>Default: None
      *
-     * @return Detailed information of the public virtual interface to be created.
+     * @return Detailed information for the public virtual interface to be created.
      *         <p>Default: None
      */
     public NewPublicVirtualInterface getNewPublicVirtualInterface() {
@@ -84,10 +85,10 @@ public class CreatePublicVirtualInterfaceRequest extends AmazonWebServiceRequest
     }
     
     /**
-     * Detailed information of the public virtual interface to be created.
+     * Detailed information for the public virtual interface to be created.
      * <p>Default: None
      *
-     * @param newPublicVirtualInterface Detailed information of the public virtual interface to be created.
+     * @param newPublicVirtualInterface Detailed information for the public virtual interface to be created.
      *         <p>Default: None
      */
     public void setNewPublicVirtualInterface(NewPublicVirtualInterface newPublicVirtualInterface) {
@@ -95,12 +96,12 @@ public class CreatePublicVirtualInterfaceRequest extends AmazonWebServiceRequest
     }
     
     /**
-     * Detailed information of the public virtual interface to be created.
+     * Detailed information for the public virtual interface to be created.
      * <p>Default: None
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param newPublicVirtualInterface Detailed information of the public virtual interface to be created.
+     * @param newPublicVirtualInterface Detailed information for the public virtual interface to be created.
      *         <p>Default: None
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -110,8 +111,7 @@ public class CreatePublicVirtualInterfaceRequest extends AmazonWebServiceRequest
         this.newPublicVirtualInterface = newPublicVirtualInterface;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

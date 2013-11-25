@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elastictranscoder.AmazonElasticTranscoder#createPipeline(CreatePipelineRequest) CreatePipeline operation}.
@@ -266,8 +268,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 bucket in which you saved the media files that you want
      * to transcode.
@@ -315,8 +316,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.inputBucket = inputBucket;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 bucket in which you want Elastic Transcoder to save the
      * transcoded files. (Use this, or use ContentConfig:Bucket plus
@@ -466,8 +466,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.outputBucket = outputBucket;
         return this;
     }
-    
-    
+
     /**
      * The IAM Amazon Resource Name (ARN) for the role that you want Elastic
      * Transcoder to use to create the pipeline.
@@ -515,8 +514,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.role = role;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Simple Notification Service (Amazon SNS) topic that you
      * want to notify to report job status. <important>To receive
@@ -663,8 +661,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.notifications = notifications;
         return this;
     }
-    
-    
+
     /**
      * The optional <code>ContentConfig</code> object specifies information
      * about the Amazon S3 bucket in which you want Elastic Transcoder to
@@ -1009,8 +1006,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.contentConfig = contentConfig;
         return this;
     }
-    
-    
+
     /**
      * The <code>ThumbnailConfig</code> object specifies several values,
      * including the Amazon S3 bucket in which you want Elastic Transcoder to
@@ -1325,8 +1321,7 @@ public class CreatePipelineRequest extends AmazonWebServiceRequest implements Se
         this.thumbnailConfig = thumbnailConfig;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

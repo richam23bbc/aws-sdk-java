@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.datapipeline.DataPipeline#queryObjects(QueryObjectsRequest) QueryObjects operation}.
@@ -122,8 +124,7 @@ public class QueryObjectsRequest extends AmazonWebServiceRequest implements Seri
         this.pipelineId = pipelineId;
         return this;
     }
-    
-    
+
     /**
      * Query that defines the objects to be returned. The <a>Query</a> object
      * can contain a maximum of ten selectors. The conditions in the query
@@ -174,8 +175,7 @@ public class QueryObjectsRequest extends AmazonWebServiceRequest implements Seri
         this.query = query;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the query applies to components or instances.
      * Allowable values: <code>COMPONENT</code>, <code>INSTANCE</code>,
@@ -232,8 +232,7 @@ public class QueryObjectsRequest extends AmazonWebServiceRequest implements Seri
         this.sphere = sphere;
         return this;
     }
-    
-    
+
     /**
      * The starting point for the results to be returned. The first time you
      * call <a>QueryObjects</a>, this value should be empty. As long as the
@@ -302,8 +301,7 @@ public class QueryObjectsRequest extends AmazonWebServiceRequest implements Seri
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Specifies the maximum number of object names that <a>QueryObjects</a>
      * will return in a single call. The default value is 100.
@@ -342,8 +340,7 @@ public class QueryObjectsRequest extends AmazonWebServiceRequest implements Seri
         this.limit = limit;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -77,8 +79,7 @@ public class GetItemResult implements Serializable {
         setItem(item);
         return this;
     }
-    
-   	
+
     /**
      * A map of attribute names to <i>AttributeValue</i> objects, as
      * specified by <i>AttributesToGet</i>.
@@ -99,7 +100,7 @@ public class GetItemResult implements Serializable {
 		this.item.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Item.
 	 * <p>
@@ -172,8 +173,7 @@ public class GetItemResult implements Serializable {
         this.consumedCapacity = consumedCapacity;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

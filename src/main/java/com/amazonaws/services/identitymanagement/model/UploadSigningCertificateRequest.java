@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#uploadSigningCertificate(UploadSigningCertificateRequest) UploadSigningCertificate operation}.
@@ -23,7 +25,7 @@ import java.io.Serializable;
  * that are signed with a corresponding private key. When you upload the certificate, its default status is <code>Active</code> .
  * </p>
  * <p>
- * If the <code>UserName</code> field is not specified, the user name is determined implicitly based on the AWS Access Key ID used to sign the request.
+ * If the <code>UserName</code> field is not specified, the user name is determined implicitly based on the AWS access key ID used to sign the request.
  * Because this action works for access keys under the AWS account, this API can be used to manage root credentials even if the AWS account has no
  * associated users.
  * </p>
@@ -61,8 +63,6 @@ public class UploadSigningCertificateRequest extends AmazonWebServiceRequest imp
      */
     public UploadSigningCertificateRequest() {}
     
-
-
     /**
      * Constructs a new UploadSigningCertificateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -74,8 +74,6 @@ public class UploadSigningCertificateRequest extends AmazonWebServiceRequest imp
         setCertificateBody(certificateBody);
     }
 
-    
-    
     /**
      * Name of the user the signing certificate is for.
      * <p>
@@ -120,8 +118,7 @@ public class UploadSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The contents of the signing certificate.
      * <p>
@@ -166,8 +163,7 @@ public class UploadSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.certificateBody = certificateBody;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#modifyDBSubnetGroup(ModifyDBSubnetGroupRequest) ModifyDBSubnetGroup operation}.
@@ -27,7 +29,7 @@ import java.io.Serializable;
 public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * The name for the DB Subnet Group. This value is stored as a lowercase
+     * The name for the DB subnet group. This value is stored as a lowercase
      * string. <p>Constraints: Must contain no more than 255 alphanumeric
      * characters or hyphens. Must not be "Default". <p>Example:
      * <code>mySubnetgroup</code>
@@ -35,22 +37,22 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
     private String dBSubnetGroupName;
 
     /**
-     * The description for the DB Subnet Group.
+     * The description for the DB subnet group.
      */
     private String dBSubnetGroupDescription;
 
     /**
-     * The EC2 Subnet IDs for the DB Subnet Group.
+     * The EC2 subnet IDs for the DB subnet group.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<String> subnetIds;
 
     /**
-     * The name for the DB Subnet Group. This value is stored as a lowercase
+     * The name for the DB subnet group. This value is stored as a lowercase
      * string. <p>Constraints: Must contain no more than 255 alphanumeric
      * characters or hyphens. Must not be "Default". <p>Example:
      * <code>mySubnetgroup</code>
      *
-     * @return The name for the DB Subnet Group. This value is stored as a lowercase
+     * @return The name for the DB subnet group. This value is stored as a lowercase
      *         string. <p>Constraints: Must contain no more than 255 alphanumeric
      *         characters or hyphens. Must not be "Default". <p>Example:
      *         <code>mySubnetgroup</code>
@@ -60,12 +62,12 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The name for the DB Subnet Group. This value is stored as a lowercase
+     * The name for the DB subnet group. This value is stored as a lowercase
      * string. <p>Constraints: Must contain no more than 255 alphanumeric
      * characters or hyphens. Must not be "Default". <p>Example:
      * <code>mySubnetgroup</code>
      *
-     * @param dBSubnetGroupName The name for the DB Subnet Group. This value is stored as a lowercase
+     * @param dBSubnetGroupName The name for the DB subnet group. This value is stored as a lowercase
      *         string. <p>Constraints: Must contain no more than 255 alphanumeric
      *         characters or hyphens. Must not be "Default". <p>Example:
      *         <code>mySubnetgroup</code>
@@ -75,14 +77,14 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The name for the DB Subnet Group. This value is stored as a lowercase
+     * The name for the DB subnet group. This value is stored as a lowercase
      * string. <p>Constraints: Must contain no more than 255 alphanumeric
      * characters or hyphens. Must not be "Default". <p>Example:
      * <code>mySubnetgroup</code>
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSubnetGroupName The name for the DB Subnet Group. This value is stored as a lowercase
+     * @param dBSubnetGroupName The name for the DB subnet group. This value is stored as a lowercase
      *         string. <p>Constraints: Must contain no more than 255 alphanumeric
      *         characters or hyphens. Must not be "Default". <p>Example:
      *         <code>mySubnetgroup</code>
@@ -94,32 +96,31 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
         this.dBSubnetGroupName = dBSubnetGroupName;
         return this;
     }
-    
-    
+
     /**
-     * The description for the DB Subnet Group.
+     * The description for the DB subnet group.
      *
-     * @return The description for the DB Subnet Group.
+     * @return The description for the DB subnet group.
      */
     public String getDBSubnetGroupDescription() {
         return dBSubnetGroupDescription;
     }
     
     /**
-     * The description for the DB Subnet Group.
+     * The description for the DB subnet group.
      *
-     * @param dBSubnetGroupDescription The description for the DB Subnet Group.
+     * @param dBSubnetGroupDescription The description for the DB subnet group.
      */
     public void setDBSubnetGroupDescription(String dBSubnetGroupDescription) {
         this.dBSubnetGroupDescription = dBSubnetGroupDescription;
     }
     
     /**
-     * The description for the DB Subnet Group.
+     * The description for the DB subnet group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSubnetGroupDescription The description for the DB Subnet Group.
+     * @param dBSubnetGroupDescription The description for the DB subnet group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -128,15 +129,13 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
         this.dBSubnetGroupDescription = dBSubnetGroupDescription;
         return this;
     }
-    
-    
+
     /**
-     * The EC2 Subnet IDs for the DB Subnet Group.
+     * The EC2 subnet IDs for the DB subnet group.
      *
-     * @return The EC2 Subnet IDs for the DB Subnet Group.
+     * @return The EC2 subnet IDs for the DB subnet group.
      */
     public java.util.List<String> getSubnetIds() {
-        
         if (subnetIds == null) {
               subnetIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               subnetIds.setAutoConstruct(true);
@@ -145,9 +144,9 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The EC2 Subnet IDs for the DB Subnet Group.
+     * The EC2 subnet IDs for the DB subnet group.
      *
-     * @param subnetIds The EC2 Subnet IDs for the DB Subnet Group.
+     * @param subnetIds The EC2 subnet IDs for the DB subnet group.
      */
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
         if (subnetIds == null) {
@@ -160,11 +159,11 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The EC2 Subnet IDs for the DB Subnet Group.
+     * The EC2 subnet IDs for the DB subnet group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param subnetIds The EC2 Subnet IDs for the DB Subnet Group.
+     * @param subnetIds The EC2 subnet IDs for the DB subnet group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -178,11 +177,11 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The EC2 Subnet IDs for the DB Subnet Group.
+     * The EC2 subnet IDs for the DB subnet group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param subnetIds The EC2 Subnet IDs for the DB Subnet Group.
+     * @param subnetIds The EC2 subnet IDs for the DB subnet group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -198,7 +197,7 @@ public class ModifyDBSubnetGroupRequest extends AmazonWebServiceRequest implemen
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

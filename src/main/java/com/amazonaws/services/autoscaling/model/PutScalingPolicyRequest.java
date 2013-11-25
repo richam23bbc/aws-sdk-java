@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#putScalingPolicy(PutScalingPolicyRequest) PutScalingPolicy operation}.
@@ -58,7 +60,10 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
      * Specifies whether the <code>ScalingAdjustment</code> is an absolute
      * number or a percentage of the current capacity. Valid values are
      * <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     * <code>PercentChangeInCapacity</code>.
+     * <code>PercentChangeInCapacity</code>. <p>For more information about
+     * the adjustment types supported by Auto Scaling, see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     * Based on Demand</a>.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 255<br/>
@@ -67,8 +72,11 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
     private String adjustmentType;
 
     /**
-     * The amount of time, in seconds, after a scaling activity completes
-     * before any further trigger-related scaling activities can start.
+     * The amount of time, in seconds, after a scaling activity completes and
+     * before the next scaling activity can start. <p>For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     * Period</a>
      */
     private Integer cooldown;
 
@@ -127,8 +135,7 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The name of the policy you want to create or update.
      * <p>
@@ -173,8 +180,7 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
         this.policyName = policyName;
         return this;
     }
-    
-    
+
     /**
      * The number of instances by which to scale. <code>AdjustmentType</code>
      * determines the interpretation of this number (e.g., as an absolute
@@ -231,13 +237,15 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
         this.scalingAdjustment = scalingAdjustment;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the <code>ScalingAdjustment</code> is an absolute
      * number or a percentage of the current capacity. Valid values are
      * <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     * <code>PercentChangeInCapacity</code>.
+     * <code>PercentChangeInCapacity</code>. <p>For more information about
+     * the adjustment types supported by Auto Scaling, see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     * Based on Demand</a>.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 255<br/>
@@ -246,7 +254,10 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
      * @return Specifies whether the <code>ScalingAdjustment</code> is an absolute
      *         number or a percentage of the current capacity. Valid values are
      *         <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     *         <code>PercentChangeInCapacity</code>.
+     *         <code>PercentChangeInCapacity</code>. <p>For more information about
+     *         the adjustment types supported by Auto Scaling, see <a
+     *         href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     *         Based on Demand</a>.
      */
     public String getAdjustmentType() {
         return adjustmentType;
@@ -256,7 +267,10 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
      * Specifies whether the <code>ScalingAdjustment</code> is an absolute
      * number or a percentage of the current capacity. Valid values are
      * <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     * <code>PercentChangeInCapacity</code>.
+     * <code>PercentChangeInCapacity</code>. <p>For more information about
+     * the adjustment types supported by Auto Scaling, see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     * Based on Demand</a>.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 255<br/>
@@ -265,7 +279,10 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
      * @param adjustmentType Specifies whether the <code>ScalingAdjustment</code> is an absolute
      *         number or a percentage of the current capacity. Valid values are
      *         <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     *         <code>PercentChangeInCapacity</code>.
+     *         <code>PercentChangeInCapacity</code>. <p>For more information about
+     *         the adjustment types supported by Auto Scaling, see <a
+     *         href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     *         Based on Demand</a>.
      */
     public void setAdjustmentType(String adjustmentType) {
         this.adjustmentType = adjustmentType;
@@ -275,7 +292,10 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
      * Specifies whether the <code>ScalingAdjustment</code> is an absolute
      * number or a percentage of the current capacity. Valid values are
      * <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     * <code>PercentChangeInCapacity</code>.
+     * <code>PercentChangeInCapacity</code>. <p>For more information about
+     * the adjustment types supported by Auto Scaling, see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     * Based on Demand</a>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -286,7 +306,10 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
      * @param adjustmentType Specifies whether the <code>ScalingAdjustment</code> is an absolute
      *         number or a percentage of the current capacity. Valid values are
      *         <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and
-     *         <code>PercentChangeInCapacity</code>.
+     *         <code>PercentChangeInCapacity</code>. <p>For more information about
+     *         the adjustment types supported by Auto Scaling, see <a
+     *         href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Scale
+     *         Based on Demand</a>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -295,38 +318,55 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
         this.adjustmentType = adjustmentType;
         return this;
     }
-    
-    
+
     /**
-     * The amount of time, in seconds, after a scaling activity completes
-     * before any further trigger-related scaling activities can start.
+     * The amount of time, in seconds, after a scaling activity completes and
+     * before the next scaling activity can start. <p>For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     * Period</a>
      *
-     * @return The amount of time, in seconds, after a scaling activity completes
-     *         before any further trigger-related scaling activities can start.
+     * @return The amount of time, in seconds, after a scaling activity completes and
+     *         before the next scaling activity can start. <p>For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     *         Period</a>
      */
     public Integer getCooldown() {
         return cooldown;
     }
     
     /**
-     * The amount of time, in seconds, after a scaling activity completes
-     * before any further trigger-related scaling activities can start.
+     * The amount of time, in seconds, after a scaling activity completes and
+     * before the next scaling activity can start. <p>For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     * Period</a>
      *
-     * @param cooldown The amount of time, in seconds, after a scaling activity completes
-     *         before any further trigger-related scaling activities can start.
+     * @param cooldown The amount of time, in seconds, after a scaling activity completes and
+     *         before the next scaling activity can start. <p>For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     *         Period</a>
      */
     public void setCooldown(Integer cooldown) {
         this.cooldown = cooldown;
     }
     
     /**
-     * The amount of time, in seconds, after a scaling activity completes
-     * before any further trigger-related scaling activities can start.
+     * The amount of time, in seconds, after a scaling activity completes and
+     * before the next scaling activity can start. <p>For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     * Period</a>
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param cooldown The amount of time, in seconds, after a scaling activity completes
-     *         before any further trigger-related scaling activities can start.
+     * @param cooldown The amount of time, in seconds, after a scaling activity completes and
+     *         before the next scaling activity can start. <p>For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AS_Concepts.html#Cooldown">Cooldown
+     *         Period</a>
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -335,8 +375,7 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
         this.cooldown = cooldown;
         return this;
     }
-    
-    
+
     /**
      * Used with <code>AdjustmentType</code> with the value
      * <code>PercentChangeInCapacity</code>, the scaling policy changes the
@@ -405,8 +444,7 @@ public class PutScalingPolicyRequest extends AmazonWebServiceRequest implements 
         this.minAdjustmentStep = minAdjustmentStep;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -45,7 +47,6 @@ public class DescribeCasesResult implements Serializable {
      *         title="CaseDetails">CaseDetails</a> objects.
      */
     public java.util.List<CaseDetails> getCases() {
-        
         if (cases == null) {
               cases = new com.amazonaws.internal.ListWithAutoConstructFlag<CaseDetails>();
               cases.setAutoConstruct(true);
@@ -119,7 +120,7 @@ public class DescribeCasesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Defines a resumption point for pagination.
      *
@@ -152,8 +153,7 @@ public class DescribeCasesResult implements Serializable {
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

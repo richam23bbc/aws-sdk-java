@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#deleteSnapshotSchedule(DeleteSnapshotScheduleRequest) DeleteSnapshotSchedule operation}.
@@ -23,66 +25,52 @@ import java.io.Serializable;
  * </p>
  * <p>
  * You can take snapshots of your gateway volumes on a scheduled or ad-hoc basis. This API enables you to delete a snapshot schedule for a volume. For
- * more information, see <a href="http://docs.amazonwebservices.com/storagegateway/latest/userguide/WorkingWithSnapshots.html"> Working with Snapshots
- * </a> . In the <code>DeleteSnapshotSchedule</code> request, you identify the volume by providing its Amazon Resource Name (ARN).
+ * more information, see <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/WorkingWithSnapshots.html"> Working with Snapshots </a> . In
+ * the <code>DeleteSnapshotSchedule</code> request, you identify the volume by providing its Amazon Resource Name (ARN).
  * </p>
  * <p>
- * <b>NOTE:</b> To list or delete a snapshot, you must use the Amazon EC2 API. For more information, go to DeleteSnapshot and DescribeSnapshots in Amazon
- * Elastic Compute Cloud API Reference.
+ * <b>NOTE:</b> To list or delete a snapshot, you must use the Amazon EC2 API. in Amazon Elastic Compute Cloud API Reference.
  * </p>
  *
  * @see com.amazonaws.services.storagegateway.AWSStorageGateway#deleteSnapshotSchedule(DeleteSnapshotScheduleRequest)
  */
 public class DeleteSnapshotScheduleRequest extends AmazonWebServiceRequest implements Serializable {
 
-    /**
-     * The Amazon Resource Name (ARN) of the volume. Use the
-     * <a>ListVolumes</a> operation to return a list of gateway volumes.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Length: </b>50 - 500<br/>
-     */
     private String volumeARN;
 
     /**
-     * The Amazon Resource Name (ARN) of the volume. Use the
-     * <a>ListVolumes</a> operation to return a list of gateway volumes.
+     * Returns the value of the VolumeARN property for this object.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>50 - 500<br/>
      *
-     * @return The Amazon Resource Name (ARN) of the volume. Use the
-     *         <a>ListVolumes</a> operation to return a list of gateway volumes.
+     * @return The value of the VolumeARN property for this object.
      */
     public String getVolumeARN() {
         return volumeARN;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the volume. Use the
-     * <a>ListVolumes</a> operation to return a list of gateway volumes.
+     * Sets the value of the VolumeARN property for this object.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>50 - 500<br/>
      *
-     * @param volumeARN The Amazon Resource Name (ARN) of the volume. Use the
-     *         <a>ListVolumes</a> operation to return a list of gateway volumes.
+     * @param volumeARN The new value for the VolumeARN property for this object.
      */
     public void setVolumeARN(String volumeARN) {
         this.volumeARN = volumeARN;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the volume. Use the
-     * <a>ListVolumes</a> operation to return a list of gateway volumes.
+     * Sets the value of the VolumeARN property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>50 - 500<br/>
      *
-     * @param volumeARN The Amazon Resource Name (ARN) of the volume. Use the
-     *         <a>ListVolumes</a> operation to return a list of gateway volumes.
+     * @param volumeARN The new value for the VolumeARN property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -91,8 +79,7 @@ public class DeleteSnapshotScheduleRequest extends AmazonWebServiceRequest imple
         this.volumeARN = volumeARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

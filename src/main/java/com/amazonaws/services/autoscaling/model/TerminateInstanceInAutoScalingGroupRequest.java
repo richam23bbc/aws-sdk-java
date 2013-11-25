@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#terminateInstanceInAutoScalingGroup(TerminateInstanceInAutoScalingGroupRequest) TerminateInstanceInAutoScalingGroup operation}.
@@ -89,8 +91,7 @@ public class TerminateInstanceInAutoScalingGroupRequest extends AmazonWebService
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether (<i>true</i>) or not (<i>false</i>) terminating this
      * instance should also decrement the size of the
@@ -135,8 +136,7 @@ public class TerminateInstanceInAutoScalingGroupRequest extends AmazonWebService
         this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether (<i>true</i>) or not (<i>false</i>) terminating this
      * instance should also decrement the size of the
@@ -149,7 +149,7 @@ public class TerminateInstanceInAutoScalingGroupRequest extends AmazonWebService
     public Boolean getShouldDecrementDesiredCapacity() {
         return shouldDecrementDesiredCapacity;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

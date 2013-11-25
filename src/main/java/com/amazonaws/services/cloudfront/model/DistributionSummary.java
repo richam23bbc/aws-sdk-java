@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -72,6 +74,12 @@ public class DistributionSummary implements Serializable {
     private CacheBehaviors cacheBehaviors;
 
     /**
+     * A complex type that contains zero or more CustomErrorResponses
+     * elements.
+     */
+    private CustomErrorResponses customErrorResponses;
+
+    /**
      * The comment originally specified when this distribution was created.
      */
     private String comment;
@@ -128,8 +136,7 @@ public class DistributionSummary implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * This response element indicates the current status of the
      * distribution. When the status is Deployed, the distribution's
@@ -180,8 +187,7 @@ public class DistributionSummary implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The date and time the distribution was last modified.
      *
@@ -214,8 +220,7 @@ public class DistributionSummary implements Serializable {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
-    
-    
+
     /**
      * The domain name corresponding to the distribution. For example:
      * d604721fxaaqy9.cloudfront.net.
@@ -254,8 +259,7 @@ public class DistributionSummary implements Serializable {
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about CNAMEs (alternate
      * domain names), if any, for this distribution.
@@ -294,8 +298,7 @@ public class DistributionSummary implements Serializable {
         this.aliases = aliases;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about origins for this
      * distribution.
@@ -334,8 +337,7 @@ public class DistributionSummary implements Serializable {
         this.origins = origins;
         return this;
     }
-    
-    
+
     /**
      * A complex type that describes the default cache behavior if you do not
      * specify a CacheBehavior element or if files don't match any of the
@@ -386,8 +388,7 @@ public class DistributionSummary implements Serializable {
         this.defaultCacheBehavior = defaultCacheBehavior;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains zero or more CacheBehavior elements.
      *
@@ -420,8 +421,46 @@ public class DistributionSummary implements Serializable {
         this.cacheBehaviors = cacheBehaviors;
         return this;
     }
+
+    /**
+     * A complex type that contains zero or more CustomErrorResponses
+     * elements.
+     *
+     * @return A complex type that contains zero or more CustomErrorResponses
+     *         elements.
+     */
+    public CustomErrorResponses getCustomErrorResponses() {
+        return customErrorResponses;
+    }
     
+    /**
+     * A complex type that contains zero or more CustomErrorResponses
+     * elements.
+     *
+     * @param customErrorResponses A complex type that contains zero or more CustomErrorResponses
+     *         elements.
+     */
+    public void setCustomErrorResponses(CustomErrorResponses customErrorResponses) {
+        this.customErrorResponses = customErrorResponses;
+    }
     
+    /**
+     * A complex type that contains zero or more CustomErrorResponses
+     * elements.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param customErrorResponses A complex type that contains zero or more CustomErrorResponses
+     *         elements.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public DistributionSummary withCustomErrorResponses(CustomErrorResponses customErrorResponses) {
+        this.customErrorResponses = customErrorResponses;
+        return this;
+    }
+
     /**
      * The comment originally specified when this distribution was created.
      *
@@ -454,8 +493,7 @@ public class DistributionSummary implements Serializable {
         this.comment = comment;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PriceClass property for this object.
      * <p>
@@ -503,8 +541,7 @@ public class DistributionSummary implements Serializable {
         this.priceClass = priceClass;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the PriceClass property for this object.
      * <p>
@@ -538,7 +575,7 @@ public class DistributionSummary implements Serializable {
         this.priceClass = priceClass.toString();
         return this;
     }
-    
+
     /**
      * Whether the distribution is enabled to accept end user requests for
      * content.
@@ -577,8 +614,7 @@ public class DistributionSummary implements Serializable {
         this.enabled = enabled;
         return this;
     }
-    
-    
+
     /**
      * Whether the distribution is enabled to accept end user requests for
      * content.
@@ -589,7 +625,7 @@ public class DistributionSummary implements Serializable {
     public Boolean getEnabled() {
         return enabled;
     }
-    
+
     /**
      * A complex type that contains information about viewer certificates for
      * this distribution.
@@ -628,8 +664,7 @@ public class DistributionSummary implements Serializable {
         this.viewerCertificate = viewerCertificate;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -650,6 +685,7 @@ public class DistributionSummary implements Serializable {
         if (getOrigins() != null) sb.append("Origins: " + getOrigins() + ",");
         if (getDefaultCacheBehavior() != null) sb.append("DefaultCacheBehavior: " + getDefaultCacheBehavior() + ",");
         if (getCacheBehaviors() != null) sb.append("CacheBehaviors: " + getCacheBehaviors() + ",");
+        if (getCustomErrorResponses() != null) sb.append("CustomErrorResponses: " + getCustomErrorResponses() + ",");
         if (getComment() != null) sb.append("Comment: " + getComment() + ",");
         if (getPriceClass() != null) sb.append("PriceClass: " + getPriceClass() + ",");
         if (isEnabled() != null) sb.append("Enabled: " + isEnabled() + ",");
@@ -671,6 +707,7 @@ public class DistributionSummary implements Serializable {
         hashCode = prime * hashCode + ((getOrigins() == null) ? 0 : getOrigins().hashCode()); 
         hashCode = prime * hashCode + ((getDefaultCacheBehavior() == null) ? 0 : getDefaultCacheBehavior().hashCode()); 
         hashCode = prime * hashCode + ((getCacheBehaviors() == null) ? 0 : getCacheBehaviors().hashCode()); 
+        hashCode = prime * hashCode + ((getCustomErrorResponses() == null) ? 0 : getCustomErrorResponses().hashCode()); 
         hashCode = prime * hashCode + ((getComment() == null) ? 0 : getComment().hashCode()); 
         hashCode = prime * hashCode + ((getPriceClass() == null) ? 0 : getPriceClass().hashCode()); 
         hashCode = prime * hashCode + ((isEnabled() == null) ? 0 : isEnabled().hashCode()); 
@@ -702,6 +739,8 @@ public class DistributionSummary implements Serializable {
         if (other.getDefaultCacheBehavior() != null && other.getDefaultCacheBehavior().equals(this.getDefaultCacheBehavior()) == false) return false; 
         if (other.getCacheBehaviors() == null ^ this.getCacheBehaviors() == null) return false;
         if (other.getCacheBehaviors() != null && other.getCacheBehaviors().equals(this.getCacheBehaviors()) == false) return false; 
+        if (other.getCustomErrorResponses() == null ^ this.getCustomErrorResponses() == null) return false;
+        if (other.getCustomErrorResponses() != null && other.getCustomErrorResponses().equals(this.getCustomErrorResponses()) == false) return false; 
         if (other.getComment() == null ^ this.getComment() == null) return false;
         if (other.getComment() != null && other.getComment().equals(this.getComment()) == false) return false; 
         if (other.getPriceClass() == null ^ this.getPriceClass() == null) return false;

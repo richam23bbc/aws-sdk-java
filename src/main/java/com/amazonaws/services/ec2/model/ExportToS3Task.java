@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Export To S3 Task
@@ -32,7 +34,7 @@ public class ExportToS3Task implements Serializable {
      * Returns the value of the DiskImageFormat property for this object.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>vmdk, vhd
+     * <b>Allowed Values: </b>VMDK, RAW, VHD
      *
      * @return The value of the DiskImageFormat property for this object.
      *
@@ -46,7 +48,7 @@ public class ExportToS3Task implements Serializable {
      * Sets the value of the DiskImageFormat property for this object.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>vmdk, vhd
+     * <b>Allowed Values: </b>VMDK, RAW, VHD
      *
      * @param diskImageFormat The new value for the DiskImageFormat property for this object.
      *
@@ -62,7 +64,7 @@ public class ExportToS3Task implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>vmdk, vhd
+     * <b>Allowed Values: </b>VMDK, RAW, VHD
      *
      * @param diskImageFormat The new value for the DiskImageFormat property for this object.
      *
@@ -75,13 +77,12 @@ public class ExportToS3Task implements Serializable {
         this.diskImageFormat = diskImageFormat;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the DiskImageFormat property for this object.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>vmdk, vhd
+     * <b>Allowed Values: </b>VMDK, RAW, VHD
      *
      * @param diskImageFormat The new value for the DiskImageFormat property for this object.
      *
@@ -97,7 +98,7 @@ public class ExportToS3Task implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>vmdk, vhd
+     * <b>Allowed Values: </b>VMDK, RAW, VHD
      *
      * @param diskImageFormat The new value for the DiskImageFormat property for this object.
      *
@@ -110,7 +111,7 @@ public class ExportToS3Task implements Serializable {
         this.diskImageFormat = diskImageFormat.toString();
         return this;
     }
-    
+
     /**
      * Returns the value of the ContainerFormat property for this object.
      * <p>
@@ -158,8 +159,7 @@ public class ExportToS3Task implements Serializable {
         this.containerFormat = containerFormat;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the ContainerFormat property for this object.
      * <p>
@@ -193,7 +193,7 @@ public class ExportToS3Task implements Serializable {
         this.containerFormat = containerFormat.toString();
         return this;
     }
-    
+
     /**
      * Returns the value of the S3Bucket property for this object.
      *
@@ -226,8 +226,7 @@ public class ExportToS3Task implements Serializable {
         this.s3Bucket = s3Bucket;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the S3Key property for this object.
      *
@@ -260,8 +259,7 @@ public class ExportToS3Task implements Serializable {
         this.s3Key = s3Key;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

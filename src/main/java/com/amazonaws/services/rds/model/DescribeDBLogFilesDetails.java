@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -69,8 +71,7 @@ public class DescribeDBLogFilesDetails implements Serializable {
         this.logFileName = logFileName;
         return this;
     }
-    
-    
+
     /**
      * A POSIX timestamp when the last log entry was written.
      *
@@ -103,8 +104,7 @@ public class DescribeDBLogFilesDetails implements Serializable {
         this.lastWritten = lastWritten;
         return this;
     }
-    
-    
+
     /**
      * The size, in bytes, of the log file for the specified DB instance.
      *
@@ -137,8 +137,7 @@ public class DescribeDBLogFilesDetails implements Serializable {
         this.size = size;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -88,6 +88,9 @@ public class DescribeVolumesRequestMarshaller implements Marshaller<Request<Desc
             if (describeVolumesRequest.getInstanceId() != null) {
                 jsonWriter.key("InstanceId").value(describeVolumesRequest.getInstanceId());
             }
+            if (describeVolumesRequest.getStackId() != null) {
+                jsonWriter.key("StackId").value(describeVolumesRequest.getStackId());
+            }
             if (describeVolumesRequest.getRaidArrayId() != null) {
                 jsonWriter.key("RaidArrayId").value(describeVolumesRequest.getRaidArrayId());
             }
@@ -119,10 +122,5 @@ public class DescribeVolumesRequestMarshaller implements Marshaller<Request<Desc
         
 
         return request;
-    }
-
-    private String getString(String s) {
-        if (s == null) return "";
-        return s;
     }
 }

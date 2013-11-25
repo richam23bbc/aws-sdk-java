@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#requestCancelWorkflowExecution(RequestCancelWorkflowExecutionRequest) RequestCancelWorkflowExecution operation}.
@@ -119,8 +121,7 @@ public class RequestCancelWorkflowExecutionRequest extends AmazonWebServiceReque
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The workflowId of the workflow execution to cancel.
      * <p>
@@ -162,8 +163,7 @@ public class RequestCancelWorkflowExecutionRequest extends AmazonWebServiceReque
         this.workflowId = workflowId;
         return this;
     }
-    
-    
+
     /**
      * The runId of the workflow execution to cancel.
      * <p>
@@ -205,8 +205,7 @@ public class RequestCancelWorkflowExecutionRequest extends AmazonWebServiceReque
         this.runId = runId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

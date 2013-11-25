@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -109,6 +111,13 @@ public class Snapshot implements Serializable {
     private Boolean encrypted;
 
     /**
+     * A boolean that indicates whether the snapshot data is encrypted using
+     * the HSM keys of the source cluster. <code>true</code> indicates that
+     * the data is encrypted using HSM keys.
+     */
+    private Boolean encryptedWithHSM;
+
+    /**
      * A list of the AWS customer accounts authorized to restore the
      * snapshot. Returns <code>null</code> if no accounts are authorized.
      * Visible only to the snapshot owner.
@@ -159,6 +168,11 @@ public class Snapshot implements Serializable {
     private Long elapsedTimeInSeconds;
 
     /**
+     * The source region from which the snapshot was copied.
+     */
+    private String sourceRegion;
+
+    /**
      * The snapshot identifier that is provided in the request.
      *
      * @return The snapshot identifier that is provided in the request.
@@ -190,8 +204,7 @@ public class Snapshot implements Serializable {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The identifier of the cluster for which the snapshot was taken.
      *
@@ -224,8 +237,7 @@ public class Snapshot implements Serializable {
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The time (UTC) when Amazon Redshift began the snapshot. A snapshot
      * contains a copy of the cluster data as of this exact time.
@@ -264,8 +276,7 @@ public class Snapshot implements Serializable {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
     }
-    
-    
+
     /**
      * The snapshot status. The value of the status depends on the API
      * operation used. <ul> <li><a>CreateClusterSnapshot</a> and
@@ -328,8 +339,7 @@ public class Snapshot implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The port that the cluster is listening on.
      *
@@ -362,8 +372,7 @@ public class Snapshot implements Serializable {
         this.port = port;
         return this;
     }
-    
-    
+
     /**
      * The Availability Zone in which the cluster was created.
      *
@@ -396,8 +405,7 @@ public class Snapshot implements Serializable {
         this.availabilityZone = availabilityZone;
         return this;
     }
-    
-    
+
     /**
      * The time (UTC) when the cluster was originally created.
      *
@@ -430,8 +438,7 @@ public class Snapshot implements Serializable {
         this.clusterCreateTime = clusterCreateTime;
         return this;
     }
-    
-    
+
     /**
      * The master user name for the cluster.
      *
@@ -464,8 +471,7 @@ public class Snapshot implements Serializable {
         this.masterUsername = masterUsername;
         return this;
     }
-    
-    
+
     /**
      * The version ID of the Amazon Redshift engine that is running on the
      * cluster.
@@ -504,8 +510,7 @@ public class Snapshot implements Serializable {
         this.clusterVersion = clusterVersion;
         return this;
     }
-    
-    
+
     /**
      * The snapshot type. Snapshots created using
      * <a>CreateClusterSnapshot</a> and <a>CopyClusterSnapshot</a> will be of
@@ -550,8 +555,7 @@ public class Snapshot implements Serializable {
         this.snapshotType = snapshotType;
         return this;
     }
-    
-    
+
     /**
      * The node type of the nodes in the cluster.
      *
@@ -584,8 +588,7 @@ public class Snapshot implements Serializable {
         this.nodeType = nodeType;
         return this;
     }
-    
-    
+
     /**
      * The number of nodes in the cluster.
      *
@@ -618,8 +621,7 @@ public class Snapshot implements Serializable {
         this.numberOfNodes = numberOfNodes;
         return this;
     }
-    
-    
+
     /**
      * The name of the database that was created when the cluster was
      * created.
@@ -658,8 +660,7 @@ public class Snapshot implements Serializable {
         this.dBName = dBName;
         return this;
     }
-    
-    
+
     /**
      * The VPC identifier of the cluster if the snapshot is from a cluster in
      * a VPC. Otherwise, this field is not in the output.
@@ -698,8 +699,7 @@ public class Snapshot implements Serializable {
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, the data in the snapshot is encrypted at rest.
      *
@@ -732,8 +732,7 @@ public class Snapshot implements Serializable {
         this.encrypted = encrypted;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, the data in the snapshot is encrypted at rest.
      *
@@ -742,7 +741,65 @@ public class Snapshot implements Serializable {
     public Boolean getEncrypted() {
         return encrypted;
     }
+
+    /**
+     * A boolean that indicates whether the snapshot data is encrypted using
+     * the HSM keys of the source cluster. <code>true</code> indicates that
+     * the data is encrypted using HSM keys.
+     *
+     * @return A boolean that indicates whether the snapshot data is encrypted using
+     *         the HSM keys of the source cluster. <code>true</code> indicates that
+     *         the data is encrypted using HSM keys.
+     */
+    public Boolean isEncryptedWithHSM() {
+        return encryptedWithHSM;
+    }
     
+    /**
+     * A boolean that indicates whether the snapshot data is encrypted using
+     * the HSM keys of the source cluster. <code>true</code> indicates that
+     * the data is encrypted using HSM keys.
+     *
+     * @param encryptedWithHSM A boolean that indicates whether the snapshot data is encrypted using
+     *         the HSM keys of the source cluster. <code>true</code> indicates that
+     *         the data is encrypted using HSM keys.
+     */
+    public void setEncryptedWithHSM(Boolean encryptedWithHSM) {
+        this.encryptedWithHSM = encryptedWithHSM;
+    }
+    
+    /**
+     * A boolean that indicates whether the snapshot data is encrypted using
+     * the HSM keys of the source cluster. <code>true</code> indicates that
+     * the data is encrypted using HSM keys.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param encryptedWithHSM A boolean that indicates whether the snapshot data is encrypted using
+     *         the HSM keys of the source cluster. <code>true</code> indicates that
+     *         the data is encrypted using HSM keys.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public Snapshot withEncryptedWithHSM(Boolean encryptedWithHSM) {
+        this.encryptedWithHSM = encryptedWithHSM;
+        return this;
+    }
+
+    /**
+     * A boolean that indicates whether the snapshot data is encrypted using
+     * the HSM keys of the source cluster. <code>true</code> indicates that
+     * the data is encrypted using HSM keys.
+     *
+     * @return A boolean that indicates whether the snapshot data is encrypted using
+     *         the HSM keys of the source cluster. <code>true</code> indicates that
+     *         the data is encrypted using HSM keys.
+     */
+    public Boolean getEncryptedWithHSM() {
+        return encryptedWithHSM;
+    }
+
     /**
      * A list of the AWS customer accounts authorized to restore the
      * snapshot. Returns <code>null</code> if no accounts are authorized.
@@ -753,7 +810,6 @@ public class Snapshot implements Serializable {
      *         Visible only to the snapshot owner.
      */
     public java.util.List<AccountWithRestoreAccess> getAccountsWithRestoreAccess() {
-        
         if (accountsWithRestoreAccess == null) {
               accountsWithRestoreAccess = new com.amazonaws.internal.ListWithAutoConstructFlag<AccountWithRestoreAccess>();
               accountsWithRestoreAccess.setAutoConstruct(true);
@@ -827,7 +883,7 @@ public class Snapshot implements Serializable {
 
         return this;
     }
-    
+
     /**
      * For manual snapshots, the AWS customer account used to create or copy
      * the snapshot. For automatic snapshots, the owner of the cluster. The
@@ -878,8 +934,7 @@ public class Snapshot implements Serializable {
         this.ownerAccount = ownerAccount;
         return this;
     }
-    
-    
+
     /**
      * The size of the complete set of backup data that would be used to
      * restore the cluster.
@@ -918,8 +973,7 @@ public class Snapshot implements Serializable {
         this.totalBackupSizeInMegaBytes = totalBackupSizeInMegaBytes;
         return this;
     }
-    
-    
+
     /**
      * The size of the incremental backup.
      *
@@ -952,8 +1006,7 @@ public class Snapshot implements Serializable {
         this.actualIncrementalBackupSizeInMegaBytes = actualIncrementalBackupSizeInMegaBytes;
         return this;
     }
-    
-    
+
     /**
      * The number of megabytes that have been transferred to the snapshot
      * backup.
@@ -992,8 +1045,7 @@ public class Snapshot implements Serializable {
         this.backupProgressInMegaBytes = backupProgressInMegaBytes;
         return this;
     }
-    
-    
+
     /**
      * The number of megabytes per second being transferred to the snapshot
      * backup. Returns <code>0</code> for a completed backup.
@@ -1032,8 +1084,7 @@ public class Snapshot implements Serializable {
         this.currentBackupRateInMegaBytesPerSecond = currentBackupRateInMegaBytesPerSecond;
         return this;
     }
-    
-    
+
     /**
      * The estimate of the time remaining before the snapshot backup will
      * complete. Returns <code>0</code> for a completed backup.
@@ -1072,8 +1123,7 @@ public class Snapshot implements Serializable {
         this.estimatedSecondsToCompletion = estimatedSecondsToCompletion;
         return this;
     }
-    
-    
+
     /**
      * The amount of time an in-progress snapshot backup has been running, or
      * the amount of time it took a completed backup to finish.
@@ -1112,8 +1162,40 @@ public class Snapshot implements Serializable {
         this.elapsedTimeInSeconds = elapsedTimeInSeconds;
         return this;
     }
+
+    /**
+     * The source region from which the snapshot was copied.
+     *
+     * @return The source region from which the snapshot was copied.
+     */
+    public String getSourceRegion() {
+        return sourceRegion;
+    }
     
+    /**
+     * The source region from which the snapshot was copied.
+     *
+     * @param sourceRegion The source region from which the snapshot was copied.
+     */
+    public void setSourceRegion(String sourceRegion) {
+        this.sourceRegion = sourceRegion;
+    }
     
+    /**
+     * The source region from which the snapshot was copied.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param sourceRegion The source region from which the snapshot was copied.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public Snapshot withSourceRegion(String sourceRegion) {
+        this.sourceRegion = sourceRegion;
+        return this;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -1141,6 +1223,7 @@ public class Snapshot implements Serializable {
         if (getDBName() != null) sb.append("DBName: " + getDBName() + ",");
         if (getVpcId() != null) sb.append("VpcId: " + getVpcId() + ",");
         if (isEncrypted() != null) sb.append("Encrypted: " + isEncrypted() + ",");
+        if (isEncryptedWithHSM() != null) sb.append("EncryptedWithHSM: " + isEncryptedWithHSM() + ",");
         if (getAccountsWithRestoreAccess() != null) sb.append("AccountsWithRestoreAccess: " + getAccountsWithRestoreAccess() + ",");
         if (getOwnerAccount() != null) sb.append("OwnerAccount: " + getOwnerAccount() + ",");
         if (getTotalBackupSizeInMegaBytes() != null) sb.append("TotalBackupSizeInMegaBytes: " + getTotalBackupSizeInMegaBytes() + ",");
@@ -1148,7 +1231,8 @@ public class Snapshot implements Serializable {
         if (getBackupProgressInMegaBytes() != null) sb.append("BackupProgressInMegaBytes: " + getBackupProgressInMegaBytes() + ",");
         if (getCurrentBackupRateInMegaBytesPerSecond() != null) sb.append("CurrentBackupRateInMegaBytesPerSecond: " + getCurrentBackupRateInMegaBytesPerSecond() + ",");
         if (getEstimatedSecondsToCompletion() != null) sb.append("EstimatedSecondsToCompletion: " + getEstimatedSecondsToCompletion() + ",");
-        if (getElapsedTimeInSeconds() != null) sb.append("ElapsedTimeInSeconds: " + getElapsedTimeInSeconds() );
+        if (getElapsedTimeInSeconds() != null) sb.append("ElapsedTimeInSeconds: " + getElapsedTimeInSeconds() + ",");
+        if (getSourceRegion() != null) sb.append("SourceRegion: " + getSourceRegion() );
         sb.append("}");
         return sb.toString();
     }
@@ -1173,6 +1257,7 @@ public class Snapshot implements Serializable {
         hashCode = prime * hashCode + ((getDBName() == null) ? 0 : getDBName().hashCode()); 
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode()); 
         hashCode = prime * hashCode + ((isEncrypted() == null) ? 0 : isEncrypted().hashCode()); 
+        hashCode = prime * hashCode + ((isEncryptedWithHSM() == null) ? 0 : isEncryptedWithHSM().hashCode()); 
         hashCode = prime * hashCode + ((getAccountsWithRestoreAccess() == null) ? 0 : getAccountsWithRestoreAccess().hashCode()); 
         hashCode = prime * hashCode + ((getOwnerAccount() == null) ? 0 : getOwnerAccount().hashCode()); 
         hashCode = prime * hashCode + ((getTotalBackupSizeInMegaBytes() == null) ? 0 : getTotalBackupSizeInMegaBytes().hashCode()); 
@@ -1181,6 +1266,7 @@ public class Snapshot implements Serializable {
         hashCode = prime * hashCode + ((getCurrentBackupRateInMegaBytesPerSecond() == null) ? 0 : getCurrentBackupRateInMegaBytesPerSecond().hashCode()); 
         hashCode = prime * hashCode + ((getEstimatedSecondsToCompletion() == null) ? 0 : getEstimatedSecondsToCompletion().hashCode()); 
         hashCode = prime * hashCode + ((getElapsedTimeInSeconds() == null) ? 0 : getElapsedTimeInSeconds().hashCode()); 
+        hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode()); 
         return hashCode;
     }
     
@@ -1222,6 +1308,8 @@ public class Snapshot implements Serializable {
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false) return false; 
         if (other.isEncrypted() == null ^ this.isEncrypted() == null) return false;
         if (other.isEncrypted() != null && other.isEncrypted().equals(this.isEncrypted()) == false) return false; 
+        if (other.isEncryptedWithHSM() == null ^ this.isEncryptedWithHSM() == null) return false;
+        if (other.isEncryptedWithHSM() != null && other.isEncryptedWithHSM().equals(this.isEncryptedWithHSM()) == false) return false; 
         if (other.getAccountsWithRestoreAccess() == null ^ this.getAccountsWithRestoreAccess() == null) return false;
         if (other.getAccountsWithRestoreAccess() != null && other.getAccountsWithRestoreAccess().equals(this.getAccountsWithRestoreAccess()) == false) return false; 
         if (other.getOwnerAccount() == null ^ this.getOwnerAccount() == null) return false;
@@ -1238,6 +1326,8 @@ public class Snapshot implements Serializable {
         if (other.getEstimatedSecondsToCompletion() != null && other.getEstimatedSecondsToCompletion().equals(this.getEstimatedSecondsToCompletion()) == false) return false; 
         if (other.getElapsedTimeInSeconds() == null ^ this.getElapsedTimeInSeconds() == null) return false;
         if (other.getElapsedTimeInSeconds() != null && other.getElapsedTimeInSeconds().equals(this.getElapsedTimeInSeconds()) == false) return false; 
+        if (other.getSourceRegion() == null ^ this.getSourceRegion() == null) return false;
+        if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false) return false; 
         return true;
     }
     

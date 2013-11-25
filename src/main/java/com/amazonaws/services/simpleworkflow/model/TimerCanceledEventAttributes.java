@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -86,8 +88,7 @@ public class TimerCanceledEventAttributes implements Serializable {
         this.timerId = timerId;
         return this;
     }
-    
-    
+
     /**
      * The id of the <code>TimerStarted</code> event that was recorded when
      * this timer was started. This information can be useful for diagnosing
@@ -132,8 +133,7 @@ public class TimerCanceledEventAttributes implements Serializable {
         this.startedEventId = startedEventId;
         return this;
     }
-    
-    
+
     /**
      * The id of the <code>DecisionTaskCompleted</code> event corresponding
      * to the decision task that resulted in the <code>CancelTimer</code>
@@ -184,8 +184,7 @@ public class TimerCanceledEventAttributes implements Serializable {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeImagesResult implements Serializable {
      * @return The list of the described AMIs.
      */
     public java.util.List<Image> getImages() {
-        
         if (images == null) {
               images = new com.amazonaws.internal.ListWithAutoConstructFlag<Image>();
               images.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeImagesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

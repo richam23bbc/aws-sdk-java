@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -77,8 +79,7 @@ public class PendingModifiedValues implements Serializable {
         this.numCacheNodes = numCacheNodes;
         return this;
     }
-    
-    
+
     /**
      * A list of cache node IDs that are being removed (or will be removed)
      * from the cache cluster. A node ID is a numeric identifier (0001, 0002,
@@ -89,7 +90,6 @@ public class PendingModifiedValues implements Serializable {
      *         etc.).
      */
     public java.util.List<String> getCacheNodeIdsToRemove() {
-        
         if (cacheNodeIdsToRemove == null) {
               cacheNodeIdsToRemove = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               cacheNodeIdsToRemove.setAutoConstruct(true);
@@ -163,7 +163,7 @@ public class PendingModifiedValues implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The new cache engine version that the cache cluster will run.
      *
@@ -196,8 +196,7 @@ public class PendingModifiedValues implements Serializable {
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

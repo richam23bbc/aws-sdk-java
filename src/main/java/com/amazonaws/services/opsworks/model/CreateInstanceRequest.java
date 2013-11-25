@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#createInstance(CreateInstanceRequest) CreateInstance operation}.
@@ -108,6 +110,13 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
     private String availabilityZone;
 
     /**
+     * The ID of the instance's subnet. If the stack is running in a VPC, you
+     * can use this parameter to override the stack's default subnet ID value
+     * and direct AWS OpsWorks to launch the instance in a different subnet.
+     */
+    private String subnetId;
+
+    /**
      * The instance architecture. Instance types do not necessarily support
      * both architectures. For a list of the architectures that are supported
      * by the different instance types, see <a
@@ -174,15 +183,13 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * An array that contains the instance layer IDs.
      *
      * @return An array that contains the instance layer IDs.
      */
     public java.util.List<String> getLayerIds() {
-        
         if (layerIds == null) {
               layerIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               layerIds.setAutoConstruct(true);
@@ -244,7 +251,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
 
         return this;
     }
-    
+
     /**
      * The instance type. AWS OpsWorks supports all instance types except
      * Cluster Compute, Cluster GPU, and High Memory Cluster. For more
@@ -313,8 +320,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.instanceType = instanceType;
         return this;
     }
-    
-    
+
     /**
      * The instance auto scaling type, which has three possible values: <ul>
      * <li><b>AlwaysRunning</b>: A 24/7 instance, which is not affected by
@@ -416,8 +422,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.autoScalingType = autoScalingType;
         return this;
     }
-    
-    
+
     /**
      * The instance auto scaling type, which has three possible values: <ul>
      * <li><b>AlwaysRunning</b>: A 24/7 instance, which is not affected by
@@ -487,7 +492,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.autoScalingType = autoScalingType.toString();
         return this;
     }
-    
+
     /**
      * The instance host name.
      *
@@ -520,8 +525,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.hostname = hostname;
         return this;
     }
-    
-    
+
     /**
      * The instance operating system, which must be set to one of the
      * following. <ul> <li>Standard operating systems: <code>Amazon
@@ -626,8 +630,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.os = os;
         return this;
     }
-    
-    
+
     /**
      * A custom AMI ID to be used to create the instance. The AMI should be
      * based on one of the standard AWS OpsWorks APIs: Amazon Linux or Ubuntu
@@ -678,8 +681,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.amiId = amiId;
         return this;
     }
-    
-    
+
     /**
      * The instance SSH key name.
      *
@@ -712,8 +714,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.sshKeyName = sshKeyName;
         return this;
     }
-    
-    
+
     /**
      * The instance Availability Zone. For more information, see <a
      * href="http://docs.aws.amazon.com/general/latest/gr/rande.html">Regions
@@ -758,8 +759,52 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.availabilityZone = availabilityZone;
         return this;
     }
+
+    /**
+     * The ID of the instance's subnet. If the stack is running in a VPC, you
+     * can use this parameter to override the stack's default subnet ID value
+     * and direct AWS OpsWorks to launch the instance in a different subnet.
+     *
+     * @return The ID of the instance's subnet. If the stack is running in a VPC, you
+     *         can use this parameter to override the stack's default subnet ID value
+     *         and direct AWS OpsWorks to launch the instance in a different subnet.
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
     
+    /**
+     * The ID of the instance's subnet. If the stack is running in a VPC, you
+     * can use this parameter to override the stack's default subnet ID value
+     * and direct AWS OpsWorks to launch the instance in a different subnet.
+     *
+     * @param subnetId The ID of the instance's subnet. If the stack is running in a VPC, you
+     *         can use this parameter to override the stack's default subnet ID value
+     *         and direct AWS OpsWorks to launch the instance in a different subnet.
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
     
+    /**
+     * The ID of the instance's subnet. If the stack is running in a VPC, you
+     * can use this parameter to override the stack's default subnet ID value
+     * and direct AWS OpsWorks to launch the instance in a different subnet.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param subnetId The ID of the instance's subnet. If the stack is running in a VPC, you
+     *         can use this parameter to override the stack's default subnet ID value
+     *         and direct AWS OpsWorks to launch the instance in a different subnet.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public CreateInstanceRequest withSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+        return this;
+    }
+
     /**
      * The instance architecture. Instance types do not necessarily support
      * both architectures. For a list of the architectures that are supported
@@ -831,8 +876,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.architecture = architecture;
         return this;
     }
-    
-    
+
     /**
      * The instance architecture. Instance types do not necessarily support
      * both architectures. For a list of the architectures that are supported
@@ -882,7 +926,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.architecture = architecture.toString();
         return this;
     }
-    
+
     /**
      * The instance root device type. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">Storage
@@ -942,8 +986,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.rootDeviceType = rootDeviceType;
         return this;
     }
-    
-    
+
     /**
      * The instance root device type. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">Storage
@@ -985,7 +1028,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.rootDeviceType = rootDeviceType.toString();
         return this;
     }
-    
+
     /**
      * Whether to install operating system and package updates when the
      * instance boots. The default value is <code>true</code>. To control
@@ -1066,8 +1109,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
     }
-    
-    
+
     /**
      * Whether to install operating system and package updates when the
      * instance boots. The default value is <code>true</code>. To control
@@ -1092,7 +1134,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
     public Boolean getInstallUpdatesOnBoot() {
         return installUpdatesOnBoot;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -1114,6 +1156,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         if (getAmiId() != null) sb.append("AmiId: " + getAmiId() + ",");
         if (getSshKeyName() != null) sb.append("SshKeyName: " + getSshKeyName() + ",");
         if (getAvailabilityZone() != null) sb.append("AvailabilityZone: " + getAvailabilityZone() + ",");
+        if (getSubnetId() != null) sb.append("SubnetId: " + getSubnetId() + ",");
         if (getArchitecture() != null) sb.append("Architecture: " + getArchitecture() + ",");
         if (getRootDeviceType() != null) sb.append("RootDeviceType: " + getRootDeviceType() + ",");
         if (isInstallUpdatesOnBoot() != null) sb.append("InstallUpdatesOnBoot: " + isInstallUpdatesOnBoot() );
@@ -1135,6 +1178,7 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         hashCode = prime * hashCode + ((getAmiId() == null) ? 0 : getAmiId().hashCode()); 
         hashCode = prime * hashCode + ((getSshKeyName() == null) ? 0 : getSshKeyName().hashCode()); 
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode()); 
+        hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode()); 
         hashCode = prime * hashCode + ((getArchitecture() == null) ? 0 : getArchitecture().hashCode()); 
         hashCode = prime * hashCode + ((getRootDeviceType() == null) ? 0 : getRootDeviceType().hashCode()); 
         hashCode = prime * hashCode + ((isInstallUpdatesOnBoot() == null) ? 0 : isInstallUpdatesOnBoot().hashCode()); 
@@ -1167,6 +1211,8 @@ public class CreateInstanceRequest extends AmazonWebServiceRequest implements Se
         if (other.getSshKeyName() != null && other.getSshKeyName().equals(this.getSshKeyName()) == false) return false; 
         if (other.getAvailabilityZone() == null ^ this.getAvailabilityZone() == null) return false;
         if (other.getAvailabilityZone() != null && other.getAvailabilityZone().equals(this.getAvailabilityZone()) == false) return false; 
+        if (other.getSubnetId() == null ^ this.getSubnetId() == null) return false;
+        if (other.getSubnetId() != null && other.getSubnetId().equals(this.getSubnetId()) == false) return false; 
         if (other.getArchitecture() == null ^ this.getArchitecture() == null) return false;
         if (other.getArchitecture() != null && other.getArchitecture().equals(this.getArchitecture()) == false) return false; 
         if (other.getRootDeviceType() == null ^ this.getRootDeviceType() == null) return false;

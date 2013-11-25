@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.dynamodbv2.AmazonDynamoDB#batchWriteItem(BatchWriteItemRequest) BatchWriteItem operation}.
@@ -140,8 +142,6 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
      */
     public BatchWriteItemRequest() {}
     
-
-
     /**
      * Constructs a new BatchWriteItemRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -171,8 +171,6 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
         setRequestItems(requestItems);
     }
 
-    
-    
     /**
      * A map of one or more table names and, for each table, a list of
      * operations to be performed (<i>DeleteRequest</i> or
@@ -323,8 +321,7 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
         setRequestItems(requestItems);
         return this;
     }
-    
-   	
+
     /**
      * A map of one or more table names and, for each table, a list of
      * operations to be performed (<i>DeleteRequest</i> or
@@ -365,7 +362,7 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
 		this.requestItems.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into RequestItems.
 	 * <p>
@@ -435,8 +432,7 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
     }
-    
-    
+
     /**
      * If set to <code>TOTAL</code>, <i>ConsumedCapacity</i> is included in
      * the response; if set to <code>NONE</code> (the default),
@@ -478,7 +474,7 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
         this.returnConsumedCapacity = returnConsumedCapacity.toString();
         return this;
     }
-    
+
     /**
      * If set to <code>SIZE</code>, statistics about item collections, if
      * any, that were modified during the operation are returned in the
@@ -544,8 +540,7 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
         this.returnItemCollectionMetrics = returnItemCollectionMetrics;
         return this;
     }
-    
-    
+
     /**
      * If set to <code>SIZE</code>, statistics about item collections, if
      * any, that were modified during the operation are returned in the
@@ -591,7 +586,7 @@ public class BatchWriteItemRequest extends AmazonWebServiceRequest implements Se
         this.returnItemCollectionMetrics = returnItemCollectionMetrics.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

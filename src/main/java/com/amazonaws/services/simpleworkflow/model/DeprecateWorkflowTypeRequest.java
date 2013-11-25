@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#deprecateWorkflowType(DeprecateWorkflowTypeRequest) DeprecateWorkflowType operation}.
@@ -108,8 +110,7 @@ public class DeprecateWorkflowTypeRequest extends AmazonWebServiceRequest implem
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The workflow type to deprecate.
      *
@@ -142,8 +143,7 @@ public class DeprecateWorkflowTypeRequest extends AmazonWebServiceRequest implem
         this.workflowType = workflowType;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

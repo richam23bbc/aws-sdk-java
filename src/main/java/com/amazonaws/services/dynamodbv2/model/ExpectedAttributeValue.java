@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,6 @@ public class ExpectedAttributeValue implements Serializable {
      */
     public ExpectedAttributeValue() {}
     
-
-
     /**
      * Constructs a new ExpectedAttributeValue object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -77,10 +77,6 @@ public class ExpectedAttributeValue implements Serializable {
     public ExpectedAttributeValue(AttributeValue value) {
         setValue(value);
     }
-
-    
-    
-
 
     /**
      * Constructs a new ExpectedAttributeValue object.
@@ -116,8 +112,6 @@ public class ExpectedAttributeValue implements Serializable {
         setExists(exists);
     }
 
-    
-    
     /**
      * Represents the data for an attribute. You can set one, and only one,
      * of the elements.
@@ -156,8 +150,7 @@ public class ExpectedAttributeValue implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * Causes Amazon DynamoDB to evaluate the value before attempting a
      * conditional operation: <ul> <li> <p>If <i>Exists</i> is
@@ -328,8 +321,7 @@ public class ExpectedAttributeValue implements Serializable {
         this.exists = exists;
         return this;
     }
-    
-    
+
     /**
      * Causes Amazon DynamoDB to evaluate the value before attempting a
      * conditional operation: <ul> <li> <p>If <i>Exists</i> is
@@ -384,7 +376,7 @@ public class ExpectedAttributeValue implements Serializable {
     public Boolean getExists() {
         return exists;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

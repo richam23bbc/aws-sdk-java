@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -55,8 +57,6 @@ public class MFADevice implements Serializable {
      */
     public MFADevice() {}
     
-
-
     /**
      * Constructs a new MFADevice object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -74,8 +74,6 @@ public class MFADevice implements Serializable {
         setEnableDate(enableDate);
     }
 
-    
-    
     /**
      * The user with whom the MFA device is associated.
      * <p>
@@ -120,8 +118,7 @@ public class MFADevice implements Serializable {
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The serial number that uniquely identifies the MFA device. For virtual
      * MFA devices, the serial number is the device ARN.
@@ -172,8 +169,7 @@ public class MFADevice implements Serializable {
         this.serialNumber = serialNumber;
         return this;
     }
-    
-    
+
     /**
      * The date when the MFA device was enabled for the user.
      *
@@ -206,8 +202,7 @@ public class MFADevice implements Serializable {
         this.enableDate = enableDate;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

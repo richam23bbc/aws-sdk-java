@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -42,7 +44,6 @@ public class DescribeStackEventsResult implements Serializable {
      * @return A list of <code>StackEvents</code> structures.
      */
     public java.util.List<StackEvent> getStackEvents() {
-        
         if (stackEvents == null) {
               stackEvents = new com.amazonaws.internal.ListWithAutoConstructFlag<StackEvent>();
               stackEvents.setAutoConstruct(true);
@@ -104,7 +105,7 @@ public class DescribeStackEventsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * String that identifies the start of the next list of events, if there
      * is one.
@@ -152,8 +153,7 @@ public class DescribeStackEventsResult implements Serializable {
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

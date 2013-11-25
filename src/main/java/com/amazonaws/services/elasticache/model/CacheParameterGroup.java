@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -70,8 +72,7 @@ public class CacheParameterGroup implements Serializable {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache parameter group family that this cache parameter
      * group is compatible with.
@@ -110,8 +111,7 @@ public class CacheParameterGroup implements Serializable {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The description for this cache parameter group.
      *
@@ -144,8 +144,7 @@ public class CacheParameterGroup implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

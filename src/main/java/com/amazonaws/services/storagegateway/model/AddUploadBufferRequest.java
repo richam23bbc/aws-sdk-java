@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#addUploadBuffer(AddUploadBufferRequest) AddUploadBuffer operation}.
@@ -41,12 +43,6 @@ public class AddUploadBufferRequest extends AmazonWebServiceRequest implements S
      */
     private String gatewayARN;
 
-    /**
-     * An array of strings that identify disks that are to be configured as
-     * upload buffer. Each string in the array must be minimum length of 1
-     * and maximum length of 300. You can get disk IDs from the
-     * <a>ListLocalDisks</a> API.
-     */
     private com.amazonaws.internal.ListWithAutoConstructFlag<String> diskIds;
 
     /**
@@ -102,21 +98,13 @@ public class AddUploadBufferRequest extends AmazonWebServiceRequest implements S
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
-     * An array of strings that identify disks that are to be configured as
-     * upload buffer. Each string in the array must be minimum length of 1
-     * and maximum length of 300. You can get disk IDs from the
-     * <a>ListLocalDisks</a> API.
+     * Returns the value of the DiskIds property for this object.
      *
-     * @return An array of strings that identify disks that are to be configured as
-     *         upload buffer. Each string in the array must be minimum length of 1
-     *         and maximum length of 300. You can get disk IDs from the
-     *         <a>ListLocalDisks</a> API.
+     * @return The value of the DiskIds property for this object.
      */
     public java.util.List<String> getDiskIds() {
-        
         if (diskIds == null) {
               diskIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               diskIds.setAutoConstruct(true);
@@ -125,15 +113,9 @@ public class AddUploadBufferRequest extends AmazonWebServiceRequest implements S
     }
     
     /**
-     * An array of strings that identify disks that are to be configured as
-     * upload buffer. Each string in the array must be minimum length of 1
-     * and maximum length of 300. You can get disk IDs from the
-     * <a>ListLocalDisks</a> API.
+     * Sets the value of the DiskIds property for this object.
      *
-     * @param diskIds An array of strings that identify disks that are to be configured as
-     *         upload buffer. Each string in the array must be minimum length of 1
-     *         and maximum length of 300. You can get disk IDs from the
-     *         <a>ListLocalDisks</a> API.
+     * @param diskIds The new value for the DiskIds property for this object.
      */
     public void setDiskIds(java.util.Collection<String> diskIds) {
         if (diskIds == null) {
@@ -146,17 +128,11 @@ public class AddUploadBufferRequest extends AmazonWebServiceRequest implements S
     }
     
     /**
-     * An array of strings that identify disks that are to be configured as
-     * upload buffer. Each string in the array must be minimum length of 1
-     * and maximum length of 300. You can get disk IDs from the
-     * <a>ListLocalDisks</a> API.
+     * Sets the value of the DiskIds property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param diskIds An array of strings that identify disks that are to be configured as
-     *         upload buffer. Each string in the array must be minimum length of 1
-     *         and maximum length of 300. You can get disk IDs from the
-     *         <a>ListLocalDisks</a> API.
+     * @param diskIds The new value for the DiskIds property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -170,17 +146,11 @@ public class AddUploadBufferRequest extends AmazonWebServiceRequest implements S
     }
     
     /**
-     * An array of strings that identify disks that are to be configured as
-     * upload buffer. Each string in the array must be minimum length of 1
-     * and maximum length of 300. You can get disk IDs from the
-     * <a>ListLocalDisks</a> API.
+     * Sets the value of the DiskIds property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param diskIds An array of strings that identify disks that are to be configured as
-     *         upload buffer. Each string in the array must be minimum length of 1
-     *         and maximum length of 300. You can get disk IDs from the
-     *         <a>ListLocalDisks</a> API.
+     * @param diskIds The new value for the DiskIds property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -196,7 +166,7 @@ public class AddUploadBufferRequest extends AmazonWebServiceRequest implements S
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#describeReservedCacheNodesOfferings(DescribeReservedCacheNodesOfferingsRequest) DescribeReservedCacheNodesOfferings operation}.
@@ -127,8 +129,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
     }
-    
-    
+
     /**
      * The cache node type filter value. Use this parameter to show only the
      * available offerings matching the specified cache node type.
@@ -167,8 +168,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.cacheNodeType = cacheNodeType;
         return this;
     }
-    
-    
+
     /**
      * Duration filter value, specified in years or seconds. Use this
      * parameter to show only reservations for a given duration. <p>Valid
@@ -213,8 +213,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.duration = duration;
         return this;
     }
-    
-    
+
     /**
      * The product description filter value. Use this parameter to show only
      * the available offerings matching the specified product description.
@@ -253,8 +252,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.productDescription = productDescription;
         return this;
     }
-    
-    
+
     /**
      * The offering type filter value. Use this parameter to show only the
      * available offerings matching the specified offering type. <p>Valid
@@ -305,8 +303,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.offeringType = offeringType;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -357,8 +354,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned from a prior request. Use this marker for
      * pagination of results from this operation. If this parameter is
@@ -409,8 +405,7 @@ public class DescribeReservedCacheNodesOfferingsRequest extends AmazonWebService
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

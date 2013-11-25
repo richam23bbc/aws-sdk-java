@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -30,7 +32,7 @@ public class DescribeReservedDBInstancesOfferingsResult implements Serializable 
     private String marker;
 
     /**
-     * A list of reserved DB Instance offerings.
+     * A list of reserved DB instance offerings.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<ReservedDBInstancesOffering> reservedDBInstancesOfferings;
 
@@ -78,15 +80,13 @@ public class DescribeReservedDBInstancesOfferingsResult implements Serializable 
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
-     * A list of reserved DB Instance offerings.
+     * A list of reserved DB instance offerings.
      *
-     * @return A list of reserved DB Instance offerings.
+     * @return A list of reserved DB instance offerings.
      */
     public java.util.List<ReservedDBInstancesOffering> getReservedDBInstancesOfferings() {
-        
         if (reservedDBInstancesOfferings == null) {
               reservedDBInstancesOfferings = new com.amazonaws.internal.ListWithAutoConstructFlag<ReservedDBInstancesOffering>();
               reservedDBInstancesOfferings.setAutoConstruct(true);
@@ -95,9 +95,9 @@ public class DescribeReservedDBInstancesOfferingsResult implements Serializable 
     }
     
     /**
-     * A list of reserved DB Instance offerings.
+     * A list of reserved DB instance offerings.
      *
-     * @param reservedDBInstancesOfferings A list of reserved DB Instance offerings.
+     * @param reservedDBInstancesOfferings A list of reserved DB instance offerings.
      */
     public void setReservedDBInstancesOfferings(java.util.Collection<ReservedDBInstancesOffering> reservedDBInstancesOfferings) {
         if (reservedDBInstancesOfferings == null) {
@@ -110,11 +110,11 @@ public class DescribeReservedDBInstancesOfferingsResult implements Serializable 
     }
     
     /**
-     * A list of reserved DB Instance offerings.
+     * A list of reserved DB instance offerings.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param reservedDBInstancesOfferings A list of reserved DB Instance offerings.
+     * @param reservedDBInstancesOfferings A list of reserved DB instance offerings.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -128,11 +128,11 @@ public class DescribeReservedDBInstancesOfferingsResult implements Serializable 
     }
     
     /**
-     * A list of reserved DB Instance offerings.
+     * A list of reserved DB instance offerings.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param reservedDBInstancesOfferings A list of reserved DB Instance offerings.
+     * @param reservedDBInstancesOfferings A list of reserved DB instance offerings.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -148,7 +148,7 @@ public class DescribeReservedDBInstancesOfferingsResult implements Serializable 
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

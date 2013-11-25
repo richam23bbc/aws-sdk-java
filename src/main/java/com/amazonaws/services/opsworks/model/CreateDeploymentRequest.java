@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#createDeployment(CreateDeploymentRequest) CreateDeployment operation}.
@@ -107,8 +109,7 @@ public class CreateDeploymentRequest extends AmazonWebServiceRequest implements 
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * The app ID. This parameter is required for app deployments, but not
      * for other deployment commands.
@@ -147,15 +148,13 @@ public class CreateDeploymentRequest extends AmazonWebServiceRequest implements 
         this.appId = appId;
         return this;
     }
-    
-    
+
     /**
      * The instance IDs for the deployment targets.
      *
      * @return The instance IDs for the deployment targets.
      */
     public java.util.List<String> getInstanceIds() {
-        
         if (instanceIds == null) {
               instanceIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               instanceIds.setAutoConstruct(true);
@@ -217,7 +216,7 @@ public class CreateDeploymentRequest extends AmazonWebServiceRequest implements 
 
         return this;
     }
-    
+
     /**
      * A <code>DeploymentCommand</code> object that specifies the deployment
      * command and any associated arguments.
@@ -256,8 +255,7 @@ public class CreateDeploymentRequest extends AmazonWebServiceRequest implements 
         this.command = command;
         return this;
     }
-    
-    
+
     /**
      * A user-defined comment.
      *
@@ -290,8 +288,7 @@ public class CreateDeploymentRequest extends AmazonWebServiceRequest implements 
         this.comment = comment;
         return this;
     }
-    
-    
+
     /**
      * A string that contains user-defined, custom JSON. It is used to
      * override the corresponding default stack configuration JSON values.
@@ -360,8 +357,7 @@ public class CreateDeploymentRequest extends AmazonWebServiceRequest implements 
         this.customJson = customJson;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

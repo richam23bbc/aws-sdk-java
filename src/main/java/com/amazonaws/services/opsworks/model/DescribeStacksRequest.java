@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describeStacks(DescribeStacksRequest) DescribeStacks operation}.
@@ -43,7 +45,6 @@ public class DescribeStacksRequest extends AmazonWebServiceRequest implements Se
      *         of every stack.
      */
     public java.util.List<String> getStackIds() {
-        
         if (stackIds == null) {
               stackIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               stackIds.setAutoConstruct(true);
@@ -117,7 +118,7 @@ public class DescribeStacksRequest extends AmazonWebServiceRequest implements Se
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

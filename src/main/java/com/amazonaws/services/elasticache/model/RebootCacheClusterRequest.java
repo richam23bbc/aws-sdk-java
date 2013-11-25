@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#rebootCacheCluster(RebootCacheClusterRequest) RebootCacheCluster operation}.
@@ -53,8 +55,6 @@ public class RebootCacheClusterRequest extends AmazonWebServiceRequest implement
      */
     public RebootCacheClusterRequest() {}
     
-
-
     /**
      * Constructs a new RebootCacheClusterRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -72,8 +72,6 @@ public class RebootCacheClusterRequest extends AmazonWebServiceRequest implement
         setCacheNodeIdsToReboot(cacheNodeIdsToReboot);
     }
 
-    
-    
     /**
      * The cache cluster identifier. This parameter is stored as a lowercase
      * string.
@@ -112,8 +110,7 @@ public class RebootCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheClusterId = cacheClusterId;
         return this;
     }
-    
-    
+
     /**
      * A list of cache cluster node IDs to reboot. A node ID is a numeric
      * identifier (0001, 0002, etc.). To reboot an entire cache cluster,
@@ -124,7 +121,6 @@ public class RebootCacheClusterRequest extends AmazonWebServiceRequest implement
      *         specify all of the cache cluster node IDs.
      */
     public java.util.List<String> getCacheNodeIdsToReboot() {
-        
         if (cacheNodeIdsToReboot == null) {
               cacheNodeIdsToReboot = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               cacheNodeIdsToReboot.setAutoConstruct(true);
@@ -198,7 +194,7 @@ public class RebootCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

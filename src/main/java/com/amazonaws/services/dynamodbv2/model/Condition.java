@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -186,7 +188,6 @@ public class Condition implements Serializable {
      *         query expressions. </note>
      */
     public java.util.List<AttributeValue> getAttributeValueList() {
-        
         return attributeValueList;
     }
     
@@ -310,7 +311,7 @@ public class Condition implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Represents a comparator for evaluating attributes. For example,
      * equals, greater than, less than, etc. <p>Valid comparison operators
@@ -904,8 +905,7 @@ public class Condition implements Serializable {
         this.comparisonOperator = comparisonOperator;
         return this;
     }
-    
-    
+
     /**
      * Represents a comparator for evaluating attributes. For example,
      * equals, greater than, less than, etc. <p>Valid comparison operators
@@ -1303,7 +1303,7 @@ public class Condition implements Serializable {
         this.comparisonOperator = comparisonOperator.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

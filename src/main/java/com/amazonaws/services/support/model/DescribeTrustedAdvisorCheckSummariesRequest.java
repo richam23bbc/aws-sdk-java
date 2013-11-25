@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.support.AWSSupport#describeTrustedAdvisorCheckSummaries(DescribeTrustedAdvisorCheckSummariesRequest) DescribeTrustedAdvisorCheckSummaries operation}.
@@ -43,7 +45,6 @@ public class DescribeTrustedAdvisorCheckSummariesRequest extends AmazonWebServic
      * @return Unique identifier for a Trusted Advisor check.
      */
     public java.util.List<String> getCheckIds() {
-        
         if (checkIds == null) {
               checkIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               checkIds.setAutoConstruct(true);
@@ -105,7 +106,7 @@ public class DescribeTrustedAdvisorCheckSummariesRequest extends AmazonWebServic
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

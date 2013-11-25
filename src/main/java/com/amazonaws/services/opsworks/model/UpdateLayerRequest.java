@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#updateLayer(UpdateLayerRequest) UpdateLayer operation}.
@@ -83,9 +85,20 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
     /**
      * Whether to automatically assign an <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     * IP address</a> to the layer.
+     * IP address</a> to the layer's instances. For more information, see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
      */
     private Boolean autoAssignElasticIps;
+
+    /**
+     * For stacks that are running in a VPC, whether to automatically assign
+     * a public IP address to the layer's instances. For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
+     */
+    private Boolean autoAssignPublicIps;
 
     /**
      * A <code>LayerCustomRecipes</code> object that specifies the layer's
@@ -138,8 +151,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.layerId = layerId;
         return this;
     }
-    
-    
+
     /**
      * The layer name, which is used by the console.
      *
@@ -172,8 +184,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The layer short name, which is used internally by AWS OpsWorksand by
      * Chef. The short name is also used as the name for the directory where
@@ -224,8 +235,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.shortname = shortname;
         return this;
     }
-    
-    
+
     /**
      * One or more user-defined key/value pairs to be added to the stack
      * attributes bag.
@@ -268,8 +278,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         setAttributes(attributes);
         return this;
     }
-    
-   	
+
     /**
      * One or more user-defined key/value pairs to be added to the stack
      * attributes bag.
@@ -290,7 +299,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
 		this.attributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Attributes.
 	 * <p>
@@ -351,15 +360,13 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.customInstanceProfileArn = customInstanceProfileArn;
         return this;
     }
-    
-    
+
     /**
      * An array containing the layer's custom security group IDs.
      *
      * @return An array containing the layer's custom security group IDs.
      */
     public java.util.List<String> getCustomSecurityGroupIds() {
-        
         if (customSecurityGroupIds == null) {
               customSecurityGroupIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               customSecurityGroupIds.setAutoConstruct(true);
@@ -421,7 +428,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * An array of <code>Package</code> objects that describe the layer's
      * packages.
@@ -430,7 +437,6 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
      *         packages.
      */
     public java.util.List<String> getPackages() {
-        
         if (packages == null) {
               packages = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               packages.setAutoConstruct(true);
@@ -498,7 +504,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * A <code>VolumeConfigurations</code> object that describes the layer's
      * Amazon EBS volumes.
@@ -507,7 +513,6 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
      *         Amazon EBS volumes.
      */
     public java.util.List<VolumeConfiguration> getVolumeConfigurations() {
-        
         if (volumeConfigurations == null) {
               volumeConfigurations = new com.amazonaws.internal.ListWithAutoConstructFlag<VolumeConfiguration>();
               volumeConfigurations.setAutoConstruct(true);
@@ -575,7 +580,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * Whether to disable auto healing for the layer.
      *
@@ -608,8 +613,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.enableAutoHealing = enableAutoHealing;
         return this;
     }
-    
-    
+
     /**
      * Whether to disable auto healing for the layer.
      *
@@ -618,15 +622,19 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
     public Boolean getEnableAutoHealing() {
         return enableAutoHealing;
     }
-    
+
     /**
      * Whether to automatically assign an <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     * IP address</a> to the layer.
+     * IP address</a> to the layer's instances. For more information, see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
      *
      * @return Whether to automatically assign an <a
      *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     *         IP address</a> to the layer.
+     *         IP address</a> to the layer's instances. For more information, see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
      */
     public Boolean isAutoAssignElasticIps() {
         return autoAssignElasticIps;
@@ -635,11 +643,15 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
     /**
      * Whether to automatically assign an <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     * IP address</a> to the layer.
+     * IP address</a> to the layer's instances. For more information, see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
      *
      * @param autoAssignElasticIps Whether to automatically assign an <a
      *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     *         IP address</a> to the layer.
+     *         IP address</a> to the layer's instances. For more information, see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
      */
     public void setAutoAssignElasticIps(Boolean autoAssignElasticIps) {
         this.autoAssignElasticIps = autoAssignElasticIps;
@@ -648,13 +660,17 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
     /**
      * Whether to automatically assign an <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     * IP address</a> to the layer.
+     * IP address</a> to the layer's instances. For more information, see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param autoAssignElasticIps Whether to automatically assign an <a
      *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     *         IP address</a> to the layer.
+     *         IP address</a> to the layer's instances. For more information, see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -663,21 +679,98 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.autoAssignElasticIps = autoAssignElasticIps;
         return this;
     }
-    
-    
+
     /**
      * Whether to automatically assign an <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     * IP address</a> to the layer.
+     * IP address</a> to the layer's instances. For more information, see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
      *
      * @return Whether to automatically assign an <a
      *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
-     *         IP address</a> to the layer.
+     *         IP address</a> to the layer's instances. For more information, see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
      */
     public Boolean getAutoAssignElasticIps() {
         return autoAssignElasticIps;
     }
+
+    /**
+     * For stacks that are running in a VPC, whether to automatically assign
+     * a public IP address to the layer's instances. For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
+     *
+     * @return For stacks that are running in a VPC, whether to automatically assign
+     *         a public IP address to the layer's instances. For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
+     */
+    public Boolean isAutoAssignPublicIps() {
+        return autoAssignPublicIps;
+    }
     
+    /**
+     * For stacks that are running in a VPC, whether to automatically assign
+     * a public IP address to the layer's instances. For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
+     *
+     * @param autoAssignPublicIps For stacks that are running in a VPC, whether to automatically assign
+     *         a public IP address to the layer's instances. For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
+     */
+    public void setAutoAssignPublicIps(Boolean autoAssignPublicIps) {
+        this.autoAssignPublicIps = autoAssignPublicIps;
+    }
+    
+    /**
+     * For stacks that are running in a VPC, whether to automatically assign
+     * a public IP address to the layer's instances. For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param autoAssignPublicIps For stacks that are running in a VPC, whether to automatically assign
+     *         a public IP address to the layer's instances. For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public UpdateLayerRequest withAutoAssignPublicIps(Boolean autoAssignPublicIps) {
+        this.autoAssignPublicIps = autoAssignPublicIps;
+        return this;
+    }
+
+    /**
+     * For stacks that are running in a VPC, whether to automatically assign
+     * a public IP address to the layer's instances. For more information,
+     * see <a
+     * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     * to Edit a Layer</a>.
+     *
+     * @return For stacks that are running in a VPC, whether to automatically assign
+     *         a public IP address to the layer's instances. For more information,
+     *         see <a
+     *         href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How
+     *         to Edit a Layer</a>.
+     */
+    public Boolean getAutoAssignPublicIps() {
+        return autoAssignPublicIps;
+    }
+
     /**
      * A <code>LayerCustomRecipes</code> object that specifies the layer's
      * custom recipes.
@@ -716,8 +809,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.customRecipes = customRecipes;
         return this;
     }
-    
-    
+
     /**
      * Whether to install operating system and package updates when the
      * instance boots. The default value is <code>true</code>. To control
@@ -798,8 +890,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
     }
-    
-    
+
     /**
      * Whether to install operating system and package updates when the
      * instance boots. The default value is <code>true</code>. To control
@@ -824,7 +915,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
     public Boolean getInstallUpdatesOnBoot() {
         return installUpdatesOnBoot;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -847,6 +938,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         if (getVolumeConfigurations() != null) sb.append("VolumeConfigurations: " + getVolumeConfigurations() + ",");
         if (isEnableAutoHealing() != null) sb.append("EnableAutoHealing: " + isEnableAutoHealing() + ",");
         if (isAutoAssignElasticIps() != null) sb.append("AutoAssignElasticIps: " + isAutoAssignElasticIps() + ",");
+        if (isAutoAssignPublicIps() != null) sb.append("AutoAssignPublicIps: " + isAutoAssignPublicIps() + ",");
         if (getCustomRecipes() != null) sb.append("CustomRecipes: " + getCustomRecipes() + ",");
         if (isInstallUpdatesOnBoot() != null) sb.append("InstallUpdatesOnBoot: " + isInstallUpdatesOnBoot() );
         sb.append("}");
@@ -868,6 +960,7 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         hashCode = prime * hashCode + ((getVolumeConfigurations() == null) ? 0 : getVolumeConfigurations().hashCode()); 
         hashCode = prime * hashCode + ((isEnableAutoHealing() == null) ? 0 : isEnableAutoHealing().hashCode()); 
         hashCode = prime * hashCode + ((isAutoAssignElasticIps() == null) ? 0 : isAutoAssignElasticIps().hashCode()); 
+        hashCode = prime * hashCode + ((isAutoAssignPublicIps() == null) ? 0 : isAutoAssignPublicIps().hashCode()); 
         hashCode = prime * hashCode + ((getCustomRecipes() == null) ? 0 : getCustomRecipes().hashCode()); 
         hashCode = prime * hashCode + ((isInstallUpdatesOnBoot() == null) ? 0 : isInstallUpdatesOnBoot().hashCode()); 
         return hashCode;
@@ -901,6 +994,8 @@ public class UpdateLayerRequest extends AmazonWebServiceRequest implements Seria
         if (other.isEnableAutoHealing() != null && other.isEnableAutoHealing().equals(this.isEnableAutoHealing()) == false) return false; 
         if (other.isAutoAssignElasticIps() == null ^ this.isAutoAssignElasticIps() == null) return false;
         if (other.isAutoAssignElasticIps() != null && other.isAutoAssignElasticIps().equals(this.isAutoAssignElasticIps()) == false) return false; 
+        if (other.isAutoAssignPublicIps() == null ^ this.isAutoAssignPublicIps() == null) return false;
+        if (other.isAutoAssignPublicIps() != null && other.isAutoAssignPublicIps().equals(this.isAutoAssignPublicIps()) == false) return false; 
         if (other.getCustomRecipes() == null ^ this.getCustomRecipes() == null) return false;
         if (other.getCustomRecipes() != null && other.getCustomRecipes().equals(this.getCustomRecipes()) == false) return false; 
         if (other.isInstallUpdatesOnBoot() == null ^ this.isInstallUpdatesOnBoot() == null) return false;

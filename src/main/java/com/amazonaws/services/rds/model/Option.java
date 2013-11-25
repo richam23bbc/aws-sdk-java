@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -53,13 +55,13 @@ public class Option implements Serializable {
     private com.amazonaws.internal.ListWithAutoConstructFlag<OptionSetting> optionSettings;
 
     /**
-     * If the option requires access to a port, then this DB Security Group
+     * If the option requires access to a port, then this DB security group
      * allows access to the port.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<DBSecurityGroupMembership> dBSecurityGroupMemberships;
 
     /**
-     * If the option requires access to a port, then this VPC Security Group
+     * If the option requires access to a port, then this VPC security group
      * allows access to the port.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<VpcSecurityGroupMembership> vpcSecurityGroupMemberships;
@@ -96,8 +98,7 @@ public class Option implements Serializable {
         this.optionName = optionName;
         return this;
     }
-    
-    
+
     /**
      * The description of the option.
      *
@@ -130,8 +131,7 @@ public class Option implements Serializable {
         this.optionDescription = optionDescription;
         return this;
     }
-    
-    
+
     /**
      * Indicate if this option is persistent.
      *
@@ -164,8 +164,7 @@ public class Option implements Serializable {
         this.persistent = persistent;
         return this;
     }
-    
-    
+
     /**
      * Indicate if this option is persistent.
      *
@@ -174,7 +173,7 @@ public class Option implements Serializable {
     public Boolean getPersistent() {
         return persistent;
     }
-    
+
     /**
      * Indicate if this option is permanent.
      *
@@ -207,8 +206,7 @@ public class Option implements Serializable {
         this.permanent = permanent;
         return this;
     }
-    
-    
+
     /**
      * Indicate if this option is permanent.
      *
@@ -217,7 +215,7 @@ public class Option implements Serializable {
     public Boolean getPermanent() {
         return permanent;
     }
-    
+
     /**
      * If required, the port configured for this option to use.
      *
@@ -250,15 +248,13 @@ public class Option implements Serializable {
         this.port = port;
         return this;
     }
-    
-    
+
     /**
      * The option settings for this option.
      *
      * @return The option settings for this option.
      */
     public java.util.List<OptionSetting> getOptionSettings() {
-        
         if (optionSettings == null) {
               optionSettings = new com.amazonaws.internal.ListWithAutoConstructFlag<OptionSetting>();
               optionSettings.setAutoConstruct(true);
@@ -320,16 +316,15 @@ public class Option implements Serializable {
 
         return this;
     }
-    
+
     /**
-     * If the option requires access to a port, then this DB Security Group
+     * If the option requires access to a port, then this DB security group
      * allows access to the port.
      *
-     * @return If the option requires access to a port, then this DB Security Group
+     * @return If the option requires access to a port, then this DB security group
      *         allows access to the port.
      */
     public java.util.List<DBSecurityGroupMembership> getDBSecurityGroupMemberships() {
-        
         if (dBSecurityGroupMemberships == null) {
               dBSecurityGroupMemberships = new com.amazonaws.internal.ListWithAutoConstructFlag<DBSecurityGroupMembership>();
               dBSecurityGroupMemberships.setAutoConstruct(true);
@@ -338,10 +333,10 @@ public class Option implements Serializable {
     }
     
     /**
-     * If the option requires access to a port, then this DB Security Group
+     * If the option requires access to a port, then this DB security group
      * allows access to the port.
      *
-     * @param dBSecurityGroupMemberships If the option requires access to a port, then this DB Security Group
+     * @param dBSecurityGroupMemberships If the option requires access to a port, then this DB security group
      *         allows access to the port.
      */
     public void setDBSecurityGroupMemberships(java.util.Collection<DBSecurityGroupMembership> dBSecurityGroupMemberships) {
@@ -355,12 +350,12 @@ public class Option implements Serializable {
     }
     
     /**
-     * If the option requires access to a port, then this DB Security Group
+     * If the option requires access to a port, then this DB security group
      * allows access to the port.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSecurityGroupMemberships If the option requires access to a port, then this DB Security Group
+     * @param dBSecurityGroupMemberships If the option requires access to a port, then this DB security group
      *         allows access to the port.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -375,12 +370,12 @@ public class Option implements Serializable {
     }
     
     /**
-     * If the option requires access to a port, then this DB Security Group
+     * If the option requires access to a port, then this DB security group
      * allows access to the port.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSecurityGroupMemberships If the option requires access to a port, then this DB Security Group
+     * @param dBSecurityGroupMemberships If the option requires access to a port, then this DB security group
      *         allows access to the port.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -397,16 +392,15 @@ public class Option implements Serializable {
 
         return this;
     }
-    
+
     /**
-     * If the option requires access to a port, then this VPC Security Group
+     * If the option requires access to a port, then this VPC security group
      * allows access to the port.
      *
-     * @return If the option requires access to a port, then this VPC Security Group
+     * @return If the option requires access to a port, then this VPC security group
      *         allows access to the port.
      */
     public java.util.List<VpcSecurityGroupMembership> getVpcSecurityGroupMemberships() {
-        
         if (vpcSecurityGroupMemberships == null) {
               vpcSecurityGroupMemberships = new com.amazonaws.internal.ListWithAutoConstructFlag<VpcSecurityGroupMembership>();
               vpcSecurityGroupMemberships.setAutoConstruct(true);
@@ -415,10 +409,10 @@ public class Option implements Serializable {
     }
     
     /**
-     * If the option requires access to a port, then this VPC Security Group
+     * If the option requires access to a port, then this VPC security group
      * allows access to the port.
      *
-     * @param vpcSecurityGroupMemberships If the option requires access to a port, then this VPC Security Group
+     * @param vpcSecurityGroupMemberships If the option requires access to a port, then this VPC security group
      *         allows access to the port.
      */
     public void setVpcSecurityGroupMemberships(java.util.Collection<VpcSecurityGroupMembership> vpcSecurityGroupMemberships) {
@@ -432,12 +426,12 @@ public class Option implements Serializable {
     }
     
     /**
-     * If the option requires access to a port, then this VPC Security Group
+     * If the option requires access to a port, then this VPC security group
      * allows access to the port.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param vpcSecurityGroupMemberships If the option requires access to a port, then this VPC Security Group
+     * @param vpcSecurityGroupMemberships If the option requires access to a port, then this VPC security group
      *         allows access to the port.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -452,12 +446,12 @@ public class Option implements Serializable {
     }
     
     /**
-     * If the option requires access to a port, then this VPC Security Group
+     * If the option requires access to a port, then this VPC security group
      * allows access to the port.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param vpcSecurityGroupMemberships If the option requires access to a port, then this VPC Security Group
+     * @param vpcSecurityGroupMemberships If the option requires access to a port, then this VPC security group
      *         allows access to the port.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -474,7 +468,7 @@ public class Option implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

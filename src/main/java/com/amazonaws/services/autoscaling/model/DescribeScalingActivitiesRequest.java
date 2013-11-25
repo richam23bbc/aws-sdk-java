@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#describeScalingActivities(DescribeScalingActivitiesRequest) DescribeScalingActivities operation}.
@@ -86,7 +88,6 @@ public class DescribeScalingActivitiesRequest extends AmazonWebServiceRequest im
      *         with no error.
      */
     public java.util.List<String> getActivityIds() {
-        
         if (activityIds == null) {
               activityIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               activityIds.setAutoConstruct(true);
@@ -178,7 +179,7 @@ public class DescribeScalingActivitiesRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * The name of the <a>AutoScalingGroup</a>.
      * <p>
@@ -223,8 +224,7 @@ public class DescribeScalingActivitiesRequest extends AmazonWebServiceRequest im
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of scaling activities to return.
      * <p>
@@ -266,8 +266,7 @@ public class DescribeScalingActivitiesRequest extends AmazonWebServiceRequest im
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * A string that marks the start of the next batch of returned results
      * for pagination.
@@ -315,8 +314,7 @@ public class DescribeScalingActivitiesRequest extends AmazonWebServiceRequest im
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

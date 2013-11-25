@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
+
 import java.io.Serializable;
+
 
 /**
  * 
@@ -31,7 +33,6 @@ public class ListQueuesResult implements Serializable {
      * @return A list of queue URLs, up to 1000 entries.
      */
     public java.util.List<String> getQueueUrls() {
-        
         if (queueUrls == null) {
               queueUrls = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               queueUrls.setAutoConstruct(true);
@@ -93,7 +94,7 @@ public class ListQueuesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

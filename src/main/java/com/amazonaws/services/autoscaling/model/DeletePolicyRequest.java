@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#deletePolicy(DeletePolicyRequest) DeletePolicy operation}.
@@ -88,8 +90,7 @@ public class DeletePolicyRequest extends AmazonWebServiceRequest implements Seri
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The name or PolicyARN of the policy you want to delete.
      * <p>
@@ -134,8 +135,7 @@ public class DeletePolicyRequest extends AmazonWebServiceRequest implements Seri
         this.policyName = policyName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

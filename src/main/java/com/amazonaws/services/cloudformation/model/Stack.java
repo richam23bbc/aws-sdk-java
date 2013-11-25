@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -137,8 +139,7 @@ public class Stack implements Serializable {
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * The name associated with the stack.
      *
@@ -171,8 +172,7 @@ public class Stack implements Serializable {
         this.stackName = stackName;
         return this;
     }
-    
-    
+
     /**
      * User defined description associated with the stack.
      *
@@ -205,15 +205,13 @@ public class Stack implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * A list of <code>Parameter</code> structures.
      *
      * @return A list of <code>Parameter</code> structures.
      */
     public java.util.List<Parameter> getParameters() {
-        
         if (parameters == null) {
               parameters = new com.amazonaws.internal.ListWithAutoConstructFlag<Parameter>();
               parameters.setAutoConstruct(true);
@@ -275,7 +273,7 @@ public class Stack implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Time at which the stack was created.
      *
@@ -308,8 +306,7 @@ public class Stack implements Serializable {
         this.creationTime = creationTime;
         return this;
     }
-    
-    
+
     /**
      * The time the stack was last updated. This field will only be returned
      * if the stack has been updated at least once.
@@ -348,8 +345,7 @@ public class Stack implements Serializable {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
     }
-    
-    
+
     /**
      * Current status of the stack.
      * <p>
@@ -397,8 +393,7 @@ public class Stack implements Serializable {
         this.stackStatus = stackStatus;
         return this;
     }
-    
-    
+
     /**
      * Current status of the stack.
      * <p>
@@ -432,7 +427,7 @@ public class Stack implements Serializable {
         this.stackStatus = stackStatus.toString();
         return this;
     }
-    
+
     /**
      * Success/failure message associated with the stack status.
      *
@@ -465,8 +460,7 @@ public class Stack implements Serializable {
         this.stackStatusReason = stackStatusReason;
         return this;
     }
-    
-    
+
     /**
      * Boolean to enable or disable rollback on stack creation failures: <p>
      * <ul> <li><code>true</code>: disable rollback</li>
@@ -511,8 +505,7 @@ public class Stack implements Serializable {
         this.disableRollback = disableRollback;
         return this;
     }
-    
-    
+
     /**
      * Boolean to enable or disable rollback on stack creation failures: <p>
      * <ul> <li><code>true</code>: disable rollback</li>
@@ -525,7 +518,7 @@ public class Stack implements Serializable {
     public Boolean getDisableRollback() {
         return disableRollback;
     }
-    
+
     /**
      * SNS topic ARNs to which stack related events are published.
      * <p>
@@ -535,7 +528,6 @@ public class Stack implements Serializable {
      * @return SNS topic ARNs to which stack related events are published.
      */
     public java.util.List<String> getNotificationARNs() {
-        
         if (notificationARNs == null) {
               notificationARNs = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               notificationARNs.setAutoConstruct(true);
@@ -606,7 +598,7 @@ public class Stack implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The amount of time within which stack creation should complete.
      * <p>
@@ -648,15 +640,13 @@ public class Stack implements Serializable {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
-    
-    
+
     /**
      * The capabilities allowed in the stack.
      *
      * @return The capabilities allowed in the stack.
      */
     public java.util.List<String> getCapabilities() {
-        
         if (capabilities == null) {
               capabilities = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               capabilities.setAutoConstruct(true);
@@ -718,14 +708,36 @@ public class Stack implements Serializable {
 
         return this;
     }
-    
+
+    /**
+     * The capabilities allowed in the stack.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param capabilities The capabilities allowed in the stack.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public Stack withCapabilities(Capability... capabilities) {
+        java.util.ArrayList<String> capabilitiesCopy = new java.util.ArrayList<String>(capabilities.length);
+        for (Capability member : capabilities) {
+            capabilitiesCopy.add(member.toString());
+        }
+        if (getCapabilities() == null) {
+            setCapabilities(capabilitiesCopy);
+        } else {
+            getCapabilities().addAll(capabilitiesCopy);
+        }
+        return this;
+    }
+
     /**
      * A list of output structures.
      *
      * @return A list of output structures.
      */
     public java.util.List<Output> getOutputs() {
-        
         if (outputs == null) {
               outputs = new com.amazonaws.internal.ListWithAutoConstructFlag<Output>();
               outputs.setAutoConstruct(true);
@@ -787,7 +799,7 @@ public class Stack implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of <code>Tag</code>s that specify cost allocation information
      * for the stack.
@@ -796,7 +808,6 @@ public class Stack implements Serializable {
      *         for the stack.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -864,7 +875,7 @@ public class Stack implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

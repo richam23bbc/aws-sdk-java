@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#listRolePolicies(ListRolePoliciesRequest) ListRolePolicies operation}.
@@ -54,7 +56,8 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -105,8 +108,7 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
         this.roleName = roleName;
         return this;
     }
-    
-    
+
     /**
      * Use this parameter only when paginating results, and only in a
      * subsequent request after you've received a response where the results
@@ -169,13 +171,13 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -183,7 +185,8 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
      * @return Use this parameter only when paginating results to indicate the
      *         maximum number of user names you want in the response. If there are
      *         additional user names beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -193,7 +196,8 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -201,7 +205,8 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
      * @param maxItems Use this parameter only when paginating results to indicate the
      *         maximum number of user names you want in the response. If there are
      *         additional user names beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -211,7 +216,8 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
      * Use this parameter only when paginating results to indicate the
      * maximum number of user names you want in the response. If there are
      * additional user names beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -221,7 +227,8 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
      * @param maxItems Use this parameter only when paginating results to indicate the
      *         maximum number of user names you want in the response. If there are
      *         additional user names beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -230,8 +237,7 @@ public class ListRolePoliciesRequest extends AmazonWebServiceRequest implements 
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

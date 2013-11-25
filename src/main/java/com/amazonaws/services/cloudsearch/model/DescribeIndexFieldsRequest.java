@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudsearch.AmazonCloudSearch#describeIndexFields(DescribeIndexFieldsRequest) DescribeIndexFields operation}.
@@ -113,8 +115,7 @@ public class DescribeIndexFieldsRequest extends AmazonWebServiceRequest implemen
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * Limits the <code>DescribeIndexFields</code> response to the specified
      * fields.
@@ -123,7 +124,6 @@ public class DescribeIndexFieldsRequest extends AmazonWebServiceRequest implemen
      *         fields.
      */
     public java.util.List<String> getFieldNames() {
-        
         if (fieldNames == null) {
               fieldNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               fieldNames.setAutoConstruct(true);
@@ -191,7 +191,7 @@ public class DescribeIndexFieldsRequest extends AmazonWebServiceRequest implemen
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

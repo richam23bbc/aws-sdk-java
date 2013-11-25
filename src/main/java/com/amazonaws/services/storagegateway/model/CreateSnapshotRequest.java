@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#createSnapshot(CreateSnapshotRequest) CreateSnapshot operation}.
@@ -34,8 +36,7 @@ import java.io.Serializable;
  * volume from a snapshot.
  * </p>
  * <p>
- * <b>NOTE:</b>To list or delete a snapshot, you must use the Amazon EC2 API. For more information, go to DeleteSnapshot and DescribeSnapshots in the
- * Amazon Elastic Compute Cloud API Reference.
+ * <b>NOTE:</b>To list or delete a snapshot, you must use the Amazon EC2 API. For more information, .
  * </p>
  *
  * @see com.amazonaws.services.storagegateway.AWSStorageGateway#createSnapshot(CreateSnapshotRequest)
@@ -109,8 +110,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
         this.volumeARN = volumeARN;
         return this;
     }
-    
-    
+
     /**
      * Textual description of the snapshot that appears in the Amazon EC2
      * console, Elastic Block Store snapshots panel in the <b>Description</b>
@@ -170,8 +170,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
         this.snapshotDescription = snapshotDescription;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -132,8 +134,6 @@ public class ResourceRecordSet implements Serializable {
      */
     public ResourceRecordSet() {}
     
-
-
     /**
      * Constructs a new ResourceRecordSet object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -147,8 +147,6 @@ public class ResourceRecordSet implements Serializable {
         setType(type);
     }
 
-    
-    
     /**
      * Constructs a new ResourceRecordSet object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -161,7 +159,7 @@ public class ResourceRecordSet implements Serializable {
         this.name = name;
         this.type = type.toString();
     }
-    
+
     /**
      * The domain name of the current resource record set.
      * <p>
@@ -203,8 +201,7 @@ public class ResourceRecordSet implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The type of the current resource record set.
      * <p>
@@ -252,8 +249,7 @@ public class ResourceRecordSet implements Serializable {
         this.type = type;
         return this;
     }
-    
-    
+
     /**
      * The type of the current resource record set.
      * <p>
@@ -287,7 +283,7 @@ public class ResourceRecordSet implements Serializable {
         this.type = type.toString();
         return this;
     }
-    
+
     /**
      * <i>Weighted, Regional, and Failover resource record sets only:</i> An
      * identifier that differentiates among multiple resource record sets
@@ -341,8 +337,7 @@ public class ResourceRecordSet implements Serializable {
         this.setIdentifier = setIdentifier;
         return this;
     }
-    
-    
+
     /**
      * <i>Weighted resource record sets only:</i> Among resource record sets
      * that have the same combination of DNS name and type, a value that
@@ -402,8 +397,7 @@ public class ResourceRecordSet implements Serializable {
         this.weight = weight;
         return this;
     }
-    
-    
+
     /**
      * <i>Regional resource record sets only:</i> Among resource record sets
      * that have the same combination of DNS name and type, a value that
@@ -466,8 +460,7 @@ public class ResourceRecordSet implements Serializable {
         this.region = region;
         return this;
     }
-    
-    
+
     /**
      * <i>Regional resource record sets only:</i> Among resource record sets
      * that have the same combination of DNS name and type, a value that
@@ -511,7 +504,7 @@ public class ResourceRecordSet implements Serializable {
         this.region = region.toString();
         return this;
     }
-    
+
     /**
      * <i>Failover resource record sets only:</i> Among resource record sets
      * that have the same combination of DNS name and type, a value that
@@ -649,8 +642,7 @@ public class ResourceRecordSet implements Serializable {
         this.failover = failover;
         return this;
     }
-    
-    
+
     /**
      * <i>Failover resource record sets only:</i> Among resource record sets
      * that have the same combination of DNS name and type, a value that
@@ -744,7 +736,7 @@ public class ResourceRecordSet implements Serializable {
         this.failover = failover.toString();
         return this;
     }
-    
+
     /**
      * The cache time to live for the current resource record set.
      * <p>
@@ -786,8 +778,7 @@ public class ResourceRecordSet implements Serializable {
         this.tTL = tTL;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains the resource records for the current
      * resource record set.
@@ -799,7 +790,6 @@ public class ResourceRecordSet implements Serializable {
      *         resource record set.
      */
     public java.util.List<ResourceRecord> getResourceRecords() {
-        
         if (resourceRecords == null) {
               resourceRecords = new com.amazonaws.internal.ListWithAutoConstructFlag<ResourceRecord>();
               resourceRecords.setAutoConstruct(true);
@@ -876,7 +866,7 @@ public class ResourceRecordSet implements Serializable {
 
         return this;
     }
-    
+
     /**
      * <i>Alias resource record sets only:</i> Information about the AWS
      * resource to which you are redirecting traffic.
@@ -915,8 +905,7 @@ public class ResourceRecordSet implements Serializable {
         this.aliasTarget = aliasTarget;
         return this;
     }
-    
-    
+
     /**
      * <i>Health Check resource record sets only, not required for alias
      * resource record sets:</i> An identifier that is used to identify
@@ -970,8 +959,7 @@ public class ResourceRecordSet implements Serializable {
         this.healthCheckId = healthCheckId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

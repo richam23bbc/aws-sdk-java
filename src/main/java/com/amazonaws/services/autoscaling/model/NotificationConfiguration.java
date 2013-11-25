@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -94,8 +96,7 @@ public class NotificationConfiguration implements Serializable {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the Amazon Simple Notification
      * Service (SNS) topic.
@@ -146,8 +147,7 @@ public class NotificationConfiguration implements Serializable {
         this.topicARN = topicARN;
         return this;
     }
-    
-    
+
     /**
      * The types of events for an action to start.
      * <p>
@@ -192,8 +192,7 @@ public class NotificationConfiguration implements Serializable {
         this.notificationType = notificationType;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,8 @@ public class SourceDataTrimTitle implements Serializable {
     private String sourceName;
 
     /**
-     * The value of a field or source document attribute.
+     * The default value to use if the source attribute is not specified in a
+     * document. Optional.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 1024<br/>
@@ -105,41 +108,46 @@ public class SourceDataTrimTitle implements Serializable {
         this.sourceName = sourceName;
         return this;
     }
-    
-    
+
     /**
-     * The value of a field or source document attribute.
+     * The default value to use if the source attribute is not specified in a
+     * document. Optional.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 1024<br/>
      *
-     * @return The value of a field or source document attribute.
+     * @return The default value to use if the source attribute is not specified in a
+     *         document. Optional.
      */
     public String getDefaultValue() {
         return defaultValue;
     }
     
     /**
-     * The value of a field or source document attribute.
+     * The default value to use if the source attribute is not specified in a
+     * document. Optional.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 1024<br/>
      *
-     * @param defaultValue The value of a field or source document attribute.
+     * @param defaultValue The default value to use if the source attribute is not specified in a
+     *         document. Optional.
      */
     public void setDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
     }
     
     /**
-     * The value of a field or source document attribute.
+     * The default value to use if the source attribute is not specified in a
+     * document. Optional.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 1024<br/>
      *
-     * @param defaultValue The value of a field or source document attribute.
+     * @param defaultValue The default value to use if the source attribute is not specified in a
+     *         document. Optional.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -148,8 +156,7 @@ public class SourceDataTrimTitle implements Serializable {
         this.defaultValue = defaultValue;
         return this;
     }
-    
-    
+
     /**
      * The separator that follows the text to trim.
      *
@@ -182,8 +189,7 @@ public class SourceDataTrimTitle implements Serializable {
         this.separator = separator;
         return this;
     }
-    
-    
+
     /**
      * An <a href="http://tools.ietf.org/html/rfc4646">IETF RFC 4646</a>
      * language code. Only the primary language is considered. English (en)
@@ -237,8 +243,7 @@ public class SourceDataTrimTitle implements Serializable {
         this.language = language;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

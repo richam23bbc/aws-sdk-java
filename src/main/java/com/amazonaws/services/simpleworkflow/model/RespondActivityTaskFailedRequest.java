@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#respondActivityTaskFailed(RespondActivityTaskFailedRequest) RespondActivityTaskFailed operation}.
@@ -143,8 +145,7 @@ public class RespondActivityTaskFailedRequest extends AmazonWebServiceRequest im
         this.taskToken = taskToken;
         return this;
     }
-    
-    
+
     /**
      * Description of the error that may assist in diagnostics.
      * <p>
@@ -186,8 +187,7 @@ public class RespondActivityTaskFailedRequest extends AmazonWebServiceRequest im
         this.reason = reason;
         return this;
     }
-    
-    
+
     /**
      * Optional detailed information about the failure.
      * <p>
@@ -229,8 +229,7 @@ public class RespondActivityTaskFailedRequest extends AmazonWebServiceRequest im
         this.details = details;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

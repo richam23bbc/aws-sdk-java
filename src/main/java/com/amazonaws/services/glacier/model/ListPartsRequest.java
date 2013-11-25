@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.glacier.AmazonGlacier#listParts(ListPartsRequest) ListParts operation}.
@@ -87,8 +89,6 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
      */
     public ListPartsRequest() {}
     
-
-
     /**
      * Constructs a new ListPartsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -101,10 +101,6 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         setVaultName(vaultName);
         setUploadId(uploadId);
     }
-
-    
-    
-
 
     /**
      * Constructs a new ListPartsRequest object.
@@ -125,8 +121,6 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         setUploadId(uploadId);
     }
 
-    
-    
     /**
      * The <code>AccountId</code> is the AWS Account ID. You can specify
      * either the AWS Account ID or optionally a '-', in which case Amazon
@@ -183,8 +177,7 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         this.accountId = accountId;
         return this;
     }
-    
-    
+
     /**
      * The name of the vault.
      *
@@ -217,8 +210,7 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         this.vaultName = vaultName;
         return this;
     }
-    
-    
+
     /**
      * The upload ID of the multipart upload.
      *
@@ -251,8 +243,7 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         this.uploadId = uploadId;
         return this;
     }
-    
-    
+
     /**
      * An opaque string used for pagination. This value specifies the part at
      * which the listing of parts should begin. Get the marker value from the
@@ -309,8 +300,7 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Specifies the maximum number of parts returned in the response body.
      * If this value is not specified, the List Parts operation returns up to
@@ -355,8 +345,7 @@ public class ListPartsRequest extends AmazonWebServiceRequest implements Seriali
         this.limit = limit;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

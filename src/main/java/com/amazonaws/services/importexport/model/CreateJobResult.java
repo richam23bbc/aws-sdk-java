@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.importexport.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -91,8 +93,7 @@ public class CreateJobResult implements Serializable {
         this.jobId = jobId;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the job to initiate is an import or export job.
      * <p>
@@ -140,8 +141,7 @@ public class CreateJobResult implements Serializable {
         this.jobType = jobType;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the job to initiate is an import or export job.
      * <p>
@@ -175,7 +175,7 @@ public class CreateJobResult implements Serializable {
         this.jobType = jobType.toString();
         return this;
     }
-    
+
     /**
      * Address you ship your storage device to.
      *
@@ -208,8 +208,7 @@ public class CreateJobResult implements Serializable {
         this.awsShippingAddress = awsShippingAddress;
         return this;
     }
-    
-    
+
     /**
      * An encrypted code used to authenticate the request and response, for
      * example, "DV+TpDfx1/TdSE9ktyK9k/bDTVI=". Only use this value is you
@@ -260,8 +259,7 @@ public class CreateJobResult implements Serializable {
         this.signature = signature;
         return this;
     }
-    
-    
+
     /**
      * The actual text of the SIGNATURE file to be written to disk.
      *
@@ -294,8 +292,7 @@ public class CreateJobResult implements Serializable {
         this.signatureFileContents = signatureFileContents;
         return this;
     }
-    
-    
+
     /**
      * An optional message notifying you of non-fatal issues with the job,
      * such as use of an incompatible Amazon S3 bucket name.
@@ -334,8 +331,7 @@ public class CreateJobResult implements Serializable {
         this.warningMessage = warningMessage;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

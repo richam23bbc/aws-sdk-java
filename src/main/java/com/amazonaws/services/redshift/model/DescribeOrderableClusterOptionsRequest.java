@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#describeOrderableClusterOptions(DescribeOrderableClusterOptionsRequest) DescribeOrderableClusterOptions operation}.
@@ -112,8 +114,7 @@ public class DescribeOrderableClusterOptionsRequest extends AmazonWebServiceRequ
         this.clusterVersion = clusterVersion;
         return this;
     }
-    
-    
+
     /**
      * The node type filter value. Specify this parameter to show only the
      * available offerings matching the specified node type.
@@ -152,8 +153,7 @@ public class DescribeOrderableClusterOptionsRequest extends AmazonWebServiceRequ
         this.nodeType = nodeType;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -210,8 +210,7 @@ public class DescribeOrderableClusterOptionsRequest extends AmazonWebServiceRequ
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned from a previous
      * <b>DescribeOrderableClusterOptions</b> request. If this parameter is
@@ -262,8 +261,7 @@ public class DescribeOrderableClusterOptionsRequest extends AmazonWebServiceRequ
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

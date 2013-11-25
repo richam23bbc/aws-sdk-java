@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -77,8 +79,6 @@ public class InstanceGroupConfig implements Serializable {
      */
     public InstanceGroupConfig() {}
     
-
-
     /**
      * Constructs a new InstanceGroupConfig object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -96,8 +96,6 @@ public class InstanceGroupConfig implements Serializable {
         setInstanceCount(instanceCount);
     }
 
-    
-    
     /**
      * Constructs a new InstanceGroupConfig object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -114,7 +112,7 @@ public class InstanceGroupConfig implements Serializable {
         this.instanceType = instanceType;
         this.instanceCount = instanceCount;
     }
-    
+
     /**
      * Friendly name given to the instance group.
      * <p>
@@ -159,8 +157,7 @@ public class InstanceGroupConfig implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * Market type of the Amazon EC2 instances used to create a cluster node.
      * <p>
@@ -208,8 +205,7 @@ public class InstanceGroupConfig implements Serializable {
         this.market = market;
         return this;
     }
-    
-    
+
     /**
      * Market type of the Amazon EC2 instances used to create a cluster node.
      * <p>
@@ -243,7 +239,7 @@ public class InstanceGroupConfig implements Serializable {
         this.market = market.toString();
         return this;
     }
-    
+
     /**
      * The role of the instance group in the cluster.
      * <p>
@@ -291,8 +287,7 @@ public class InstanceGroupConfig implements Serializable {
         this.instanceRole = instanceRole;
         return this;
     }
-    
-    
+
     /**
      * The role of the instance group in the cluster.
      * <p>
@@ -326,7 +321,7 @@ public class InstanceGroupConfig implements Serializable {
         this.instanceRole = instanceRole.toString();
         return this;
     }
-    
+
     /**
      * Bid price for each Amazon EC2 instance in the instance group when
      * launching nodes as Spot Instances, expressed in USD.
@@ -377,8 +372,7 @@ public class InstanceGroupConfig implements Serializable {
         this.bidPrice = bidPrice;
         return this;
     }
-    
-    
+
     /**
      * The Amazon EC2 instance type for all instances in the instance group.
      * <p>
@@ -423,8 +417,7 @@ public class InstanceGroupConfig implements Serializable {
         this.instanceType = instanceType;
         return this;
     }
-    
-    
+
     /**
      * Target number of instances for the instance group.
      *
@@ -457,8 +450,7 @@ public class InstanceGroupConfig implements Serializable {
         this.instanceCount = instanceCount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

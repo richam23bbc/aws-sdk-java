@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Describe Volume Status Result
@@ -30,7 +32,6 @@ public class DescribeVolumeStatusResult implements Serializable {
      * @return The value of the VolumeStatuses property for this object.
      */
     public java.util.List<VolumeStatusItem> getVolumeStatuses() {
-        
         if (volumeStatuses == null) {
               volumeStatuses = new com.amazonaws.internal.ListWithAutoConstructFlag<VolumeStatusItem>();
               volumeStatuses.setAutoConstruct(true);
@@ -92,7 +93,7 @@ public class DescribeVolumeStatusResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the NextToken property for this object.
      *
@@ -125,8 +126,7 @@ public class DescribeVolumeStatusResult implements Serializable {
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

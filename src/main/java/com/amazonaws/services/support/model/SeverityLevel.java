@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -78,8 +80,7 @@ public class SeverityLevel implements Serializable {
         this.code = code;
         return this;
     }
-    
-    
+
     /**
      * Name of severity levels that correspond to the severity level codes.
      *
@@ -112,8 +113,7 @@ public class SeverityLevel implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#describeAutoScalingGroups(DescribeAutoScalingGroupsRequest) DescribeAutoScalingGroups operation}.
@@ -58,7 +60,6 @@ public class DescribeAutoScalingGroupsRequest extends AmazonWebServiceRequest im
      * @return A list of Auto Scaling group names.
      */
     public java.util.List<String> getAutoScalingGroupNames() {
-        
         if (autoScalingGroupNames == null) {
               autoScalingGroupNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               autoScalingGroupNames.setAutoConstruct(true);
@@ -120,7 +121,7 @@ public class DescribeAutoScalingGroupsRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * A string that marks the start of the next batch of returned results.
      * <p>
@@ -162,8 +163,7 @@ public class DescribeAutoScalingGroupsRequest extends AmazonWebServiceRequest im
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to return.
      * <p>
@@ -205,8 +205,7 @@ public class DescribeAutoScalingGroupsRequest extends AmazonWebServiceRequest im
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

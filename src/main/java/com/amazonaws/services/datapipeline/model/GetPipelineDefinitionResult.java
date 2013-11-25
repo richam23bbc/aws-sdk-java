@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class GetPipelineDefinitionResult implements Serializable {
      * @return An array of objects defined in the pipeline.
      */
     public java.util.List<PipelineObject> getPipelineObjects() {
-        
         if (pipelineObjects == null) {
               pipelineObjects = new com.amazonaws.internal.ListWithAutoConstructFlag<PipelineObject>();
               pipelineObjects.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class GetPipelineDefinitionResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

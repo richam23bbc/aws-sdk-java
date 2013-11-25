@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -50,7 +52,6 @@ public class PutPipelineDefinitionResult implements Serializable {
      *         defined in <code>pipelineObjects</code>.
      */
     public java.util.List<ValidationError> getValidationErrors() {
-        
         if (validationErrors == null) {
               validationErrors = new com.amazonaws.internal.ListWithAutoConstructFlag<ValidationError>();
               validationErrors.setAutoConstruct(true);
@@ -118,7 +119,7 @@ public class PutPipelineDefinitionResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of the validation warnings that are associated with the objects
      * defined in <code>pipelineObjects</code>.
@@ -127,7 +128,6 @@ public class PutPipelineDefinitionResult implements Serializable {
      *         defined in <code>pipelineObjects</code>.
      */
     public java.util.List<ValidationWarning> getValidationWarnings() {
-        
         if (validationWarnings == null) {
               validationWarnings = new com.amazonaws.internal.ListWithAutoConstructFlag<ValidationWarning>();
               validationWarnings.setAutoConstruct(true);
@@ -195,7 +195,7 @@ public class PutPipelineDefinitionResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * If <code>True</code>, there were validation errors. If errored is
      * <code>True</code>, the pipeline definition is stored but cannot be
@@ -246,8 +246,7 @@ public class PutPipelineDefinitionResult implements Serializable {
         this.errored = errored;
         return this;
     }
-    
-    
+
     /**
      * If <code>True</code>, there were validation errors. If errored is
      * <code>True</code>, the pipeline definition is stored but cannot be
@@ -262,7 +261,7 @@ public class PutPipelineDefinitionResult implements Serializable {
     public Boolean getErrored() {
         return errored;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

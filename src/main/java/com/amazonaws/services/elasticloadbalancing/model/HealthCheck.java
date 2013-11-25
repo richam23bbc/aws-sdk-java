@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticloadbalancing.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -84,8 +86,6 @@ public class HealthCheck implements Serializable {
      */
     public HealthCheck() {}
     
-
-
     /**
      * Constructs a new HealthCheck object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -126,8 +126,6 @@ public class HealthCheck implements Serializable {
         setHealthyThreshold(healthyThreshold);
     }
 
-    
-    
     /**
      * Specifies the instance being checked. The protocol is either TCP,
      * HTTP, HTTPS, or SSL. The range of valid ports is one (1) through
@@ -244,8 +242,7 @@ public class HealthCheck implements Serializable {
         this.target = target;
         return this;
     }
-    
-    
+
     /**
      * Specifies the approximate interval, in seconds, between health checks
      * of an individual instance.
@@ -293,8 +290,7 @@ public class HealthCheck implements Serializable {
         this.interval = interval;
         return this;
     }
-    
-    
+
     /**
      * Specifies the amount of time, in seconds, during which no response
      * means a failed health probe. <note> This value must be less than the
@@ -348,8 +344,7 @@ public class HealthCheck implements Serializable {
         this.timeout = timeout;
         return this;
     }
-    
-    
+
     /**
      * Specifies the number of consecutive health probe failures required
      * before moving the instance to the <i>Unhealthy</i> state.
@@ -397,8 +392,7 @@ public class HealthCheck implements Serializable {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
-    
-    
+
     /**
      * Specifies the number of consecutive health probe successes required
      * before moving the instance to the <i>Healthy</i> state.
@@ -446,8 +440,7 @@ public class HealthCheck implements Serializable {
         this.healthyThreshold = healthyThreshold;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

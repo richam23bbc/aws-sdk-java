@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DeleteRouteRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#deleteRoute(DeleteRouteRequest) DeleteRoute operation}.
@@ -73,8 +75,7 @@ public class DeleteRouteRequest extends AmazonWebServiceRequest implements Seria
         this.routeTableId = routeTableId;
         return this;
     }
-    
-    
+
     /**
      * The CIDR range for the route you want to delete. The value you specify
      * must exactly match the CIDR for the route you want to delete.
@@ -113,8 +114,7 @@ public class DeleteRouteRequest extends AmazonWebServiceRequest implements Seria
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

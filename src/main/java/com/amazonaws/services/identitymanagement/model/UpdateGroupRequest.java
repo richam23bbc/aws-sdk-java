@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#updateGroup(UpdateGroupRequest) UpdateGroup operation}.
@@ -71,8 +73,6 @@ public class UpdateGroupRequest extends AmazonWebServiceRequest implements Seria
      */
     public UpdateGroupRequest() {}
     
-
-
     /**
      * Constructs a new UpdateGroupRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -85,8 +85,6 @@ public class UpdateGroupRequest extends AmazonWebServiceRequest implements Seria
         setGroupName(groupName);
     }
 
-    
-    
     /**
      * Name of the group to update. If you're changing the name of the group,
      * this is the original name.
@@ -137,8 +135,7 @@ public class UpdateGroupRequest extends AmazonWebServiceRequest implements Seria
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * New path for the group. Only include this if changing the group's
      * path.
@@ -189,8 +186,7 @@ public class UpdateGroupRequest extends AmazonWebServiceRequest implements Seria
         this.newPath = newPath;
         return this;
     }
-    
-    
+
     /**
      * New name for the group. Only include this if changing the group's
      * name.
@@ -241,8 +237,7 @@ public class UpdateGroupRequest extends AmazonWebServiceRequest implements Seria
         this.newGroupName = newGroupName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

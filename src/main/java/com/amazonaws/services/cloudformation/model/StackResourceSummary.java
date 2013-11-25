@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -35,7 +37,7 @@ public class StackResourceSummary implements Serializable {
 
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      */
     private String resourceType;
@@ -90,8 +92,7 @@ public class StackResourceSummary implements Serializable {
         this.logicalResourceId = logicalResourceId;
         return this;
     }
-    
-    
+
     /**
      * The name or unique identifier that corresponds to a physical instance
      * ID of the resource.
@@ -130,15 +131,14 @@ public class StackResourceSummary implements Serializable {
         this.physicalResourceId = physicalResourceId;
         return this;
     }
-    
-    
+
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      *
      * @return Type of the resource. (For more information, go to the <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      *         CloudFormation User Guide</a>.)
      */
     public String getResourceType() {
@@ -147,11 +147,11 @@ public class StackResourceSummary implements Serializable {
     
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      *
      * @param resourceType Type of the resource. (For more information, go to the <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      *         CloudFormation User Guide</a>.)
      */
     public void setResourceType(String resourceType) {
@@ -160,13 +160,13 @@ public class StackResourceSummary implements Serializable {
     
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param resourceType Type of the resource. (For more information, go to the <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      *         CloudFormation User Guide</a>.)
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -176,8 +176,7 @@ public class StackResourceSummary implements Serializable {
         this.resourceType = resourceType;
         return this;
     }
-    
-    
+
     /**
      * Time the status was updated.
      *
@@ -210,8 +209,7 @@ public class StackResourceSummary implements Serializable {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
     }
-    
-    
+
     /**
      * Current status of the resource.
      * <p>
@@ -259,8 +257,7 @@ public class StackResourceSummary implements Serializable {
         this.resourceStatus = resourceStatus;
         return this;
     }
-    
-    
+
     /**
      * Current status of the resource.
      * <p>
@@ -294,7 +291,7 @@ public class StackResourceSummary implements Serializable {
         this.resourceStatus = resourceStatus.toString();
         return this;
     }
-    
+
     /**
      * Success/failure message associated with the resource.
      *
@@ -327,8 +324,7 @@ public class StackResourceSummary implements Serializable {
         this.resourceStatusReason = resourceStatusReason;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

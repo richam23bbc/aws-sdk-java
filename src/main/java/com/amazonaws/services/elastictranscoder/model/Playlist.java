@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -150,8 +152,7 @@ public class Playlist implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * This value must currently be <code>HLSv3</code>.
      * <p>
@@ -193,8 +194,7 @@ public class Playlist implements Serializable {
         this.format = format;
         return this;
     }
-    
-    
+
     /**
      * For each output in this job that you want to include in a master
      * playlist, the value of the Outputs:Key object. If you include more
@@ -210,7 +210,6 @@ public class Playlist implements Serializable {
      *         <code>SegmentDuration</code> for all of the outputs must be the same.
      */
     public java.util.List<String> getOutputKeys() {
-        
         if (outputKeys == null) {
               outputKeys = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               outputKeys.setAutoConstruct(true);
@@ -299,7 +298,7 @@ public class Playlist implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The status of the job with which the playlist is associated.
      * <p>
@@ -341,8 +340,7 @@ public class Playlist implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Information that further explains the status.
      * <p>
@@ -384,8 +382,7 @@ public class Playlist implements Serializable {
         this.statusDetail = statusDetail;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

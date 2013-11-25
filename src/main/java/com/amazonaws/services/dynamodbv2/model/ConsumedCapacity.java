@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -83,8 +85,7 @@ public class ConsumedCapacity implements Serializable {
         this.tableName = tableName;
         return this;
     }
-    
-    
+
     /**
      * The total number of capacity units consumed.
      *
@@ -117,8 +118,7 @@ public class ConsumedCapacity implements Serializable {
         this.capacityUnits = capacityUnits;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

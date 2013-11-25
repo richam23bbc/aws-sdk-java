@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -98,8 +100,7 @@ public class TimerStartedEventAttributes implements Serializable {
         this.timerId = timerId;
         return this;
     }
-    
-    
+
     /**
      * Optional data attached to the event that can be used by the decider in
      * subsequent workflow tasks.
@@ -147,8 +148,7 @@ public class TimerStartedEventAttributes implements Serializable {
         this.control = control;
         return this;
     }
-    
-    
+
     /**
      * The duration of time after which the timer will fire. <p>The duration
      * is specified in seconds. The valid values are integers greater than or
@@ -202,8 +202,7 @@ public class TimerStartedEventAttributes implements Serializable {
         this.startToFireTimeout = startToFireTimeout;
         return this;
     }
-    
-    
+
     /**
      * The id of the <code>DecisionTaskCompleted</code> event corresponding
      * to the decision task that resulted in the <code>StartTimer</code>
@@ -254,8 +253,7 @@ public class TimerStartedEventAttributes implements Serializable {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#getServerCertificate(GetServerCertificateRequest) GetServerCertificate operation}.
@@ -42,8 +44,6 @@ public class GetServerCertificateRequest extends AmazonWebServiceRequest impleme
      */
     public GetServerCertificateRequest() {}
     
-
-
     /**
      * Constructs a new GetServerCertificateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -56,8 +56,6 @@ public class GetServerCertificateRequest extends AmazonWebServiceRequest impleme
         setServerCertificateName(serverCertificateName);
     }
 
-    
-    
     /**
      * The name of the server certificate you want to retrieve information
      * about.
@@ -108,8 +106,7 @@ public class GetServerCertificateRequest extends AmazonWebServiceRequest impleme
         this.serverCertificateName = serverCertificateName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

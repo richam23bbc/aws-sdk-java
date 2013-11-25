@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -63,8 +65,7 @@ public class GetIdentityVerificationAttributesResult implements Serializable {
         setVerificationAttributes(verificationAttributes);
         return this;
     }
-    
-   	
+
     /**
      * A map of Identities to IdentityVerificationAttributes objects.
      * <p>
@@ -84,7 +85,7 @@ public class GetIdentityVerificationAttributesResult implements Serializable {
 		this.verificationAttributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into VerificationAttributes.
 	 * <p>

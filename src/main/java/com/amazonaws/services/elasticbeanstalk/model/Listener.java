@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,7 @@ public class Listener implements Serializable {
         this.protocol = protocol;
         return this;
     }
-    
-    
+
     /**
      * The port that is used by the Listener.
      *
@@ -98,8 +99,7 @@ public class Listener implements Serializable {
         this.port = port;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

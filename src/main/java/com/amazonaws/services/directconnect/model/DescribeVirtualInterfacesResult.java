@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.directconnect.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeVirtualInterfacesResult implements Serializable {
      * @return A list of virtual interfaces.
      */
     public java.util.List<VirtualInterface> getVirtualInterfaces() {
-        
         if (virtualInterfaces == null) {
               virtualInterfaces = new com.amazonaws.internal.ListWithAutoConstructFlag<VirtualInterface>();
               virtualInterfaces.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeVirtualInterfacesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

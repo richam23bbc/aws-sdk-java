@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,7 @@ public class DownloadDBLogFilePortionResult implements Serializable {
         this.logFileData = logFileData;
         return this;
     }
-    
-    
+
     /**
      * An optional pagination token provided by a previous
      * DownloadDBLogFilePortion request.
@@ -111,8 +112,7 @@ public class DownloadDBLogFilePortionResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Boolean value that if true, indicates there is more data to be
      * downloaded.
@@ -151,8 +151,7 @@ public class DownloadDBLogFilePortionResult implements Serializable {
         this.additionalDataPending = additionalDataPending;
         return this;
     }
-    
-    
+
     /**
      * Boolean value that if true, indicates there is more data to be
      * downloaded.
@@ -163,7 +162,7 @@ public class DownloadDBLogFilePortionResult implements Serializable {
     public Boolean getAdditionalDataPending() {
         return additionalDataPending;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

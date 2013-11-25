@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -69,8 +71,7 @@ public class ClusterVersion implements Serializable {
         this.clusterVersion = clusterVersion;
         return this;
     }
-    
-    
+
     /**
      * The name of the cluster parameter group family for the cluster.
      *
@@ -103,8 +104,7 @@ public class ClusterVersion implements Serializable {
         this.clusterParameterGroupFamily = clusterParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The description of the cluster version.
      *
@@ -137,8 +137,7 @@ public class ClusterVersion implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

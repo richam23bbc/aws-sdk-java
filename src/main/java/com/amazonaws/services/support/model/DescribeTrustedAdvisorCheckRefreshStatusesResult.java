@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -51,7 +53,6 @@ public class DescribeTrustedAdvisorCheckRefreshStatusesResult implements Seriali
      *         check from refreshing. </li> </ul>
      */
     public java.util.List<TrustedAdvisorCheckRefreshStatus> getStatuses() {
-        
         if (statuses == null) {
               statuses = new com.amazonaws.internal.ListWithAutoConstructFlag<TrustedAdvisorCheckRefreshStatus>();
               statuses.setAutoConstruct(true);
@@ -149,7 +150,7 @@ public class DescribeTrustedAdvisorCheckRefreshStatusesResult implements Seriali
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

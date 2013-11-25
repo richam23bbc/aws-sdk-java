@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -72,8 +74,7 @@ public class AvailabilityZone implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * True indicates the availability zone is capable of provisioned IOPs.
      *
@@ -106,8 +107,7 @@ public class AvailabilityZone implements Serializable {
         this.provisionedIopsCapable = provisionedIopsCapable;
         return this;
     }
-    
-    
+
     /**
      * True indicates the availability zone is capable of provisioned IOPs.
      *
@@ -116,7 +116,7 @@ public class AvailabilityZone implements Serializable {
     public Boolean getProvisionedIopsCapable() {
         return provisionedIopsCapable;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

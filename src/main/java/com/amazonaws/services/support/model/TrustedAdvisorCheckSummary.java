@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -97,8 +99,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
         this.checkId = checkId;
         return this;
     }
-    
-    
+
     /**
      * 
      *
@@ -131,8 +132,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
         this.timestamp = timestamp;
         return this;
     }
-    
-    
+
     /**
      * Overall status of the Trusted Advisor check.
      *
@@ -165,8 +165,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Indicates that the Trusted Advisor check returned flagged resources.
      *
@@ -199,8 +198,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
         this.hasFlaggedResources = hasFlaggedResources;
         return this;
     }
-    
-    
+
     /**
      * Indicates that the Trusted Advisor check returned flagged resources.
      *
@@ -209,7 +207,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
     public Boolean getHasFlaggedResources() {
         return hasFlaggedResources;
     }
-    
+
     /**
      * JSON-formatted object that lists details about AWS resources that were
      * analyzed in a call to Trusted Advisor <a
@@ -260,8 +258,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
         this.resourcesSummary = resourcesSummary;
         return this;
     }
-    
-    
+
     /**
      * Reports the results of a Trusted Advisor check by category. Only
      * <i>Cost Optimizing</i> is currently supported.
@@ -300,8 +297,7 @@ public class TrustedAdvisorCheckSummary implements Serializable {
         this.categorySpecificSummary = categorySpecificSummary;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

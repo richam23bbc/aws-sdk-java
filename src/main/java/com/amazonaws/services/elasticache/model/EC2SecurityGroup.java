@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -75,8 +77,7 @@ public class EC2SecurityGroup implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The name of the Amazon EC2 security group.
      *
@@ -109,8 +110,7 @@ public class EC2SecurityGroup implements Serializable {
         this.eC2SecurityGroupName = eC2SecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * The AWS account ID of the Amazon EC2 security group owner.
      *
@@ -143,8 +143,7 @@ public class EC2SecurityGroup implements Serializable {
         this.eC2SecurityGroupOwnerId = eC2SecurityGroupOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

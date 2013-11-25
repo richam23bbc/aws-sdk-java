@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -26,7 +28,7 @@ public class StemmingOptionsStatus implements Serializable {
      * Maps terms to their stems, serialized as a JSON document. The document
      * has a single object with one property "stems" whose value is an object
      * mapping terms to their stems. The maximum size of a stemming document
-     * is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     * is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      * "walk"} }</code>
      */
     private String options;
@@ -41,13 +43,13 @@ public class StemmingOptionsStatus implements Serializable {
      * Maps terms to their stems, serialized as a JSON document. The document
      * has a single object with one property "stems" whose value is an object
      * mapping terms to their stems. The maximum size of a stemming document
-     * is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     * is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      * "walk"} }</code>
      *
      * @return Maps terms to their stems, serialized as a JSON document. The document
      *         has a single object with one property "stems" whose value is an object
      *         mapping terms to their stems. The maximum size of a stemming document
-     *         is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     *         is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      *         "walk"} }</code>
      */
     public String getOptions() {
@@ -58,13 +60,13 @@ public class StemmingOptionsStatus implements Serializable {
      * Maps terms to their stems, serialized as a JSON document. The document
      * has a single object with one property "stems" whose value is an object
      * mapping terms to their stems. The maximum size of a stemming document
-     * is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     * is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      * "walk"} }</code>
      *
      * @param options Maps terms to their stems, serialized as a JSON document. The document
      *         has a single object with one property "stems" whose value is an object
      *         mapping terms to their stems. The maximum size of a stemming document
-     *         is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     *         is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      *         "walk"} }</code>
      */
     public void setOptions(String options) {
@@ -75,7 +77,7 @@ public class StemmingOptionsStatus implements Serializable {
      * Maps terms to their stems, serialized as a JSON document. The document
      * has a single object with one property "stems" whose value is an object
      * mapping terms to their stems. The maximum size of a stemming document
-     * is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     * is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      * "walk"} }</code>
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
@@ -83,7 +85,7 @@ public class StemmingOptionsStatus implements Serializable {
      * @param options Maps terms to their stems, serialized as a JSON document. The document
      *         has a single object with one property "stems" whose value is an object
      *         mapping terms to their stems. The maximum size of a stemming document
-     *         is 500KB. Example: <code>{ "stems": {"people": "person", "walking":
+     *         is 500 KB. Example: <code>{ "stems": {"people": "person", "walking":
      *         "walk"} }</code>
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -93,8 +95,7 @@ public class StemmingOptionsStatus implements Serializable {
         this.options = options;
         return this;
     }
-    
-    
+
     /**
      * The status of an option, including when it was last updated and
      * whether it is actively in use for searches.
@@ -133,8 +134,7 @@ public class StemmingOptionsStatus implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

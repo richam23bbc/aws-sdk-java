@@ -13,13 +13,18 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describeInstances(DescribeInstancesRequest) DescribeInstances operation}.
  * <p>
- * Requests a description of a set of instances associated with a specified ID or IDs.
+ * Requests a description of a set of instances.
+ * </p>
+ * <p>
+ * <b>NOTE:</b>You must specify at least one of the parameters.
  * </p>
  *
  * @see com.amazonaws.services.opsworks.AWSOpsWorks#describeInstances(DescribeInstancesRequest)
@@ -91,8 +96,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * A layer ID. If you use this parameter, <code>DescribeInstances</code>
      * returns descriptions of the instances associated with the specified
@@ -137,8 +141,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
         this.layerId = layerId;
         return this;
     }
-    
-    
+
     /**
      * An array of instance IDs to be described. If you use this parameter,
      * <code>DescribeInstances</code> returns a description of the specified
@@ -149,7 +152,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         instances. Otherwise, it returns a description of every instance.
      */
     public java.util.List<String> getInstanceIds() {
-        
         if (instanceIds == null) {
               instanceIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               instanceIds.setAutoConstruct(true);
@@ -223,7 +225,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

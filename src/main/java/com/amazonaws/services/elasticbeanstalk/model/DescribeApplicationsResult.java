@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeApplicationsResult implements Serializable {
      * @return This parameter contains a list of <a>ApplicationDescription</a>.
      */
     public java.util.List<ApplicationDescription> getApplications() {
-        
         if (applications == null) {
               applications = new com.amazonaws.internal.ListWithAutoConstructFlag<ApplicationDescription>();
               applications.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeApplicationsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

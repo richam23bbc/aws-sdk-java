@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -88,8 +90,7 @@ public class ActivityTypeInfo implements Serializable {
         this.activityType = activityType;
         return this;
     }
-    
-    
+
     /**
      * The current status of the activity type.
      * <p>
@@ -137,8 +138,7 @@ public class ActivityTypeInfo implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The current status of the activity type.
      * <p>
@@ -172,7 +172,7 @@ public class ActivityTypeInfo implements Serializable {
         this.status = status.toString();
         return this;
     }
-    
+
     /**
      * The description of the activity type provided in
      * <a>RegisterActivityType</a>.
@@ -220,8 +220,7 @@ public class ActivityTypeInfo implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The date and time this activity type was created through
      * <a>RegisterActivityType</a>.
@@ -260,8 +259,7 @@ public class ActivityTypeInfo implements Serializable {
         this.creationDate = creationDate;
         return this;
     }
-    
-    
+
     /**
      * If DEPRECATED, the date and time <a>DeprecateActivityType</a> was
      * called.
@@ -300,8 +298,7 @@ public class ActivityTypeInfo implements Serializable {
         this.deprecationDate = deprecationDate;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

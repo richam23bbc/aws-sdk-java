@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -193,8 +195,7 @@ public class WorkflowTypeConfiguration implements Serializable {
         this.defaultTaskStartToCloseTimeout = defaultTaskStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * The optional default maximum duration, specified when registering the
      * workflow type, for executions of this workflow type. This default can
@@ -278,8 +279,7 @@ public class WorkflowTypeConfiguration implements Serializable {
         this.defaultExecutionStartToCloseTimeout = defaultExecutionStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * The optional default task list, specified when registering the
      * workflow type, for decisions tasks scheduled for workflow executions
@@ -336,8 +336,7 @@ public class WorkflowTypeConfiguration implements Serializable {
         this.defaultTaskList = defaultTaskList;
         return this;
     }
-    
-    
+
     /**
      * The optional default policy to use for the child workflow executions
      * when a workflow execution of this type is terminated, by calling the
@@ -463,8 +462,7 @@ public class WorkflowTypeConfiguration implements Serializable {
         this.defaultChildPolicy = defaultChildPolicy;
         return this;
     }
-    
-    
+
     /**
      * The optional default policy to use for the child workflow executions
      * when a workflow execution of this type is terminated, by calling the
@@ -550,7 +548,7 @@ public class WorkflowTypeConfiguration implements Serializable {
         this.defaultChildPolicy = defaultChildPolicy.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

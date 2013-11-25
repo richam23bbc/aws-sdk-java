@@ -36,74 +36,25 @@ import com.amazonaws.services.redshift.model.*;
  * process the result and handle the exceptions in the worker thread by providing a callback handler
  * when making the call, or use the returned Future object to check the result of the call in the calling thread.
  * Amazon Redshift <b>Overview</b> <p>
- * This is the Amazon Redshift API Reference. This guide provides descriptions and samples of the Amazon Redshift API.
+ * This is an interface reference for Amazon Redshift. It contains documentation for one of the programming or command line interfaces you can use to
+ * manage Amazon Redshift clusters. Note that Amazon Redshift is asynchronous, which means that some interfaces may require techniques, such as polling
+ * or asynchronous callback handlers, to determine when a command has been applied. In this reference, the parameter descriptions indicate whether a
+ * change is applied immediately, on the next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster
+ * management interfaces, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html"> Using the Amazon Redshift Management
+ * Interfaces </a> .
  * </p>
  * <p>
  * Amazon Redshift manages all the work of setting up, operating, and scaling a data warehouse: provisioning capacity, monitoring and backing up the
  * cluster, and applying patches and upgrades to the Amazon Redshift engine. You can focus on using your data to acquire new insights for your business
  * and customers.
  * </p>
- * <b>Are You a First-Time Amazon Redshift User?</b> <p>
- * If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the following sections:
+ * <p>
+ * If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the The <a
+ * href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html"> Amazon Redshift Getting Started Guide </a>
  * </p>
  * <p>
- * 
- * <ul>
- * <li> <p>
- * <i>Service Highlights and Pricing</i> - The <a href="http://aws.amazon.com/redshift/"> product detail page </a> provides the Amazon Redshift value
- * proposition, service highlights and pricing.
- * </p>
- * </li>
- * <li> <p>
- * <i>Getting Started</i> - The <a href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html"> Getting Started Guide </a> includes an
- * example that walks you through the process of creating a cluster, creating database tables, uploading data, and testing queries.
- * </p>
- * </li>
- * 
- * </ul>
- * 
- * </p>
- * <p>
- * After you complete the Getting Started Guide, we recommend that you explore one of the following guides:
- * </p>
- * 
- * <ul>
- * <li> <p>
- * <i>Cluster Management</i> - If you are responsible for managing Amazon Redshift clusters, the <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html"> Cluster Management Guide </a> shows you how to create and manage Amazon Redshift
- * clusters.
- * </p>
- * <p>
- * If you are an application developer, you can use the Amazon Redshift Query API to manage clusters programmatically. Additionally, the AWS SDK
- * libraries that wrap the underlying Amazon Redshift API simplify your programming tasks. If you prefer a more interactive way of managing clusters,
- * you can use the Amazon Redshift console and the AWS command line interface (AWS CLI). For information about the API and CLI, go to the following
- * manuals :
- * </p>
- * 
- * <ul>
- * <li> <p>
- * API Reference ( <i>this document</i> )
- * </p>
- * </li>
- * <li> <p>
- * <a href="http://docs.aws.amazon.com/redshift/latest/cli"> CLI Reference </a>
- * </p>
- * </li>
- * 
- * </ul>
- * </li>
- * <li> <p>
- * <i>Amazon Redshift Database Database Developer</i> - If you are a database developer, the Amazon Redshift <a
- * href="http://docs.aws.amazon.com/redshift/latest/dg/"> Database Developer Guide </a> explains how to design, build, query, and maintain the databases
- * that make up your data warehouse.
- * </p>
- * </li>
- * 
- * </ul>
- * <p>
- * For a list of supported AWS regions where you can provision a cluster, go to the <a
- * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region"> Regions and Endpoints </a> section in the <i>Amazon Web Services
- * Glossary</i> .
+ * If you are a database developer, the <a href="http://docs.aws.amazon.com/redshift/latest/dg/welcome.html"> Amazon Redshift Database Developer Guide
+ * </a> explains how to design, build, query, and maintain the databases that make up your data warehouse.
  * </p>
  */
 public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
@@ -129,7 +80,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * All service calls made using this new client object are blocking, and will not
      * return until the service call completes.
      *
-     * @see DefaultAWSCredentialsProvider
+     * @see DefaultAWSCredentialsProviderChain
      */
     public AmazonRedshiftAsyncClient() {
         this(new DefaultAWSCredentialsProviderChain());
@@ -153,7 +104,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *                       client connects to AmazonRedshift
      *                       (ex: proxy settings, retry counts, etc.).
      *
-     * @see DefaultAWSCredentialsProvider
+     * @see DefaultAWSCredentialsProviderChain
      */
     public AmazonRedshiftAsyncClient(ClientConfiguration clientConfiguration) {
         this(new DefaultAWSCredentialsProviderChain(), clientConfiguration, Executors.newCachedThreadPool());
@@ -356,6 +307,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         RevokeSnapshotAccess service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -398,6 +350,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         RevokeSnapshotAccess service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -428,6 +381,85 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
+     * Modifies the number of days to retain automated snapshots in the
+     * destination region after they are copied from the source region.
+     * </p>
+     *
+     * @param modifySnapshotCopyRetentionPeriodRequest Container for the
+     *           necessary parameters to execute the ModifySnapshotCopyRetentionPeriod
+     *           operation on AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ModifySnapshotCopyRetentionPeriod service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> modifySnapshotCopyRetentionPeriodAsync(final ModifySnapshotCopyRetentionPeriodRequest modifySnapshotCopyRetentionPeriodRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+                return modifySnapshotCopyRetentionPeriod(modifySnapshotCopyRetentionPeriodRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Modifies the number of days to retain automated snapshots in the
+     * destination region after they are copied from the source region.
+     * </p>
+     *
+     * @param modifySnapshotCopyRetentionPeriodRequest Container for the
+     *           necessary parameters to execute the ModifySnapshotCopyRetentionPeriod
+     *           operation on AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ModifySnapshotCopyRetentionPeriod service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> modifySnapshotCopyRetentionPeriodAsync(
+            final ModifySnapshotCopyRetentionPeriodRequest modifySnapshotCopyRetentionPeriodRequest,
+            final AsyncHandler<ModifySnapshotCopyRetentionPeriodRequest, Cluster> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+            	Cluster result;
+                try {
+            		result = modifySnapshotCopyRetentionPeriod(modifySnapshotCopyRetentionPeriodRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(modifySnapshotCopyRetentionPeriodRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Modifies a cluster subnet group to include the specified list of VPC
      * subnets. The operation replaces the existing list of subnets with the
      * new list of subnets.
@@ -440,6 +472,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         ModifyClusterSubnetGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -477,6 +510,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         ModifyClusterSubnetGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -507,6 +541,81 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
+     * Deletes the specified Amazon Redshift HSM configuration.
+     * </p>
+     *
+     * @param deleteHsmConfigurationRequest Container for the necessary
+     *           parameters to execute the DeleteHsmConfiguration operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteHsmConfiguration service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteHsmConfigurationAsync(final DeleteHsmConfigurationRequest deleteHsmConfigurationRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deleteHsmConfiguration(deleteHsmConfigurationRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes the specified Amazon Redshift HSM configuration.
+     * </p>
+     *
+     * @param deleteHsmConfigurationRequest Container for the necessary
+     *           parameters to execute the DeleteHsmConfiguration operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteHsmConfiguration service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteHsmConfigurationAsync(
+            final DeleteHsmConfigurationRequest deleteHsmConfigurationRequest,
+            final AsyncHandler<DeleteHsmConfigurationRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deleteHsmConfiguration(deleteHsmConfigurationRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteHsmConfigurationRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Allows you to purchase reserved nodes. Amazon Redshift offers a
      * predefined set of reserved node offerings. You can purchase one of the
      * offerings. You can call the DescribeReservedNodeOfferings API to
@@ -530,6 +639,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         PurchaseReservedNodeOffering service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -578,6 +688,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         PurchaseReservedNodeOffering service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -601,6 +712,81 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     				throw ex;
             	}
             	asyncHandler.onSuccess(purchaseReservedNodeOfferingRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Stops logging information, such as queries and connection attempts,
+     * for the specified Amazon Redshift cluster.
+     * </p>
+     *
+     * @param disableLoggingRequest Container for the necessary parameters to
+     *           execute the DisableLogging operation on AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DisableLogging service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DisableLoggingResult> disableLoggingAsync(final DisableLoggingRequest disableLoggingRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DisableLoggingResult>() {
+            public DisableLoggingResult call() throws Exception {
+                return disableLogging(disableLoggingRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Stops logging information, such as queries and connection attempts,
+     * for the specified Amazon Redshift cluster.
+     * </p>
+     *
+     * @param disableLoggingRequest Container for the necessary parameters to
+     *           execute the DisableLogging operation on AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DisableLogging service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DisableLoggingResult> disableLoggingAsync(
+            final DisableLoggingRequest disableLoggingRequest,
+            final AsyncHandler<DisableLoggingRequest, DisableLoggingResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DisableLoggingResult>() {
+            public DisableLoggingResult call() throws Exception {
+            	DisableLoggingResult result;
+                try {
+            		result = disableLogging(disableLoggingRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(disableLoggingRequest, result);
                	return result;
 		    }
 		});
@@ -632,6 +818,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         ModifyCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -681,6 +868,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         ModifyCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -704,184 +892,6 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     				throw ex;
             	}
             	asyncHandler.onSuccess(modifyClusterRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Modifies the parameters of a parameter group.
-     * </p>
-     * <p>
-     * For more information about managing parameter groups, go to <a
-     * s.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">
-     * Amazon Redshift Parameter Groups </a> in the <i>Amazon Redshift
-     * Management Guide</i> .
-     * </p>
-     *
-     * @param modifyClusterParameterGroupRequest Container for the necessary
-     *           parameters to execute the ModifyClusterParameterGroup operation on
-     *           AmazonRedshift.
-     * 
-     * @return A Java Future object containing the response from the
-     *         ModifyClusterParameterGroup service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<ModifyClusterParameterGroupResult> modifyClusterParameterGroupAsync(final ModifyClusterParameterGroupRequest modifyClusterParameterGroupRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<ModifyClusterParameterGroupResult>() {
-            public ModifyClusterParameterGroupResult call() throws Exception {
-                return modifyClusterParameterGroup(modifyClusterParameterGroupRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Modifies the parameters of a parameter group.
-     * </p>
-     * <p>
-     * For more information about managing parameter groups, go to <a
-     * s.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">
-     * Amazon Redshift Parameter Groups </a> in the <i>Amazon Redshift
-     * Management Guide</i> .
-     * </p>
-     *
-     * @param modifyClusterParameterGroupRequest Container for the necessary
-     *           parameters to execute the ModifyClusterParameterGroup operation on
-     *           AmazonRedshift.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         ModifyClusterParameterGroup service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<ModifyClusterParameterGroupResult> modifyClusterParameterGroupAsync(
-            final ModifyClusterParameterGroupRequest modifyClusterParameterGroupRequest,
-            final AsyncHandler<ModifyClusterParameterGroupRequest, ModifyClusterParameterGroupResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<ModifyClusterParameterGroupResult>() {
-            public ModifyClusterParameterGroupResult call() throws Exception {
-            	ModifyClusterParameterGroupResult result;
-                try {
-            		result = modifyClusterParameterGroup(modifyClusterParameterGroupRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(modifyClusterParameterGroupRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Returns information about Amazon Redshift security groups. If the
-     * name of a security group is specified, the response will contain only
-     * information about only that security group.
-     * </p>
-     * <p>
-     * For information about managing security groups, go to <a
-     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
-     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
-     * Redshift Management Guide</i> .
-     * </p>
-     *
-     * @param describeClusterSecurityGroupsRequest Container for the
-     *           necessary parameters to execute the DescribeClusterSecurityGroups
-     *           operation on AmazonRedshift.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeClusterSecurityGroups service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeClusterSecurityGroupsResult> describeClusterSecurityGroupsAsync(final DescribeClusterSecurityGroupsRequest describeClusterSecurityGroupsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeClusterSecurityGroupsResult>() {
-            public DescribeClusterSecurityGroupsResult call() throws Exception {
-                return describeClusterSecurityGroups(describeClusterSecurityGroupsRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Returns information about Amazon Redshift security groups. If the
-     * name of a security group is specified, the response will contain only
-     * information about only that security group.
-     * </p>
-     * <p>
-     * For information about managing security groups, go to <a
-     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
-     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
-     * Redshift Management Guide</i> .
-     * </p>
-     *
-     * @param describeClusterSecurityGroupsRequest Container for the
-     *           necessary parameters to execute the DescribeClusterSecurityGroups
-     *           operation on AmazonRedshift.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeClusterSecurityGroups service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeClusterSecurityGroupsResult> describeClusterSecurityGroupsAsync(
-            final DescribeClusterSecurityGroupsRequest describeClusterSecurityGroupsRequest,
-            final AsyncHandler<DescribeClusterSecurityGroupsRequest, DescribeClusterSecurityGroupsResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeClusterSecurityGroupsResult>() {
-            public DescribeClusterSecurityGroupsResult call() throws Exception {
-            	DescribeClusterSecurityGroupsResult result;
-                try {
-            		result = describeClusterSecurityGroups(describeClusterSecurityGroupsRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeClusterSecurityGroupsRequest, result);
                	return result;
 		    }
 		});
@@ -914,6 +924,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         CopyClusterSnapshot service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -964,6 +975,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         CopyClusterSnapshot service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1014,6 +1026,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeOrderableClusterOptions service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1059,6 +1072,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeOrderableClusterOptions service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1089,6 +1103,81 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
+     * Starts logging information, such as queries and connection attempts,
+     * for the specified Amazon Redshift cluster.
+     * </p>
+     *
+     * @param enableLoggingRequest Container for the necessary parameters to
+     *           execute the EnableLogging operation on AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         EnableLogging service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<EnableLoggingResult> enableLoggingAsync(final EnableLoggingRequest enableLoggingRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<EnableLoggingResult>() {
+            public EnableLoggingResult call() throws Exception {
+                return enableLogging(enableLoggingRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Starts logging information, such as queries and connection attempts,
+     * for the specified Amazon Redshift cluster.
+     * </p>
+     *
+     * @param enableLoggingRequest Container for the necessary parameters to
+     *           execute the EnableLogging operation on AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         EnableLogging service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<EnableLoggingResult> enableLoggingAsync(
+            final EnableLoggingRequest enableLoggingRequest,
+            final AsyncHandler<EnableLoggingRequest, EnableLoggingResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<EnableLoggingResult>() {
+            public EnableLoggingResult call() throws Exception {
+            	EnableLoggingResult result;
+                try {
+            		result = enableLogging(enableLoggingRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(enableLoggingRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Creates a new Amazon Redshift subnet group. You must provide a list
      * of one or more subnets in your existing Amazon Virtual Private Cloud
      * (Amazon VPC) when creating Amazon Redshift subnet group.
@@ -1108,6 +1197,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         CreateClusterSubnetGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1152,6 +1242,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         CreateClusterSubnetGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1182,6 +1273,83 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
+     * Deletes the specified HSM client certificate.
+     * </p>
+     *
+     * @param deleteHsmClientCertificateRequest Container for the necessary
+     *           parameters to execute the DeleteHsmClientCertificate operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteHsmClientCertificate service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteHsmClientCertificateAsync(final DeleteHsmClientCertificateRequest deleteHsmClientCertificateRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deleteHsmClientCertificate(deleteHsmClientCertificateRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes the specified HSM client certificate.
+     * </p>
+     *
+     * @param deleteHsmClientCertificateRequest Container for the necessary
+     *           parameters to execute the DeleteHsmClientCertificate operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteHsmClientCertificate service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteHsmClientCertificateAsync(
+            final DeleteHsmClientCertificateRequest deleteHsmClientCertificateRequest,
+            final AsyncHandler<DeleteHsmClientCertificateRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deleteHsmClientCertificate(deleteHsmClientCertificateRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteHsmClientCertificateRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Reboots a cluster. This action is taken as soon as possible. It
      * results in a momentary outage to the cluster, during which the cluster
      * status is set to <code>rebooting</code> . A cluster event is created
@@ -1198,6 +1366,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         RebootCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1239,6 +1408,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         RebootCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1279,6 +1449,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DeleteClusterSubnetGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1315,6 +1486,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DeleteClusterSubnetGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1344,87 +1516,6 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns one or more cluster subnet group objects, which contain
-     * metadata about your cluster subnet groups. By default, this operation
-     * returns information about all cluster subnet groups that are defined
-     * in you AWS account.
-     * </p>
-     *
-     * @param describeClusterSubnetGroupsRequest Container for the necessary
-     *           parameters to execute the DescribeClusterSubnetGroups operation on
-     *           AmazonRedshift.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeClusterSubnetGroups service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeClusterSubnetGroupsResult> describeClusterSubnetGroupsAsync(final DescribeClusterSubnetGroupsRequest describeClusterSubnetGroupsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeClusterSubnetGroupsResult>() {
-            public DescribeClusterSubnetGroupsResult call() throws Exception {
-                return describeClusterSubnetGroups(describeClusterSubnetGroupsRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Returns one or more cluster subnet group objects, which contain
-     * metadata about your cluster subnet groups. By default, this operation
-     * returns information about all cluster subnet groups that are defined
-     * in you AWS account.
-     * </p>
-     *
-     * @param describeClusterSubnetGroupsRequest Container for the necessary
-     *           parameters to execute the DescribeClusterSubnetGroups operation on
-     *           AmazonRedshift.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeClusterSubnetGroups service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeClusterSubnetGroupsResult> describeClusterSubnetGroupsAsync(
-            final DescribeClusterSubnetGroupsRequest describeClusterSubnetGroupsRequest,
-            final AsyncHandler<DescribeClusterSubnetGroupsRequest, DescribeClusterSubnetGroupsResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeClusterSubnetGroupsResult>() {
-            public DescribeClusterSubnetGroupsResult call() throws Exception {
-            	DescribeClusterSubnetGroupsResult result;
-                try {
-            		result = describeClusterSubnetGroups(describeClusterSubnetGroupsRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeClusterSubnetGroupsRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Deletes a previously provisioned cluster. A successful response from
      * the web service indicates that the request was received correctly. If
      * a final cluster snapshot is requested the status of the cluster will
@@ -1444,6 +1535,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1488,6 +1580,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1534,6 +1627,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateClusterSnapshot service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1575,6 +1669,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateClusterSnapshot service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1622,6 +1717,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1664,6 +1760,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateCluster service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1694,25 +1791,19 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Deletes the specified manual snapshot. The snapshot must be in the
-     * "available" state, with no other users authorized to access the
-     * snapshot.
-     * </p>
-     * <p>
-     * Unlike automated snapshots, manual snapshots are retained even after
-     * you delete your cluster. Amazon Redshift does not delete your manual
-     * snapshots. You must delete manual snapshot explicitly to avoid getting
-     * charged. If other accounts are authorized to access the snapshot, you
-     * must revoke all of the authorizations before you can delete the
-     * snapshot.
+     * Returns events related to clusters, security groups, snapshots, and
+     * parameter groups for the past 14 days. Events specific to a particular
+     * cluster, security group, snapshot or parameter group can be obtained
+     * by providing the name as a parameter. By default, the past hour of
+     * events are returned.
      * </p>
      *
-     * @param deleteClusterSnapshotRequest Container for the necessary
-     *           parameters to execute the DeleteClusterSnapshot operation on
-     *           AmazonRedshift.
+     * @param describeEventsRequest Container for the necessary parameters to
+     *           execute the DescribeEvents operation on AmazonRedshift.
      * 
      * @return A Java Future object containing the response from the
-     *         DeleteClusterSnapshot service method, as returned by AmazonRedshift.
+     *         DescribeEvents service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1722,11 +1813,11 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Snapshot> deleteClusterSnapshotAsync(final DeleteClusterSnapshotRequest deleteClusterSnapshotRequest) 
+    public Future<DescribeEventsResult> describeEventsAsync(final DescribeEventsRequest describeEventsRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Snapshot>() {
-            public Snapshot call() throws Exception {
-                return deleteClusterSnapshot(deleteClusterSnapshotRequest);
+        return executorService.submit(new Callable<DescribeEventsResult>() {
+            public DescribeEventsResult call() throws Exception {
+                return describeEvents(describeEventsRequest);
 		    }
 		});
     }
@@ -1734,29 +1825,23 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Deletes the specified manual snapshot. The snapshot must be in the
-     * "available" state, with no other users authorized to access the
-     * snapshot.
-     * </p>
-     * <p>
-     * Unlike automated snapshots, manual snapshots are retained even after
-     * you delete your cluster. Amazon Redshift does not delete your manual
-     * snapshots. You must delete manual snapshot explicitly to avoid getting
-     * charged. If other accounts are authorized to access the snapshot, you
-     * must revoke all of the authorizations before you can delete the
-     * snapshot.
+     * Returns events related to clusters, security groups, snapshots, and
+     * parameter groups for the past 14 days. Events specific to a particular
+     * cluster, security group, snapshot or parameter group can be obtained
+     * by providing the name as a parameter. By default, the past hour of
+     * events are returned.
      * </p>
      *
-     * @param deleteClusterSnapshotRequest Container for the necessary
-     *           parameters to execute the DeleteClusterSnapshot operation on
-     *           AmazonRedshift.
+     * @param describeEventsRequest Container for the necessary parameters to
+     *           execute the DescribeEvents operation on AmazonRedshift.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         DeleteClusterSnapshot service method, as returned by AmazonRedshift.
+     *         DescribeEvents service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1766,104 +1851,21 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Snapshot> deleteClusterSnapshotAsync(
-            final DeleteClusterSnapshotRequest deleteClusterSnapshotRequest,
-            final AsyncHandler<DeleteClusterSnapshotRequest, Snapshot> asyncHandler)
+    public Future<DescribeEventsResult> describeEventsAsync(
+            final DescribeEventsRequest describeEventsRequest,
+            final AsyncHandler<DescribeEventsRequest, DescribeEventsResult> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Snapshot>() {
-            public Snapshot call() throws Exception {
-            	Snapshot result;
+        return executorService.submit(new Callable<DescribeEventsResult>() {
+            public DescribeEventsResult call() throws Exception {
+            	DescribeEventsResult result;
                 try {
-            		result = deleteClusterSnapshot(deleteClusterSnapshotRequest);
+            		result = describeEvents(describeEventsRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(deleteClusterSnapshotRequest, result);
+            	asyncHandler.onSuccess(describeEventsRequest, result);
                	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Deletes a specified Amazon Redshift parameter group. <p>
-     * <b>NOTE:</b>You cannot delete a parameter group if it is associated
-     * with a cluster.
-     * </p>
-     * 
-     * </p>
-     *
-     * @param deleteClusterParameterGroupRequest Container for the necessary
-     *           parameters to execute the DeleteClusterParameterGroup operation on
-     *           AmazonRedshift.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DeleteClusterParameterGroup service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> deleteClusterParameterGroupAsync(final DeleteClusterParameterGroupRequest deleteClusterParameterGroupRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                deleteClusterParameterGroup(deleteClusterParameterGroupRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Deletes a specified Amazon Redshift parameter group. <p>
-     * <b>NOTE:</b>You cannot delete a parameter group if it is associated
-     * with a cluster.
-     * </p>
-     * 
-     * </p>
-     *
-     * @param deleteClusterParameterGroupRequest Container for the necessary
-     *           parameters to execute the DeleteClusterParameterGroup operation on
-     *           AmazonRedshift.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DeleteClusterParameterGroup service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> deleteClusterParameterGroupAsync(
-            final DeleteClusterParameterGroupRequest deleteClusterParameterGroupRequest,
-            final AsyncHandler<DeleteClusterParameterGroupRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		deleteClusterParameterGroup(deleteClusterParameterGroupRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(deleteClusterParameterGroupRequest, null);
-               	return null;
 		    }
 		});
     }
@@ -1903,6 +1905,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         AuthorizeClusterSecurityGroupIngress service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1961,6 +1964,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         AuthorizeClusterSecurityGroupIngress service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1991,18 +1995,16 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns events related to clusters, security groups, snapshots, and
-     * parameter groups for the past 14 days. Events specific to a particular
-     * cluster, security group, snapshot or parameter group can be obtained
-     * by providing the name as a parameter. By default, the past hour of
-     * events are returned.
+     * Rotates the encryption keys for a cluster.
      * </p>
      *
-     * @param describeEventsRequest Container for the necessary parameters to
-     *           execute the DescribeEvents operation on AmazonRedshift.
+     * @param rotateEncryptionKeyRequest Container for the necessary
+     *           parameters to execute the RotateEncryptionKey operation on
+     *           AmazonRedshift.
      * 
      * @return A Java Future object containing the response from the
-     *         DescribeEvents service method, as returned by AmazonRedshift.
+     *         RotateEncryptionKey service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2012,11 +2014,11 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<DescribeEventsResult> describeEventsAsync(final DescribeEventsRequest describeEventsRequest) 
+    public Future<Cluster> rotateEncryptionKeyAsync(final RotateEncryptionKeyRequest rotateEncryptionKeyRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeEventsResult>() {
-            public DescribeEventsResult call() throws Exception {
-                return describeEvents(describeEventsRequest);
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+                return rotateEncryptionKey(rotateEncryptionKeyRequest);
 		    }
 		});
     }
@@ -2024,22 +2026,20 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns events related to clusters, security groups, snapshots, and
-     * parameter groups for the past 14 days. Events specific to a particular
-     * cluster, security group, snapshot or parameter group can be obtained
-     * by providing the name as a parameter. By default, the past hour of
-     * events are returned.
+     * Rotates the encryption keys for a cluster.
      * </p>
      *
-     * @param describeEventsRequest Container for the necessary parameters to
-     *           execute the DescribeEvents operation on AmazonRedshift.
+     * @param rotateEncryptionKeyRequest Container for the necessary
+     *           parameters to execute the RotateEncryptionKey operation on
+     *           AmazonRedshift.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         DescribeEvents service method, as returned by AmazonRedshift.
+     *         RotateEncryptionKey service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2049,20 +2049,20 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<DescribeEventsResult> describeEventsAsync(
-            final DescribeEventsRequest describeEventsRequest,
-            final AsyncHandler<DescribeEventsRequest, DescribeEventsResult> asyncHandler)
+    public Future<Cluster> rotateEncryptionKeyAsync(
+            final RotateEncryptionKeyRequest rotateEncryptionKeyRequest,
+            final AsyncHandler<RotateEncryptionKeyRequest, Cluster> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeEventsResult>() {
-            public DescribeEventsResult call() throws Exception {
-            	DescribeEventsResult result;
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+            	Cluster result;
                 try {
-            		result = describeEvents(describeEventsRequest);
+            		result = rotateEncryptionKey(rotateEncryptionKeyRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(describeEventsRequest, result);
+            	asyncHandler.onSuccess(rotateEncryptionKeyRequest, result);
                	return result;
 		    }
 		});
@@ -2090,6 +2090,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DeleteClusterSecurityGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2136,6 +2137,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DeleteClusterSecurityGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2174,6 +2176,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeReservedNodes service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2208,6 +2211,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeReservedNodes service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2238,89 +2242,6 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Sets one or more parameters of the specified parameter group to their
-     * default values and sets the source values of the parameters to
-     * "engine-default". To reset the entire parameter group specify the
-     * <i>ResetAllParameters</i> parameter. For parameter changes to take
-     * effect you must reboot any associated clusters.
-     * </p>
-     *
-     * @param resetClusterParameterGroupRequest Container for the necessary
-     *           parameters to execute the ResetClusterParameterGroup operation on
-     *           AmazonRedshift.
-     * 
-     * @return A Java Future object containing the response from the
-     *         ResetClusterParameterGroup service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<ResetClusterParameterGroupResult> resetClusterParameterGroupAsync(final ResetClusterParameterGroupRequest resetClusterParameterGroupRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<ResetClusterParameterGroupResult>() {
-            public ResetClusterParameterGroupResult call() throws Exception {
-                return resetClusterParameterGroup(resetClusterParameterGroupRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Sets one or more parameters of the specified parameter group to their
-     * default values and sets the source values of the parameters to
-     * "engine-default". To reset the entire parameter group specify the
-     * <i>ResetAllParameters</i> parameter. For parameter changes to take
-     * effect you must reboot any associated clusters.
-     * </p>
-     *
-     * @param resetClusterParameterGroupRequest Container for the necessary
-     *           parameters to execute the ResetClusterParameterGroup operation on
-     *           AmazonRedshift.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         ResetClusterParameterGroup service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<ResetClusterParameterGroupResult> resetClusterParameterGroupAsync(
-            final ResetClusterParameterGroupRequest resetClusterParameterGroupRequest,
-            final AsyncHandler<ResetClusterParameterGroupRequest, ResetClusterParameterGroupResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<ResetClusterParameterGroupResult>() {
-            public ResetClusterParameterGroupResult call() throws Exception {
-            	ResetClusterParameterGroupResult result;
-                try {
-            		result = resetClusterParameterGroup(resetClusterParameterGroupRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(resetClusterParameterGroupRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Returns a list of parameter settings for the specified parameter
      * group family.
      * </p>
@@ -2338,6 +2259,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeDefaultClusterParameters service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2380,6 +2302,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeDefaultClusterParameters service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2410,6 +2333,81 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
+     * Modifies an existing Amazon Redshift event notification subscription.
+     * </p>
+     *
+     * @param modifyEventSubscriptionRequest Container for the necessary
+     *           parameters to execute the ModifyEventSubscription operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ModifyEventSubscription service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<EventSubscription> modifyEventSubscriptionAsync(final ModifyEventSubscriptionRequest modifyEventSubscriptionRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<EventSubscription>() {
+            public EventSubscription call() throws Exception {
+                return modifyEventSubscription(modifyEventSubscriptionRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Modifies an existing Amazon Redshift event notification subscription.
+     * </p>
+     *
+     * @param modifyEventSubscriptionRequest Container for the necessary
+     *           parameters to execute the ModifyEventSubscription operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ModifyEventSubscription service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<EventSubscription> modifyEventSubscriptionAsync(
+            final ModifyEventSubscriptionRequest modifyEventSubscriptionRequest,
+            final AsyncHandler<ModifyEventSubscriptionRequest, EventSubscription> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<EventSubscription>() {
+            public EventSubscription call() throws Exception {
+            	EventSubscription result;
+                try {
+            		result = modifyEventSubscription(modifyEventSubscriptionRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(modifyEventSubscriptionRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Creates a new Amazon Redshift security group. You use security groups
      * to control access to non-VPC clusters.
      * </p>
@@ -2428,6 +2426,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         CreateClusterSecurityGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2471,6 +2470,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         CreateClusterSecurityGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2501,6 +2501,1195 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
+     * Returns information about the last resize operation for the specified
+     * cluster. If no resize operation has ever been initiated for the
+     * specified cluster, a <code>HTTP 404</code> error is returned. If a
+     * resize operation was initiated and completed, the status of the resize
+     * remains as <code>SUCCEEDED</code> until the next resize.
+     * </p>
+     * <p>
+     * A resize operation can be requested using ModifyCluster and
+     * specifying a different number or type of nodes for the cluster.
+     * </p>
+     *
+     * @param describeResizeRequest Container for the necessary parameters to
+     *           execute the DescribeResize operation on AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeResize service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeResizeResult> describeResizeAsync(final DescribeResizeRequest describeResizeRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeResizeResult>() {
+            public DescribeResizeResult call() throws Exception {
+                return describeResize(describeResizeRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Returns information about the last resize operation for the specified
+     * cluster. If no resize operation has ever been initiated for the
+     * specified cluster, a <code>HTTP 404</code> error is returned. If a
+     * resize operation was initiated and completed, the status of the resize
+     * remains as <code>SUCCEEDED</code> until the next resize.
+     * </p>
+     * <p>
+     * A resize operation can be requested using ModifyCluster and
+     * specifying a different number or type of nodes for the cluster.
+     * </p>
+     *
+     * @param describeResizeRequest Container for the necessary parameters to
+     *           execute the DescribeResize operation on AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeResize service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeResizeResult> describeResizeAsync(
+            final DescribeResizeRequest describeResizeRequest,
+            final AsyncHandler<DescribeResizeRequest, DescribeResizeResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeResizeResult>() {
+            public DescribeResizeResult call() throws Exception {
+            	DescribeResizeResult result;
+                try {
+            		result = describeResize(describeResizeRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeResizeRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Returns descriptions of the available Amazon Redshift cluster
+     * versions. You can call this operation even before creating any
+     * clusters to learn more about the Amazon Redshift versions. For more
+     * information about managing clusters, go to <a
+     * /docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">
+     * Amazon Redshift Clusters </a> in the <i>Amazon Redshift Management
+     * Guide</i>
+     * </p>
+     *
+     * @param describeClusterVersionsRequest Container for the necessary
+     *           parameters to execute the DescribeClusterVersions operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeClusterVersions service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeClusterVersionsResult> describeClusterVersionsAsync(final DescribeClusterVersionsRequest describeClusterVersionsRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeClusterVersionsResult>() {
+            public DescribeClusterVersionsResult call() throws Exception {
+                return describeClusterVersions(describeClusterVersionsRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Returns descriptions of the available Amazon Redshift cluster
+     * versions. You can call this operation even before creating any
+     * clusters to learn more about the Amazon Redshift versions. For more
+     * information about managing clusters, go to <a
+     * /docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">
+     * Amazon Redshift Clusters </a> in the <i>Amazon Redshift Management
+     * Guide</i>
+     * </p>
+     *
+     * @param describeClusterVersionsRequest Container for the necessary
+     *           parameters to execute the DescribeClusterVersions operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeClusterVersions service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeClusterVersionsResult> describeClusterVersionsAsync(
+            final DescribeClusterVersionsRequest describeClusterVersionsRequest,
+            final AsyncHandler<DescribeClusterVersionsRequest, DescribeClusterVersionsResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeClusterVersionsResult>() {
+            public DescribeClusterVersionsResult call() throws Exception {
+            	DescribeClusterVersionsResult result;
+                try {
+            		result = describeClusterVersions(describeClusterVersionsRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeClusterVersionsRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates a new cluster from a snapshot. Amazon Redshift creates the
+     * resulting cluster with the same configuration as the original cluster
+     * from which the snapshot was created, except that the new cluster is
+     * created with the default cluster security and parameter group. After
+     * Amazon Redshift creates the cluster you can use the ModifyCluster API
+     * to associate a different security group and different parameter group
+     * with the restored cluster.
+     * </p>
+     * <p>
+     * If a snapshot is taken of a cluster in VPC, you can restore it only
+     * in VPC. In this case, you must provide a cluster subnet group where
+     * you want the cluster restored. If snapshot is taken of a cluster
+     * outside VPC, then you can restore it only outside VPC.
+     * </p>
+     * <p>
+     * For more information about working with snapshots, go to <a
+     * docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">
+     * Amazon Redshift Snapshots </a> in the <i>Amazon Redshift Management
+     * Guide</i> .
+     * </p>
+     *
+     * @param restoreFromClusterSnapshotRequest Container for the necessary
+     *           parameters to execute the RestoreFromClusterSnapshot operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RestoreFromClusterSnapshot service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> restoreFromClusterSnapshotAsync(final RestoreFromClusterSnapshotRequest restoreFromClusterSnapshotRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+                return restoreFromClusterSnapshot(restoreFromClusterSnapshotRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates a new cluster from a snapshot. Amazon Redshift creates the
+     * resulting cluster with the same configuration as the original cluster
+     * from which the snapshot was created, except that the new cluster is
+     * created with the default cluster security and parameter group. After
+     * Amazon Redshift creates the cluster you can use the ModifyCluster API
+     * to associate a different security group and different parameter group
+     * with the restored cluster.
+     * </p>
+     * <p>
+     * If a snapshot is taken of a cluster in VPC, you can restore it only
+     * in VPC. In this case, you must provide a cluster subnet group where
+     * you want the cluster restored. If snapshot is taken of a cluster
+     * outside VPC, then you can restore it only outside VPC.
+     * </p>
+     * <p>
+     * For more information about working with snapshots, go to <a
+     * docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">
+     * Amazon Redshift Snapshots </a> in the <i>Amazon Redshift Management
+     * Guide</i> .
+     * </p>
+     *
+     * @param restoreFromClusterSnapshotRequest Container for the necessary
+     *           parameters to execute the RestoreFromClusterSnapshot operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RestoreFromClusterSnapshot service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> restoreFromClusterSnapshotAsync(
+            final RestoreFromClusterSnapshotRequest restoreFromClusterSnapshotRequest,
+            final AsyncHandler<RestoreFromClusterSnapshotRequest, Cluster> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+            	Cluster result;
+                try {
+            		result = restoreFromClusterSnapshot(restoreFromClusterSnapshotRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(restoreFromClusterSnapshotRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Modifies the parameters of a parameter group.
+     * </p>
+     * <p>
+     * For more information about managing parameter groups, go to <a
+     * s.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">
+     * Amazon Redshift Parameter Groups </a> in the <i>Amazon Redshift
+     * Management Guide</i> .
+     * </p>
+     *
+     * @param modifyClusterParameterGroupRequest Container for the necessary
+     *           parameters to execute the ModifyClusterParameterGroup operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ModifyClusterParameterGroup service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<ModifyClusterParameterGroupResult> modifyClusterParameterGroupAsync(final ModifyClusterParameterGroupRequest modifyClusterParameterGroupRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<ModifyClusterParameterGroupResult>() {
+            public ModifyClusterParameterGroupResult call() throws Exception {
+                return modifyClusterParameterGroup(modifyClusterParameterGroupRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Modifies the parameters of a parameter group.
+     * </p>
+     * <p>
+     * For more information about managing parameter groups, go to <a
+     * s.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">
+     * Amazon Redshift Parameter Groups </a> in the <i>Amazon Redshift
+     * Management Guide</i> .
+     * </p>
+     *
+     * @param modifyClusterParameterGroupRequest Container for the necessary
+     *           parameters to execute the ModifyClusterParameterGroup operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ModifyClusterParameterGroup service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<ModifyClusterParameterGroupResult> modifyClusterParameterGroupAsync(
+            final ModifyClusterParameterGroupRequest modifyClusterParameterGroupRequest,
+            final AsyncHandler<ModifyClusterParameterGroupRequest, ModifyClusterParameterGroupResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<ModifyClusterParameterGroupResult>() {
+            public ModifyClusterParameterGroupResult call() throws Exception {
+            	ModifyClusterParameterGroupResult result;
+                try {
+            		result = modifyClusterParameterGroup(modifyClusterParameterGroupRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(modifyClusterParameterGroupRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Displays a list of event categories for all event source types, or for
+     * a specified source type. For a list of the event categories and source
+     * types, go to <a
+     * mazon.com/redshift/latest/mgmt/working-with-event-notifications.html">
+     * Amazon Redshift Event Notifications </a> .
+     * </p>
+     *
+     * @param describeEventCategoriesRequest Container for the necessary
+     *           parameters to execute the DescribeEventCategories operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeEventCategories service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeEventCategoriesResult> describeEventCategoriesAsync(final DescribeEventCategoriesRequest describeEventCategoriesRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeEventCategoriesResult>() {
+            public DescribeEventCategoriesResult call() throws Exception {
+                return describeEventCategories(describeEventCategoriesRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Displays a list of event categories for all event source types, or for
+     * a specified source type. For a list of the event categories and source
+     * types, go to <a
+     * mazon.com/redshift/latest/mgmt/working-with-event-notifications.html">
+     * Amazon Redshift Event Notifications </a> .
+     * </p>
+     *
+     * @param describeEventCategoriesRequest Container for the necessary
+     *           parameters to execute the DescribeEventCategories operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeEventCategories service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeEventCategoriesResult> describeEventCategoriesAsync(
+            final DescribeEventCategoriesRequest describeEventCategoriesRequest,
+            final AsyncHandler<DescribeEventCategoriesRequest, DescribeEventCategoriesResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeEventCategoriesResult>() {
+            public DescribeEventCategoriesResult call() throws Exception {
+            	DescribeEventCategoriesResult result;
+                try {
+            		result = describeEventCategories(describeEventCategoriesRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeEventCategoriesRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Returns information about Amazon Redshift security groups. If the
+     * name of a security group is specified, the response will contain only
+     * information about only that security group.
+     * </p>
+     * <p>
+     * For information about managing security groups, go to <a
+     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
+     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
+     * Redshift Management Guide</i> .
+     * </p>
+     *
+     * @param describeClusterSecurityGroupsRequest Container for the
+     *           necessary parameters to execute the DescribeClusterSecurityGroups
+     *           operation on AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeClusterSecurityGroups service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeClusterSecurityGroupsResult> describeClusterSecurityGroupsAsync(final DescribeClusterSecurityGroupsRequest describeClusterSecurityGroupsRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeClusterSecurityGroupsResult>() {
+            public DescribeClusterSecurityGroupsResult call() throws Exception {
+                return describeClusterSecurityGroups(describeClusterSecurityGroupsRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Returns information about Amazon Redshift security groups. If the
+     * name of a security group is specified, the response will contain only
+     * information about only that security group.
+     * </p>
+     * <p>
+     * For information about managing security groups, go to <a
+     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
+     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
+     * Redshift Management Guide</i> .
+     * </p>
+     *
+     * @param describeClusterSecurityGroupsRequest Container for the
+     *           necessary parameters to execute the DescribeClusterSecurityGroups
+     *           operation on AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeClusterSecurityGroups service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeClusterSecurityGroupsResult> describeClusterSecurityGroupsAsync(
+            final DescribeClusterSecurityGroupsRequest describeClusterSecurityGroupsRequest,
+            final AsyncHandler<DescribeClusterSecurityGroupsRequest, DescribeClusterSecurityGroupsResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeClusterSecurityGroupsResult>() {
+            public DescribeClusterSecurityGroupsResult call() throws Exception {
+            	DescribeClusterSecurityGroupsResult result;
+                try {
+            		result = describeClusterSecurityGroups(describeClusterSecurityGroupsRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeClusterSecurityGroupsRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Returns one or more cluster subnet group objects, which contain
+     * metadata about your cluster subnet groups. By default, this operation
+     * returns information about all cluster subnet groups that are defined
+     * in you AWS account.
+     * </p>
+     *
+     * @param describeClusterSubnetGroupsRequest Container for the necessary
+     *           parameters to execute the DescribeClusterSubnetGroups operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeClusterSubnetGroups service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeClusterSubnetGroupsResult> describeClusterSubnetGroupsAsync(final DescribeClusterSubnetGroupsRequest describeClusterSubnetGroupsRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeClusterSubnetGroupsResult>() {
+            public DescribeClusterSubnetGroupsResult call() throws Exception {
+                return describeClusterSubnetGroups(describeClusterSubnetGroupsRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Returns one or more cluster subnet group objects, which contain
+     * metadata about your cluster subnet groups. By default, this operation
+     * returns information about all cluster subnet groups that are defined
+     * in you AWS account.
+     * </p>
+     *
+     * @param describeClusterSubnetGroupsRequest Container for the necessary
+     *           parameters to execute the DescribeClusterSubnetGroups operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeClusterSubnetGroups service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeClusterSubnetGroupsResult> describeClusterSubnetGroupsAsync(
+            final DescribeClusterSubnetGroupsRequest describeClusterSubnetGroupsRequest,
+            final AsyncHandler<DescribeClusterSubnetGroupsRequest, DescribeClusterSubnetGroupsResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeClusterSubnetGroupsResult>() {
+            public DescribeClusterSubnetGroupsResult call() throws Exception {
+            	DescribeClusterSubnetGroupsResult result;
+                try {
+            		result = describeClusterSubnetGroups(describeClusterSubnetGroupsRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeClusterSubnetGroupsRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Returns information about the specified Amazon Redshift HSM
+     * configuration. If no configuration ID is specified, returns
+     * information about all the HSM configurations owned by your AWS
+     * customer account.
+     * </p>
+     *
+     * @param describeHsmConfigurationsRequest Container for the necessary
+     *           parameters to execute the DescribeHsmConfigurations operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeHsmConfigurations service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeHsmConfigurationsResult> describeHsmConfigurationsAsync(final DescribeHsmConfigurationsRequest describeHsmConfigurationsRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeHsmConfigurationsResult>() {
+            public DescribeHsmConfigurationsResult call() throws Exception {
+                return describeHsmConfigurations(describeHsmConfigurationsRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Returns information about the specified Amazon Redshift HSM
+     * configuration. If no configuration ID is specified, returns
+     * information about all the HSM configurations owned by your AWS
+     * customer account.
+     * </p>
+     *
+     * @param describeHsmConfigurationsRequest Container for the necessary
+     *           parameters to execute the DescribeHsmConfigurations operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeHsmConfigurations service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeHsmConfigurationsResult> describeHsmConfigurationsAsync(
+            final DescribeHsmConfigurationsRequest describeHsmConfigurationsRequest,
+            final AsyncHandler<DescribeHsmConfigurationsRequest, DescribeHsmConfigurationsResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeHsmConfigurationsResult>() {
+            public DescribeHsmConfigurationsResult call() throws Exception {
+            	DescribeHsmConfigurationsResult result;
+                try {
+            		result = describeHsmConfigurations(describeHsmConfigurationsRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeHsmConfigurationsRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Deletes the specified manual snapshot. The snapshot must be in the
+     * "available" state, with no other users authorized to access the
+     * snapshot.
+     * </p>
+     * <p>
+     * Unlike automated snapshots, manual snapshots are retained even after
+     * you delete your cluster. Amazon Redshift does not delete your manual
+     * snapshots. You must delete manual snapshot explicitly to avoid getting
+     * charged. If other accounts are authorized to access the snapshot, you
+     * must revoke all of the authorizations before you can delete the
+     * snapshot.
+     * </p>
+     *
+     * @param deleteClusterSnapshotRequest Container for the necessary
+     *           parameters to execute the DeleteClusterSnapshot operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteClusterSnapshot service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Snapshot> deleteClusterSnapshotAsync(final DeleteClusterSnapshotRequest deleteClusterSnapshotRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Snapshot>() {
+            public Snapshot call() throws Exception {
+                return deleteClusterSnapshot(deleteClusterSnapshotRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes the specified manual snapshot. The snapshot must be in the
+     * "available" state, with no other users authorized to access the
+     * snapshot.
+     * </p>
+     * <p>
+     * Unlike automated snapshots, manual snapshots are retained even after
+     * you delete your cluster. Amazon Redshift does not delete your manual
+     * snapshots. You must delete manual snapshot explicitly to avoid getting
+     * charged. If other accounts are authorized to access the snapshot, you
+     * must revoke all of the authorizations before you can delete the
+     * snapshot.
+     * </p>
+     *
+     * @param deleteClusterSnapshotRequest Container for the necessary
+     *           parameters to execute the DeleteClusterSnapshot operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteClusterSnapshot service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Snapshot> deleteClusterSnapshotAsync(
+            final DeleteClusterSnapshotRequest deleteClusterSnapshotRequest,
+            final AsyncHandler<DeleteClusterSnapshotRequest, Snapshot> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Snapshot>() {
+            public Snapshot call() throws Exception {
+            	Snapshot result;
+                try {
+            		result = deleteClusterSnapshot(deleteClusterSnapshotRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteClusterSnapshotRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Deletes a specified Amazon Redshift parameter group. <p>
+     * <b>NOTE:</b>You cannot delete a parameter group if it is associated
+     * with a cluster.
+     * </p>
+     * 
+     * </p>
+     *
+     * @param deleteClusterParameterGroupRequest Container for the necessary
+     *           parameters to execute the DeleteClusterParameterGroup operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteClusterParameterGroup service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteClusterParameterGroupAsync(final DeleteClusterParameterGroupRequest deleteClusterParameterGroupRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deleteClusterParameterGroup(deleteClusterParameterGroupRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes a specified Amazon Redshift parameter group. <p>
+     * <b>NOTE:</b>You cannot delete a parameter group if it is associated
+     * with a cluster.
+     * </p>
+     * 
+     * </p>
+     *
+     * @param deleteClusterParameterGroupRequest Container for the necessary
+     *           parameters to execute the DeleteClusterParameterGroup operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteClusterParameterGroup service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteClusterParameterGroupAsync(
+            final DeleteClusterParameterGroupRequest deleteClusterParameterGroupRequest,
+            final AsyncHandler<DeleteClusterParameterGroupRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deleteClusterParameterGroup(deleteClusterParameterGroupRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteClusterParameterGroupRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Disables the automatic copying of snapshots from one region to another
+     * region for a specified cluster.
+     * </p>
+     *
+     * @param disableSnapshotCopyRequest Container for the necessary
+     *           parameters to execute the DisableSnapshotCopy operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DisableSnapshotCopy service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> disableSnapshotCopyAsync(final DisableSnapshotCopyRequest disableSnapshotCopyRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+                return disableSnapshotCopy(disableSnapshotCopyRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Disables the automatic copying of snapshots from one region to another
+     * region for a specified cluster.
+     * </p>
+     *
+     * @param disableSnapshotCopyRequest Container for the necessary
+     *           parameters to execute the DisableSnapshotCopy operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DisableSnapshotCopy service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> disableSnapshotCopyAsync(
+            final DisableSnapshotCopyRequest disableSnapshotCopyRequest,
+            final AsyncHandler<DisableSnapshotCopyRequest, Cluster> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+            	Cluster result;
+                try {
+            		result = disableSnapshotCopy(disableSnapshotCopyRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(disableSnapshotCopyRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates an Amazon Redshift event notification subscription. This
+     * action requires an ARN (Amazon Resource Name) of an Amazon SNS topic
+     * created by either the Amazon Redshift console, the Amazon SNS console,
+     * or the Amazon SNS API. To obtain an ARN with Amazon SNS, you must
+     * create a topic in Amazon SNS and subscribe to the topic. The ARN is
+     * displayed in the SNS console.
+     * </p>
+     * <p>
+     * You can specify the source type, and lists of Amazon Redshift source
+     * IDs, event categories, and event severities. Notifications will be
+     * sent for all events you want that match those criteria. For example,
+     * you can specify source type = cluster, source ID = my-cluster-1 and
+     * mycluster2, event categories = Availability, Backup, and severity =
+     * ERROR. The subsription will only send notifications for those ERROR
+     * events in the Availability and Backup categores for the specified
+     * clusters.
+     * </p>
+     * <p>
+     * If you specify both the source type and source IDs, such as source
+     * type = cluster and source identifier = my-cluster-1, notifiactions
+     * will be sent for all the cluster events for my-cluster-1. If you
+     * specify a source type but do not specify a source identifier, you will
+     * receive notice of the events for the objects of that type in your AWS
+     * account. If you do not specify either the SourceType nor the
+     * SourceIdentifier, you will be notified of events generated from all
+     * Amazon Redshift sources belonging to your AWS account. You must
+     * specify a source type if you specify a source ID.
+     * </p>
+     *
+     * @param createEventSubscriptionRequest Container for the necessary
+     *           parameters to execute the CreateEventSubscription operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateEventSubscription service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<EventSubscription> createEventSubscriptionAsync(final CreateEventSubscriptionRequest createEventSubscriptionRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<EventSubscription>() {
+            public EventSubscription call() throws Exception {
+                return createEventSubscription(createEventSubscriptionRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates an Amazon Redshift event notification subscription. This
+     * action requires an ARN (Amazon Resource Name) of an Amazon SNS topic
+     * created by either the Amazon Redshift console, the Amazon SNS console,
+     * or the Amazon SNS API. To obtain an ARN with Amazon SNS, you must
+     * create a topic in Amazon SNS and subscribe to the topic. The ARN is
+     * displayed in the SNS console.
+     * </p>
+     * <p>
+     * You can specify the source type, and lists of Amazon Redshift source
+     * IDs, event categories, and event severities. Notifications will be
+     * sent for all events you want that match those criteria. For example,
+     * you can specify source type = cluster, source ID = my-cluster-1 and
+     * mycluster2, event categories = Availability, Backup, and severity =
+     * ERROR. The subsription will only send notifications for those ERROR
+     * events in the Availability and Backup categores for the specified
+     * clusters.
+     * </p>
+     * <p>
+     * If you specify both the source type and source IDs, such as source
+     * type = cluster and source identifier = my-cluster-1, notifiactions
+     * will be sent for all the cluster events for my-cluster-1. If you
+     * specify a source type but do not specify a source identifier, you will
+     * receive notice of the events for the objects of that type in your AWS
+     * account. If you do not specify either the SourceType nor the
+     * SourceIdentifier, you will be notified of events generated from all
+     * Amazon Redshift sources belonging to your AWS account. You must
+     * specify a source type if you specify a source ID.
+     * </p>
+     *
+     * @param createEventSubscriptionRequest Container for the necessary
+     *           parameters to execute the CreateEventSubscription operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateEventSubscription service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<EventSubscription> createEventSubscriptionAsync(
+            final CreateEventSubscriptionRequest createEventSubscriptionRequest,
+            final AsyncHandler<CreateEventSubscriptionRequest, EventSubscription> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<EventSubscription>() {
+            public EventSubscription call() throws Exception {
+            	EventSubscription result;
+                try {
+            		result = createEventSubscription(createEventSubscriptionRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createEventSubscriptionRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Sets one or more parameters of the specified parameter group to their
+     * default values and sets the source values of the parameters to
+     * "engine-default". To reset the entire parameter group specify the
+     * <i>ResetAllParameters</i> parameter. For parameter changes to take
+     * effect you must reboot any associated clusters.
+     * </p>
+     *
+     * @param resetClusterParameterGroupRequest Container for the necessary
+     *           parameters to execute the ResetClusterParameterGroup operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ResetClusterParameterGroup service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<ResetClusterParameterGroupResult> resetClusterParameterGroupAsync(final ResetClusterParameterGroupRequest resetClusterParameterGroupRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<ResetClusterParameterGroupResult>() {
+            public ResetClusterParameterGroupResult call() throws Exception {
+                return resetClusterParameterGroup(resetClusterParameterGroupRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Sets one or more parameters of the specified parameter group to their
+     * default values and sets the source values of the parameters to
+     * "engine-default". To reset the entire parameter group specify the
+     * <i>ResetAllParameters</i> parameter. For parameter changes to take
+     * effect you must reboot any associated clusters.
+     * </p>
+     *
+     * @param resetClusterParameterGroupRequest Container for the necessary
+     *           parameters to execute the ResetClusterParameterGroup operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         ResetClusterParameterGroup service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<ResetClusterParameterGroupResult> resetClusterParameterGroupAsync(
+            final ResetClusterParameterGroupRequest resetClusterParameterGroupRequest,
+            final AsyncHandler<ResetClusterParameterGroupRequest, ResetClusterParameterGroupResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<ResetClusterParameterGroupResult>() {
+            public ResetClusterParameterGroupResult call() throws Exception {
+            	ResetClusterParameterGroupResult result;
+                try {
+            		result = resetClusterParameterGroup(resetClusterParameterGroupRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(resetClusterParameterGroupRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Authorizes the specified AWS customer account to restore the
      * specified snapshot.
      * </p>
@@ -2517,6 +3706,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         AuthorizeSnapshotAccess service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2558,6 +3748,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         AuthorizeSnapshotAccess service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2581,6 +3772,83 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     				throw ex;
             	}
             	asyncHandler.onSuccess(authorizeSnapshotAccessRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Enables the automatic copy of snapshots from one region to another
+     * region for a specified cluster.
+     * </p>
+     *
+     * @param enableSnapshotCopyRequest Container for the necessary
+     *           parameters to execute the EnableSnapshotCopy operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         EnableSnapshotCopy service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> enableSnapshotCopyAsync(final EnableSnapshotCopyRequest enableSnapshotCopyRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+                return enableSnapshotCopy(enableSnapshotCopyRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Enables the automatic copy of snapshots from one region to another
+     * region for a specified cluster.
+     * </p>
+     *
+     * @param enableSnapshotCopyRequest Container for the necessary
+     *           parameters to execute the EnableSnapshotCopy operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         EnableSnapshotCopy service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Cluster> enableSnapshotCopyAsync(
+            final EnableSnapshotCopyRequest enableSnapshotCopyRequest,
+            final AsyncHandler<EnableSnapshotCopyRequest, Cluster> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Cluster>() {
+            public Cluster call() throws Exception {
+            	Cluster result;
+                try {
+            		result = enableSnapshotCopy(enableSnapshotCopyRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(enableSnapshotCopyRequest, result);
                	return result;
 		    }
 		});
@@ -2612,6 +3880,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeReservedNodeOfferings service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2661,6 +3930,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeReservedNodeOfferings service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2691,22 +3961,19 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns information about the last resize operation for the specified
-     * cluster. If no resize operation has ever been initiated for the
-     * specified cluster, a <code>HTTP 404</code> error is returned. If a
-     * resize operation was initiated and completed, the status of the resize
-     * remains as <code>SUCCEEDED</code> until the next resize.
-     * </p>
-     * <p>
-     * A resize operation can be requested using ModifyCluster and
-     * specifying a different number or type of nodes for the cluster.
+     * Lists descriptions of all the Amazon Redshift event notifications
+     * subscription for a customer account. If you specify a subscription
+     * name, lists the description for that subscription.
      * </p>
      *
-     * @param describeResizeRequest Container for the necessary parameters to
-     *           execute the DescribeResize operation on AmazonRedshift.
+     * @param describeEventSubscriptionsRequest Container for the necessary
+     *           parameters to execute the DescribeEventSubscriptions operation on
+     *           AmazonRedshift.
      * 
      * @return A Java Future object containing the response from the
-     *         DescribeResize service method, as returned by AmazonRedshift.
+     *         DescribeEventSubscriptions service method, as returned by
+     *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2716,11 +3983,11 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<DescribeResizeResult> describeResizeAsync(final DescribeResizeRequest describeResizeRequest) 
+    public Future<DescribeEventSubscriptionsResult> describeEventSubscriptionsAsync(final DescribeEventSubscriptionsRequest describeEventSubscriptionsRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeResizeResult>() {
-            public DescribeResizeResult call() throws Exception {
-                return describeResize(describeResizeRequest);
+        return executorService.submit(new Callable<DescribeEventSubscriptionsResult>() {
+            public DescribeEventSubscriptionsResult call() throws Exception {
+                return describeEventSubscriptions(describeEventSubscriptionsRequest);
 		    }
 		});
     }
@@ -2728,26 +3995,23 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns information about the last resize operation for the specified
-     * cluster. If no resize operation has ever been initiated for the
-     * specified cluster, a <code>HTTP 404</code> error is returned. If a
-     * resize operation was initiated and completed, the status of the resize
-     * remains as <code>SUCCEEDED</code> until the next resize.
-     * </p>
-     * <p>
-     * A resize operation can be requested using ModifyCluster and
-     * specifying a different number or type of nodes for the cluster.
+     * Lists descriptions of all the Amazon Redshift event notifications
+     * subscription for a customer account. If you specify a subscription
+     * name, lists the description for that subscription.
      * </p>
      *
-     * @param describeResizeRequest Container for the necessary parameters to
-     *           execute the DescribeResize operation on AmazonRedshift.
+     * @param describeEventSubscriptionsRequest Container for the necessary
+     *           parameters to execute the DescribeEventSubscriptions operation on
+     *           AmazonRedshift.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         DescribeResize service method, as returned by AmazonRedshift.
+     *         DescribeEventSubscriptions service method, as returned by
+     *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2757,20 +4021,20 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<DescribeResizeResult> describeResizeAsync(
-            final DescribeResizeRequest describeResizeRequest,
-            final AsyncHandler<DescribeResizeRequest, DescribeResizeResult> asyncHandler)
+    public Future<DescribeEventSubscriptionsResult> describeEventSubscriptionsAsync(
+            final DescribeEventSubscriptionsRequest describeEventSubscriptionsRequest,
+            final AsyncHandler<DescribeEventSubscriptionsRequest, DescribeEventSubscriptionsResult> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeResizeResult>() {
-            public DescribeResizeResult call() throws Exception {
-            	DescribeResizeResult result;
+        return executorService.submit(new Callable<DescribeEventSubscriptionsResult>() {
+            public DescribeEventSubscriptionsResult call() throws Exception {
+            	DescribeEventSubscriptionsResult result;
                 try {
-            		result = describeResize(describeResizeRequest);
+            		result = describeEventSubscriptions(describeEventSubscriptionsRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(describeResizeRequest, result);
+            	asyncHandler.onSuccess(describeEventSubscriptionsRequest, result);
                	return result;
 		    }
 		});
@@ -2778,21 +4042,17 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns descriptions of the available Amazon Redshift cluster
-     * versions. You can call this operation even before creating any
-     * clusters to learn more about the Amazon Redshift versions. For more
-     * information about managing clusters, go to <a
-     * /docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">
-     * Amazon Redshift Clusters </a> in the <i>Amazon Redshift Management
-     * Guide</i>
+     * Describes whether information, such as queries and connection
+     * attempts, is being logged for the specified Amazon Redshift cluster.
      * </p>
      *
-     * @param describeClusterVersionsRequest Container for the necessary
-     *           parameters to execute the DescribeClusterVersions operation on
+     * @param describeLoggingStatusRequest Container for the necessary
+     *           parameters to execute the DescribeLoggingStatus operation on
      *           AmazonRedshift.
      * 
      * @return A Java Future object containing the response from the
-     *         DescribeClusterVersions service method, as returned by AmazonRedshift.
+     *         DescribeLoggingStatus service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2802,11 +4062,11 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<DescribeClusterVersionsResult> describeClusterVersionsAsync(final DescribeClusterVersionsRequest describeClusterVersionsRequest) 
+    public Future<DescribeLoggingStatusResult> describeLoggingStatusAsync(final DescribeLoggingStatusRequest describeLoggingStatusRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeClusterVersionsResult>() {
-            public DescribeClusterVersionsResult call() throws Exception {
-                return describeClusterVersions(describeClusterVersionsRequest);
+        return executorService.submit(new Callable<DescribeLoggingStatusResult>() {
+            public DescribeLoggingStatusResult call() throws Exception {
+                return describeLoggingStatus(describeLoggingStatusRequest);
 		    }
 		});
     }
@@ -2814,17 +4074,12 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Returns descriptions of the available Amazon Redshift cluster
-     * versions. You can call this operation even before creating any
-     * clusters to learn more about the Amazon Redshift versions. For more
-     * information about managing clusters, go to <a
-     * /docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">
-     * Amazon Redshift Clusters </a> in the <i>Amazon Redshift Management
-     * Guide</i>
+     * Describes whether information, such as queries and connection
+     * attempts, is being logged for the specified Amazon Redshift cluster.
      * </p>
      *
-     * @param describeClusterVersionsRequest Container for the necessary
-     *           parameters to execute the DescribeClusterVersions operation on
+     * @param describeLoggingStatusRequest Container for the necessary
+     *           parameters to execute the DescribeLoggingStatus operation on
      *           AmazonRedshift.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
@@ -2832,7 +4087,8 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         DescribeClusterVersions service method, as returned by AmazonRedshift.
+     *         DescribeLoggingStatus service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2842,20 +4098,283 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<DescribeClusterVersionsResult> describeClusterVersionsAsync(
-            final DescribeClusterVersionsRequest describeClusterVersionsRequest,
-            final AsyncHandler<DescribeClusterVersionsRequest, DescribeClusterVersionsResult> asyncHandler)
+    public Future<DescribeLoggingStatusResult> describeLoggingStatusAsync(
+            final DescribeLoggingStatusRequest describeLoggingStatusRequest,
+            final AsyncHandler<DescribeLoggingStatusRequest, DescribeLoggingStatusResult> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeClusterVersionsResult>() {
-            public DescribeClusterVersionsResult call() throws Exception {
-            	DescribeClusterVersionsResult result;
+        return executorService.submit(new Callable<DescribeLoggingStatusResult>() {
+            public DescribeLoggingStatusResult call() throws Exception {
+            	DescribeLoggingStatusResult result;
                 try {
-            		result = describeClusterVersions(describeClusterVersionsRequest);
+            		result = describeLoggingStatus(describeLoggingStatusRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(describeClusterVersionsRequest, result);
+            	asyncHandler.onSuccess(describeLoggingStatusRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Deletes an Amazon Redshift event notification subscription.
+     * </p>
+     *
+     * @param deleteEventSubscriptionRequest Container for the necessary
+     *           parameters to execute the DeleteEventSubscription operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteEventSubscription service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteEventSubscriptionAsync(final DeleteEventSubscriptionRequest deleteEventSubscriptionRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deleteEventSubscription(deleteEventSubscriptionRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes an Amazon Redshift event notification subscription.
+     * </p>
+     *
+     * @param deleteEventSubscriptionRequest Container for the necessary
+     *           parameters to execute the DeleteEventSubscription operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteEventSubscription service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteEventSubscriptionAsync(
+            final DeleteEventSubscriptionRequest deleteEventSubscriptionRequest,
+            final AsyncHandler<DeleteEventSubscriptionRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deleteEventSubscription(deleteEventSubscriptionRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteEventSubscriptionRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates an HSM client certificate that an Amazon Redshift cluster will
+     * use to connect to the client's HSM in order to store and retrieve the
+     * keys used to encrypt the cluster databases.
+     * </p>
+     * <p>
+     * The command returns a public key, which you must store in the HSM.
+     * After creating the HSM certificate, you must create an Amazon Redshift
+     * HSM configuration that provides a cluster the information needed to
+     * store and retrieve database encryption keys in the HSM. For more
+     * information, go to aLinkToHSMTopic in the Amazon Redshift Management
+     * Guide.
+     * </p>
+     *
+     * @param createHsmClientCertificateRequest Container for the necessary
+     *           parameters to execute the CreateHsmClientCertificate operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateHsmClientCertificate service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<HsmClientCertificate> createHsmClientCertificateAsync(final CreateHsmClientCertificateRequest createHsmClientCertificateRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<HsmClientCertificate>() {
+            public HsmClientCertificate call() throws Exception {
+                return createHsmClientCertificate(createHsmClientCertificateRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates an HSM client certificate that an Amazon Redshift cluster will
+     * use to connect to the client's HSM in order to store and retrieve the
+     * keys used to encrypt the cluster databases.
+     * </p>
+     * <p>
+     * The command returns a public key, which you must store in the HSM.
+     * After creating the HSM certificate, you must create an Amazon Redshift
+     * HSM configuration that provides a cluster the information needed to
+     * store and retrieve database encryption keys in the HSM. For more
+     * information, go to aLinkToHSMTopic in the Amazon Redshift Management
+     * Guide.
+     * </p>
+     *
+     * @param createHsmClientCertificateRequest Container for the necessary
+     *           parameters to execute the CreateHsmClientCertificate operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateHsmClientCertificate service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<HsmClientCertificate> createHsmClientCertificateAsync(
+            final CreateHsmClientCertificateRequest createHsmClientCertificateRequest,
+            final AsyncHandler<CreateHsmClientCertificateRequest, HsmClientCertificate> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<HsmClientCertificate>() {
+            public HsmClientCertificate call() throws Exception {
+            	HsmClientCertificate result;
+                try {
+            		result = createHsmClientCertificate(createHsmClientCertificateRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createHsmClientCertificateRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Revokes an ingress rule in an Amazon Redshift security group for a
+     * previously authorized IP range or Amazon EC2 security group. To add an
+     * ingress rule, see AuthorizeClusterSecurityGroupIngress. For
+     * information about managing security groups, go to <a
+     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
+     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
+     * Redshift Management Guide</i> .
+     * 
+     * </p>
+     *
+     * @param revokeClusterSecurityGroupIngressRequest Container for the
+     *           necessary parameters to execute the RevokeClusterSecurityGroupIngress
+     *           operation on AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RevokeClusterSecurityGroupIngress service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<ClusterSecurityGroup> revokeClusterSecurityGroupIngressAsync(final RevokeClusterSecurityGroupIngressRequest revokeClusterSecurityGroupIngressRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<ClusterSecurityGroup>() {
+            public ClusterSecurityGroup call() throws Exception {
+                return revokeClusterSecurityGroupIngress(revokeClusterSecurityGroupIngressRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Revokes an ingress rule in an Amazon Redshift security group for a
+     * previously authorized IP range or Amazon EC2 security group. To add an
+     * ingress rule, see AuthorizeClusterSecurityGroupIngress. For
+     * information about managing security groups, go to <a
+     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
+     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
+     * Redshift Management Guide</i> .
+     * 
+     * </p>
+     *
+     * @param revokeClusterSecurityGroupIngressRequest Container for the
+     *           necessary parameters to execute the RevokeClusterSecurityGroupIngress
+     *           operation on AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RevokeClusterSecurityGroupIngress service method, as returned by
+     *         AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<ClusterSecurityGroup> revokeClusterSecurityGroupIngressAsync(
+            final RevokeClusterSecurityGroupIngressRequest revokeClusterSecurityGroupIngressRequest,
+            final AsyncHandler<RevokeClusterSecurityGroupIngressRequest, ClusterSecurityGroup> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<ClusterSecurityGroup>() {
+            public ClusterSecurityGroup call() throws Exception {
+            	ClusterSecurityGroup result;
+                try {
+            		result = revokeClusterSecurityGroupIngress(revokeClusterSecurityGroupIngressRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(revokeClusterSecurityGroupIngressRequest, result);
                	return result;
 		    }
 		});
@@ -2888,6 +4407,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeClusterParameters service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2938,6 +4458,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeClusterParameters service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2968,23 +4489,19 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Revokes an ingress rule in an Amazon Redshift security group for a
-     * previously authorized IP range or Amazon EC2 security group. To add an
-     * ingress rule, see AuthorizeClusterSecurityGroupIngress. For
-     * information about managing security groups, go to <a
-     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
-     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
-     * Redshift Management Guide</i> .
-     * 
+     * Returns information about the specified HSM client certificate. If no
+     * certificate ID is specified, returns information about all the HSM
+     * certificates owned by your AWS customer account.
      * </p>
      *
-     * @param revokeClusterSecurityGroupIngressRequest Container for the
-     *           necessary parameters to execute the RevokeClusterSecurityGroupIngress
+     * @param describeHsmClientCertificatesRequest Container for the
+     *           necessary parameters to execute the DescribeHsmClientCertificates
      *           operation on AmazonRedshift.
      * 
      * @return A Java Future object containing the response from the
-     *         RevokeClusterSecurityGroupIngress service method, as returned by
+     *         DescribeHsmClientCertificates service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2994,11 +4511,11 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<ClusterSecurityGroup> revokeClusterSecurityGroupIngressAsync(final RevokeClusterSecurityGroupIngressRequest revokeClusterSecurityGroupIngressRequest) 
+    public Future<DescribeHsmClientCertificatesResult> describeHsmClientCertificatesAsync(final DescribeHsmClientCertificatesRequest describeHsmClientCertificatesRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<ClusterSecurityGroup>() {
-            public ClusterSecurityGroup call() throws Exception {
-                return revokeClusterSecurityGroupIngress(revokeClusterSecurityGroupIngressRequest);
+        return executorService.submit(new Callable<DescribeHsmClientCertificatesResult>() {
+            public DescribeHsmClientCertificatesResult call() throws Exception {
+                return describeHsmClientCertificates(describeHsmClientCertificatesRequest);
 		    }
 		});
     }
@@ -3006,18 +4523,13 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     
     /**
      * <p>
-     * Revokes an ingress rule in an Amazon Redshift security group for a
-     * previously authorized IP range or Amazon EC2 security group. To add an
-     * ingress rule, see AuthorizeClusterSecurityGroupIngress. For
-     * information about managing security groups, go to <a
-     * ws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">
-     * Amazon Redshift Cluster Security Groups </a> in the <i>Amazon
-     * Redshift Management Guide</i> .
-     * 
+     * Returns information about the specified HSM client certificate. If no
+     * certificate ID is specified, returns information about all the HSM
+     * certificates owned by your AWS customer account.
      * </p>
      *
-     * @param revokeClusterSecurityGroupIngressRequest Container for the
-     *           necessary parameters to execute the RevokeClusterSecurityGroupIngress
+     * @param describeHsmClientCertificatesRequest Container for the
+     *           necessary parameters to execute the DescribeHsmClientCertificates
      *           operation on AmazonRedshift.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
@@ -3025,8 +4537,9 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         RevokeClusterSecurityGroupIngress service method, as returned by
+     *         DescribeHsmClientCertificates service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3036,20 +4549,113 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      *             If an error response is returned by AmazonRedshift indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<ClusterSecurityGroup> revokeClusterSecurityGroupIngressAsync(
-            final RevokeClusterSecurityGroupIngressRequest revokeClusterSecurityGroupIngressRequest,
-            final AsyncHandler<RevokeClusterSecurityGroupIngressRequest, ClusterSecurityGroup> asyncHandler)
+    public Future<DescribeHsmClientCertificatesResult> describeHsmClientCertificatesAsync(
+            final DescribeHsmClientCertificatesRequest describeHsmClientCertificatesRequest,
+            final AsyncHandler<DescribeHsmClientCertificatesRequest, DescribeHsmClientCertificatesResult> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<ClusterSecurityGroup>() {
-            public ClusterSecurityGroup call() throws Exception {
-            	ClusterSecurityGroup result;
+        return executorService.submit(new Callable<DescribeHsmClientCertificatesResult>() {
+            public DescribeHsmClientCertificatesResult call() throws Exception {
+            	DescribeHsmClientCertificatesResult result;
                 try {
-            		result = revokeClusterSecurityGroupIngress(revokeClusterSecurityGroupIngressRequest);
+            		result = describeHsmClientCertificates(describeHsmClientCertificatesRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(revokeClusterSecurityGroupIngressRequest, result);
+            	asyncHandler.onSuccess(describeHsmClientCertificatesRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates an HSM configuration that contains the information required by
+     * an Amazon Redshift cluster to store and retrieve database encryption
+     * keys in a Hardware Storeage Module (HSM). After creating the HSM
+     * configuration, you can specify it as a parameter when creating a
+     * cluster. The cluster will then store its encryption keys in the HSM.
+     * </p>
+     * <p>
+     * Before creating an HSM configuration, you must have first created an
+     * HSM client certificate. For more information, go to aLinkToHSMTopic in
+     * the Amazon Redshift Management Guide.
+     * </p>
+     *
+     * @param createHsmConfigurationRequest Container for the necessary
+     *           parameters to execute the CreateHsmConfiguration operation on
+     *           AmazonRedshift.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateHsmConfiguration service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<HsmConfiguration> createHsmConfigurationAsync(final CreateHsmConfigurationRequest createHsmConfigurationRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<HsmConfiguration>() {
+            public HsmConfiguration call() throws Exception {
+                return createHsmConfiguration(createHsmConfigurationRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates an HSM configuration that contains the information required by
+     * an Amazon Redshift cluster to store and retrieve database encryption
+     * keys in a Hardware Storeage Module (HSM). After creating the HSM
+     * configuration, you can specify it as a parameter when creating a
+     * cluster. The cluster will then store its encryption keys in the HSM.
+     * </p>
+     * <p>
+     * Before creating an HSM configuration, you must have first created an
+     * HSM client certificate. For more information, go to aLinkToHSMTopic in
+     * the Amazon Redshift Management Guide.
+     * </p>
+     *
+     * @param createHsmConfigurationRequest Container for the necessary
+     *           parameters to execute the CreateHsmConfiguration operation on
+     *           AmazonRedshift.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateHsmConfiguration service method, as returned by AmazonRedshift.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AmazonRedshift indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<HsmConfiguration> createHsmConfigurationAsync(
+            final CreateHsmConfigurationRequest createHsmConfigurationRequest,
+            final AsyncHandler<CreateHsmConfigurationRequest, HsmConfiguration> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<HsmConfiguration>() {
+            public HsmConfiguration call() throws Exception {
+            	HsmConfiguration result;
+                try {
+            		result = createHsmConfiguration(createHsmConfigurationRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createHsmConfigurationRequest, result);
                	return result;
 		    }
 		});
@@ -3073,6 +4679,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeClusters service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3114,6 +4721,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeClusters service method, as returned by AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3158,6 +4766,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeClusterSnapshots service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3197,6 +4806,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeClusterSnapshots service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3252,6 +4862,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         CreateClusterParameterGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3302,6 +4913,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         CreateClusterParameterGroup service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3353,6 +4965,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeClusterParameterGroups service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3399,6 +5012,7 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
      * @return A Java Future object containing the response from the
      *         DescribeClusterParameterGroups service method, as returned by
      *         AmazonRedshift.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3422,117 +5036,6 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient
     				throw ex;
             	}
             	asyncHandler.onSuccess(describeClusterParameterGroupsRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Creates a new cluster from a snapshot. Amazon Redshift creates the
-     * resulting cluster with the same configuration as the original cluster
-     * from which the snapshot was created, except that the new cluster is
-     * created with the default cluster security and parameter group. After
-     * Amazon Redshift creates the cluster you can use the ModifyCluster API
-     * to associate a different security group and different parameter group
-     * with the restored cluster.
-     * </p>
-     * <p>
-     * If a snapshot is taken of a cluster in VPC, you can restore it only
-     * in VPC. In this case, you must provide a cluster subnet group where
-     * you want the cluster restored. If snapshot is taken of a cluster
-     * outside VPC, then you can restore it only outside VPC.
-     * </p>
-     * <p>
-     * For more information about working with snapshots, go to <a
-     * docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">
-     * Amazon Redshift Snapshots </a> in the <i>Amazon Redshift Management
-     * Guide</i> .
-     * </p>
-     *
-     * @param restoreFromClusterSnapshotRequest Container for the necessary
-     *           parameters to execute the RestoreFromClusterSnapshot operation on
-     *           AmazonRedshift.
-     * 
-     * @return A Java Future object containing the response from the
-     *         RestoreFromClusterSnapshot service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Cluster> restoreFromClusterSnapshotAsync(final RestoreFromClusterSnapshotRequest restoreFromClusterSnapshotRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Cluster>() {
-            public Cluster call() throws Exception {
-                return restoreFromClusterSnapshot(restoreFromClusterSnapshotRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Creates a new cluster from a snapshot. Amazon Redshift creates the
-     * resulting cluster with the same configuration as the original cluster
-     * from which the snapshot was created, except that the new cluster is
-     * created with the default cluster security and parameter group. After
-     * Amazon Redshift creates the cluster you can use the ModifyCluster API
-     * to associate a different security group and different parameter group
-     * with the restored cluster.
-     * </p>
-     * <p>
-     * If a snapshot is taken of a cluster in VPC, you can restore it only
-     * in VPC. In this case, you must provide a cluster subnet group where
-     * you want the cluster restored. If snapshot is taken of a cluster
-     * outside VPC, then you can restore it only outside VPC.
-     * </p>
-     * <p>
-     * For more information about working with snapshots, go to <a
-     * docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">
-     * Amazon Redshift Snapshots </a> in the <i>Amazon Redshift Management
-     * Guide</i> .
-     * </p>
-     *
-     * @param restoreFromClusterSnapshotRequest Container for the necessary
-     *           parameters to execute the RestoreFromClusterSnapshot operation on
-     *           AmazonRedshift.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         RestoreFromClusterSnapshot service method, as returned by
-     *         AmazonRedshift.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AmazonRedshift indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Cluster> restoreFromClusterSnapshotAsync(
-            final RestoreFromClusterSnapshotRequest restoreFromClusterSnapshotRequest,
-            final AsyncHandler<RestoreFromClusterSnapshotRequest, Cluster> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Cluster>() {
-            public Cluster call() throws Exception {
-            	Cluster result;
-                try {
-            		result = restoreFromClusterSnapshot(restoreFromClusterSnapshotRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(restoreFromClusterSnapshotRequest, result);
                	return result;
 		    }
 		});

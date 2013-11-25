@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,7 @@ public class DBEngineVersion implements Serializable {
     private String engineVersion;
 
     /**
-     * The name of the DBParameterGroupFamily for the database engine.
+     * The name of the DB parameter group family for the database engine.
      */
     private String dBParameterGroupFamily;
 
@@ -98,8 +100,7 @@ public class DBEngineVersion implements Serializable {
         this.engine = engine;
         return this;
     }
-    
-    
+
     /**
      * The version number of the database engine.
      *
@@ -132,32 +133,31 @@ public class DBEngineVersion implements Serializable {
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
-     * The name of the DBParameterGroupFamily for the database engine.
+     * The name of the DB parameter group family for the database engine.
      *
-     * @return The name of the DBParameterGroupFamily for the database engine.
+     * @return The name of the DB parameter group family for the database engine.
      */
     public String getDBParameterGroupFamily() {
         return dBParameterGroupFamily;
     }
     
     /**
-     * The name of the DBParameterGroupFamily for the database engine.
+     * The name of the DB parameter group family for the database engine.
      *
-     * @param dBParameterGroupFamily The name of the DBParameterGroupFamily for the database engine.
+     * @param dBParameterGroupFamily The name of the DB parameter group family for the database engine.
      */
     public void setDBParameterGroupFamily(String dBParameterGroupFamily) {
         this.dBParameterGroupFamily = dBParameterGroupFamily;
     }
     
     /**
-     * The name of the DBParameterGroupFamily for the database engine.
+     * The name of the DB parameter group family for the database engine.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBParameterGroupFamily The name of the DBParameterGroupFamily for the database engine.
+     * @param dBParameterGroupFamily The name of the DB parameter group family for the database engine.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -166,8 +166,7 @@ public class DBEngineVersion implements Serializable {
         this.dBParameterGroupFamily = dBParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The description of the database engine.
      *
@@ -200,8 +199,7 @@ public class DBEngineVersion implements Serializable {
         this.dBEngineDescription = dBEngineDescription;
         return this;
     }
-    
-    
+
     /**
      * The description of the database engine version.
      *
@@ -234,8 +232,7 @@ public class DBEngineVersion implements Serializable {
         this.dBEngineVersionDescription = dBEngineVersionDescription;
         return this;
     }
-    
-    
+
     /**
      * The default character set for new instances of this engine version, if
      * the <code>CharacterSetName</code> parameter of the CreateDBInstance
@@ -280,8 +277,7 @@ public class DBEngineVersion implements Serializable {
         this.defaultCharacterSet = defaultCharacterSet;
         return this;
     }
-    
-    
+
     /**
      * A list of the character sets supported by this engine for the
      * <code>CharacterSetName</code> parameter of the CreateDBInstance API.
@@ -290,7 +286,6 @@ public class DBEngineVersion implements Serializable {
      *         <code>CharacterSetName</code> parameter of the CreateDBInstance API.
      */
     public java.util.List<CharacterSet> getSupportedCharacterSets() {
-        
         if (supportedCharacterSets == null) {
               supportedCharacterSets = new com.amazonaws.internal.ListWithAutoConstructFlag<CharacterSet>();
               supportedCharacterSets.setAutoConstruct(true);
@@ -358,7 +353,7 @@ public class DBEngineVersion implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

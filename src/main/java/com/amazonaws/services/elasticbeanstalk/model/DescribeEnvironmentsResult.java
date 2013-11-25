@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeEnvironmentsResult implements Serializable {
      * @return Returns an <a>EnvironmentDescription</a> list.
      */
     public java.util.List<EnvironmentDescription> getEnvironments() {
-        
         if (environments == null) {
               environments = new com.amazonaws.internal.ListWithAutoConstructFlag<EnvironmentDescription>();
               environments.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeEnvironmentsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

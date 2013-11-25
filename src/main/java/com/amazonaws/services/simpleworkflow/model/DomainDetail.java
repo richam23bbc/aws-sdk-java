@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,7 @@ public class DomainDetail implements Serializable {
         this.domainInfo = domainInfo;
         return this;
     }
-    
-    
+
     /**
      * Contains the configuration settings of a domain.
      *
@@ -98,8 +99,7 @@ public class DomainDetail implements Serializable {
         this.configuration = configuration;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

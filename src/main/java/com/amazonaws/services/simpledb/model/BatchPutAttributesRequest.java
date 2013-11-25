@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#batchPutAttributes(BatchPutAttributesRequest) BatchPutAttributes operation}.
@@ -88,8 +90,6 @@ public class BatchPutAttributesRequest extends AmazonWebServiceRequest implement
      */
     public BatchPutAttributesRequest() {}
     
-
-
     /**
      * Constructs a new BatchPutAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -104,8 +104,6 @@ public class BatchPutAttributesRequest extends AmazonWebServiceRequest implement
         setItems(items);
     }
 
-    
-    
     /**
      * The name of the domain in which the attributes are being stored.
      *
@@ -138,15 +136,13 @@ public class BatchPutAttributesRequest extends AmazonWebServiceRequest implement
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A list of items on which to perform the operation.
      *
      * @return A list of items on which to perform the operation.
      */
     public java.util.List<ReplaceableItem> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<ReplaceableItem>();
               items.setAutoConstruct(true);
@@ -208,7 +204,7 @@ public class BatchPutAttributesRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

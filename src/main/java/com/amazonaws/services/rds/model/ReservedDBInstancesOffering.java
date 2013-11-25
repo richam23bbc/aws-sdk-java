@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -28,7 +30,7 @@ public class ReservedDBInstancesOffering implements Serializable {
     private String reservedDBInstancesOfferingId;
 
     /**
-     * The DB instance class for the reserved DB Instance.
+     * The DB instance class for the reserved DB instance.
      */
     private String dBInstanceClass;
 
@@ -48,7 +50,7 @@ public class ReservedDBInstancesOffering implements Serializable {
     private Double usagePrice;
 
     /**
-     * The currency code for the reserved DB Instance offering.
+     * The currency code for the reserved DB instance offering.
      */
     private String currencyCode;
 
@@ -68,7 +70,7 @@ public class ReservedDBInstancesOffering implements Serializable {
     private Boolean multiAZ;
 
     /**
-     * The recurring price charged to run this reserved DB Instance.
+     * The recurring price charged to run this reserved DB instance.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<RecurringCharge> recurringCharges;
 
@@ -110,32 +112,31 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
     }
-    
-    
+
     /**
-     * The DB instance class for the reserved DB Instance.
+     * The DB instance class for the reserved DB instance.
      *
-     * @return The DB instance class for the reserved DB Instance.
+     * @return The DB instance class for the reserved DB instance.
      */
     public String getDBInstanceClass() {
         return dBInstanceClass;
     }
     
     /**
-     * The DB instance class for the reserved DB Instance.
+     * The DB instance class for the reserved DB instance.
      *
-     * @param dBInstanceClass The DB instance class for the reserved DB Instance.
+     * @param dBInstanceClass The DB instance class for the reserved DB instance.
      */
     public void setDBInstanceClass(String dBInstanceClass) {
         this.dBInstanceClass = dBInstanceClass;
     }
     
     /**
-     * The DB instance class for the reserved DB Instance.
+     * The DB instance class for the reserved DB instance.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBInstanceClass The DB instance class for the reserved DB Instance.
+     * @param dBInstanceClass The DB instance class for the reserved DB instance.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -144,8 +145,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.dBInstanceClass = dBInstanceClass;
         return this;
     }
-    
-    
+
     /**
      * The duration of the offering in seconds.
      *
@@ -178,8 +178,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.duration = duration;
         return this;
     }
-    
-    
+
     /**
      * The fixed price charged for this offering.
      *
@@ -212,8 +211,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.fixedPrice = fixedPrice;
         return this;
     }
-    
-    
+
     /**
      * The hourly price charged for this offering.
      *
@@ -246,32 +244,31 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.usagePrice = usagePrice;
         return this;
     }
-    
-    
+
     /**
-     * The currency code for the reserved DB Instance offering.
+     * The currency code for the reserved DB instance offering.
      *
-     * @return The currency code for the reserved DB Instance offering.
+     * @return The currency code for the reserved DB instance offering.
      */
     public String getCurrencyCode() {
         return currencyCode;
     }
     
     /**
-     * The currency code for the reserved DB Instance offering.
+     * The currency code for the reserved DB instance offering.
      *
-     * @param currencyCode The currency code for the reserved DB Instance offering.
+     * @param currencyCode The currency code for the reserved DB instance offering.
      */
     public void setCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
     }
     
     /**
-     * The currency code for the reserved DB Instance offering.
+     * The currency code for the reserved DB instance offering.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param currencyCode The currency code for the reserved DB Instance offering.
+     * @param currencyCode The currency code for the reserved DB instance offering.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -280,8 +277,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.currencyCode = currencyCode;
         return this;
     }
-    
-    
+
     /**
      * The database engine used by the offering.
      *
@@ -314,8 +310,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.productDescription = productDescription;
         return this;
     }
-    
-    
+
     /**
      * The offering type.
      *
@@ -348,8 +343,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.offeringType = offeringType;
         return this;
     }
-    
-    
+
     /**
      * Indicates if the offering applies to Multi-AZ deployments.
      *
@@ -382,8 +376,7 @@ public class ReservedDBInstancesOffering implements Serializable {
         this.multiAZ = multiAZ;
         return this;
     }
-    
-    
+
     /**
      * Indicates if the offering applies to Multi-AZ deployments.
      *
@@ -392,14 +385,13 @@ public class ReservedDBInstancesOffering implements Serializable {
     public Boolean getMultiAZ() {
         return multiAZ;
     }
-    
+
     /**
-     * The recurring price charged to run this reserved DB Instance.
+     * The recurring price charged to run this reserved DB instance.
      *
-     * @return The recurring price charged to run this reserved DB Instance.
+     * @return The recurring price charged to run this reserved DB instance.
      */
     public java.util.List<RecurringCharge> getRecurringCharges() {
-        
         if (recurringCharges == null) {
               recurringCharges = new com.amazonaws.internal.ListWithAutoConstructFlag<RecurringCharge>();
               recurringCharges.setAutoConstruct(true);
@@ -408,9 +400,9 @@ public class ReservedDBInstancesOffering implements Serializable {
     }
     
     /**
-     * The recurring price charged to run this reserved DB Instance.
+     * The recurring price charged to run this reserved DB instance.
      *
-     * @param recurringCharges The recurring price charged to run this reserved DB Instance.
+     * @param recurringCharges The recurring price charged to run this reserved DB instance.
      */
     public void setRecurringCharges(java.util.Collection<RecurringCharge> recurringCharges) {
         if (recurringCharges == null) {
@@ -423,11 +415,11 @@ public class ReservedDBInstancesOffering implements Serializable {
     }
     
     /**
-     * The recurring price charged to run this reserved DB Instance.
+     * The recurring price charged to run this reserved DB instance.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param recurringCharges The recurring price charged to run this reserved DB Instance.
+     * @param recurringCharges The recurring price charged to run this reserved DB instance.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -441,11 +433,11 @@ public class ReservedDBInstancesOffering implements Serializable {
     }
     
     /**
-     * The recurring price charged to run this reserved DB Instance.
+     * The recurring price charged to run this reserved DB instance.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param recurringCharges The recurring price charged to run this reserved DB Instance.
+     * @param recurringCharges The recurring price charged to run this reserved DB instance.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -461,7 +453,7 @@ public class ReservedDBInstancesOffering implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.datapipeline.DataPipeline#evaluateExpression(EvaluateExpressionRequest) EvaluateExpression operation}.
@@ -97,8 +99,7 @@ public class EvaluateExpressionRequest extends AmazonWebServiceRequest implement
         this.pipelineId = pipelineId;
         return this;
     }
-    
-    
+
     /**
      * The identifier of the object.
      * <p>
@@ -143,8 +144,7 @@ public class EvaluateExpressionRequest extends AmazonWebServiceRequest implement
         this.objectId = objectId;
         return this;
     }
-    
-    
+
     /**
      * The expression to evaluate.
      * <p>
@@ -189,8 +189,7 @@ public class EvaluateExpressionRequest extends AmazonWebServiceRequest implement
         this.expression = expression;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

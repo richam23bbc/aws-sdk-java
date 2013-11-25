@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeDomainsResult implements Serializable {
      * @return The current status of all of your search domains.
      */
     public java.util.List<DomainStatus> getDomainStatusList() {
-        
         if (domainStatusList == null) {
               domainStatusList = new com.amazonaws.internal.ListWithAutoConstructFlag<DomainStatus>();
               domainStatusList.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeDomainsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

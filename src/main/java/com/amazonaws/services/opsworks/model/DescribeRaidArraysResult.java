@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -36,7 +38,6 @@ public class DescribeRaidArraysResult implements Serializable {
      *         arrays.
      */
     public java.util.List<RaidArray> getRaidArrays() {
-        
         if (raidArrays == null) {
               raidArrays = new com.amazonaws.internal.ListWithAutoConstructFlag<RaidArray>();
               raidArrays.setAutoConstruct(true);
@@ -104,7 +105,7 @@ public class DescribeRaidArraysResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

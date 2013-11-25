@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -175,8 +177,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.input = input;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the total duration for this workflow execution. This
      * overrides the <code>defaultExecutionStartToCloseTimeout</code>
@@ -278,8 +279,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.executionStartToCloseTimeout = executionStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * Represents a task list.
      *
@@ -312,8 +312,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.taskList = taskList;
         return this;
     }
-    
-    
+
     /**
      * Specifies the maximum duration of decision tasks for the new workflow
      * execution. This parameter overrides the
@@ -421,8 +420,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.taskStartToCloseTimeout = taskStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the policy to use for the child workflow executions
      * of the new execution if it is terminated by calling the
@@ -566,8 +564,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.childPolicy = childPolicy;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the policy to use for the child workflow executions
      * of the new execution if it is terminated by calling the
@@ -665,7 +662,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.childPolicy = childPolicy.toString();
         return this;
     }
-    
+
     /**
      * The list of tags to associate with the new workflow execution. A
      * maximum of 5 tags can be specified. You can list workflow executions
@@ -681,7 +678,6 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
      *         <a>ListClosedWorkflowExecutions</a> and specifying a <a>TagFilter</a>.
      */
     public java.util.List<String> getTagList() {
-        
         if (tagList == null) {
               tagList = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               tagList.setAutoConstruct(true);
@@ -770,7 +766,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
 
         return this;
     }
-    
+
     /**
      * Returns the value of the WorkflowTypeVersion property for this object.
      * <p>
@@ -812,8 +808,7 @@ public class ContinueAsNewWorkflowExecutionDecisionAttributes implements Seriali
         this.workflowTypeVersion = workflowTypeVersion;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

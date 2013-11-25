@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.ReplaceNetworkAclAssociationRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#replaceNetworkAclAssociation(ReplaceNetworkAclAssociationRequest) ReplaceNetworkAclAssociation operation}.
@@ -78,8 +80,7 @@ public class ReplaceNetworkAclAssociationRequest extends AmazonWebServiceRequest
         this.associationId = associationId;
         return this;
     }
-    
-    
+
     /**
      * The ID of the new ACL to associate with the subnet.
      *
@@ -112,8 +113,7 @@ public class ReplaceNetworkAclAssociationRequest extends AmazonWebServiceRequest
         this.networkAclId = networkAclId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

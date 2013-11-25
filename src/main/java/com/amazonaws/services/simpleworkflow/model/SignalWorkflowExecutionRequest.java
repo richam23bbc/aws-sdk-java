@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#signalWorkflowExecution(SignalWorkflowExecutionRequest) SignalWorkflowExecution operation}.
@@ -135,8 +137,7 @@ public class SignalWorkflowExecutionRequest extends AmazonWebServiceRequest impl
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The workflowId of the workflow execution to signal.
      * <p>
@@ -178,8 +179,7 @@ public class SignalWorkflowExecutionRequest extends AmazonWebServiceRequest impl
         this.workflowId = workflowId;
         return this;
     }
-    
-    
+
     /**
      * The runId of the workflow execution to signal.
      * <p>
@@ -221,8 +221,7 @@ public class SignalWorkflowExecutionRequest extends AmazonWebServiceRequest impl
         this.runId = runId;
         return this;
     }
-    
-    
+
     /**
      * The name of the signal. This name must be meaningful to the target
      * workflow.
@@ -270,8 +269,7 @@ public class SignalWorkflowExecutionRequest extends AmazonWebServiceRequest impl
         this.signalName = signalName;
         return this;
     }
-    
-    
+
     /**
      * Data to attach to the <code>WorkflowExecutionSignaled</code> event in
      * the target workflow execution's history.
@@ -319,8 +317,7 @@ public class SignalWorkflowExecutionRequest extends AmazonWebServiceRequest impl
         this.input = input;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

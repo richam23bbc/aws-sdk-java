@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.directconnect.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.directconnect.AmazonDirectConnect#deleteConnection(DeleteConnectionRequest) DeleteConnection operation}.
@@ -22,8 +24,8 @@ import java.io.Serializable;
  * Deletes the connection.
  * </p>
  * <p>
- * Deleting a connection only stops the AWS Direct Connect port and data transfer charges. You separately need to cancel any services or charges for
- * cross-connects or network circuits that connect you to the AWS Direct Connect location with the providers of those services.
+ * Deleting a connection only stops the AWS Direct Connect port hour and data transfer charges. You need to cancel separately with the providers any
+ * services or charges for cross-connects or network circuits that connect you to the AWS Direct Connect location.
  * </p>
  *
  * @see com.amazonaws.services.directconnect.AmazonDirectConnect#deleteConnection(DeleteConnectionRequest)
@@ -67,8 +69,7 @@ public class DeleteConnectionRequest extends AmazonWebServiceRequest implements 
         this.connectionId = connectionId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

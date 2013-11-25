@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#describeDBLogFiles(DescribeDBLogFilesRequest) DescribeDBLogFiles operation}.
@@ -27,7 +29,7 @@ import java.io.Serializable;
 public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * The customer-assigned name of the DB Instance that contains the log
+     * The customer-assigned name of the DB instance that contains the log
      * files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      * to 63 alphanumeric characters or hyphens</li> <li>First character must
      * be a letter</li> <li>Cannot end with a hyphen or contain two
@@ -69,13 +71,13 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
     private String marker;
 
     /**
-     * The customer-assigned name of the DB Instance that contains the log
+     * The customer-assigned name of the DB instance that contains the log
      * files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      * to 63 alphanumeric characters or hyphens</li> <li>First character must
      * be a letter</li> <li>Cannot end with a hyphen or contain two
      * consecutive hyphens</li> </ul>
      *
-     * @return The customer-assigned name of the DB Instance that contains the log
+     * @return The customer-assigned name of the DB instance that contains the log
      *         files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      *         to 63 alphanumeric characters or hyphens</li> <li>First character must
      *         be a letter</li> <li>Cannot end with a hyphen or contain two
@@ -86,13 +88,13 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
     }
     
     /**
-     * The customer-assigned name of the DB Instance that contains the log
+     * The customer-assigned name of the DB instance that contains the log
      * files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      * to 63 alphanumeric characters or hyphens</li> <li>First character must
      * be a letter</li> <li>Cannot end with a hyphen or contain two
      * consecutive hyphens</li> </ul>
      *
-     * @param dBInstanceIdentifier The customer-assigned name of the DB Instance that contains the log
+     * @param dBInstanceIdentifier The customer-assigned name of the DB instance that contains the log
      *         files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      *         to 63 alphanumeric characters or hyphens</li> <li>First character must
      *         be a letter</li> <li>Cannot end with a hyphen or contain two
@@ -103,7 +105,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
     }
     
     /**
-     * The customer-assigned name of the DB Instance that contains the log
+     * The customer-assigned name of the DB instance that contains the log
      * files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      * to 63 alphanumeric characters or hyphens</li> <li>First character must
      * be a letter</li> <li>Cannot end with a hyphen or contain two
@@ -111,7 +113,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBInstanceIdentifier The customer-assigned name of the DB Instance that contains the log
+     * @param dBInstanceIdentifier The customer-assigned name of the DB instance that contains the log
      *         files you want to list. <p>Constraints: <ul> <li>Must contain from 1
      *         to 63 alphanumeric characters or hyphens</li> <li>First character must
      *         be a letter</li> <li>Cannot end with a hyphen or contain two
@@ -124,8 +126,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
         this.dBInstanceIdentifier = dBInstanceIdentifier;
         return this;
     }
-    
-    
+
     /**
      * Filters the available log files for log file names that contain the
      * specified string.
@@ -164,8 +165,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
         this.filenameContains = filenameContains;
         return this;
     }
-    
-    
+
     /**
      * Filters the available log files for files written since the specified
      * date, in POSIX timestamp format.
@@ -204,8 +204,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
         this.fileLastWritten = fileLastWritten;
         return this;
     }
-    
-    
+
     /**
      * Filters the available log files for files larger than the specified
      * size.
@@ -244,8 +243,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
         this.fileSize = fileSize;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified MaxRecords value, a pagination token
@@ -296,8 +294,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * The pagination token provided in the previous request. If this
      * parameter is specified the response includes only records beyond the
@@ -342,8 +339,7 @@ public class DescribeDBLogFilesRequest extends AmazonWebServiceRequest implement
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

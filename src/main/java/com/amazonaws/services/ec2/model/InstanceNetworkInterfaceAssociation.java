@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Instance Network Interface Association
@@ -58,8 +60,7 @@ public class InstanceNetworkInterfaceAssociation implements Serializable {
         this.publicIp = publicIp;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PublicDnsName property for this object.
      *
@@ -92,8 +93,7 @@ public class InstanceNetworkInterfaceAssociation implements Serializable {
         this.publicDnsName = publicDnsName;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the IpOwnerId property for this object.
      *
@@ -126,8 +126,7 @@ public class InstanceNetworkInterfaceAssociation implements Serializable {
         this.ipOwnerId = ipOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

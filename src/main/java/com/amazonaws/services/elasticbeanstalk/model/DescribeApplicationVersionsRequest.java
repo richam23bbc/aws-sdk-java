@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#describeApplicationVersions(DescribeApplicationVersionsRequest) DescribeApplicationVersions operation}.
@@ -101,8 +103,7 @@ public class DescribeApplicationVersionsRequest extends AmazonWebServiceRequest 
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * If specified, restricts the returned descriptions to only include ones
      * that have the specified version labels.
@@ -111,7 +112,6 @@ public class DescribeApplicationVersionsRequest extends AmazonWebServiceRequest 
      *         that have the specified version labels.
      */
     public java.util.List<String> getVersionLabels() {
-        
         if (versionLabels == null) {
               versionLabels = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               versionLabels.setAutoConstruct(true);
@@ -179,7 +179,7 @@ public class DescribeApplicationVersionsRequest extends AmazonWebServiceRequest 
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

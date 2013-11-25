@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CancelBundleTaskRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#cancelBundleTask(CancelBundleTaskRequest) CancelBundleTask operation}.
@@ -41,8 +43,6 @@ public class CancelBundleTaskRequest extends AmazonWebServiceRequest implements 
      */
     public CancelBundleTaskRequest() {}
     
-
-
     /**
      * Constructs a new CancelBundleTaskRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -54,8 +54,6 @@ public class CancelBundleTaskRequest extends AmazonWebServiceRequest implements 
         setBundleId(bundleId);
     }
 
-    
-    
     /**
      * The ID of the bundle task to cancel.
      *
@@ -88,8 +86,7 @@ public class CancelBundleTaskRequest extends AmazonWebServiceRequest implements 
         this.bundleId = bundleId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

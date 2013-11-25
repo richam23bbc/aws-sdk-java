@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudsearch.AmazonCloudSearch#deleteIndexField(DeleteIndexFieldRequest) DeleteIndexField operation}.
@@ -120,8 +122,7 @@ public class DeleteIndexFieldRequest extends AmazonWebServiceRequest implements 
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A string that represents the name of an index field. Field names must
      * begin with a letter and can contain the following characters: a-z
@@ -190,8 +191,7 @@ public class DeleteIndexFieldRequest extends AmazonWebServiceRequest implements 
         this.indexFieldName = indexFieldName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -75,8 +77,7 @@ public class RunJobFlowResult implements Serializable {
         this.jobFlowId = jobFlowId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

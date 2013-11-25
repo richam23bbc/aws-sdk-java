@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DeleteDhcpOptionsRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#deleteDhcpOptions(DeleteDhcpOptionsRequest) DeleteDhcpOptions operation}.
@@ -40,8 +42,6 @@ public class DeleteDhcpOptionsRequest extends AmazonWebServiceRequest implements
      */
     public DeleteDhcpOptionsRequest() {}
     
-
-
     /**
      * Constructs a new DeleteDhcpOptionsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -53,8 +53,6 @@ public class DeleteDhcpOptionsRequest extends AmazonWebServiceRequest implements
         setDhcpOptionsId(dhcpOptionsId);
     }
 
-    
-    
     /**
      * The ID of the DHCP options set to delete.
      *
@@ -87,8 +85,7 @@ public class DeleteDhcpOptionsRequest extends AmazonWebServiceRequest implements
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -105,8 +107,6 @@ public class AttributeValueUpdate implements Serializable {
      */
     public AttributeValueUpdate() {}
     
-
-
     /**
      * Constructs a new AttributeValueUpdate object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -176,8 +176,6 @@ public class AttributeValueUpdate implements Serializable {
         setAction(action);
     }
 
-    
-    
     /**
      * Constructs a new AttributeValueUpdate object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -246,7 +244,7 @@ public class AttributeValueUpdate implements Serializable {
         this.value = value;
         this.action = action.toString();
     }
-    
+
     /**
      * Represents the data for an attribute. You can set one, and only one,
      * of the elements.
@@ -285,8 +283,7 @@ public class AttributeValueUpdate implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * Specifies how to perform the update. Valid values are
      * <code>PUT</code>, <code>DELETE</code>, and <code>ADD</code>. The
@@ -664,8 +661,7 @@ public class AttributeValueUpdate implements Serializable {
         this.action = action;
         return this;
     }
-    
-    
+
     /**
      * Specifies how to perform the update. Valid values are
      * <code>PUT</code>, <code>DELETE</code>, and <code>ADD</code>. The
@@ -919,7 +915,7 @@ public class AttributeValueUpdate implements Serializable {
         this.action = action.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

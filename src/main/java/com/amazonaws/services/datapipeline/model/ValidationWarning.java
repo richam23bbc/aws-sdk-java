@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -81,15 +83,13 @@ public class ValidationWarning implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * A description of the validation warning.
      *
      * @return A description of the validation warning.
      */
     public java.util.List<String> getWarnings() {
-        
         if (warnings == null) {
               warnings = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               warnings.setAutoConstruct(true);
@@ -151,7 +151,7 @@ public class ValidationWarning implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

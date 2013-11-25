@@ -13,13 +13,15 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#attachElasticLoadBalancer(AttachElasticLoadBalancerRequest) AttachElasticLoadBalancer operation}.
  * <p>
- * Attaches an Elastic Load Balancing instance to a specified layer.
+ * Attaches an Elastic Load Balancing load balancer to a specified layer.
  * </p>
  * <p>
  * <b>NOTE:</b>You must create the Elastic Load Balancing instance separately, by using the Elastic Load Balancing console, API, or CLI. For more
@@ -73,8 +75,7 @@ public class AttachElasticLoadBalancerRequest extends AmazonWebServiceRequest im
         this.elasticLoadBalancerName = elasticLoadBalancerName;
         return this;
     }
-    
-    
+
     /**
      * The ID of the layer that the Elastic Load Balancing instance is to be
      * attached to.
@@ -113,8 +114,7 @@ public class AttachElasticLoadBalancerRequest extends AmazonWebServiceRequest im
         this.layerId = layerId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

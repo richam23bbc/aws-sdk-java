@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudwatch.AmazonCloudWatch#listMetrics(ListMetricsRequest) ListMetrics operation}.
@@ -110,8 +112,7 @@ public class ListMetricsRequest extends AmazonWebServiceRequest implements Seria
         this.namespace = namespace;
         return this;
     }
-    
-    
+
     /**
      * The name of the metric to filter against.
      * <p>
@@ -153,8 +154,7 @@ public class ListMetricsRequest extends AmazonWebServiceRequest implements Seria
         this.metricName = metricName;
         return this;
     }
-    
-    
+
     /**
      * A list of dimensions to filter against.
      * <p>
@@ -164,7 +164,6 @@ public class ListMetricsRequest extends AmazonWebServiceRequest implements Seria
      * @return A list of dimensions to filter against.
      */
     public java.util.List<DimensionFilter> getDimensions() {
-        
         if (dimensions == null) {
               dimensions = new com.amazonaws.internal.ListWithAutoConstructFlag<DimensionFilter>();
               dimensions.setAutoConstruct(true);
@@ -235,7 +234,7 @@ public class ListMetricsRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * The token returned by a previous call to indicate that there is more
      * data available.
@@ -274,8 +273,7 @@ public class ListMetricsRequest extends AmazonWebServiceRequest implements Seria
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

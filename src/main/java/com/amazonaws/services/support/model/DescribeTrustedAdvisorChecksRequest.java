@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.support.AWSSupport#describeTrustedAdvisorChecks(DescribeTrustedAdvisorChecksRequest) DescribeTrustedAdvisorChecks operation}.
@@ -87,8 +89,7 @@ public class DescribeTrustedAdvisorChecksRequest extends AmazonWebServiceRequest
         this.language = language;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

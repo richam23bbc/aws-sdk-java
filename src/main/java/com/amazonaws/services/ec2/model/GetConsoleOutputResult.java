@@ -13,7 +13,13 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
+import com.amazonaws.util.BinaryUtils;
+import com.amazonaws.AmazonClientException;
+import java.io.UnsupportedEncodingException;
+
 
 /**
  * <p>
@@ -69,8 +75,7 @@ public class GetConsoleOutputResult implements Serializable {
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * The time the output was last updated.
      *
@@ -103,8 +108,7 @@ public class GetConsoleOutputResult implements Serializable {
         this.timestamp = timestamp;
         return this;
     }
-    
-    
+
     /**
      * The console output, Base64 encoded.
      *
@@ -137,8 +141,23 @@ public class GetConsoleOutputResult implements Serializable {
         this.output = output;
         return this;
     }
-    
-    
+
+    /**
+     * The decoded console output.
+     * 
+     * @return The decoded console output.
+     */
+    public String getDecodedOutput() {
+        byte[] bytes = BinaryUtils.fromBase64(output);
+        String decoded;
+        try {
+            decoded = new String(bytes, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new AmazonClientException("Cannot decode the output, since UTF-8 is not supported.", e);
+        }
+        return decoded;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

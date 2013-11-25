@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -59,8 +61,7 @@ public class ActivityTaskStatus implements Serializable {
         this.cancelRequested = cancelRequested;
         return this;
     }
-    
-    
+
     /**
      * Set to <code>true</code> if cancellation of the task is requested.
      *
@@ -69,7 +70,7 @@ public class ActivityTaskStatus implements Serializable {
     public Boolean getCancelRequested() {
         return cancelRequested;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

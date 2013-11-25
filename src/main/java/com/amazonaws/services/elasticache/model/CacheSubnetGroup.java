@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -81,8 +83,7 @@ public class CacheSubnetGroup implements Serializable {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
     }
-    
-    
+
     /**
      * The description of the cache subnet group.
      *
@@ -115,8 +116,7 @@ public class CacheSubnetGroup implements Serializable {
         this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Virtual Private Cloud identifier (VPC ID) of the cache
      * subnet group.
@@ -155,15 +155,13 @@ public class CacheSubnetGroup implements Serializable {
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * A list of subnets associated with the cache subnet group.
      *
      * @return A list of subnets associated with the cache subnet group.
      */
     public java.util.List<Subnet> getSubnets() {
-        
         if (subnets == null) {
               subnets = new com.amazonaws.internal.ListWithAutoConstructFlag<Subnet>();
               subnets.setAutoConstruct(true);
@@ -225,7 +223,7 @@ public class CacheSubnetGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleemail.AmazonSimpleEmailService#getIdentityNotificationAttributes(GetIdentityNotificationAttributesRequest) GetIdentityNotificationAttributes operation}.
@@ -39,7 +41,6 @@ public class GetIdentityNotificationAttributesRequest extends AmazonWebServiceRe
      * @return A list of one or more identities.
      */
     public java.util.List<String> getIdentities() {
-        
         if (identities == null) {
               identities = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               identities.setAutoConstruct(true);
@@ -101,7 +102,7 @@ public class GetIdentityNotificationAttributesRequest extends AmazonWebServiceRe
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

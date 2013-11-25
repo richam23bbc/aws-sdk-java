@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#respondDecisionTaskCompleted(RespondDecisionTaskCompletedRequest) RespondDecisionTaskCompleted operation}.
@@ -133,8 +135,7 @@ public class RespondDecisionTaskCompletedRequest extends AmazonWebServiceRequest
         this.taskToken = taskToken;
         return this;
     }
-    
-    
+
     /**
      * The list of decisions (possibly empty) made by the decider while
      * processing this decision task. See the docs for the <a>Decision</a>
@@ -145,7 +146,6 @@ public class RespondDecisionTaskCompletedRequest extends AmazonWebServiceRequest
      *         structure for details.
      */
     public java.util.List<Decision> getDecisions() {
-        
         if (decisions == null) {
               decisions = new com.amazonaws.internal.ListWithAutoConstructFlag<Decision>();
               decisions.setAutoConstruct(true);
@@ -219,7 +219,7 @@ public class RespondDecisionTaskCompletedRequest extends AmazonWebServiceRequest
 
         return this;
     }
-    
+
     /**
      * User defined context to add to workflow execution.
      * <p>
@@ -261,8 +261,7 @@ public class RespondDecisionTaskCompletedRequest extends AmazonWebServiceRequest
         this.executionContext = executionContext;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

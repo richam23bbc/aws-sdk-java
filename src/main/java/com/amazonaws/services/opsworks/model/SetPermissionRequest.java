@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#setPermission(SetPermissionRequest) SetPermission operation}.
@@ -79,8 +81,7 @@ public class SetPermissionRequest extends AmazonWebServiceRequest implements Ser
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * The user's IAM ARN.
      *
@@ -113,8 +114,7 @@ public class SetPermissionRequest extends AmazonWebServiceRequest implements Ser
         this.iamUserArn = iamUserArn;
         return this;
     }
-    
-    
+
     /**
      * The user is allowed to use SSH to communicate with the instance.
      *
@@ -147,8 +147,7 @@ public class SetPermissionRequest extends AmazonWebServiceRequest implements Ser
         this.allowSsh = allowSsh;
         return this;
     }
-    
-    
+
     /**
      * The user is allowed to use SSH to communicate with the instance.
      *
@@ -157,7 +156,7 @@ public class SetPermissionRequest extends AmazonWebServiceRequest implements Ser
     public Boolean getAllowSsh() {
         return allowSsh;
     }
-    
+
     /**
      * The user is allowed to use <b>sudo</b> to elevate privileges.
      *
@@ -190,8 +189,7 @@ public class SetPermissionRequest extends AmazonWebServiceRequest implements Ser
         this.allowSudo = allowSudo;
         return this;
     }
-    
-    
+
     /**
      * The user is allowed to use <b>sudo</b> to elevate privileges.
      *
@@ -200,7 +198,7 @@ public class SetPermissionRequest extends AmazonWebServiceRequest implements Ser
     public Boolean getAllowSudo() {
         return allowSudo;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.route53.AmazonRoute53#listHostedZones(ListHostedZonesRequest) ListHostedZones operation}.
@@ -115,8 +117,7 @@ public class ListHostedZonesRequest extends AmazonWebServiceRequest implements S
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Specify the maximum number of hosted zones to return per page of
      * results.
@@ -155,8 +156,7 @@ public class ListHostedZonesRequest extends AmazonWebServiceRequest implements S
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -99,8 +101,7 @@ public class Event implements Serializable {
         this.sourceIdentifier = sourceIdentifier;
         return this;
     }
-    
-    
+
     /**
      * Specifies the origin of this event - a cache cluster, a parameter
      * group, a security group, etc.
@@ -154,8 +155,7 @@ public class Event implements Serializable {
         this.sourceType = sourceType;
         return this;
     }
-    
-    
+
     /**
      * Specifies the origin of this event - a cache cluster, a parameter
      * group, a security group, etc.
@@ -193,7 +193,7 @@ public class Event implements Serializable {
         this.sourceType = sourceType.toString();
         return this;
     }
-    
+
     /**
      * The text of the event.
      *
@@ -226,8 +226,7 @@ public class Event implements Serializable {
         this.message = message;
         return this;
     }
-    
-    
+
     /**
      * The date and time when the event occurred.
      *
@@ -260,8 +259,7 @@ public class Event implements Serializable {
         this.date = date;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

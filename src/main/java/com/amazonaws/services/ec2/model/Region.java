@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,7 @@ public class Region implements Serializable {
         this.regionName = regionName;
         return this;
     }
-    
-    
+
     /**
      * Region service endpoint.
      *
@@ -98,8 +99,7 @@ public class Region implements Serializable {
         this.endpoint = endpoint;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

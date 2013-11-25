@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#deleteDistribution(DeleteDistributionRequest) DeleteDistribution operation}.
@@ -43,8 +45,6 @@ public class DeleteDistributionRequest extends AmazonWebServiceRequest implement
      */
     public DeleteDistributionRequest() {}
     
-
-
     /**
      * Constructs a new DeleteDistributionRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -59,8 +59,6 @@ public class DeleteDistributionRequest extends AmazonWebServiceRequest implement
         setIfMatch(ifMatch);
     }
 
-    
-    
     /**
      * The distribution id.
      *
@@ -93,8 +91,7 @@ public class DeleteDistributionRequest extends AmazonWebServiceRequest implement
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * The value of the ETag header you received when you disabled the
      * distribution. For example: E2QWRUHAPOMQZL.
@@ -133,8 +130,7 @@ public class DeleteDistributionRequest extends AmazonWebServiceRequest implement
         this.ifMatch = ifMatch;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

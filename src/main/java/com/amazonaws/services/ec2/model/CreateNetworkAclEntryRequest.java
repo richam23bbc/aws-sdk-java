@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CreateNetworkAclEntryRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#createNetworkAclEntry(CreateNetworkAclEntryRequest) CreateNetworkAclEntry operation}.
@@ -120,8 +122,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.networkAclId = networkAclId;
         return this;
     }
-    
-    
+
     /**
      * Rule number to assign to the entry (e.g., 100). ACL entries are
      * processed in ascending order by rule number.
@@ -160,8 +161,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.ruleNumber = ruleNumber;
         return this;
     }
-    
-    
+
     /**
      * IP protocol the rule applies to. Valid Values: <code>tcp</code>,
      * <code>udp</code>, <code>icmp</code> or an IP protocol number.
@@ -200,8 +200,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.protocol = protocol;
         return this;
     }
-    
-    
+
     /**
      * Whether to allow or deny traffic that matches the rule.
      * <p>
@@ -249,8 +248,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.ruleAction = ruleAction;
         return this;
     }
-    
-    
+
     /**
      * Whether to allow or deny traffic that matches the rule.
      * <p>
@@ -284,7 +282,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.ruleAction = ruleAction.toString();
         return this;
     }
-    
+
     /**
      * Whether this rule applies to egress traffic from the subnet
      * (<code>true</code>) or ingress traffic to the subnet
@@ -329,8 +327,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.egress = egress;
         return this;
     }
-    
-    
+
     /**
      * Whether this rule applies to egress traffic from the subnet
      * (<code>true</code>) or ingress traffic to the subnet
@@ -343,7 +340,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
     public Boolean getEgress() {
         return egress;
     }
-    
+
     /**
      * The CIDR range to allow or deny, in CIDR notation (e.g.,
      * <code>172.16.0.0/24</code>).
@@ -382,8 +379,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.cidrBlock = cidrBlock;
         return this;
     }
-    
-    
+
     /**
      * ICMP values.
      *
@@ -416,8 +412,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.icmpTypeCode = icmpTypeCode;
         return this;
     }
-    
-    
+
     /**
      * Port ranges.
      *
@@ -450,8 +445,7 @@ public class CreateNetworkAclEntryRequest extends AmazonWebServiceRequest implem
         this.portRange = portRange;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

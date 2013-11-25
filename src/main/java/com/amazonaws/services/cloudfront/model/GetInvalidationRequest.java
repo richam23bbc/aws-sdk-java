@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#getInvalidation(GetInvalidationRequest) GetInvalidation operation}.
@@ -42,8 +44,6 @@ public class GetInvalidationRequest extends AmazonWebServiceRequest implements S
      */
     public GetInvalidationRequest() {}
     
-
-
     /**
      * Constructs a new GetInvalidationRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -57,8 +57,6 @@ public class GetInvalidationRequest extends AmazonWebServiceRequest implements S
         setId(id);
     }
 
-    
-    
     /**
      * The distribution's id.
      *
@@ -91,8 +89,7 @@ public class GetInvalidationRequest extends AmazonWebServiceRequest implements S
         this.distributionId = distributionId;
         return this;
     }
-    
-    
+
     /**
      * The invalidation's id.
      *
@@ -125,8 +122,7 @@ public class GetInvalidationRequest extends AmazonWebServiceRequest implements S
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

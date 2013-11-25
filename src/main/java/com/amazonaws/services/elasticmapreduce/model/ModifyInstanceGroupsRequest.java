@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduce#modifyInstanceGroups(ModifyInstanceGroupsRequest) ModifyInstanceGroups operation}.
@@ -38,8 +40,6 @@ public class ModifyInstanceGroupsRequest extends AmazonWebServiceRequest impleme
      */
     public ModifyInstanceGroupsRequest() {}
     
-
-
     /**
      * Constructs a new ModifyInstanceGroupsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -51,15 +51,12 @@ public class ModifyInstanceGroupsRequest extends AmazonWebServiceRequest impleme
         setInstanceGroups(instanceGroups);
     }
 
-    
-    
     /**
      * Instance groups to change.
      *
      * @return Instance groups to change.
      */
     public java.util.List<InstanceGroupModifyConfig> getInstanceGroups() {
-        
         if (instanceGroups == null) {
               instanceGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<InstanceGroupModifyConfig>();
               instanceGroups.setAutoConstruct(true);
@@ -121,7 +118,7 @@ public class ModifyInstanceGroupsRequest extends AmazonWebServiceRequest impleme
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

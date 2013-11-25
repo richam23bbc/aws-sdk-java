@@ -13,11 +13,13 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * A JSON object containing the DeleteVolumeOutput$VolumeARN of the storage volume that was deleted
+ * A JSON object containing the of the storage volume that was deleted
  * </p>
  */
 public class DeleteVolumeResult implements Serializable {
@@ -78,8 +80,7 @@ public class DeleteVolumeResult implements Serializable {
         this.volumeARN = volumeARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

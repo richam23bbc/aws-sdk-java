@@ -37,7 +37,6 @@ import com.amazonaws.util.HttpUtils;
  * Signer implementation that signs requests with the AWS3 signing protocol.
  */
 public class AWS3Signer extends AbstractAWSSigner {
-
     private static final String AUTHORIZATION_HEADER = "X-Amzn-Authorization";
     private static final String NONCE_HEADER = "x-amz-nonce";
     private static final String HTTP_SCHEME = "AWS3";
@@ -68,7 +67,7 @@ public class AWS3Signer extends AbstractAWSSigner {
 
         SigningAlgorithm algorithm = SigningAlgorithm.HmacSHA256;
         String nonce = UUID.randomUUID().toString();
-        
+
         int timeOffset = getTimeOffset(request);
         Date dateValue = getSignatureDate(timeOffset);
         String date = dateUtils.formatRfc822Date(dateValue);
@@ -101,6 +100,7 @@ public class AWS3Signer extends AbstractAWSSigner {
             }
         } else {
             String path = HttpUtils.appendUri(request.getEndpoint().getPath(), request.getResourcePath());
+
             /*
              * AWS3 requires all query params to be listed on the third line of
              * the string to sign, even if those query params will be sent in

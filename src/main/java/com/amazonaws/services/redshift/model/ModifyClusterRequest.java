@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#modifyCluster(ModifyClusterRequest) ModifyCluster operation}.
@@ -173,6 +175,19 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
     private Boolean allowVersionUpgrade;
 
     /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift
+     * cluster uses to retrieve the data encryption keys stored in an HSM.
+     */
+    private String hsmClientCertificateIdentifier;
+
+    /**
+     * Specifies the name of the HSM configuration that contains the
+     * information the Amazon Redshift cluster can use to retrieve and store
+     * keys in an HSM.
+     */
+    private String hsmConfigurationIdentifier;
+
+    /**
      * The unique identifier of the cluster to be modified. <p>Example:
      * <code>examplecluster</code>
      *
@@ -210,8 +225,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The new cluster type. <p> When you submit your cluster resize request,
      * your existing cluster goes into a read-only mode. After Amazon
@@ -280,8 +294,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.clusterType = clusterType;
         return this;
     }
-    
-    
+
     /**
      * The new node type of the cluster. If you specify a new node type, you
      * must also specify the number of nodes parameter also. <p> When you
@@ -374,8 +387,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.nodeType = nodeType;
         return this;
     }
-    
-    
+
     /**
      * The new number of nodes of the cluster. If you specify a new number of
      * nodes, you must also specify the node type parameter also. <p> When
@@ -468,8 +480,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.numberOfNodes = numberOfNodes;
         return this;
     }
-    
-    
+
     /**
      * A list of cluster security groups to be authorized on this cluster.
      * This change is asynchronously applied as soon as possible. <p>Security
@@ -488,7 +499,6 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
      *         or contain two consecutive hyphens</li> </ul>
      */
     public java.util.List<String> getClusterSecurityGroups() {
-        
         if (clusterSecurityGroups == null) {
               clusterSecurityGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               clusterSecurityGroups.setAutoConstruct(true);
@@ -586,7 +596,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
-    
+
     /**
      * A list of Virtual Private Cloud (VPC) security groups to be associated
      * with the cluster.
@@ -595,7 +605,6 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
      *         with the cluster.
      */
     public java.util.List<String> getVpcSecurityGroupIds() {
-        
         if (vpcSecurityGroupIds == null) {
               vpcSecurityGroupIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               vpcSecurityGroupIds.setAutoConstruct(true);
@@ -663,7 +672,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
-    
+
     /**
      * The new password for the cluster master user. This change is
      * asynchronously applied as soon as possible. Between the time of the
@@ -774,8 +783,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.masterUserPassword = masterUserPassword;
         return this;
     }
-    
-    
+
     /**
      * The name of the cluster parameter group to apply to this cluster. This
      * change is applied only after the cluster is rebooted. To reboot a
@@ -832,8 +840,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.clusterParameterGroupName = clusterParameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The number of days that automated snapshots are retained. If the value
      * is 0, automated snapshots are disabled. Even if automated snapshots
@@ -908,8 +915,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
     }
-    
-    
+
     /**
      * The weekly time range (in UTC) during which system maintenance can
      * occur, if necessary. If system maintenance is necessary during the
@@ -996,8 +1002,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
     }
-    
-    
+
     /**
      * The new version number of the Amazon Redshift engine to upgrade to.
      * <p> For major version upgrades, if a non-default cluster parameter
@@ -1084,8 +1089,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.clusterVersion = clusterVersion;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, upgrades will be applied automatically to the
      * cluster during the maintenance window. <p>Default: <code>false</code>
@@ -1124,8 +1128,7 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, upgrades will be applied automatically to the
      * cluster during the maintenance window. <p>Default: <code>false</code>
@@ -1136,7 +1139,91 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
     public Boolean getAllowVersionUpgrade() {
         return allowVersionUpgrade;
     }
+
+    /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift
+     * cluster uses to retrieve the data encryption keys stored in an HSM.
+     *
+     * @return Specifies the name of the HSM client certificate the Amazon Redshift
+     *         cluster uses to retrieve the data encryption keys stored in an HSM.
+     */
+    public String getHsmClientCertificateIdentifier() {
+        return hsmClientCertificateIdentifier;
+    }
     
+    /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift
+     * cluster uses to retrieve the data encryption keys stored in an HSM.
+     *
+     * @param hsmClientCertificateIdentifier Specifies the name of the HSM client certificate the Amazon Redshift
+     *         cluster uses to retrieve the data encryption keys stored in an HSM.
+     */
+    public void setHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+    }
+    
+    /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift
+     * cluster uses to retrieve the data encryption keys stored in an HSM.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param hsmClientCertificateIdentifier Specifies the name of the HSM client certificate the Amazon Redshift
+     *         cluster uses to retrieve the data encryption keys stored in an HSM.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public ModifyClusterRequest withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+        return this;
+    }
+
+    /**
+     * Specifies the name of the HSM configuration that contains the
+     * information the Amazon Redshift cluster can use to retrieve and store
+     * keys in an HSM.
+     *
+     * @return Specifies the name of the HSM configuration that contains the
+     *         information the Amazon Redshift cluster can use to retrieve and store
+     *         keys in an HSM.
+     */
+    public String getHsmConfigurationIdentifier() {
+        return hsmConfigurationIdentifier;
+    }
+    
+    /**
+     * Specifies the name of the HSM configuration that contains the
+     * information the Amazon Redshift cluster can use to retrieve and store
+     * keys in an HSM.
+     *
+     * @param hsmConfigurationIdentifier Specifies the name of the HSM configuration that contains the
+     *         information the Amazon Redshift cluster can use to retrieve and store
+     *         keys in an HSM.
+     */
+    public void setHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+    }
+    
+    /**
+     * Specifies the name of the HSM configuration that contains the
+     * information the Amazon Redshift cluster can use to retrieve and store
+     * keys in an HSM.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param hsmConfigurationIdentifier Specifies the name of the HSM configuration that contains the
+     *         information the Amazon Redshift cluster can use to retrieve and store
+     *         keys in an HSM.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public ModifyClusterRequest withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+        return this;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -1160,7 +1247,9 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         if (getAutomatedSnapshotRetentionPeriod() != null) sb.append("AutomatedSnapshotRetentionPeriod: " + getAutomatedSnapshotRetentionPeriod() + ",");
         if (getPreferredMaintenanceWindow() != null) sb.append("PreferredMaintenanceWindow: " + getPreferredMaintenanceWindow() + ",");
         if (getClusterVersion() != null) sb.append("ClusterVersion: " + getClusterVersion() + ",");
-        if (isAllowVersionUpgrade() != null) sb.append("AllowVersionUpgrade: " + isAllowVersionUpgrade() );
+        if (isAllowVersionUpgrade() != null) sb.append("AllowVersionUpgrade: " + isAllowVersionUpgrade() + ",");
+        if (getHsmClientCertificateIdentifier() != null) sb.append("HsmClientCertificateIdentifier: " + getHsmClientCertificateIdentifier() + ",");
+        if (getHsmConfigurationIdentifier() != null) sb.append("HsmConfigurationIdentifier: " + getHsmConfigurationIdentifier() );
         sb.append("}");
         return sb.toString();
     }
@@ -1182,6 +1271,8 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getPreferredMaintenanceWindow() == null) ? 0 : getPreferredMaintenanceWindow().hashCode()); 
         hashCode = prime * hashCode + ((getClusterVersion() == null) ? 0 : getClusterVersion().hashCode()); 
         hashCode = prime * hashCode + ((isAllowVersionUpgrade() == null) ? 0 : isAllowVersionUpgrade().hashCode()); 
+        hashCode = prime * hashCode + ((getHsmClientCertificateIdentifier() == null) ? 0 : getHsmClientCertificateIdentifier().hashCode()); 
+        hashCode = prime * hashCode + ((getHsmConfigurationIdentifier() == null) ? 0 : getHsmConfigurationIdentifier().hashCode()); 
         return hashCode;
     }
     
@@ -1217,6 +1308,10 @@ public class ModifyClusterRequest extends AmazonWebServiceRequest implements Ser
         if (other.getClusterVersion() != null && other.getClusterVersion().equals(this.getClusterVersion()) == false) return false; 
         if (other.isAllowVersionUpgrade() == null ^ this.isAllowVersionUpgrade() == null) return false;
         if (other.isAllowVersionUpgrade() != null && other.isAllowVersionUpgrade().equals(this.isAllowVersionUpgrade()) == false) return false; 
+        if (other.getHsmClientCertificateIdentifier() == null ^ this.getHsmClientCertificateIdentifier() == null) return false;
+        if (other.getHsmClientCertificateIdentifier() != null && other.getHsmClientCertificateIdentifier().equals(this.getHsmClientCertificateIdentifier()) == false) return false; 
+        if (other.getHsmConfigurationIdentifier() == null ^ this.getHsmConfigurationIdentifier() == null) return false;
+        if (other.getHsmConfigurationIdentifier() != null && other.getHsmConfigurationIdentifier().equals(this.getHsmConfigurationIdentifier()) == false) return false; 
         return true;
     }
     

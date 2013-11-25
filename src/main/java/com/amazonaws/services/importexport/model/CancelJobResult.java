@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.importexport.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -66,8 +68,7 @@ public class CancelJobResult implements Serializable {
         this.success = success;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether (true) or not (false) AWS Import/Export updated your
      * job.
@@ -78,7 +79,7 @@ public class CancelJobResult implements Serializable {
     public Boolean getSuccess() {
         return success;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

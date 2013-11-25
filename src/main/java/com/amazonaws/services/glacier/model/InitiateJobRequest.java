@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.glacier.AmazonGlacier#initiateJob(InitiateJobRequest) InitiateJob operation}.
@@ -123,8 +125,6 @@ public class InitiateJobRequest extends AmazonWebServiceRequest implements Seria
      */
     public InitiateJobRequest() {}
     
-
-
     /**
      * Constructs a new InitiateJobRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -137,10 +137,6 @@ public class InitiateJobRequest extends AmazonWebServiceRequest implements Seria
         setVaultName(vaultName);
         setJobParameters(jobParameters);
     }
-
-    
-    
-
 
     /**
      * Constructs a new InitiateJobRequest object.
@@ -161,8 +157,6 @@ public class InitiateJobRequest extends AmazonWebServiceRequest implements Seria
         setJobParameters(jobParameters);
     }
 
-    
-    
     /**
      * The <code>AccountId</code> is the AWS Account ID. You can specify
      * either the AWS Account ID or optionally a '-', in which case Amazon
@@ -219,8 +213,7 @@ public class InitiateJobRequest extends AmazonWebServiceRequest implements Seria
         this.accountId = accountId;
         return this;
     }
-    
-    
+
     /**
      * The name of the vault.
      *
@@ -253,8 +246,7 @@ public class InitiateJobRequest extends AmazonWebServiceRequest implements Seria
         this.vaultName = vaultName;
         return this;
     }
-    
-    
+
     /**
      * Provides options for specifying job information.
      *
@@ -287,8 +279,7 @@ public class InitiateJobRequest extends AmazonWebServiceRequest implements Seria
         this.jobParameters = jobParameters;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

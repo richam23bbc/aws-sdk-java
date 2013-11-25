@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -36,7 +38,6 @@ public class IndexDocumentsResult implements Serializable {
      *         <code>IndexDocuments</code> action.
      */
     public java.util.List<String> getFieldNames() {
-        
         if (fieldNames == null) {
               fieldNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               fieldNames.setAutoConstruct(true);
@@ -104,7 +105,7 @@ public class IndexDocumentsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

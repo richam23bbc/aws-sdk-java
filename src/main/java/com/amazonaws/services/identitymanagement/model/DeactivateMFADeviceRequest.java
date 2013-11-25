@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#deactivateMFADevice(DeactivateMFADeviceRequest) DeactivateMFADevice operation}.
@@ -51,8 +53,6 @@ public class DeactivateMFADeviceRequest extends AmazonWebServiceRequest implemen
      */
     public DeactivateMFADeviceRequest() {}
     
-
-
     /**
      * Constructs a new DeactivateMFADeviceRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -68,8 +68,6 @@ public class DeactivateMFADeviceRequest extends AmazonWebServiceRequest implemen
         setSerialNumber(serialNumber);
     }
 
-    
-    
     /**
      * Name of the user whose MFA device you want to deactivate.
      * <p>
@@ -114,8 +112,7 @@ public class DeactivateMFADeviceRequest extends AmazonWebServiceRequest implemen
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The serial number that uniquely identifies the MFA device. For virtual
      * MFA devices, the serial number is the device ARN.
@@ -166,8 +163,7 @@ public class DeactivateMFADeviceRequest extends AmazonWebServiceRequest implemen
         this.serialNumber = serialNumber;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

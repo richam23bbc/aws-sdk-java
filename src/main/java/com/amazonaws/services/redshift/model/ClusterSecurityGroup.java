@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -83,8 +85,7 @@ public class ClusterSecurityGroup implements Serializable {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * A description of the security group.
      *
@@ -117,8 +118,7 @@ public class ClusterSecurityGroup implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * A list of EC2 security groups that are permitted to access clusters
      * associated with this cluster security group.
@@ -127,7 +127,6 @@ public class ClusterSecurityGroup implements Serializable {
      *         associated with this cluster security group.
      */
     public java.util.List<EC2SecurityGroup> getEC2SecurityGroups() {
-        
         if (eC2SecurityGroups == null) {
               eC2SecurityGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<EC2SecurityGroup>();
               eC2SecurityGroups.setAutoConstruct(true);
@@ -195,7 +194,7 @@ public class ClusterSecurityGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of IP ranges (CIDR blocks) that are permitted to access
      * clusters associated with this cluster security group.
@@ -204,7 +203,6 @@ public class ClusterSecurityGroup implements Serializable {
      *         clusters associated with this cluster security group.
      */
     public java.util.List<IPRange> getIPRanges() {
-        
         if (iPRanges == null) {
               iPRanges = new com.amazonaws.internal.ListWithAutoConstructFlag<IPRange>();
               iPRanges.setAutoConstruct(true);
@@ -272,7 +270,7 @@ public class ClusterSecurityGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

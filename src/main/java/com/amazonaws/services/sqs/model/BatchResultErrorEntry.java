@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -74,8 +76,7 @@ public class BatchResultErrorEntry implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Whether the error happened due to the sender's fault.
      *
@@ -108,8 +109,7 @@ public class BatchResultErrorEntry implements Serializable {
         this.senderFault = senderFault;
         return this;
     }
-    
-    
+
     /**
      * Whether the error happened due to the sender's fault.
      *
@@ -118,7 +118,7 @@ public class BatchResultErrorEntry implements Serializable {
     public Boolean getSenderFault() {
         return senderFault;
     }
-    
+
     /**
      * An error code representing why the operation failed on this entry.
      *
@@ -151,8 +151,7 @@ public class BatchResultErrorEntry implements Serializable {
         this.code = code;
         return this;
     }
-    
-    
+
     /**
      * A message explaining why the operation failed on this entry.
      *
@@ -185,8 +184,7 @@ public class BatchResultErrorEntry implements Serializable {
         this.message = message;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

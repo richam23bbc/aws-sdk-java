@@ -13,15 +13,17 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#addRoleToInstanceProfile(AddRoleToInstanceProfileRequest) AddRoleToInstanceProfile operation}.
  * <p>
  * Adds the specified role to the specified instance profile. For more information about roles, go to <a
- * href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/WorkingWithRoles.html"> Working with Roles </a> . For more information about instance
- * profiles, go to <a href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/AboutInstanceProfiles.html"> About Instance Profiles </a> .
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html"> Working with Roles </a> . For more information about instance profiles,
+ * go to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html"> About Instance Profiles </a> .
  * </p>
  *
  * @see com.amazonaws.services.identitymanagement.AmazonIdentityManagement#addRoleToInstanceProfile(AddRoleToInstanceProfileRequest)
@@ -90,8 +92,7 @@ public class AddRoleToInstanceProfileRequest extends AmazonWebServiceRequest imp
         this.instanceProfileName = instanceProfileName;
         return this;
     }
-    
-    
+
     /**
      * Name of the role to add.
      * <p>
@@ -136,8 +137,7 @@ public class AddRoleToInstanceProfileRequest extends AmazonWebServiceRequest imp
         this.roleName = roleName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

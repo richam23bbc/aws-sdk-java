@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -36,7 +38,6 @@ public class DescribeSeverityLevelsResult implements Serializable {
      *         severity levels are defined by your service level agreement with AWS.
      */
     public java.util.List<SeverityLevel> getSeverityLevels() {
-        
         if (severityLevels == null) {
               severityLevels = new com.amazonaws.internal.ListWithAutoConstructFlag<SeverityLevel>();
               severityLevels.setAutoConstruct(true);
@@ -104,7 +105,7 @@ public class DescribeSeverityLevelsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

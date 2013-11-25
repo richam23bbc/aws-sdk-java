@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -41,7 +43,6 @@ public class DescribeOrderableClusterOptionsResult implements Serializable {
      *         about orderable options for the Cluster.
      */
     public java.util.List<OrderableClusterOption> getOrderableClusterOptions() {
-        
         if (orderableClusterOptions == null) {
               orderableClusterOptions = new com.amazonaws.internal.ListWithAutoConstructFlag<OrderableClusterOption>();
               orderableClusterOptions.setAutoConstruct(true);
@@ -109,7 +110,7 @@ public class DescribeOrderableClusterOptionsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A marker that can be used to retrieve paginated results.
      *
@@ -142,8 +143,7 @@ public class DescribeOrderableClusterOptionsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

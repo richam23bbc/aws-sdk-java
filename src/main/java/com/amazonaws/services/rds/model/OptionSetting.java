@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -101,8 +103,7 @@ public class OptionSetting implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The current value of the option setting.
      *
@@ -135,8 +136,7 @@ public class OptionSetting implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * The default value of the option setting.
      *
@@ -169,8 +169,7 @@ public class OptionSetting implements Serializable {
         this.defaultValue = defaultValue;
         return this;
     }
-    
-    
+
     /**
      * The description of the option setting.
      *
@@ -203,8 +202,7 @@ public class OptionSetting implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The DB engine specific parameter type.
      *
@@ -237,8 +235,7 @@ public class OptionSetting implements Serializable {
         this.applyType = applyType;
         return this;
     }
-    
-    
+
     /**
      * The data type of the option setting.
      *
@@ -271,8 +268,7 @@ public class OptionSetting implements Serializable {
         this.dataType = dataType;
         return this;
     }
-    
-    
+
     /**
      * The allowed values of the option setting.
      *
@@ -305,8 +301,7 @@ public class OptionSetting implements Serializable {
         this.allowedValues = allowedValues;
         return this;
     }
-    
-    
+
     /**
      * A Boolean value that, when true, indicates the option setting can be
      * modified from the default.
@@ -345,8 +340,7 @@ public class OptionSetting implements Serializable {
         this.isModifiable = isModifiable;
         return this;
     }
-    
-    
+
     /**
      * A Boolean value that, when true, indicates the option setting can be
      * modified from the default.
@@ -357,7 +351,7 @@ public class OptionSetting implements Serializable {
     public Boolean getIsModifiable() {
         return isModifiable;
     }
-    
+
     /**
      * Indicates if the option setting is part of a collection.
      *
@@ -390,8 +384,7 @@ public class OptionSetting implements Serializable {
         this.isCollection = isCollection;
         return this;
     }
-    
-    
+
     /**
      * Indicates if the option setting is part of a collection.
      *
@@ -400,7 +393,7 @@ public class OptionSetting implements Serializable {
     public Boolean getIsCollection() {
         return isCollection;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

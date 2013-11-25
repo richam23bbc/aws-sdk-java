@@ -13,15 +13,17 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#listAccountAliases(ListAccountAliasesRequest) ListAccountAliases operation}.
  * <p>
  * Lists the account aliases associated with the account. For information about using an AWS account alias, see <a
- * href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/AccountAlias.html"> Using an Alias for Your AWS Account ID </a> in <i>Using AWS Identity
- * and Access Management</i> .
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html"> Using an Alias for Your AWS Account ID </a> in <i>Using AWS Identity and
+ * Access Management</i> .
  * </p>
  * <p>
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters.
@@ -47,7 +49,8 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
      * Use this only when paginating results to indicate the maximum number
      * of account aliases you want in the response. If there are additional
      * account aliases beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -122,13 +125,13 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results to indicate the maximum number
      * of account aliases you want in the response. If there are additional
      * account aliases beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -136,7 +139,8 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
      * @return Use this only when paginating results to indicate the maximum number
      *         of account aliases you want in the response. If there are additional
      *         account aliases beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -146,7 +150,8 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
      * Use this only when paginating results to indicate the maximum number
      * of account aliases you want in the response. If there are additional
      * account aliases beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -154,7 +159,8 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
      * @param maxItems Use this only when paginating results to indicate the maximum number
      *         of account aliases you want in the response. If there are additional
      *         account aliases beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -164,7 +170,8 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
      * Use this only when paginating results to indicate the maximum number
      * of account aliases you want in the response. If there are additional
      * account aliases beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -174,7 +181,8 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
      * @param maxItems Use this only when paginating results to indicate the maximum number
      *         of account aliases you want in the response. If there are additional
      *         account aliases beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -183,8 +191,7 @@ public class ListAccountAliasesRequest extends AmazonWebServiceRequest implement
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

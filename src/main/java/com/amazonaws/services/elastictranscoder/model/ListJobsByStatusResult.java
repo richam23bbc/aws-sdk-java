@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -44,7 +46,6 @@ public class ListJobsByStatusResult implements Serializable {
      * @return An array of <code>Job</code> objects that have the specified status.
      */
     public java.util.List<Job> getJobs() {
-        
         if (jobs == null) {
               jobs = new com.amazonaws.internal.ListWithAutoConstructFlag<Job>();
               jobs.setAutoConstruct(true);
@@ -106,7 +107,7 @@ public class ListJobsByStatusResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A value that you use to access the second and subsequent pages of
      * results, if any. When the jobs in the specified pipeline fit on one
@@ -166,8 +167,7 @@ public class ListJobsByStatusResult implements Serializable {
         this.nextPageToken = nextPageToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

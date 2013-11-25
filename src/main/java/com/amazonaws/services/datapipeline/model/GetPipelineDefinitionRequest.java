@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.datapipeline.DataPipeline#getPipelineDefinition(GetPipelineDefinitionRequest) GetPipelineDefinition operation}.
@@ -93,8 +95,7 @@ public class GetPipelineDefinitionRequest extends AmazonWebServiceRequest implem
         this.pipelineId = pipelineId;
         return this;
     }
-    
-    
+
     /**
      * The version of the pipeline definition to retrieve. This parameter
      * accepts the values <code>latest</code> (default) and
@@ -163,8 +164,7 @@ public class GetPipelineDefinitionRequest extends AmazonWebServiceRequest implem
         this.version = version;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

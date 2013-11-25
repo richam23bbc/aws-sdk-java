@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -43,7 +45,6 @@ public class DomainInfos implements Serializable {
      * @return A list of DomainInfo structures.
      */
     public java.util.List<DomainInfo> getDomainInfos() {
-        
         if (domainInfos == null) {
               domainInfos = new com.amazonaws.internal.ListWithAutoConstructFlag<DomainInfo>();
               domainInfos.setAutoConstruct(true);
@@ -105,7 +106,7 @@ public class DomainInfos implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a value if the results are paginated. To get the next page of
      * results, repeat the request specifying this token and all other
@@ -159,8 +160,7 @@ public class DomainInfos implements Serializable {
         this.nextPageToken = nextPageToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

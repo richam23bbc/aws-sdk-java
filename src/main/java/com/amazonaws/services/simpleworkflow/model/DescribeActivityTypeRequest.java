@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#describeActivityType(DescribeActivityTypeRequest) DescribeActivityType operation}.
@@ -105,8 +107,7 @@ public class DescribeActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The activity type to describe.
      *
@@ -139,8 +140,7 @@ public class DescribeActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.activityType = activityType;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

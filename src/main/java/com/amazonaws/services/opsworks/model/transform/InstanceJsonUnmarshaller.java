@@ -22,8 +22,8 @@ import com.amazonaws.services.opsworks.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
-import org.codehaus.jackson.JsonToken;
-import static org.codehaus.jackson.JsonToken.*;
+import com.fasterxml.jackson.core.JsonToken;
+import static com.fasterxml.jackson.core.JsonToken.*;
 
 
 /**
@@ -44,6 +44,7 @@ public class InstanceJsonUnmarshaller implements Unmarshaller<Instance, JsonUnma
 
         JsonToken token = context.currentToken;
         if (token == null) token = context.nextToken();
+        if (token == VALUE_NULL) return null;
 
         while (true) {
             if (token == null) break;
@@ -95,6 +96,10 @@ public class InstanceJsonUnmarshaller implements Unmarshaller<Instance, JsonUnma
                 if (context.testExpression("AvailabilityZone", targetDepth)) {
                     context.nextToken();
                     instance.setAvailabilityZone(StringJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SubnetId", targetDepth)) {
+                    context.nextToken();
+                    instance.setSubnetId(StringJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("PublicDns", targetDepth)) {
                     context.nextToken();

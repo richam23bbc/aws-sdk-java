@@ -13,14 +13,20 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#putNotificationConfiguration(PutNotificationConfigurationRequest) PutNotificationConfiguration operation}.
  * <p>
  * Configures an Auto Scaling group to send notifications when specified events take place. Subscribers to this topic can have messages for events
  * delivered to an endpoint such as a web server or email address.
+ * </p>
+ * <p>
+ * For more information see <a href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/ASGettingNotifications.html"> Get Email Notifications
+ * When Your Auto Scaling Group Changes </a>
  * </p>
  * <p>
  * A new <code>PutNotificationConfiguration</code> overwrites an existing configuration.
@@ -50,8 +56,9 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
     private String topicARN;
 
     /**
-     * The type of events that will trigger the notification. For more
-     * information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * The type of event that will cause the notification to be sent. For
+     * details about notification types supported by Auto Scaling, see
+     * <a>DescribeAutoScalingNotificationTypes</a>.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<String> notificationTypes;
 
@@ -99,8 +106,7 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the Amazon Simple Notification
      * Service (SNS) topic.
@@ -151,17 +157,17 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
         this.topicARN = topicARN;
         return this;
     }
-    
-    
+
     /**
-     * The type of events that will trigger the notification. For more
-     * information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * The type of event that will cause the notification to be sent. For
+     * details about notification types supported by Auto Scaling, see
+     * <a>DescribeAutoScalingNotificationTypes</a>.
      *
-     * @return The type of events that will trigger the notification. For more
-     *         information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * @return The type of event that will cause the notification to be sent. For
+     *         details about notification types supported by Auto Scaling, see
+     *         <a>DescribeAutoScalingNotificationTypes</a>.
      */
     public java.util.List<String> getNotificationTypes() {
-        
         if (notificationTypes == null) {
               notificationTypes = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               notificationTypes.setAutoConstruct(true);
@@ -170,11 +176,13 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
     }
     
     /**
-     * The type of events that will trigger the notification. For more
-     * information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * The type of event that will cause the notification to be sent. For
+     * details about notification types supported by Auto Scaling, see
+     * <a>DescribeAutoScalingNotificationTypes</a>.
      *
-     * @param notificationTypes The type of events that will trigger the notification. For more
-     *         information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * @param notificationTypes The type of event that will cause the notification to be sent. For
+     *         details about notification types supported by Auto Scaling, see
+     *         <a>DescribeAutoScalingNotificationTypes</a>.
      */
     public void setNotificationTypes(java.util.Collection<String> notificationTypes) {
         if (notificationTypes == null) {
@@ -187,13 +195,15 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
     }
     
     /**
-     * The type of events that will trigger the notification. For more
-     * information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * The type of event that will cause the notification to be sent. For
+     * details about notification types supported by Auto Scaling, see
+     * <a>DescribeAutoScalingNotificationTypes</a>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param notificationTypes The type of events that will trigger the notification. For more
-     *         information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * @param notificationTypes The type of event that will cause the notification to be sent. For
+     *         details about notification types supported by Auto Scaling, see
+     *         <a>DescribeAutoScalingNotificationTypes</a>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -207,13 +217,15 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
     }
     
     /**
-     * The type of events that will trigger the notification. For more
-     * information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * The type of event that will cause the notification to be sent. For
+     * details about notification types supported by Auto Scaling, see
+     * <a>DescribeAutoScalingNotificationTypes</a>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param notificationTypes The type of events that will trigger the notification. For more
-     *         information, go to <a>DescribeAutoScalingNotificationTypes</a>.
+     * @param notificationTypes The type of event that will cause the notification to be sent. For
+     *         details about notification types supported by Auto Scaling, see
+     *         <a>DescribeAutoScalingNotificationTypes</a>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -229,7 +241,7 @@ public class PutNotificationConfigurationRequest extends AmazonWebServiceRequest
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

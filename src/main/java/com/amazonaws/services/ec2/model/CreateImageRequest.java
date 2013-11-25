@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CreateImageRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#createImage(CreateImageRequest) CreateImage operation}.
@@ -62,8 +64,6 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      */
     public CreateImageRequest() {}
     
-
-
     /**
      * Constructs a new CreateImageRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -78,8 +78,6 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
         setName(name);
     }
 
-    
-    
     /**
      * The ID of the instance from which to create the new image.
      *
@@ -112,8 +110,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * The name for the new AMI being created.
      *
@@ -146,8 +143,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The description for the new AMI being created.
      *
@@ -180,8 +176,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * By default this property is set to <code>false</code>, which means
      * Amazon EC2 attempts to cleanly shut down the instance before image
@@ -244,8 +239,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
         this.noReboot = noReboot;
         return this;
     }
-    
-    
+
     /**
      * By default this property is set to <code>false</code>, which means
      * Amazon EC2 attempts to cleanly shut down the instance before image
@@ -264,14 +258,13 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
     public Boolean getNoReboot() {
         return noReboot;
     }
-    
+
     /**
      * Returns the value of the BlockDeviceMappings property for this object.
      *
      * @return The value of the BlockDeviceMappings property for this object.
      */
     public java.util.List<BlockDeviceMapping> getBlockDeviceMappings() {
-        
         if (blockDeviceMappings == null) {
               blockDeviceMappings = new com.amazonaws.internal.ListWithAutoConstructFlag<BlockDeviceMapping>();
               blockDeviceMappings.setAutoConstruct(true);
@@ -333,7 +326,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

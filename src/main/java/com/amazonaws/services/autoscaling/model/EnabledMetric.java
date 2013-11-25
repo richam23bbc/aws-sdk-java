@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -84,8 +86,7 @@ public class EnabledMetric implements Serializable {
         this.metric = metric;
         return this;
     }
-    
-    
+
     /**
      * The granularity of the enabled metric.
      * <p>
@@ -130,8 +131,7 @@ public class EnabledMetric implements Serializable {
         this.granularity = granularity;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

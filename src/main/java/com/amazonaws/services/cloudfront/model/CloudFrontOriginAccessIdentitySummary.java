@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -78,8 +80,7 @@ public class CloudFrontOriginAccessIdentitySummary implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 canonical user ID for the origin access identity, which
      * you use when giving the origin access identity read permission to an
@@ -124,8 +125,7 @@ public class CloudFrontOriginAccessIdentitySummary implements Serializable {
         this.s3CanonicalUserId = s3CanonicalUserId;
         return this;
     }
-    
-    
+
     /**
      * The comment for this origin access identity, as originally specified
      * when created.
@@ -164,8 +164,7 @@ public class CloudFrontOriginAccessIdentitySummary implements Serializable {
         this.comment = comment;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

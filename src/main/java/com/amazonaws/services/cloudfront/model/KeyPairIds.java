@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -65,8 +67,7 @@ public class KeyPairIds implements Serializable {
         this.quantity = quantity;
         return this;
     }
-    
-    
+
     /**
      * A complex type that lists the active CloudFront key pairs, if any,
      * that are associated with AwsAccountNumber.
@@ -75,7 +76,6 @@ public class KeyPairIds implements Serializable {
      *         that are associated with AwsAccountNumber.
      */
     public java.util.List<String> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               items.setAutoConstruct(true);
@@ -143,7 +143,7 @@ public class KeyPairIds implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

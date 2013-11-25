@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Private Ip Address Specification
@@ -56,8 +58,7 @@ public class PrivateIpAddressSpecification implements Serializable {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Primary property for this object.
      *
@@ -90,8 +91,7 @@ public class PrivateIpAddressSpecification implements Serializable {
         this.primary = primary;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Primary property for this object.
      *
@@ -100,7 +100,7 @@ public class PrivateIpAddressSpecification implements Serializable {
     public Boolean getPrimary() {
         return primary;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeAddressesResult implements Serializable {
      * @return The list of Elastic IPs.
      */
     public java.util.List<Address> getAddresses() {
-        
         if (addresses == null) {
               addresses = new com.amazonaws.internal.ListWithAutoConstructFlag<Address>();
               addresses.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeAddressesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

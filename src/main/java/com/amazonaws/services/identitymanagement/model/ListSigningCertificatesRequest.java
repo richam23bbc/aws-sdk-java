@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#listSigningCertificates(ListSigningCertificatesRequest) ListSigningCertificates operation}.
@@ -26,7 +28,7 @@ import java.io.Serializable;
  * <code>Marker</code> parameters.
  * </p>
  * <p>
- * If the <code>UserName</code> field is not specified, the user name is determined implicitly based on the AWS Access Key ID used to sign the request.
+ * If the <code>UserName</code> field is not specified, the user name is determined implicitly based on the AWS access key ID used to sign the request.
  * Because this action works for access keys under the AWS account, this API can be used to manage root credentials even if the AWS account has no
  * associated users.
  * </p>
@@ -60,7 +62,8 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
      * Use this only when paginating results to indicate the maximum number
      * of certificate IDs you want in the response. If there are additional
      * certificate IDs beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -117,8 +120,7 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results, and only in a subsequent
      * request after you've received a response where the results are
@@ -181,13 +183,13 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results to indicate the maximum number
      * of certificate IDs you want in the response. If there are additional
      * certificate IDs beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -195,7 +197,8 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
      * @return Use this only when paginating results to indicate the maximum number
      *         of certificate IDs you want in the response. If there are additional
      *         certificate IDs beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -205,7 +208,8 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
      * Use this only when paginating results to indicate the maximum number
      * of certificate IDs you want in the response. If there are additional
      * certificate IDs beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -213,7 +217,8 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
      * @param maxItems Use this only when paginating results to indicate the maximum number
      *         of certificate IDs you want in the response. If there are additional
      *         certificate IDs beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -223,7 +228,8 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
      * Use this only when paginating results to indicate the maximum number
      * of certificate IDs you want in the response. If there are additional
      * certificate IDs beyond the maximum you specify, the
-     * <code>IsTruncated</code> response element is <code>true</code>.
+     * <code>IsTruncated</code> response element is <code>true</code>. This
+     * parameter is optional. If you do not include it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -233,7 +239,8 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
      * @param maxItems Use this only when paginating results to indicate the maximum number
      *         of certificate IDs you want in the response. If there are additional
      *         certificate IDs beyond the maximum you specify, the
-     *         <code>IsTruncated</code> response element is <code>true</code>.
+     *         <code>IsTruncated</code> response element is <code>true</code>. This
+     *         parameter is optional. If you do not include it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -242,8 +249,7 @@ public class ListSigningCertificatesRequest extends AmazonWebServiceRequest impl
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

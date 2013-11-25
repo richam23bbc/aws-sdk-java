@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elastictranscoder.AmazonElasticTranscoder#listJobsByStatus(ListJobsByStatusRequest) ListJobsByStatus operation}.
@@ -117,8 +119,7 @@ public class ListJobsByStatusRequest extends AmazonWebServiceRequest implements 
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * To list jobs in chronological order by the date and time that they
      * were submitted, enter <code>true</code>. To list jobs in reverse
@@ -172,8 +173,7 @@ public class ListJobsByStatusRequest extends AmazonWebServiceRequest implements 
         this.ascending = ascending;
         return this;
     }
-    
-    
+
     /**
      * When Elastic Transcoder returns more than one page of results, use
      * <code>pageToken</code> in subsequent <code>GET</code> requests to get
@@ -227,8 +227,7 @@ public class ListJobsByStatusRequest extends AmazonWebServiceRequest implements 
         this.pageToken = pageToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

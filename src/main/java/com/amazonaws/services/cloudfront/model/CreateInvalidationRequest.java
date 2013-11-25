@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#createInvalidation(CreateInvalidationRequest) CreateInvalidation operation}.
@@ -42,8 +44,6 @@ public class CreateInvalidationRequest extends AmazonWebServiceRequest implement
      */
     public CreateInvalidationRequest() {}
     
-
-
     /**
      * Constructs a new CreateInvalidationRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -57,8 +57,6 @@ public class CreateInvalidationRequest extends AmazonWebServiceRequest implement
         setInvalidationBatch(invalidationBatch);
     }
 
-    
-    
     /**
      * The distribution's id.
      *
@@ -91,8 +89,7 @@ public class CreateInvalidationRequest extends AmazonWebServiceRequest implement
         this.distributionId = distributionId;
         return this;
     }
-    
-    
+
     /**
      * The batch information for the invalidation.
      *
@@ -125,8 +122,7 @@ public class CreateInvalidationRequest extends AmazonWebServiceRequest implement
         this.invalidationBatch = invalidationBatch;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

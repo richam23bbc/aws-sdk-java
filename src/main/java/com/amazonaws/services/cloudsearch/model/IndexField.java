@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -143,8 +145,7 @@ public class IndexField implements Serializable {
         this.indexFieldName = indexFieldName;
         return this;
     }
-    
-    
+
     /**
      * The type of field. Based on this type, exactly one of the
      * <a>UIntOptions</a>, <a>LiteralOptions</a> or <a>TextOptions</a> must
@@ -204,8 +205,7 @@ public class IndexField implements Serializable {
         this.indexFieldType = indexFieldType;
         return this;
     }
-    
-    
+
     /**
      * The type of field. Based on this type, exactly one of the
      * <a>UIntOptions</a>, <a>LiteralOptions</a> or <a>TextOptions</a> must
@@ -247,7 +247,7 @@ public class IndexField implements Serializable {
         this.indexFieldType = indexFieldType.toString();
         return this;
     }
-    
+
     /**
      * Options for an unsigned integer field. Present if
      * <code>IndexFieldType</code> specifies the field is of type unsigned
@@ -292,8 +292,7 @@ public class IndexField implements Serializable {
         this.uIntOptions = uIntOptions;
         return this;
     }
-    
-    
+
     /**
      * Options for literal field. Present if <code>IndexFieldType</code>
      * specifies the field is of type literal.
@@ -332,8 +331,7 @@ public class IndexField implements Serializable {
         this.literalOptions = literalOptions;
         return this;
     }
-    
-    
+
     /**
      * Options for text field. Present if <code>IndexFieldType</code>
      * specifies the field is of type text.
@@ -372,8 +370,7 @@ public class IndexField implements Serializable {
         this.textOptions = textOptions;
         return this;
     }
-    
-    
+
     /**
      * An optional list of source attributes that provide data for this index
      * field. If not specified, the data is pulled from a source attribute
@@ -390,7 +387,6 @@ public class IndexField implements Serializable {
      *         configure a maximum of 20 sources for an <code>IndexField</code>.
      */
     public java.util.List<SourceAttribute> getSourceAttributes() {
-        
         if (sourceAttributes == null) {
               sourceAttributes = new com.amazonaws.internal.ListWithAutoConstructFlag<SourceAttribute>();
               sourceAttributes.setAutoConstruct(true);
@@ -482,7 +478,7 @@ public class IndexField implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

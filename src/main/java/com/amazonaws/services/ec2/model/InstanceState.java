@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -81,8 +83,7 @@ public class InstanceState implements Serializable {
         this.code = code;
         return this;
     }
-    
-    
+
     /**
      * The current state of the instance.
      * <p>
@@ -130,8 +131,7 @@ public class InstanceState implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The current state of the instance.
      * <p>
@@ -165,7 +165,7 @@ public class InstanceState implements Serializable {
         this.name = name.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

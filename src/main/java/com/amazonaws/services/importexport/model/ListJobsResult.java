@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.importexport.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -39,7 +41,6 @@ public class ListJobsResult implements Serializable {
      * @return A list container for Jobs returned by the ListJobs operation.
      */
     public java.util.List<Job> getJobs() {
-        
         if (jobs == null) {
               jobs = new com.amazonaws.internal.ListWithAutoConstructFlag<Job>();
               jobs.setAutoConstruct(true);
@@ -101,7 +102,7 @@ public class ListJobsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Indicates whether the list of jobs was truncated. If true, then call
      * ListJobs again using the last JobId element as the marker.
@@ -140,8 +141,7 @@ public class ListJobsResult implements Serializable {
         this.isTruncated = isTruncated;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether the list of jobs was truncated. If true, then call
      * ListJobs again using the last JobId element as the marker.
@@ -152,7 +152,7 @@ public class ListJobsResult implements Serializable {
     public Boolean getIsTruncated() {
         return isTruncated;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

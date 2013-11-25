@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,7 @@ public class BundleTaskError implements Serializable {
         this.code = code;
         return this;
     }
-    
-    
+
     /**
      * Error message.
      *
@@ -98,8 +99,7 @@ public class BundleTaskError implements Serializable {
         this.message = message;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

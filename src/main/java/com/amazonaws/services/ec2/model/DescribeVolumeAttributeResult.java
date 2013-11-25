@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Describe Volume Attribute Result
@@ -61,8 +63,7 @@ public class DescribeVolumeAttributeResult implements Serializable {
         this.volumeId = volumeId;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -95,8 +96,7 @@ public class DescribeVolumeAttributeResult implements Serializable {
         this.autoEnableIO = autoEnableIO;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -105,14 +105,13 @@ public class DescribeVolumeAttributeResult implements Serializable {
     public Boolean getAutoEnableIO() {
         return autoEnableIO;
     }
-    
+
     /**
      * Returns the value of the ProductCodes property for this object.
      *
      * @return The value of the ProductCodes property for this object.
      */
     public java.util.List<ProductCode> getProductCodes() {
-        
         if (productCodes == null) {
               productCodes = new com.amazonaws.internal.ListWithAutoConstructFlag<ProductCode>();
               productCodes.setAutoConstruct(true);
@@ -174,7 +173,7 @@ public class DescribeVolumeAttributeResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -82,8 +84,7 @@ public class NodeGroupMember implements Serializable {
         this.cacheClusterId = cacheClusterId;
         return this;
     }
-    
-    
+
     /**
      * The ID of the node within its cache cluster. A node ID is a numeric
      * identifier (0001, 0002, etc.).
@@ -122,8 +123,7 @@ public class NodeGroupMember implements Serializable {
         this.cacheNodeId = cacheNodeId;
         return this;
     }
-    
-    
+
     /**
      * Represents the information required for client programs to connect to
      * a cache node.
@@ -162,8 +162,7 @@ public class NodeGroupMember implements Serializable {
         this.readEndpoint = readEndpoint;
         return this;
     }
-    
-    
+
     /**
      * The name of the Availability Zone in which the node is located.
      *
@@ -196,8 +195,7 @@ public class NodeGroupMember implements Serializable {
         this.preferredAvailabilityZone = preferredAvailabilityZone;
         return this;
     }
-    
-    
+
     /**
      * The role that is currently assigned to the node - <i>primary</i> or
      * <i>replica</i>.
@@ -236,8 +234,7 @@ public class NodeGroupMember implements Serializable {
         this.currentRole = currentRole;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

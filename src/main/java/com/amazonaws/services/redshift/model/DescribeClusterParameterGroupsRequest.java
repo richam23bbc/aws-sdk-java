@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#describeClusterParameterGroups(DescribeClusterParameterGroupsRequest) DescribeClusterParameterGroups operation}.
@@ -101,8 +103,7 @@ public class DescribeClusterParameterGroupsRequest extends AmazonWebServiceReque
         this.parameterGroupName = parameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of parameter group records to include in the
      * response. If more records exist than the specified
@@ -165,8 +166,7 @@ public class DescribeClusterParameterGroupsRequest extends AmazonWebServiceReque
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned by a previous
      * <a>DescribeClusterParameterGroups</a> request to indicate the first
@@ -211,8 +211,7 @@ public class DescribeClusterParameterGroupsRequest extends AmazonWebServiceReque
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

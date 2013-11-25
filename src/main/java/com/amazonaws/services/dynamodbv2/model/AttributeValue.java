@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -58,8 +60,6 @@ public class AttributeValue implements Serializable {
      */
     public AttributeValue() {}
     
-
-
     /**
      * Constructs a new AttributeValue object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -70,10 +70,6 @@ public class AttributeValue implements Serializable {
     public AttributeValue(String s) {
         setS(s);
     }
-
-    
-    
-
 
     /**
      * Constructs a new AttributeValue object.
@@ -86,8 +82,6 @@ public class AttributeValue implements Serializable {
         setSS(sS);
     }
 
-    
-    
     /**
      * Represents a String data type
      *
@@ -120,8 +114,7 @@ public class AttributeValue implements Serializable {
         this.s = s;
         return this;
     }
-    
-    
+
     /**
      * Represents a Number data type
      *
@@ -154,8 +147,7 @@ public class AttributeValue implements Serializable {
         this.n = n;
         return this;
     }
-    
-    
+
     /**
      * Represents a Binary data type
      *
@@ -188,15 +180,13 @@ public class AttributeValue implements Serializable {
         this.b = b;
         return this;
     }
-    
-    
+
     /**
      * Represents a String set data type
      *
      * @return Represents a String set data type
      */
     public java.util.List<String> getSS() {
-        
         return sS;
     }
     
@@ -254,14 +244,13 @@ public class AttributeValue implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Represents a Number set data type
      *
      * @return Represents a Number set data type
      */
     public java.util.List<String> getNS() {
-        
         return nS;
     }
     
@@ -319,14 +308,13 @@ public class AttributeValue implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Represents a Binary set data type
      *
      * @return Represents a Binary set data type
      */
     public java.util.List<java.nio.ByteBuffer> getBS() {
-        
         return bS;
     }
     
@@ -384,7 +372,7 @@ public class AttributeValue implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

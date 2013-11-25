@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,7 @@ public class PartListElement implements Serializable {
         this.rangeInBytes = rangeInBytes;
         return this;
     }
-    
-    
+
     /**
      * The SHA256 tree hash value that Amazon Glacier calculated for the
      * part. This field is never <code>null</code>.
@@ -111,8 +112,7 @@ public class PartListElement implements Serializable {
         this.sHA256TreeHash = sHA256TreeHash;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

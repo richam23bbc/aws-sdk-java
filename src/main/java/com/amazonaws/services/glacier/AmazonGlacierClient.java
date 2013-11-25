@@ -14,30 +14,22 @@
  */
 package com.amazonaws.services.glacier;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map.Entry;
+import java.net.*;
+import java.util.*;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.*;
 
 import com.amazonaws.*;
 import com.amazonaws.regions.*;
 import com.amazonaws.auth.*;
-import com.amazonaws.handlers.HandlerChainFactory;
-import com.amazonaws.handlers.RequestHandler;
-import com.amazonaws.http.HttpResponseHandler;
-import com.amazonaws.http.JsonResponseHandler;
-import com.amazonaws.http.JsonErrorResponseHandler;
-import com.amazonaws.http.ExecutionContext;
-import com.amazonaws.util.AWSRequestMetrics;
+import com.amazonaws.handlers.*;
+import com.amazonaws.http.*;
+import com.amazonaws.regions.*;
+import com.amazonaws.internal.*;
+import com.amazonaws.transform.*;
+import com.amazonaws.util.*;
 import com.amazonaws.util.AWSRequestMetrics.Field;
-import com.amazonaws.internal.StaticCredentialsProvider;
-import com.amazonaws.transform.Unmarshaller;
-import com.amazonaws.transform.JsonUnmarshallerContext;
-import com.amazonaws.transform.GlacierErrorUnmarshaller;
-import com.amazonaws.util.json.JSONObject;
+import com.amazonaws.util.json.*;
 
 import com.amazonaws.services.glacier.model.*;
 import com.amazonaws.services.glacier.model.transform.*;
@@ -97,11 +89,6 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      */
     protected List<Unmarshaller<AmazonServiceException, JSONObject>> exceptionUnmarshallers;
 
-    
-    /** AWS signer for authenticating requests. */
-    private AWS4Signer signer;
-
-
     /**
      * Constructs a new client to invoke service methods on
      * AmazonGlacier.  A credentials provider chain will be used
@@ -116,7 +103,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      * All service calls made using this new client object are blocking, and will not
      * return until the service call completes.
      *
-     * @see DefaultAWSCredentialsProvider
+     * @see DefaultAWSCredentialsProviderChain
      */
     public AmazonGlacierClient() {
         this(new DefaultAWSCredentialsProviderChain(), new ClientConfiguration());
@@ -140,7 +127,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *                       client connects to AmazonGlacier
      *                       (ex: proxy settings, retry counts, etc.).
      *
-     * @see DefaultAWSCredentialsProvider
+     * @see DefaultAWSCredentialsProviderChain
      */
     public AmazonGlacierClient(ClientConfiguration clientConfiguration) {
         this(new DefaultAWSCredentialsProviderChain(), clientConfiguration);
@@ -235,14 +222,13 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
         
         exceptionUnmarshallers.add(new GlacierErrorUnmarshaller());
-        setEndpoint("glacier.us-east-1.amazonaws.com");
-
-        signer = new AWS4Signer();
-        
-
+        // calling this.setEndPoint(...) will also modify the signer accordingly
+        this.setEndpoint("glacier.us-east-1.amazonaws.com");
         HandlerChainFactory chainFactory = new HandlerChainFactory();
-        requestHandlers.addAll(chainFactory.newRequestHandlerChain(
+        requestHandler2s.addAll(chainFactory.newRequestHandlerChain(
                 "/com/amazonaws/services/glacier/request.handlers"));
+        requestHandler2s.addAll(chainFactory.newRequestHandler2Chain(
+                "/com/amazonaws/services/glacier/request.handler2s"));
 
         
     }
@@ -300,26 +286,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public ListVaultsResult listVaults(ListVaultsRequest listVaultsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public ListVaultsResult listVaults(ListVaultsRequest listVaultsRequest) {
+        ExecutionContext executionContext = createExecutionContext(listVaultsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<ListVaultsRequest> request = new ListVaultsRequestMarshaller().marshall(listVaultsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<ListVaultsResult, JsonUnmarshallerContext> unmarshaller = new ListVaultsResultJsonUnmarshaller();
-        
-        JsonResponseHandler<ListVaultsResult> responseHandler = new JsonResponseHandler<ListVaultsResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListVaultsRequest> request = null;
+        Response<ListVaultsResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListVaultsRequestMarshaller().marshall(listVaultsRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<ListVaultsResult, JsonUnmarshallerContext> unmarshaller = new ListVaultsResultJsonUnmarshaller();
+            JsonResponseHandler<ListVaultsResult> responseHandler = new JsonResponseHandler<ListVaultsResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation returns information about a job you previously
@@ -373,26 +365,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public DescribeJobResult describeJob(DescribeJobRequest describeJobRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public DescribeJobResult describeJob(DescribeJobRequest describeJobRequest) {
+        ExecutionContext executionContext = createExecutionContext(describeJobRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<DescribeJobRequest> request = new DescribeJobRequestMarshaller().marshall(describeJobRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<DescribeJobResult, JsonUnmarshallerContext> unmarshaller = new DescribeJobResultJsonUnmarshaller();
-        
-        JsonResponseHandler<DescribeJobResult> responseHandler = new JsonResponseHandler<DescribeJobResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeJobRequest> request = null;
+        Response<DescribeJobResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeJobRequestMarshaller().marshall(describeJobRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<DescribeJobResult, JsonUnmarshallerContext> unmarshaller = new DescribeJobResultJsonUnmarshaller();
+            JsonResponseHandler<DescribeJobResult> responseHandler = new JsonResponseHandler<DescribeJobResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation lists the parts of an archive that have been uploaded
@@ -449,26 +447,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public ListPartsResult listParts(ListPartsRequest listPartsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public ListPartsResult listParts(ListPartsRequest listPartsRequest) {
+        ExecutionContext executionContext = createExecutionContext(listPartsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<ListPartsRequest> request = new ListPartsRequestMarshaller().marshall(listPartsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<ListPartsResult, JsonUnmarshallerContext> unmarshaller = new ListPartsResultJsonUnmarshaller();
-        
-        JsonResponseHandler<ListPartsResult> responseHandler = new JsonResponseHandler<ListPartsResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListPartsRequest> request = null;
+        Response<ListPartsResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListPartsRequestMarshaller().marshall(listPartsRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<ListPartsResult, JsonUnmarshallerContext> unmarshaller = new ListPartsResultJsonUnmarshaller();
+            JsonResponseHandler<ListPartsResult> responseHandler = new JsonResponseHandler<ListPartsResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation retrieves the <code>notification-configuration</code>
@@ -520,26 +524,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public GetVaultNotificationsResult getVaultNotifications(GetVaultNotificationsRequest getVaultNotificationsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public GetVaultNotificationsResult getVaultNotifications(GetVaultNotificationsRequest getVaultNotificationsRequest) {
+        ExecutionContext executionContext = createExecutionContext(getVaultNotificationsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<GetVaultNotificationsRequest> request = new GetVaultNotificationsRequestMarshaller().marshall(getVaultNotificationsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<GetVaultNotificationsResult, JsonUnmarshallerContext> unmarshaller = new GetVaultNotificationsResultJsonUnmarshaller();
-        
-        JsonResponseHandler<GetVaultNotificationsResult> responseHandler = new JsonResponseHandler<GetVaultNotificationsResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVaultNotificationsRequest> request = null;
+        Response<GetVaultNotificationsResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVaultNotificationsRequestMarshaller().marshall(getVaultNotificationsRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<GetVaultNotificationsResult, JsonUnmarshallerContext> unmarshaller = new GetVaultNotificationsResultJsonUnmarshaller();
+            JsonResponseHandler<GetVaultNotificationsResult> responseHandler = new JsonResponseHandler<GetVaultNotificationsResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation lists jobs for a vault, including jobs that are
@@ -619,26 +629,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public ListJobsResult listJobs(ListJobsRequest listJobsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public ListJobsResult listJobs(ListJobsRequest listJobsRequest) {
+        ExecutionContext executionContext = createExecutionContext(listJobsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<ListJobsRequest> request = new ListJobsRequestMarshaller().marshall(listJobsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<ListJobsResult, JsonUnmarshallerContext> unmarshaller = new ListJobsResultJsonUnmarshaller();
-        
-        JsonResponseHandler<ListJobsResult> responseHandler = new JsonResponseHandler<ListJobsResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListJobsRequest> request = null;
+        Response<ListJobsResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListJobsRequestMarshaller().marshall(listJobsRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<ListJobsResult, JsonUnmarshallerContext> unmarshaller = new ListJobsResultJsonUnmarshaller();
+            JsonResponseHandler<ListJobsResult> responseHandler = new JsonResponseHandler<ListJobsResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation creates a new vault with the specified name. The name
@@ -704,26 +720,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public CreateVaultResult createVault(CreateVaultRequest createVaultRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public CreateVaultResult createVault(CreateVaultRequest createVaultRequest) {
+        ExecutionContext executionContext = createExecutionContext(createVaultRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<CreateVaultRequest> request = new CreateVaultRequestMarshaller().marshall(createVaultRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<CreateVaultResult, JsonUnmarshallerContext> unmarshaller = new CreateVaultResultJsonUnmarshaller();
-        
-        JsonResponseHandler<CreateVaultResult> responseHandler = new JsonResponseHandler<CreateVaultResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateVaultRequest> request = null;
+        Response<CreateVaultResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateVaultRequestMarshaller().marshall(createVaultRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<CreateVaultResult, JsonUnmarshallerContext> unmarshaller = new CreateVaultResultJsonUnmarshaller();
+            JsonResponseHandler<CreateVaultResult> responseHandler = new JsonResponseHandler<CreateVaultResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation initiates a multipart upload. Amazon Glacier creates a
@@ -794,26 +816,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public InitiateMultipartUploadResult initiateMultipartUpload(InitiateMultipartUploadRequest initiateMultipartUploadRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public InitiateMultipartUploadResult initiateMultipartUpload(InitiateMultipartUploadRequest initiateMultipartUploadRequest) {
+        ExecutionContext executionContext = createExecutionContext(initiateMultipartUploadRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<InitiateMultipartUploadRequest> request = new InitiateMultipartUploadRequestMarshaller().marshall(initiateMultipartUploadRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<InitiateMultipartUploadResult, JsonUnmarshallerContext> unmarshaller = new InitiateMultipartUploadResultJsonUnmarshaller();
-        
-        JsonResponseHandler<InitiateMultipartUploadResult> responseHandler = new JsonResponseHandler<InitiateMultipartUploadResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<InitiateMultipartUploadRequest> request = null;
+        Response<InitiateMultipartUploadResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new InitiateMultipartUploadRequestMarshaller().marshall(initiateMultipartUploadRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<InitiateMultipartUploadResult, JsonUnmarshallerContext> unmarshaller = new InitiateMultipartUploadResultJsonUnmarshaller();
+            JsonResponseHandler<InitiateMultipartUploadResult> responseHandler = new JsonResponseHandler<InitiateMultipartUploadResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation aborts a multipart upload identified by the upload ID.
@@ -851,6 +879,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *           parameters to execute the AbortMultipartUpload service method on
      *           AmazonGlacier.
      * 
+     * 
      * @throws ResourceNotFoundException
      * @throws MissingParameterValueException
      * @throws ServiceUnavailableException
@@ -864,17 +893,18 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public void abortMultipartUpload(AbortMultipartUploadRequest abortMultipartUploadRequest) 
-            throws AmazonServiceException, AmazonClientException {
-                                     
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public void abortMultipartUpload(AbortMultipartUploadRequest abortMultipartUploadRequest) {
+        ExecutionContext executionContext = createExecutionContext(abortMultipartUploadRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<AbortMultipartUploadRequest> request = new AbortMultipartUploadRequestMarshaller().marshall(abortMultipartUploadRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
+        Request<AbortMultipartUploadRequest> request;
+        awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+        try {
+            request = new AbortMultipartUploadRequestMarshaller().marshall(abortMultipartUploadRequest);
+            // Binds the request metrics to the current request.
+            request.setAWSRequestMetrics(awsRequestMetrics);
+        } finally {
+            awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+        }
         JsonResponseHandler<Void> responseHandler = new JsonResponseHandler<Void>(null);
         invoke(request, responseHandler, executionContext);
     }
@@ -920,6 +950,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      * @param deleteArchiveRequest Container for the necessary parameters to
      *           execute the DeleteArchive service method on AmazonGlacier.
      * 
+     * 
      * @throws ResourceNotFoundException
      * @throws MissingParameterValueException
      * @throws ServiceUnavailableException
@@ -933,17 +964,18 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public void deleteArchive(DeleteArchiveRequest deleteArchiveRequest) 
-            throws AmazonServiceException, AmazonClientException {
-                                     
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public void deleteArchive(DeleteArchiveRequest deleteArchiveRequest) {
+        ExecutionContext executionContext = createExecutionContext(deleteArchiveRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<DeleteArchiveRequest> request = new DeleteArchiveRequestMarshaller().marshall(deleteArchiveRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
+        Request<DeleteArchiveRequest> request;
+        awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+        try {
+            request = new DeleteArchiveRequestMarshaller().marshall(deleteArchiveRequest);
+            // Binds the request metrics to the current request.
+            request.setAWSRequestMetrics(awsRequestMetrics);
+        } finally {
+            awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+        }
         JsonResponseHandler<Void> responseHandler = new JsonResponseHandler<Void>(null);
         invoke(request, responseHandler, executionContext);
     }
@@ -1033,28 +1065,34 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public GetJobOutputResult getJobOutput(GetJobOutputRequest getJobOutputRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public GetJobOutputResult getJobOutput(GetJobOutputRequest getJobOutputRequest) {
+        ExecutionContext executionContext = createExecutionContext(getJobOutputRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<GetJobOutputRequest> request = new GetJobOutputRequestMarshaller().marshall(getJobOutputRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<GetJobOutputResult, JsonUnmarshallerContext> unmarshaller = new GetJobOutputResultJsonUnmarshaller();
-        
-        JsonResponseHandler<GetJobOutputResult> responseHandler = new JsonResponseHandler<GetJobOutputResult>(unmarshaller);
-
-        
-        responseHandler.needsConnectionLeftOpen = true;
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetJobOutputRequest> request = null;
+        Response<GetJobOutputResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetJobOutputRequestMarshaller().marshall(getJobOutputRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<GetJobOutputResult, JsonUnmarshallerContext> unmarshaller = new GetJobOutputResultJsonUnmarshaller();
+            JsonResponseHandler<GetJobOutputResult> responseHandler = new JsonResponseHandler<GetJobOutputResult>(unmarshaller);
+            
+            responseHandler.needsConnectionLeftOpen = true;
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation initiates a job of the specified type. In this release,
@@ -1178,26 +1216,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public InitiateJobResult initiateJob(InitiateJobRequest initiateJobRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public InitiateJobResult initiateJob(InitiateJobRequest initiateJobRequest) {
+        ExecutionContext executionContext = createExecutionContext(initiateJobRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<InitiateJobRequest> request = new InitiateJobRequestMarshaller().marshall(initiateJobRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<InitiateJobResult, JsonUnmarshallerContext> unmarshaller = new InitiateJobResultJsonUnmarshaller();
-        
-        JsonResponseHandler<InitiateJobResult> responseHandler = new JsonResponseHandler<InitiateJobResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<InitiateJobRequest> request = null;
+        Response<InitiateJobResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new InitiateJobRequestMarshaller().marshall(initiateJobRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<InitiateJobResult, JsonUnmarshallerContext> unmarshaller = new InitiateJobResultJsonUnmarshaller();
+            JsonResponseHandler<InitiateJobResult> responseHandler = new JsonResponseHandler<InitiateJobResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation adds an archive to a vault. This is a synchronous
@@ -1272,26 +1316,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public UploadArchiveResult uploadArchive(UploadArchiveRequest uploadArchiveRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public UploadArchiveResult uploadArchive(UploadArchiveRequest uploadArchiveRequest) {
+        ExecutionContext executionContext = createExecutionContext(uploadArchiveRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<UploadArchiveRequest> request = new UploadArchiveRequestMarshaller().marshall(uploadArchiveRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<UploadArchiveResult, JsonUnmarshallerContext> unmarshaller = new UploadArchiveResultJsonUnmarshaller();
-        
-        JsonResponseHandler<UploadArchiveResult> responseHandler = new JsonResponseHandler<UploadArchiveResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UploadArchiveRequest> request = null;
+        Response<UploadArchiveResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UploadArchiveRequestMarshaller().marshall(uploadArchiveRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<UploadArchiveResult, JsonUnmarshallerContext> unmarshaller = new UploadArchiveResultJsonUnmarshaller();
+            JsonResponseHandler<UploadArchiveResult> responseHandler = new JsonResponseHandler<UploadArchiveResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation configures notifications that will be sent when
@@ -1346,6 +1396,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *           parameters to execute the SetVaultNotifications service method on
      *           AmazonGlacier.
      * 
+     * 
      * @throws ResourceNotFoundException
      * @throws MissingParameterValueException
      * @throws ServiceUnavailableException
@@ -1359,17 +1410,18 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public void setVaultNotifications(SetVaultNotificationsRequest setVaultNotificationsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-                                     
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public void setVaultNotifications(SetVaultNotificationsRequest setVaultNotificationsRequest) {
+        ExecutionContext executionContext = createExecutionContext(setVaultNotificationsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<SetVaultNotificationsRequest> request = new SetVaultNotificationsRequestMarshaller().marshall(setVaultNotificationsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
+        Request<SetVaultNotificationsRequest> request;
+        awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+        try {
+            request = new SetVaultNotificationsRequestMarshaller().marshall(setVaultNotificationsRequest);
+            // Binds the request metrics to the current request.
+            request.setAWSRequestMetrics(awsRequestMetrics);
+        } finally {
+            awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+        }
         JsonResponseHandler<Void> responseHandler = new JsonResponseHandler<Void>(null);
         invoke(request, responseHandler, executionContext);
     }
@@ -1455,26 +1507,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public CompleteMultipartUploadResult completeMultipartUpload(CompleteMultipartUploadRequest completeMultipartUploadRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public CompleteMultipartUploadResult completeMultipartUpload(CompleteMultipartUploadRequest completeMultipartUploadRequest) {
+        ExecutionContext executionContext = createExecutionContext(completeMultipartUploadRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<CompleteMultipartUploadRequest> request = new CompleteMultipartUploadRequestMarshaller().marshall(completeMultipartUploadRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<CompleteMultipartUploadResult, JsonUnmarshallerContext> unmarshaller = new CompleteMultipartUploadResultJsonUnmarshaller();
-        
-        JsonResponseHandler<CompleteMultipartUploadResult> responseHandler = new JsonResponseHandler<CompleteMultipartUploadResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CompleteMultipartUploadRequest> request = null;
+        Response<CompleteMultipartUploadResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CompleteMultipartUploadRequestMarshaller().marshall(completeMultipartUploadRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<CompleteMultipartUploadResult, JsonUnmarshallerContext> unmarshaller = new CompleteMultipartUploadResultJsonUnmarshaller();
+            JsonResponseHandler<CompleteMultipartUploadResult> responseHandler = new JsonResponseHandler<CompleteMultipartUploadResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation uploads a part of an archive. You can upload archive
@@ -1562,26 +1620,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public UploadMultipartPartResult uploadMultipartPart(UploadMultipartPartRequest uploadMultipartPartRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public UploadMultipartPartResult uploadMultipartPart(UploadMultipartPartRequest uploadMultipartPartRequest) {
+        ExecutionContext executionContext = createExecutionContext(uploadMultipartPartRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<UploadMultipartPartRequest> request = new UploadMultipartPartRequestMarshaller().marshall(uploadMultipartPartRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<UploadMultipartPartResult, JsonUnmarshallerContext> unmarshaller = new UploadMultipartPartResultJsonUnmarshaller();
-        
-        JsonResponseHandler<UploadMultipartPartResult> responseHandler = new JsonResponseHandler<UploadMultipartPartResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UploadMultipartPartRequest> request = null;
+        Response<UploadMultipartPartResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UploadMultipartPartRequestMarshaller().marshall(uploadMultipartPartRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<UploadMultipartPartResult, JsonUnmarshallerContext> unmarshaller = new UploadMultipartPartResultJsonUnmarshaller();
+            JsonResponseHandler<UploadMultipartPartResult> responseHandler = new JsonResponseHandler<UploadMultipartPartResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation returns information about a vault, including the
@@ -1633,26 +1697,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public DescribeVaultResult describeVault(DescribeVaultRequest describeVaultRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public DescribeVaultResult describeVault(DescribeVaultRequest describeVaultRequest) {
+        ExecutionContext executionContext = createExecutionContext(describeVaultRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<DescribeVaultRequest> request = new DescribeVaultRequestMarshaller().marshall(describeVaultRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<DescribeVaultResult, JsonUnmarshallerContext> unmarshaller = new DescribeVaultResultJsonUnmarshaller();
-        
-        JsonResponseHandler<DescribeVaultResult> responseHandler = new JsonResponseHandler<DescribeVaultResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeVaultRequest> request = null;
+        Response<DescribeVaultResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeVaultRequestMarshaller().marshall(describeVaultRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<DescribeVaultResult, JsonUnmarshallerContext> unmarshaller = new DescribeVaultResultJsonUnmarshaller();
+            JsonResponseHandler<DescribeVaultResult> responseHandler = new JsonResponseHandler<DescribeVaultResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation deletes the notification configuration set for a vault.
@@ -1682,6 +1752,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *           parameters to execute the DeleteVaultNotifications service method on
      *           AmazonGlacier.
      * 
+     * 
      * @throws ResourceNotFoundException
      * @throws MissingParameterValueException
      * @throws ServiceUnavailableException
@@ -1695,17 +1766,18 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public void deleteVaultNotifications(DeleteVaultNotificationsRequest deleteVaultNotificationsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-                                     
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public void deleteVaultNotifications(DeleteVaultNotificationsRequest deleteVaultNotificationsRequest) {
+        ExecutionContext executionContext = createExecutionContext(deleteVaultNotificationsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<DeleteVaultNotificationsRequest> request = new DeleteVaultNotificationsRequestMarshaller().marshall(deleteVaultNotificationsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
+        Request<DeleteVaultNotificationsRequest> request;
+        awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+        try {
+            request = new DeleteVaultNotificationsRequestMarshaller().marshall(deleteVaultNotificationsRequest);
+            // Binds the request metrics to the current request.
+            request.setAWSRequestMetrics(awsRequestMetrics);
+        } finally {
+            awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+        }
         JsonResponseHandler<Void> responseHandler = new JsonResponseHandler<Void>(null);
         invoke(request, responseHandler, executionContext);
     }
@@ -1774,26 +1846,32 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public ListMultipartUploadsResult listMultipartUploads(ListMultipartUploadsRequest listMultipartUploadsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public ListMultipartUploadsResult listMultipartUploads(ListMultipartUploadsRequest listMultipartUploadsRequest) {
+        ExecutionContext executionContext = createExecutionContext(listMultipartUploadsRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<ListMultipartUploadsRequest> request = new ListMultipartUploadsRequestMarshaller().marshall(listMultipartUploadsRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
-        Unmarshaller<ListMultipartUploadsResult, JsonUnmarshallerContext> unmarshaller = new ListMultipartUploadsResultJsonUnmarshaller();
-        
-        JsonResponseHandler<ListMultipartUploadsResult> responseHandler = new JsonResponseHandler<ListMultipartUploadsResult>(unmarshaller);
-
-        
-
-        return invoke(request, responseHandler, executionContext);
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMultipartUploadsRequest> request = null;
+        Response<ListMultipartUploadsResult> response = null;
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMultipartUploadsRequestMarshaller().marshall(listMultipartUploadsRequest);
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+            Unmarshaller<ListMultipartUploadsResult, JsonUnmarshallerContext> unmarshaller = new ListMultipartUploadsResultJsonUnmarshaller();
+            JsonResponseHandler<ListMultipartUploadsResult> responseHandler = new JsonResponseHandler<ListMultipartUploadsResult>(unmarshaller);
+            
+            response = invoke(request, responseHandler, executionContext);
+            return response.getAwsResponse();
+        } finally {
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
-    
+
+   
     /**
      * <p>
      * This operation deletes a vault. Amazon Glacier will delete a vault
@@ -1833,6 +1911,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      * @param deleteVaultRequest Container for the necessary parameters to
      *           execute the DeleteVault service method on AmazonGlacier.
      * 
+     * 
      * @throws ResourceNotFoundException
      * @throws MissingParameterValueException
      * @throws ServiceUnavailableException
@@ -1846,62 +1925,37 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
      *             If an error response is returned by AmazonGlacier indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public void deleteVault(DeleteVaultRequest deleteVaultRequest) 
-            throws AmazonServiceException, AmazonClientException {
-                                     
-        /* Create execution context */
-        ExecutionContext executionContext = createExecutionContext();
-        
+    public void deleteVault(DeleteVaultRequest deleteVaultRequest) {
+        ExecutionContext executionContext = createExecutionContext(deleteVaultRequest);
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.RequestMarshallTime.name());
-        Request<DeleteVaultRequest> request = new DeleteVaultRequestMarshaller().marshall(deleteVaultRequest);
-        awsRequestMetrics.endEvent(Field.RequestMarshallTime.name());
-
+        Request<DeleteVaultRequest> request;
+        awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+        try {
+            request = new DeleteVaultRequestMarshaller().marshall(deleteVaultRequest);
+            // Binds the request metrics to the current request.
+            request.setAWSRequestMetrics(awsRequestMetrics);
+        } finally {
+            awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+        }
         JsonResponseHandler<Void> responseHandler = new JsonResponseHandler<Void>(null);
         invoke(request, responseHandler, executionContext);
     }
     
-    /**
-     * Overrides the default endpoint for this client ("https://glacier.us-east-1.amazonaws.com") and explicitly provides
-     * an AWS region ID and AWS service name to use when the client calculates a signature
-     * for requests.  In almost all cases, this region ID and service name
-     * are automatically determined from the endpoint, and callers should use the simpler
-     * one-argument form of setEndpoint instead of this method.
-     * <p>
-     * <b>This method is not threadsafe. Endpoints should be configured when the
-     * client is created and before any service requests are made. Changing it
-     * afterwards creates inevitable race conditions for any service requests in
-     * transit.</b>
-     * <p>
-     * Callers can pass in just the endpoint (ex: "glacier.us-east-1.amazonaws.com") or a full
-     * URL, including the protocol (ex: "https://glacier.us-east-1.amazonaws.com"). If the
-     * protocol is not specified here, the default protocol from this client's
-     * {@link ClientConfiguration} will be used, which by default is HTTPS.
-     * <p>
-     * For more information on using AWS regions with the AWS SDK for Java, and
-     * a complete list of all available endpoints for all AWS services, see:
-     * <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=3912">
-     * http://developer.amazonwebservices.com/connect/entry.jspa?externalID=3912</a>
-     *
-     * @param endpoint
-     *            The endpoint (ex: "glacier.us-east-1.amazonaws.com") or a full URL,
-     *            including the protocol (ex: "https://glacier.us-east-1.amazonaws.com") of
-     *            the region specific AWS endpoint this client will communicate
-     *            with.
-     * @param serviceName
-     *            The name of the AWS service to use when signing requests.
-     * @param regionId
-     *            The ID of the region in which this service resides.
-     *
-     * @throws IllegalArgumentException
-     *             If any problems are detected with the specified endpoint.
-     * @see AmazonDynamoDB#setRegion(Region)     
-     */
-    public void setEndpoint(String endpoint, String serviceName, String regionId) throws IllegalArgumentException {
-        setEndpoint(endpoint);
-        signer.setServiceName(serviceName);
-        signer.setRegionName(regionId);
+
+    @Override
+    public void setEndpoint(String endpoint) {
+        super.setEndpoint(endpoint);
+
+        
     }
+
+    @Override
+    public void setEndpoint(String endpoint, String serviceName, String regionId) throws IllegalArgumentException {
+        super.setEndpoint(endpoint, serviceName, regionId);
+
+        
+    }
+
     
     @Override
     protected String getServiceAbbreviation() {
@@ -1929,36 +1983,33 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
         return client.getResponseMetadataForRequest(request);
     }
 
-    private <X, Y extends AmazonWebServiceRequest> X invoke(Request<Y> request,
-                                                                HttpResponseHandler<AmazonWebServiceResponse<X>> responseHandler,
-                                                                ExecutionContext executionContext) throws AmazonClientException {
-
+    private <X, Y extends AmazonWebServiceRequest> Response<X> invoke(Request<Y> request,
+            HttpResponseHandler<AmazonWebServiceResponse<X>> responseHandler,
+            ExecutionContext executionContext) {
         request.setEndpoint(endpoint);
         request.setTimeOffset(timeOffset);
 
         AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-
-        awsRequestMetrics.startEvent(Field.CredentialsRequestTime.name());
-        AWSCredentials credentials = awsCredentialsProvider.getCredentials();
-        awsRequestMetrics.endEvent(Field.CredentialsRequestTime.name());
+        AWSCredentials credentials;
+        awsRequestMetrics.startEvent(Field.CredentialsRequestTime);
+        try {
+            credentials = awsCredentialsProvider.getCredentials();
+        } finally {
+            awsRequestMetrics.endEvent(Field.CredentialsRequestTime);
+        }
 
         AmazonWebServiceRequest originalRequest = request.getOriginalRequest();
         if (originalRequest != null && originalRequest.getRequestCredentials() != null) {
             credentials = originalRequest.getRequestCredentials();
         }
 
-        executionContext.setSigner(signer);
+        executionContext.setSigner(getSigner());
         executionContext.setCredentials(credentials);
 
-        
         JsonErrorResponseHandler errorResponseHandler = new JsonErrorResponseHandler(exceptionUnmarshallers);
-
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime.name());
-        X result = (X) client.execute(request, responseHandler, errorResponseHandler, executionContext);
-        awsRequestMetrics.endEvent(Field.ClientExecuteTime.name());
-
+        Response<X> result = client.execute(request, responseHandler,
+                errorResponseHandler, executionContext);
         awsRequestMetrics.log();
-
         return result;
     }
 }

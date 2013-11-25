@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -26,7 +28,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
      * The state of the job flow.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>COMPLETED, FAILED, TERMINATED, RUNNING, SHUTTING_DOWN, STARTING, WAITING, BOOTSTRAPPING
+     * <b>Allowed Values: </b>STARTING, BOOTSTRAPPING, RUNNING, WAITING, SHUTTING_DOWN, TERMINATED, COMPLETED, FAILED
      */
     private String state;
 
@@ -66,8 +68,6 @@ public class JobFlowExecutionStatusDetail implements Serializable {
      */
     public JobFlowExecutionStatusDetail() {}
     
-
-
     /**
      * Constructs a new JobFlowExecutionStatusDetail object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -81,8 +81,6 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         setCreationDateTime(creationDateTime);
     }
 
-    
-    
     /**
      * Constructs a new JobFlowExecutionStatusDetail object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -95,12 +93,12 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.state = state.toString();
         this.creationDateTime = creationDateTime;
     }
-    
+
     /**
      * The state of the job flow.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>COMPLETED, FAILED, TERMINATED, RUNNING, SHUTTING_DOWN, STARTING, WAITING, BOOTSTRAPPING
+     * <b>Allowed Values: </b>STARTING, BOOTSTRAPPING, RUNNING, WAITING, SHUTTING_DOWN, TERMINATED, COMPLETED, FAILED
      *
      * @return The state of the job flow.
      *
@@ -114,7 +112,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
      * The state of the job flow.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>COMPLETED, FAILED, TERMINATED, RUNNING, SHUTTING_DOWN, STARTING, WAITING, BOOTSTRAPPING
+     * <b>Allowed Values: </b>STARTING, BOOTSTRAPPING, RUNNING, WAITING, SHUTTING_DOWN, TERMINATED, COMPLETED, FAILED
      *
      * @param state The state of the job flow.
      *
@@ -130,7 +128,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>COMPLETED, FAILED, TERMINATED, RUNNING, SHUTTING_DOWN, STARTING, WAITING, BOOTSTRAPPING
+     * <b>Allowed Values: </b>STARTING, BOOTSTRAPPING, RUNNING, WAITING, SHUTTING_DOWN, TERMINATED, COMPLETED, FAILED
      *
      * @param state The state of the job flow.
      *
@@ -143,13 +141,12 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.state = state;
         return this;
     }
-    
-    
+
     /**
      * The state of the job flow.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>COMPLETED, FAILED, TERMINATED, RUNNING, SHUTTING_DOWN, STARTING, WAITING, BOOTSTRAPPING
+     * <b>Allowed Values: </b>STARTING, BOOTSTRAPPING, RUNNING, WAITING, SHUTTING_DOWN, TERMINATED, COMPLETED, FAILED
      *
      * @param state The state of the job flow.
      *
@@ -165,7 +162,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>COMPLETED, FAILED, TERMINATED, RUNNING, SHUTTING_DOWN, STARTING, WAITING, BOOTSTRAPPING
+     * <b>Allowed Values: </b>STARTING, BOOTSTRAPPING, RUNNING, WAITING, SHUTTING_DOWN, TERMINATED, COMPLETED, FAILED
      *
      * @param state The state of the job flow.
      *
@@ -178,7 +175,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.state = state.toString();
         return this;
     }
-    
+
     /**
      * The creation date and time of the job flow.
      *
@@ -211,8 +208,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.creationDateTime = creationDateTime;
         return this;
     }
-    
-    
+
     /**
      * The start date and time of the job flow.
      *
@@ -245,8 +241,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.startDateTime = startDateTime;
         return this;
     }
-    
-    
+
     /**
      * The date and time when the job flow was ready to start running
      * bootstrap actions.
@@ -285,8 +280,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.readyDateTime = readyDateTime;
         return this;
     }
-    
-    
+
     /**
      * The completion date and time of the job flow.
      *
@@ -319,8 +313,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.endDateTime = endDateTime;
         return this;
     }
-    
-    
+
     /**
      * Description of the job flow last changed state.
      * <p>
@@ -365,8 +358,7 @@ public class JobFlowExecutionStatusDetail implements Serializable {
         this.lastStateChangeReason = lastStateChangeReason;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

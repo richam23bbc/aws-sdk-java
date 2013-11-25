@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -23,7 +25,7 @@ import java.io.Serializable;
 public class DescribeDBParametersResult implements Serializable {
 
     /**
-     * A list of <a>Parameter</a> instances.
+     * A list of <a>Parameter</a> values.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<Parameter> parameters;
 
@@ -35,12 +37,11 @@ public class DescribeDBParametersResult implements Serializable {
     private String marker;
 
     /**
-     * A list of <a>Parameter</a> instances.
+     * A list of <a>Parameter</a> values.
      *
-     * @return A list of <a>Parameter</a> instances.
+     * @return A list of <a>Parameter</a> values.
      */
     public java.util.List<Parameter> getParameters() {
-        
         if (parameters == null) {
               parameters = new com.amazonaws.internal.ListWithAutoConstructFlag<Parameter>();
               parameters.setAutoConstruct(true);
@@ -49,9 +50,9 @@ public class DescribeDBParametersResult implements Serializable {
     }
     
     /**
-     * A list of <a>Parameter</a> instances.
+     * A list of <a>Parameter</a> values.
      *
-     * @param parameters A list of <a>Parameter</a> instances.
+     * @param parameters A list of <a>Parameter</a> values.
      */
     public void setParameters(java.util.Collection<Parameter> parameters) {
         if (parameters == null) {
@@ -64,11 +65,11 @@ public class DescribeDBParametersResult implements Serializable {
     }
     
     /**
-     * A list of <a>Parameter</a> instances.
+     * A list of <a>Parameter</a> values.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param parameters A list of <a>Parameter</a> instances.
+     * @param parameters A list of <a>Parameter</a> values.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -82,11 +83,11 @@ public class DescribeDBParametersResult implements Serializable {
     }
     
     /**
-     * A list of <a>Parameter</a> instances.
+     * A list of <a>Parameter</a> values.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param parameters A list of <a>Parameter</a> instances.
+     * @param parameters A list of <a>Parameter</a> values.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -102,7 +103,7 @@ public class DescribeDBParametersResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An optional pagination token provided by a previous request. If this
      * parameter is specified, the response includes only records beyond the
@@ -147,8 +148,7 @@ public class DescribeDBParametersResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

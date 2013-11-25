@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#createApp(CreateAppRequest) CreateApp operation}.
@@ -117,8 +119,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * The app's short name.
      *
@@ -151,8 +152,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.shortname = shortname;
         return this;
     }
-    
-    
+
     /**
      * The app name.
      *
@@ -185,8 +185,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * A description of the app.
      *
@@ -219,8 +218,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The app type. Each supported type is associated with a particular
      * layer. For example, PHP applications are associated with a PHP layer.
@@ -286,8 +284,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.type = type;
         return this;
     }
-    
-    
+
     /**
      * The app type. Each supported type is associated with a particular
      * layer. For example, PHP applications are associated with a PHP layer.
@@ -333,7 +330,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.type = type.toString();
         return this;
     }
-    
+
     /**
      * A <code>Source</code> object that specifies the app repository.
      *
@@ -366,8 +363,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.appSource = appSource;
         return this;
     }
-    
-    
+
     /**
      * The app virtual host settings, with multiple domains separated by
      * commas. For example: <code>'www.example.com, example.com'</code>
@@ -376,7 +372,6 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
      *         commas. For example: <code>'www.example.com, example.com'</code>
      */
     public java.util.List<String> getDomains() {
-        
         if (domains == null) {
               domains = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               domains.setAutoConstruct(true);
@@ -444,7 +439,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
 
         return this;
     }
-    
+
     /**
      * Whether to enable SSL for the app.
      *
@@ -477,8 +472,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.enableSsl = enableSsl;
         return this;
     }
-    
-    
+
     /**
      * Whether to enable SSL for the app.
      *
@@ -487,7 +481,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
     public Boolean getEnableSsl() {
         return enableSsl;
     }
-    
+
     /**
      * An <code>SslConfiguration</code> object with the SSL configuration.
      *
@@ -520,8 +514,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.sslConfiguration = sslConfiguration;
         return this;
     }
-    
-    
+
     /**
      * One or more user-defined key/value pairs to be added to the stack
      * attributes bag.
@@ -564,8 +557,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
         setAttributes(attributes);
         return this;
     }
-    
-   	
+
     /**
      * One or more user-defined key/value pairs to be added to the stack
      * attributes bag.
@@ -586,7 +578,7 @@ public class CreateAppRequest extends AmazonWebServiceRequest implements Seriali
 		this.attributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Attributes.
 	 * <p>

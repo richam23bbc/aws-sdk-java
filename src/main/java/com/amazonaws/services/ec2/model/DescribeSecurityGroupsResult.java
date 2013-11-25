@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeSecurityGroupsResult implements Serializable {
      * @return The list of described Amazon EC2 security groups.
      */
     public java.util.List<SecurityGroup> getSecurityGroups() {
-        
         if (securityGroups == null) {
               securityGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<SecurityGroup>();
               securityGroups.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeSecurityGroupsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

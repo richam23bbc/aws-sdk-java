@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -110,8 +112,7 @@ public class Origin implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you
      * want CloudFront to get objects for this origin, for example,
@@ -168,8 +169,7 @@ public class Origin implements Serializable {
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about the Amazon S3 origin.
      * If the origin is a custom origin, use the CustomOriginConfig element
@@ -214,8 +214,7 @@ public class Origin implements Serializable {
         this.s3OriginConfig = s3OriginConfig;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains information about a custom origin. If the
      * origin is an Amazon S3 bucket, use the S3OriginConfig element instead.
@@ -254,8 +253,7 @@ public class Origin implements Serializable {
         this.customOriginConfig = customOriginConfig;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

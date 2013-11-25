@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#updateApplication(UpdateApplicationRequest) UpdateApplication operation}.
@@ -55,8 +57,6 @@ public class UpdateApplicationRequest extends AmazonWebServiceRequest implements
      */
     public UpdateApplicationRequest() {}
     
-
-
     /**
      * Constructs a new UpdateApplicationRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -70,8 +70,6 @@ public class UpdateApplicationRequest extends AmazonWebServiceRequest implements
         setApplicationName(applicationName);
     }
 
-    
-    
     /**
      * The name of the application to update. If no such application is
      * found, <code>UpdateApplication</code> returns an
@@ -125,8 +123,7 @@ public class UpdateApplicationRequest extends AmazonWebServiceRequest implements
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * A new description for the application. <p>Default: If not specified,
      * AWS Elastic Beanstalk does not update the description.
@@ -174,8 +171,7 @@ public class UpdateApplicationRequest extends AmazonWebServiceRequest implements
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

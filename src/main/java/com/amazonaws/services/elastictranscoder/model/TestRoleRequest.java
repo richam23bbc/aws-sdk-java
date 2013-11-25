@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elastictranscoder.AmazonElasticTranscoder#testRole(TestRoleRequest) TestRole operation}.
@@ -114,8 +116,7 @@ public class TestRoleRequest extends AmazonWebServiceRequest implements Serializ
         this.role = role;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 bucket that contains media files to be transcoded. The
      * action attempts to read from this bucket.
@@ -163,8 +164,7 @@ public class TestRoleRequest extends AmazonWebServiceRequest implements Serializ
         this.inputBucket = inputBucket;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 bucket that Elastic Transcoder will write transcoded
      * media files to. The action attempts to read from this bucket.
@@ -212,8 +212,7 @@ public class TestRoleRequest extends AmazonWebServiceRequest implements Serializ
         this.outputBucket = outputBucket;
         return this;
     }
-    
-    
+
     /**
      * The ARNs of one or more Amazon Simple Notification Service (Amazon
      * SNS) topics that you want the action to send a test notification to.
@@ -225,7 +224,6 @@ public class TestRoleRequest extends AmazonWebServiceRequest implements Serializ
      *         SNS) topics that you want the action to send a test notification to.
      */
     public java.util.List<String> getTopics() {
-        
         if (topics == null) {
               topics = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               topics.setAutoConstruct(true);
@@ -302,7 +300,7 @@ public class TestRoleRequest extends AmazonWebServiceRequest implements Serializ
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

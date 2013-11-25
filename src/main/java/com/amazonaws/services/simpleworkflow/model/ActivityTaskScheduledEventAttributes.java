@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -135,8 +137,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.activityType = activityType;
         return this;
     }
-    
-    
+
     /**
      * The unique id of the activity task.
      * <p>
@@ -178,8 +179,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.activityId = activityId;
         return this;
     }
-    
-    
+
     /**
      * The input provided to the activity task.
      * <p>
@@ -221,8 +221,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.input = input;
         return this;
     }
-    
-    
+
     /**
      * Optional data attached to the event that can be used by the decider in
      * subsequent workflow tasks. This data is not sent to the activity.
@@ -270,8 +269,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.control = control;
         return this;
     }
-    
-    
+
     /**
      * The maximum amount of time the activity task can wait to be assigned
      * to a worker.
@@ -319,8 +317,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.scheduleToStartTimeout = scheduleToStartTimeout;
         return this;
     }
-    
-    
+
     /**
      * The maximum amount of time for this activity task.
      * <p>
@@ -362,8 +359,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.scheduleToCloseTimeout = scheduleToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * The maximum amount of time a worker may take to process the activity
      * task.
@@ -411,8 +407,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.startToCloseTimeout = startToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * The task list in which the activity task has been scheduled.
      *
@@ -445,8 +440,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.taskList = taskList;
         return this;
     }
-    
-    
+
     /**
      * The id of the <code>DecisionTaskCompleted</code> event corresponding
      * to the decision that resulted in the scheduling of this activity task.
@@ -497,8 +491,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
     }
-    
-    
+
     /**
      * The maximum time before which the worker processing this task must
      * report progress by calling <a>RecordActivityTaskHeartbeat</a>. If the
@@ -564,8 +557,7 @@ public class ActivityTaskScheduledEventAttributes implements Serializable {
         this.heartbeatTimeout = heartbeatTimeout;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

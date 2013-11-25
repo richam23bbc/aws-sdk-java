@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -46,7 +48,7 @@ public class Volume implements Serializable {
      * State of this volume (e.g., creating, available).
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>creating, available, in-use, deleting, error
+     * <b>Allowed Values: </b>creating, available, in-use, deleting, deleted, error
      */
     private String state;
 
@@ -101,8 +103,7 @@ public class Volume implements Serializable {
         this.volumeId = volumeId;
         return this;
     }
-    
-    
+
     /**
      * The size of this volume, in gigabytes.
      *
@@ -135,8 +136,7 @@ public class Volume implements Serializable {
         this.size = size;
         return this;
     }
-    
-    
+
     /**
      * Optional snapshot from which this volume was created.
      *
@@ -169,8 +169,7 @@ public class Volume implements Serializable {
         this.snapshotId = snapshotId;
         return this;
     }
-    
-    
+
     /**
      * Availability zone in which this volume was created.
      *
@@ -203,13 +202,12 @@ public class Volume implements Serializable {
         this.availabilityZone = availabilityZone;
         return this;
     }
-    
-    
+
     /**
      * State of this volume (e.g., creating, available).
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>creating, available, in-use, deleting, error
+     * <b>Allowed Values: </b>creating, available, in-use, deleting, deleted, error
      *
      * @return State of this volume (e.g., creating, available).
      *
@@ -223,7 +221,7 @@ public class Volume implements Serializable {
      * State of this volume (e.g., creating, available).
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>creating, available, in-use, deleting, error
+     * <b>Allowed Values: </b>creating, available, in-use, deleting, deleted, error
      *
      * @param state State of this volume (e.g., creating, available).
      *
@@ -239,7 +237,7 @@ public class Volume implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>creating, available, in-use, deleting, error
+     * <b>Allowed Values: </b>creating, available, in-use, deleting, deleted, error
      *
      * @param state State of this volume (e.g., creating, available).
      *
@@ -252,13 +250,12 @@ public class Volume implements Serializable {
         this.state = state;
         return this;
     }
-    
-    
+
     /**
      * State of this volume (e.g., creating, available).
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>creating, available, in-use, deleting, error
+     * <b>Allowed Values: </b>creating, available, in-use, deleting, deleted, error
      *
      * @param state State of this volume (e.g., creating, available).
      *
@@ -274,7 +271,7 @@ public class Volume implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>creating, available, in-use, deleting, error
+     * <b>Allowed Values: </b>creating, available, in-use, deleting, deleted, error
      *
      * @param state State of this volume (e.g., creating, available).
      *
@@ -287,7 +284,7 @@ public class Volume implements Serializable {
         this.state = state.toString();
         return this;
     }
-    
+
     /**
      * Timestamp when volume creation was initiated.
      *
@@ -320,15 +317,13 @@ public class Volume implements Serializable {
         this.createTime = createTime;
         return this;
     }
-    
-    
+
     /**
      * Information on what this volume is attached to.
      *
      * @return Information on what this volume is attached to.
      */
     public java.util.List<VolumeAttachment> getAttachments() {
-        
         if (attachments == null) {
               attachments = new com.amazonaws.internal.ListWithAutoConstructFlag<VolumeAttachment>();
               attachments.setAutoConstruct(true);
@@ -390,14 +385,13 @@ public class Volume implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of tags for the Volume.
      *
      * @return A list of tags for the Volume.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -459,7 +453,7 @@ public class Volume implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the VolumeType property for this object.
      * <p>
@@ -507,8 +501,7 @@ public class Volume implements Serializable {
         this.volumeType = volumeType;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the VolumeType property for this object.
      * <p>
@@ -542,7 +535,7 @@ public class Volume implements Serializable {
         this.volumeType = volumeType.toString();
         return this;
     }
-    
+
     /**
      * Returns the value of the Iops property for this object.
      *
@@ -575,8 +568,7 @@ public class Volume implements Serializable {
         this.iops = iops;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

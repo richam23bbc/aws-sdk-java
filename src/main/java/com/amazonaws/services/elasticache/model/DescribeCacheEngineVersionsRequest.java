@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#describeCacheEngineVersions(DescribeCacheEngineVersionsRequest) DescribeCacheEngineVersions operation}.
@@ -106,8 +108,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
         this.engine = engine;
         return this;
     }
-    
-    
+
     /**
      * The cache engine version to return. <p>Example: <code>1.4.14</code>
      *
@@ -140,8 +141,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
      * The name of a specific cache parameter group family to return details
      * for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
@@ -192,8 +192,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -244,8 +243,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned from a prior request. Use this marker for
      * pagination of results from this operation. If this parameter is
@@ -296,8 +294,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * If <i>true</i>, specifies that only the default version of the
      * specified engine or engine and major version combination is to be
@@ -342,8 +339,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
         this.defaultOnly = defaultOnly;
         return this;
     }
-    
-    
+
     /**
      * If <i>true</i>, specifies that only the default version of the
      * specified engine or engine and major version combination is to be
@@ -356,7 +352,7 @@ public class DescribeCacheEngineVersionsRequest extends AmazonWebServiceRequest 
     public Boolean getDefaultOnly() {
         return defaultOnly;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

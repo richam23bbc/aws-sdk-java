@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#listGateways(ListGatewaysRequest) ListGateways operation}.
@@ -100,8 +102,7 @@ public class ListGatewaysRequest extends AmazonWebServiceRequest implements Seri
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Specifies that the list of gateways returned be limited to the
      * specified number of items.
@@ -149,8 +150,7 @@ public class ListGatewaysRequest extends AmazonWebServiceRequest implements Seri
         this.limit = limit;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

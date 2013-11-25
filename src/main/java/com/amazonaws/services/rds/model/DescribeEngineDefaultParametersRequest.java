@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#describeEngineDefaultParameters(DescribeEngineDefaultParametersRequest) DescribeEngineDefaultParameters operation}.
@@ -27,7 +29,7 @@ import java.io.Serializable;
 public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * The name of the DB Parameter Group Family.
+     * The name of the DB parameter group family.
      */
     private String dBParameterGroupFamily;
 
@@ -42,9 +44,9 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
 
     /**
      * An optional pagination token provided by a previous
-     * DescribeEngineDefaultParameters request. If this parameter is
-     * specified, the response includes only records beyond the marker, up to
-     * the value specified by <code>MaxRecords</code>.
+     * <code>DescribeEngineDefaultParameters</code> request. If this
+     * parameter is specified, the response includes only records beyond the
+     * marker, up to the value specified by <code>MaxRecords</code>.
      */
     private String marker;
 
@@ -54,46 +56,42 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
      */
     public DescribeEngineDefaultParametersRequest() {}
     
-
-
     /**
      * Constructs a new DescribeEngineDefaultParametersRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
      * initialize any additional object members.
      * 
-     * @param dBParameterGroupFamily The name of the DB Parameter Group
-     * Family.
+     * @param dBParameterGroupFamily The name of the DB parameter group
+     * family.
      */
     public DescribeEngineDefaultParametersRequest(String dBParameterGroupFamily) {
         setDBParameterGroupFamily(dBParameterGroupFamily);
     }
 
-    
-    
     /**
-     * The name of the DB Parameter Group Family.
+     * The name of the DB parameter group family.
      *
-     * @return The name of the DB Parameter Group Family.
+     * @return The name of the DB parameter group family.
      */
     public String getDBParameterGroupFamily() {
         return dBParameterGroupFamily;
     }
     
     /**
-     * The name of the DB Parameter Group Family.
+     * The name of the DB parameter group family.
      *
-     * @param dBParameterGroupFamily The name of the DB Parameter Group Family.
+     * @param dBParameterGroupFamily The name of the DB parameter group family.
      */
     public void setDBParameterGroupFamily(String dBParameterGroupFamily) {
         this.dBParameterGroupFamily = dBParameterGroupFamily;
     }
     
     /**
-     * The name of the DB Parameter Group Family.
+     * The name of the DB parameter group family.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBParameterGroupFamily The name of the DB Parameter Group Family.
+     * @param dBParameterGroupFamily The name of the DB parameter group family.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -102,8 +100,7 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         this.dBParameterGroupFamily = dBParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -160,18 +157,17 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional pagination token provided by a previous
-     * DescribeEngineDefaultParameters request. If this parameter is
-     * specified, the response includes only records beyond the marker, up to
-     * the value specified by <code>MaxRecords</code>.
+     * <code>DescribeEngineDefaultParameters</code> request. If this
+     * parameter is specified, the response includes only records beyond the
+     * marker, up to the value specified by <code>MaxRecords</code>.
      *
      * @return An optional pagination token provided by a previous
-     *         DescribeEngineDefaultParameters request. If this parameter is
-     *         specified, the response includes only records beyond the marker, up to
-     *         the value specified by <code>MaxRecords</code>.
+     *         <code>DescribeEngineDefaultParameters</code> request. If this
+     *         parameter is specified, the response includes only records beyond the
+     *         marker, up to the value specified by <code>MaxRecords</code>.
      */
     public String getMarker() {
         return marker;
@@ -179,14 +175,14 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
     
     /**
      * An optional pagination token provided by a previous
-     * DescribeEngineDefaultParameters request. If this parameter is
-     * specified, the response includes only records beyond the marker, up to
-     * the value specified by <code>MaxRecords</code>.
+     * <code>DescribeEngineDefaultParameters</code> request. If this
+     * parameter is specified, the response includes only records beyond the
+     * marker, up to the value specified by <code>MaxRecords</code>.
      *
      * @param marker An optional pagination token provided by a previous
-     *         DescribeEngineDefaultParameters request. If this parameter is
-     *         specified, the response includes only records beyond the marker, up to
-     *         the value specified by <code>MaxRecords</code>.
+     *         <code>DescribeEngineDefaultParameters</code> request. If this
+     *         parameter is specified, the response includes only records beyond the
+     *         marker, up to the value specified by <code>MaxRecords</code>.
      */
     public void setMarker(String marker) {
         this.marker = marker;
@@ -194,16 +190,16 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
     
     /**
      * An optional pagination token provided by a previous
-     * DescribeEngineDefaultParameters request. If this parameter is
-     * specified, the response includes only records beyond the marker, up to
-     * the value specified by <code>MaxRecords</code>.
+     * <code>DescribeEngineDefaultParameters</code> request. If this
+     * parameter is specified, the response includes only records beyond the
+     * marker, up to the value specified by <code>MaxRecords</code>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param marker An optional pagination token provided by a previous
-     *         DescribeEngineDefaultParameters request. If this parameter is
-     *         specified, the response includes only records beyond the marker, up to
-     *         the value specified by <code>MaxRecords</code>.
+     *         <code>DescribeEngineDefaultParameters</code> request. If this
+     *         parameter is specified, the response includes only records beyond the
+     *         marker, up to the value specified by <code>MaxRecords</code>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -212,8 +208,7 @@ public class DescribeEngineDefaultParametersRequest extends AmazonWebServiceRequ
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

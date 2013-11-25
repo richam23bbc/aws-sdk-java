@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -93,10 +95,8 @@ public class DomainStatus implements Serializable {
     private Boolean processing;
 
     /**
-     * The instance type that is being used to process search requests.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>SearchInstance:t1.micro, SearchInstance:m1.small, SearchInstance:m1.large, SearchInstance:m2.xlarge
+     * The instance type (such as search.m1.small) that is being used to
+     * process search requests.
      */
     private String searchInstanceType;
 
@@ -158,8 +158,7 @@ public class DomainStatus implements Serializable {
         this.domainId = domainId;
         return this;
     }
-    
-    
+
     /**
      * A string that represents the name of a domain. Domain names must be
      * unique across the domains owned by an account within an AWS region.
@@ -228,8 +227,7 @@ public class DomainStatus implements Serializable {
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * True if the search domain is created. It can take several minutes to
      * initialize a domain when <a>CreateDomain</a> is called. Newly created
@@ -280,8 +278,7 @@ public class DomainStatus implements Serializable {
         this.created = created;
         return this;
     }
-    
-    
+
     /**
      * True if the search domain is created. It can take several minutes to
      * initialize a domain when <a>CreateDomain</a> is called. Newly created
@@ -296,7 +293,7 @@ public class DomainStatus implements Serializable {
     public Boolean getCreated() {
         return created;
     }
-    
+
     /**
      * True if the search domain has been deleted. The system must clean up
      * resources dedicated to the search domain when <a>DeleteDomain</a> is
@@ -353,8 +350,7 @@ public class DomainStatus implements Serializable {
         this.deleted = deleted;
         return this;
     }
-    
-    
+
     /**
      * True if the search domain has been deleted. The system must clean up
      * resources dedicated to the search domain when <a>DeleteDomain</a> is
@@ -371,7 +367,7 @@ public class DomainStatus implements Serializable {
     public Boolean getDeleted() {
         return deleted;
     }
-    
+
     /**
      * The number of documents that have been submitted to the domain and
      * indexed.
@@ -419,8 +415,7 @@ public class DomainStatus implements Serializable {
         this.numSearchableDocs = numSearchableDocs;
         return this;
     }
-    
-    
+
     /**
      * The service endpoint for updating documents in a search domain.
      *
@@ -453,8 +448,7 @@ public class DomainStatus implements Serializable {
         this.docService = docService;
         return this;
     }
-    
-    
+
     /**
      * The service endpoint for requesting search results from a search
      * domain.
@@ -493,8 +487,7 @@ public class DomainStatus implements Serializable {
         this.searchService = searchService;
         return this;
     }
-    
-    
+
     /**
      * True if <a>IndexDocuments</a> needs to be called to activate the
      * current domain configuration.
@@ -533,8 +526,7 @@ public class DomainStatus implements Serializable {
         this.requiresIndexDocuments = requiresIndexDocuments;
         return this;
     }
-    
-    
+
     /**
      * True if <a>IndexDocuments</a> needs to be called to activate the
      * current domain configuration.
@@ -545,7 +537,7 @@ public class DomainStatus implements Serializable {
     public Boolean getRequiresIndexDocuments() {
         return requiresIndexDocuments;
     }
-    
+
     /**
      * True if processing is being done to activate the current domain
      * configuration.
@@ -584,8 +576,7 @@ public class DomainStatus implements Serializable {
         this.processing = processing;
         return this;
     }
-    
-    
+
     /**
      * True if processing is being done to activate the current domain
      * configuration.
@@ -596,90 +587,46 @@ public class DomainStatus implements Serializable {
     public Boolean getProcessing() {
         return processing;
     }
-    
+
     /**
-     * The instance type that is being used to process search requests.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>SearchInstance:t1.micro, SearchInstance:m1.small, SearchInstance:m1.large, SearchInstance:m2.xlarge
+     * The instance type (such as search.m1.small) that is being used to
+     * process search requests.
      *
-     * @return The instance type that is being used to process search requests.
-     *
-     * @see SearchInstanceType
+     * @return The instance type (such as search.m1.small) that is being used to
+     *         process search requests.
      */
     public String getSearchInstanceType() {
         return searchInstanceType;
     }
     
     /**
-     * The instance type that is being used to process search requests.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>SearchInstance:t1.micro, SearchInstance:m1.small, SearchInstance:m1.large, SearchInstance:m2.xlarge
+     * The instance type (such as search.m1.small) that is being used to
+     * process search requests.
      *
-     * @param searchInstanceType The instance type that is being used to process search requests.
-     *
-     * @see SearchInstanceType
+     * @param searchInstanceType The instance type (such as search.m1.small) that is being used to
+     *         process search requests.
      */
     public void setSearchInstanceType(String searchInstanceType) {
         this.searchInstanceType = searchInstanceType;
     }
     
     /**
-     * The instance type that is being used to process search requests.
+     * The instance type (such as search.m1.small) that is being used to
+     * process search requests.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>SearchInstance:t1.micro, SearchInstance:m1.small, SearchInstance:m1.large, SearchInstance:m2.xlarge
      *
-     * @param searchInstanceType The instance type that is being used to process search requests.
+     * @param searchInstanceType The instance type (such as search.m1.small) that is being used to
+     *         process search requests.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
-     *
-     * @see SearchInstanceType
      */
     public DomainStatus withSearchInstanceType(String searchInstanceType) {
         this.searchInstanceType = searchInstanceType;
         return this;
     }
-    
-    
-    /**
-     * The instance type that is being used to process search requests.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>SearchInstance:t1.micro, SearchInstance:m1.small, SearchInstance:m1.large, SearchInstance:m2.xlarge
-     *
-     * @param searchInstanceType The instance type that is being used to process search requests.
-     *
-     * @see SearchInstanceType
-     */
-    public void setSearchInstanceType(SearchInstanceType searchInstanceType) {
-        this.searchInstanceType = searchInstanceType.toString();
-    }
-    
-    /**
-     * The instance type that is being used to process search requests.
-     * <p>
-     * Returns a reference to this object so that method calls can be chained together.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>SearchInstance:t1.micro, SearchInstance:m1.small, SearchInstance:m1.large, SearchInstance:m2.xlarge
-     *
-     * @param searchInstanceType The instance type that is being used to process search requests.
-     *
-     * @return A reference to this updated object so that method calls can be chained 
-     *         together.
-     *
-     * @see SearchInstanceType
-     */
-    public DomainStatus withSearchInstanceType(SearchInstanceType searchInstanceType) {
-        this.searchInstanceType = searchInstanceType.toString();
-        return this;
-    }
-    
+
     /**
      * The number of partitions across which the search index is spread.
      * <p>
@@ -721,8 +668,7 @@ public class DomainStatus implements Serializable {
         this.searchPartitionCount = searchPartitionCount;
         return this;
     }
-    
-    
+
     /**
      * The number of search instances that are available to process search
      * requests.
@@ -770,8 +716,7 @@ public class DomainStatus implements Serializable {
         this.searchInstanceCount = searchInstanceCount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

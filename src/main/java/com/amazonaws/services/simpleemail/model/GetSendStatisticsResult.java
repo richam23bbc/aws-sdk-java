@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -37,7 +39,6 @@ public class GetSendStatisticsResult implements Serializable {
      *         activity.
      */
     public java.util.List<SendDataPoint> getSendDataPoints() {
-        
         if (sendDataPoints == null) {
               sendDataPoints = new com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint>();
               sendDataPoints.setAutoConstruct(true);
@@ -105,7 +106,7 @@ public class GetSendStatisticsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

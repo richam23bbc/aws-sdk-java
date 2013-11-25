@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
+
 import java.io.Serializable;
+
 
 /**
  * 
@@ -57,8 +59,7 @@ public class CreateQueueResult implements Serializable {
         this.queueUrl = queueUrl;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

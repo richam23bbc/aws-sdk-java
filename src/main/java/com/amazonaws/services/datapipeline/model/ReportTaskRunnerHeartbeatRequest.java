@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.datapipeline.DataPipeline#reportTaskRunnerHeartbeat(ReportTaskRunnerHeartbeatRequest) ReportTaskRunnerHeartbeat operation}.
@@ -140,8 +142,7 @@ public class ReportTaskRunnerHeartbeatRequest extends AmazonWebServiceRequest im
         this.taskrunnerId = taskrunnerId;
         return this;
     }
-    
-    
+
     /**
      * Indicates the type of task the task runner is configured to accept and
      * process. The worker group is set as a field on objects in the pipeline
@@ -222,8 +223,7 @@ public class ReportTaskRunnerHeartbeatRequest extends AmazonWebServiceRequest im
         this.workerGroup = workerGroup;
         return this;
     }
-    
-    
+
     /**
      * The public DNS name of the calling task runner.
      * <p>
@@ -268,8 +268,7 @@ public class ReportTaskRunnerHeartbeatRequest extends AmazonWebServiceRequest im
         this.hostname = hostname;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DetachVpnGatewayRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#detachVpnGateway(DetachVpnGatewayRequest) DetachVpnGateway operation}.
@@ -48,8 +50,6 @@ public class DetachVpnGatewayRequest extends AmazonWebServiceRequest implements 
      */
     public DetachVpnGatewayRequest() {}
     
-
-
     /**
      * Constructs a new DetachVpnGatewayRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -63,8 +63,6 @@ public class DetachVpnGatewayRequest extends AmazonWebServiceRequest implements 
         setVpcId(vpcId);
     }
 
-    
-    
     /**
      * The ID of the VPN gateway to detach from the VPC.
      *
@@ -97,8 +95,7 @@ public class DetachVpnGatewayRequest extends AmazonWebServiceRequest implements 
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
-    
-    
+
     /**
      * The ID of the VPC to detach the VPN gateway from.
      *
@@ -131,8 +128,7 @@ public class DetachVpnGatewayRequest extends AmazonWebServiceRequest implements 
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

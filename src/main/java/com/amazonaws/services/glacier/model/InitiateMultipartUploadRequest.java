@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.glacier.AmazonGlacier#initiateMultipartUpload(InitiateMultipartUploadRequest) InitiateMultipartUpload operation}.
@@ -92,8 +94,6 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
      */
     public InitiateMultipartUploadRequest() {}
     
-
-
     /**
      * Constructs a new InitiateMultipartUploadRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -113,10 +113,6 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
         setArchiveDescription(archiveDescription);
         setPartSize(partSize);
     }
-
-    
-    
-
 
     /**
      * Constructs a new InitiateMultipartUploadRequest object.
@@ -144,8 +140,6 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
         setPartSize(partSize);
     }
 
-    
-    
     /**
      * The <code>AccountId</code> is the AWS Account ID. You can specify
      * either the AWS Account ID or optionally a '-', in which case Amazon
@@ -202,8 +196,7 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
         this.accountId = accountId;
         return this;
     }
-    
-    
+
     /**
      * The name of the vault.
      *
@@ -236,8 +229,7 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
         this.vaultName = vaultName;
         return this;
     }
-    
-    
+
     /**
      * The archive description that you are uploading in parts. <p>The part
      * size must be a megabyte (1024 KB) multiplied by a power of 2���for
@@ -294,8 +286,7 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
         this.archiveDescription = archiveDescription;
         return this;
     }
-    
-    
+
     /**
      * The size of each part except the last, in bytes. The last part can be
      * smaller than this part size.
@@ -334,8 +325,7 @@ public class InitiateMultipartUploadRequest extends AmazonWebServiceRequest impl
         this.partSize = partSize;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

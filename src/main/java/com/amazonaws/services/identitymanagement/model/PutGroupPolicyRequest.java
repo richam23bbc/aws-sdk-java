@@ -13,19 +13,21 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#putGroupPolicy(PutGroupPolicyRequest) PutGroupPolicy operation}.
  * <p>
  * Adds (or updates) a policy document associated with the specified group. For information about policies, refer to <a
- * href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/index.html?PoliciesOverview.html"> Overview of Policies </a> in <i>Using AWS Identity
- * and Access Management</i> .
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?PoliciesOverview.html"> Overview of Policies </a> in <i>Using AWS Identity and
+ * Access Management</i> .
  * </p>
  * <p>
  * For information about limits on the number of policies you can associate with a group, see <a
- * href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/index.html?LimitationsOnEntities.html"> Limitations on IAM Entities </a> in <i>Using AWS
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?LimitationsOnEntities.html"> Limitations on IAM Entities </a> in <i>Using AWS
  * Identity and Access Management</i> .
  * </p>
  * <p>
@@ -71,8 +73,6 @@ public class PutGroupPolicyRequest extends AmazonWebServiceRequest implements Se
      */
     public PutGroupPolicyRequest() {}
     
-
-
     /**
      * Constructs a new PutGroupPolicyRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -88,8 +88,6 @@ public class PutGroupPolicyRequest extends AmazonWebServiceRequest implements Se
         setPolicyDocument(policyDocument);
     }
 
-    
-    
     /**
      * Name of the group to associate the policy with.
      * <p>
@@ -134,8 +132,7 @@ public class PutGroupPolicyRequest extends AmazonWebServiceRequest implements Se
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * Name of the policy document.
      * <p>
@@ -180,8 +177,7 @@ public class PutGroupPolicyRequest extends AmazonWebServiceRequest implements Se
         this.policyName = policyName;
         return this;
     }
-    
-    
+
     /**
      * The policy document.
      * <p>
@@ -226,8 +222,7 @@ public class PutGroupPolicyRequest extends AmazonWebServiceRequest implements Se
         this.policyDocument = policyDocument;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

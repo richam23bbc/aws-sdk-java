@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -67,12 +69,11 @@ public class VideoParameters implements Serializable {
      * reducing the maximum bit rate, but this also reduces the quality of
      * the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      * x seconds of the output video. This window is commonly 10 seconds, the
-     * standard segment duration when you���re using MPEG-TS for the
-     * container type of the output video. Specify an integer greater than 0.
-     * If you specify <code>MaxBitRate</code> and omit
-     * <code>BufferSize</code>, Elastic Transcoder sets
-     * <code>BufferSize</code> to 10 times the value of
-     * <code>MaxBitRate</code>.
+     * standard segment duration when you're using MPEG-TS for the container
+     * type of the output video. Specify an integer greater than 0. If you
+     * specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     * Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     * of <code>MaxBitRate</code>.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 30<br/>
@@ -150,7 +151,7 @@ public class VideoParameters implements Serializable {
      * 55296000</li> <li>4 - 62914560</li> <li>4.1 - 62914560</li> </ul>
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      */
     private String frameRate;
 
@@ -165,7 +166,7 @@ public class VideoParameters implements Serializable {
      * <code>60</code>.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      */
     private String maxFrameRate;
 
@@ -375,8 +376,7 @@ public class VideoParameters implements Serializable {
         this.codec = codec;
         return this;
     }
-    
-    
+
     /**
      * <b>Profile</b> <p>The H.264 profile that you want to use for the
      * output file. Elastic Transcoder supports the following profiles: <ul>
@@ -412,12 +412,11 @@ public class VideoParameters implements Serializable {
      * reducing the maximum bit rate, but this also reduces the quality of
      * the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      * x seconds of the output video. This window is commonly 10 seconds, the
-     * standard segment duration when you���re using MPEG-TS for the
-     * container type of the output video. Specify an integer greater than 0.
-     * If you specify <code>MaxBitRate</code> and omit
-     * <code>BufferSize</code>, Elastic Transcoder sets
-     * <code>BufferSize</code> to 10 times the value of
-     * <code>MaxBitRate</code>.
+     * standard segment duration when you're using MPEG-TS for the container
+     * type of the output video. Specify an integer greater than 0. If you
+     * specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     * Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     * of <code>MaxBitRate</code>.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 30<br/>
@@ -456,12 +455,11 @@ public class VideoParameters implements Serializable {
      *         reducing the maximum bit rate, but this also reduces the quality of
      *         the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      *         x seconds of the output video. This window is commonly 10 seconds, the
-     *         standard segment duration when you���re using MPEG-TS for the
-     *         container type of the output video. Specify an integer greater than 0.
-     *         If you specify <code>MaxBitRate</code> and omit
-     *         <code>BufferSize</code>, Elastic Transcoder sets
-     *         <code>BufferSize</code> to 10 times the value of
-     *         <code>MaxBitRate</code>.
+     *         standard segment duration when you're using MPEG-TS for the container
+     *         type of the output video. Specify an integer greater than 0. If you
+     *         specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     *         Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     *         of <code>MaxBitRate</code>.
      */
     public java.util.Map<String,String> getCodecOptions() {
         
@@ -506,12 +504,11 @@ public class VideoParameters implements Serializable {
      * reducing the maximum bit rate, but this also reduces the quality of
      * the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      * x seconds of the output video. This window is commonly 10 seconds, the
-     * standard segment duration when you���re using MPEG-TS for the
-     * container type of the output video. Specify an integer greater than 0.
-     * If you specify <code>MaxBitRate</code> and omit
-     * <code>BufferSize</code>, Elastic Transcoder sets
-     * <code>BufferSize</code> to 10 times the value of
-     * <code>MaxBitRate</code>.
+     * standard segment duration when you're using MPEG-TS for the container
+     * type of the output video. Specify an integer greater than 0. If you
+     * specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     * Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     * of <code>MaxBitRate</code>.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 30<br/>
@@ -550,12 +547,11 @@ public class VideoParameters implements Serializable {
      *         reducing the maximum bit rate, but this also reduces the quality of
      *         the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      *         x seconds of the output video. This window is commonly 10 seconds, the
-     *         standard segment duration when you���re using MPEG-TS for the
-     *         container type of the output video. Specify an integer greater than 0.
-     *         If you specify <code>MaxBitRate</code> and omit
-     *         <code>BufferSize</code>, Elastic Transcoder sets
-     *         <code>BufferSize</code> to 10 times the value of
-     *         <code>MaxBitRate</code>.
+     *         standard segment duration when you're using MPEG-TS for the container
+     *         type of the output video. Specify an integer greater than 0. If you
+     *         specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     *         Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     *         of <code>MaxBitRate</code>.
      */
     public void setCodecOptions(java.util.Map<String,String> codecOptions) {
         this.codecOptions = codecOptions;
@@ -596,12 +592,11 @@ public class VideoParameters implements Serializable {
      * reducing the maximum bit rate, but this also reduces the quality of
      * the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      * x seconds of the output video. This window is commonly 10 seconds, the
-     * standard segment duration when you���re using MPEG-TS for the
-     * container type of the output video. Specify an integer greater than 0.
-     * If you specify <code>MaxBitRate</code> and omit
-     * <code>BufferSize</code>, Elastic Transcoder sets
-     * <code>BufferSize</code> to 10 times the value of
-     * <code>MaxBitRate</code>.
+     * standard segment duration when you're using MPEG-TS for the container
+     * type of the output video. Specify an integer greater than 0. If you
+     * specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     * Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     * of <code>MaxBitRate</code>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -642,12 +637,11 @@ public class VideoParameters implements Serializable {
      *         reducing the maximum bit rate, but this also reduces the quality of
      *         the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      *         x seconds of the output video. This window is commonly 10 seconds, the
-     *         standard segment duration when you���re using MPEG-TS for the
-     *         container type of the output video. Specify an integer greater than 0.
-     *         If you specify <code>MaxBitRate</code> and omit
-     *         <code>BufferSize</code>, Elastic Transcoder sets
-     *         <code>BufferSize</code> to 10 times the value of
-     *         <code>MaxBitRate</code>.
+     *         standard segment duration when you're using MPEG-TS for the container
+     *         type of the output video. Specify an integer greater than 0. If you
+     *         specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     *         Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     *         of <code>MaxBitRate</code>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -656,8 +650,7 @@ public class VideoParameters implements Serializable {
         setCodecOptions(codecOptions);
         return this;
     }
-    
-   	
+
     /**
      * <b>Profile</b> <p>The H.264 profile that you want to use for the
      * output file. Elastic Transcoder supports the following profiles: <ul>
@@ -693,12 +686,11 @@ public class VideoParameters implements Serializable {
      * reducing the maximum bit rate, but this also reduces the quality of
      * the video. <p> <b>BufferSize</b> <p>The maximum number of bits in any
      * x seconds of the output video. This window is commonly 10 seconds, the
-     * standard segment duration when you���re using MPEG-TS for the
-     * container type of the output video. Specify an integer greater than 0.
-     * If you specify <code>MaxBitRate</code> and omit
-     * <code>BufferSize</code>, Elastic Transcoder sets
-     * <code>BufferSize</code> to 10 times the value of
-     * <code>MaxBitRate</code>.
+     * standard segment duration when you're using MPEG-TS for the container
+     * type of the output video. Specify an integer greater than 0. If you
+     * specify <code>MaxBitRate</code> and omit <code>BufferSize</code>,
+     * Elastic Transcoder sets <code>BufferSize</code> to 10 times the value
+     * of <code>MaxBitRate</code>.
      * <p>
      * The method adds a new key-value pair into CodecOptions parameter, and
      * returns a reference to this object so that method calls can be chained
@@ -719,7 +711,7 @@ public class VideoParameters implements Serializable {
 		this.codecOptions.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into CodecOptions.
 	 * <p>
@@ -801,8 +793,7 @@ public class VideoParameters implements Serializable {
         this.keyframesMaxDist = keyframesMaxDist;
         return this;
     }
-    
-    
+
     /**
      * Whether to use a fixed value for <code>FixedGOP</code>. Valid values
      * are <code>true</code> and <code>false</code>: <ul>
@@ -880,8 +871,7 @@ public class VideoParameters implements Serializable {
         this.fixedGOP = fixedGOP;
         return this;
     }
-    
-    
+
     /**
      * The bit rate of the video stream in the output file, in
      * kilobits/second. Valid values depend on the values of
@@ -1001,8 +991,7 @@ public class VideoParameters implements Serializable {
         this.bitRate = bitRate;
         return this;
     }
-    
-    
+
     /**
      * The frames per second for the video stream in the output file. Valid
      * values include: <p><code>auto</code>, <code>10</code>,
@@ -1026,7 +1015,7 @@ public class VideoParameters implements Serializable {
      * 55296000</li> <li>4 - 62914560</li> <li>4.1 - 62914560</li> </ul>
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      *
      * @return The frames per second for the video stream in the output file. Valid
      *         values include: <p><code>auto</code>, <code>10</code>,
@@ -1076,7 +1065,7 @@ public class VideoParameters implements Serializable {
      * 55296000</li> <li>4 - 62914560</li> <li>4.1 - 62914560</li> </ul>
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      *
      * @param frameRate The frames per second for the video stream in the output file. Valid
      *         values include: <p><code>auto</code>, <code>10</code>,
@@ -1128,7 +1117,7 @@ public class VideoParameters implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^auto$)|(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      *
      * @param frameRate The frames per second for the video stream in the output file. Valid
      *         values include: <p><code>auto</code>, <code>10</code>,
@@ -1158,8 +1147,7 @@ public class VideoParameters implements Serializable {
         this.frameRate = frameRate;
         return this;
     }
-    
-    
+
     /**
      * If you specify <code>auto</code> for <code>FrameRate</code>, Elastic
      * Transcoder uses the frame rate of the input video for the frame rate
@@ -1171,7 +1159,7 @@ public class VideoParameters implements Serializable {
      * <code>60</code>.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      *
      * @return If you specify <code>auto</code> for <code>FrameRate</code>, Elastic
      *         Transcoder uses the frame rate of the input video for the frame rate
@@ -1197,7 +1185,7 @@ public class VideoParameters implements Serializable {
      * <code>60</code>.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      *
      * @param maxFrameRate If you specify <code>auto</code> for <code>FrameRate</code>, Elastic
      *         Transcoder uses the frame rate of the input video for the frame rate
@@ -1225,7 +1213,7 @@ public class VideoParameters implements Serializable {
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^60$)<br/>
+     * <b>Pattern: </b>(^10$)|(^15$)|(^23.97$)|(^24$)|(^25$)|(^29.97$)|(^30$)|(^50$)|(^60$)<br/>
      *
      * @param maxFrameRate If you specify <code>auto</code> for <code>FrameRate</code>, Elastic
      *         Transcoder uses the frame rate of the input video for the frame rate
@@ -1243,8 +1231,7 @@ public class VideoParameters implements Serializable {
         this.maxFrameRate = maxFrameRate;
         return this;
     }
-    
-    
+
     /**
      * <important> <p>To better control resolution and aspect ratio of output
      * videos, we recommend that you use the values <code>MaxWidth</code>,
@@ -1448,8 +1435,7 @@ public class VideoParameters implements Serializable {
         this.resolution = resolution;
         return this;
     }
-    
-    
+
     /**
      * <important> <p>To better control resolution and aspect ratio of output
      * videos, we recommend that you use the values <code>MaxWidth</code>,
@@ -1581,8 +1567,7 @@ public class VideoParameters implements Serializable {
         this.aspectRatio = aspectRatio;
         return this;
     }
-    
-    
+
     /**
      * The maximum width of the output video in pixels. If you specify
      * <code>auto</code>, Elastic Transcoder uses 1920 (Full HD) as the
@@ -1642,8 +1627,7 @@ public class VideoParameters implements Serializable {
         this.maxWidth = maxWidth;
         return this;
     }
-    
-    
+
     /**
      * The maximum height of the output video in pixels. If you specify
      * <code>auto</code>, Elastic Transcoder uses 1080 (Full HD) as the
@@ -1703,8 +1687,7 @@ public class VideoParameters implements Serializable {
         this.maxHeight = maxHeight;
         return this;
     }
-    
-    
+
     /**
      * The value that Elastic Transcoder adds to the metadata in the output
      * file.
@@ -1752,8 +1735,7 @@ public class VideoParameters implements Serializable {
         this.displayAspectRatio = displayAspectRatio;
         return this;
     }
-    
-    
+
     /**
      * Specify one of the following values to control scaling of the output
      * video: <p> <ul> <li><code>Fit</code>: Elastic Transcoder scales the
@@ -1957,8 +1939,7 @@ public class VideoParameters implements Serializable {
         this.sizingPolicy = sizingPolicy;
         return this;
     }
-    
-    
+
     /**
      * When you set <code>PaddingPolicy</code> to <code>Pad</code>, Elastic
      * Transcoder may add black bars to the top and bottom and/or left and
@@ -2024,8 +2005,7 @@ public class VideoParameters implements Serializable {
         this.paddingPolicy = paddingPolicy;
         return this;
     }
-    
-    
+
     /**
      * Settings for the size, location, and opacity of graphics that you want
      * Elastic Transcoder to overlay over videos that are transcoded using
@@ -2056,7 +2036,6 @@ public class VideoParameters implements Serializable {
      *         different dimensions.
      */
     public java.util.List<PresetWatermark> getWatermarks() {
-        
         if (watermarks == null) {
               watermarks = new com.amazonaws.internal.ListWithAutoConstructFlag<PresetWatermark>();
               watermarks.setAutoConstruct(true);
@@ -2190,7 +2169,7 @@ public class VideoParameters implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

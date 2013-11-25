@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -34,22 +36,22 @@ import java.io.Serializable;
 public class DBSecurityGroup implements Serializable {
 
     /**
-     * Provides the AWS ID of the owner of a specific DB Security Group.
+     * Provides the AWS ID of the owner of a specific DB security group.
      */
     private String ownerId;
 
     /**
-     * Specifies the name of the DB Security Group.
+     * Specifies the name of the DB security group.
      */
     private String dBSecurityGroupName;
 
     /**
-     * Provides the description of the DB Security Group.
+     * Provides the description of the DB security group.
      */
     private String dBSecurityGroupDescription;
 
     /**
-     * Provides the VpcId of the DB Security Group.
+     * Provides the VpcId of the DB security group.
      */
     private String vpcId;
 
@@ -64,29 +66,29 @@ public class DBSecurityGroup implements Serializable {
     private com.amazonaws.internal.ListWithAutoConstructFlag<IPRange> iPRanges;
 
     /**
-     * Provides the AWS ID of the owner of a specific DB Security Group.
+     * Provides the AWS ID of the owner of a specific DB security group.
      *
-     * @return Provides the AWS ID of the owner of a specific DB Security Group.
+     * @return Provides the AWS ID of the owner of a specific DB security group.
      */
     public String getOwnerId() {
         return ownerId;
     }
     
     /**
-     * Provides the AWS ID of the owner of a specific DB Security Group.
+     * Provides the AWS ID of the owner of a specific DB security group.
      *
-     * @param ownerId Provides the AWS ID of the owner of a specific DB Security Group.
+     * @param ownerId Provides the AWS ID of the owner of a specific DB security group.
      */
     public void setOwnerId(String ownerId) {
         this.ownerId = ownerId;
     }
     
     /**
-     * Provides the AWS ID of the owner of a specific DB Security Group.
+     * Provides the AWS ID of the owner of a specific DB security group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param ownerId Provides the AWS ID of the owner of a specific DB Security Group.
+     * @param ownerId Provides the AWS ID of the owner of a specific DB security group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -95,32 +97,31 @@ public class DBSecurityGroup implements Serializable {
         this.ownerId = ownerId;
         return this;
     }
-    
-    
+
     /**
-     * Specifies the name of the DB Security Group.
+     * Specifies the name of the DB security group.
      *
-     * @return Specifies the name of the DB Security Group.
+     * @return Specifies the name of the DB security group.
      */
     public String getDBSecurityGroupName() {
         return dBSecurityGroupName;
     }
     
     /**
-     * Specifies the name of the DB Security Group.
+     * Specifies the name of the DB security group.
      *
-     * @param dBSecurityGroupName Specifies the name of the DB Security Group.
+     * @param dBSecurityGroupName Specifies the name of the DB security group.
      */
     public void setDBSecurityGroupName(String dBSecurityGroupName) {
         this.dBSecurityGroupName = dBSecurityGroupName;
     }
     
     /**
-     * Specifies the name of the DB Security Group.
+     * Specifies the name of the DB security group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSecurityGroupName Specifies the name of the DB Security Group.
+     * @param dBSecurityGroupName Specifies the name of the DB security group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -129,32 +130,31 @@ public class DBSecurityGroup implements Serializable {
         this.dBSecurityGroupName = dBSecurityGroupName;
         return this;
     }
-    
-    
+
     /**
-     * Provides the description of the DB Security Group.
+     * Provides the description of the DB security group.
      *
-     * @return Provides the description of the DB Security Group.
+     * @return Provides the description of the DB security group.
      */
     public String getDBSecurityGroupDescription() {
         return dBSecurityGroupDescription;
     }
     
     /**
-     * Provides the description of the DB Security Group.
+     * Provides the description of the DB security group.
      *
-     * @param dBSecurityGroupDescription Provides the description of the DB Security Group.
+     * @param dBSecurityGroupDescription Provides the description of the DB security group.
      */
     public void setDBSecurityGroupDescription(String dBSecurityGroupDescription) {
         this.dBSecurityGroupDescription = dBSecurityGroupDescription;
     }
     
     /**
-     * Provides the description of the DB Security Group.
+     * Provides the description of the DB security group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBSecurityGroupDescription Provides the description of the DB Security Group.
+     * @param dBSecurityGroupDescription Provides the description of the DB security group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -163,32 +163,31 @@ public class DBSecurityGroup implements Serializable {
         this.dBSecurityGroupDescription = dBSecurityGroupDescription;
         return this;
     }
-    
-    
+
     /**
-     * Provides the VpcId of the DB Security Group.
+     * Provides the VpcId of the DB security group.
      *
-     * @return Provides the VpcId of the DB Security Group.
+     * @return Provides the VpcId of the DB security group.
      */
     public String getVpcId() {
         return vpcId;
     }
     
     /**
-     * Provides the VpcId of the DB Security Group.
+     * Provides the VpcId of the DB security group.
      *
-     * @param vpcId Provides the VpcId of the DB Security Group.
+     * @param vpcId Provides the VpcId of the DB security group.
      */
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
     
     /**
-     * Provides the VpcId of the DB Security Group.
+     * Provides the VpcId of the DB security group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param vpcId Provides the VpcId of the DB Security Group.
+     * @param vpcId Provides the VpcId of the DB security group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -197,15 +196,13 @@ public class DBSecurityGroup implements Serializable {
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * Contains a list of <a>EC2SecurityGroup</a> elements.
      *
      * @return Contains a list of <a>EC2SecurityGroup</a> elements.
      */
     public java.util.List<EC2SecurityGroup> getEC2SecurityGroups() {
-        
         if (eC2SecurityGroups == null) {
               eC2SecurityGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<EC2SecurityGroup>();
               eC2SecurityGroups.setAutoConstruct(true);
@@ -267,14 +264,13 @@ public class DBSecurityGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Contains a list of <a>IPRange</a> elements.
      *
      * @return Contains a list of <a>IPRange</a> elements.
      */
     public java.util.List<IPRange> getIPRanges() {
-        
         if (iPRanges == null) {
               iPRanges = new com.amazonaws.internal.ListWithAutoConstructFlag<IPRange>();
               iPRanges.setAutoConstruct(true);
@@ -336,7 +332,7 @@ public class DBSecurityGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

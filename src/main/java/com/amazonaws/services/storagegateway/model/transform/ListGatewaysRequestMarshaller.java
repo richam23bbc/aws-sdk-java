@@ -47,7 +47,7 @@ public class ListGatewaysRequestMarshaller implements Marshaller<Request<ListGat
     }
 
         Request<ListGatewaysRequest> request = new DefaultRequest<ListGatewaysRequest>(listGatewaysRequest, "AWSStorageGateway");
-        String target = "StorageGateway_20120630.ListGateways";
+        String target = "StorageGateway_20130630.ListGateways";
         request.addHeader("X-Amz-Target", target);
         request.addHeader("Content-Type", "application/x-amz-json-1.1");
 
@@ -105,10 +105,5 @@ public class ListGatewaysRequestMarshaller implements Marshaller<Request<ListGat
         
 
         return request;
-    }
-
-    private String getString(String s) {
-        if (s == null) return "";
-        return s;
     }
 }

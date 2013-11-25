@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -110,8 +112,7 @@ public class PutItemResult implements Serializable {
         setAttributes(attributes);
         return this;
     }
-    
-   	
+
     /**
      * The attribute values as they appeared before the <i>PutItem</i>
      * operation, but only if <i>ReturnValues</i> is specified as
@@ -134,7 +135,7 @@ public class PutItemResult implements Serializable {
 		this.attributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Attributes.
 	 * <p>
@@ -207,8 +208,7 @@ public class PutItemResult implements Serializable {
         this.consumedCapacity = consumedCapacity;
         return this;
     }
-    
-    
+
     /**
      * Information about item collections, if any, that were affected by the
      * operation. <i>ItemCollectionMetrics</i> is only returned if it was
@@ -325,8 +325,7 @@ public class PutItemResult implements Serializable {
         this.itemCollectionMetrics = itemCollectionMetrics;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

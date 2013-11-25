@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -465,8 +467,7 @@ public class HistoryEvent implements Serializable {
         this.eventTimestamp = eventTimestamp;
         return this;
     }
-    
-    
+
     /**
      * The type of the history event.
      * <p>
@@ -514,8 +515,7 @@ public class HistoryEvent implements Serializable {
         this.eventType = eventType;
         return this;
     }
-    
-    
+
     /**
      * The type of the history event.
      * <p>
@@ -549,7 +549,7 @@ public class HistoryEvent implements Serializable {
         this.eventType = eventType.toString();
         return this;
     }
-    
+
     /**
      * The system generated id of the event. This id uniquely identifies the
      * event with in the workflow execution history.
@@ -588,8 +588,7 @@ public class HistoryEvent implements Serializable {
         this.eventId = eventId;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionStarted</code> then
      * this member is set and provides detailed information about the event.
@@ -634,8 +633,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionStartedEventAttributes = workflowExecutionStartedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionCompleted</code> then
      * this member is set and provides detailed information about the event.
@@ -680,8 +678,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionCompletedEventAttributes = workflowExecutionCompletedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>CompleteWorkflowExecutionFailed</code>
      * then this member is set and provides detailed information about the
@@ -726,8 +723,7 @@ public class HistoryEvent implements Serializable {
         this.completeWorkflowExecutionFailedEventAttributes = completeWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionFailed</code> then this
      * member is set and provides detailed information about the event. It is
@@ -772,8 +768,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionFailedEventAttributes = workflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>FailWorkflowExecutionFailed</code> then
      * this member is set and provides detailed information about the event.
@@ -818,8 +813,7 @@ public class HistoryEvent implements Serializable {
         this.failWorkflowExecutionFailedEventAttributes = failWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionTimedOut</code> then
      * this member is set and provides detailed information about the event.
@@ -864,8 +858,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionTimedOutEventAttributes = workflowExecutionTimedOutEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionCanceled</code> then
      * this member is set and provides detailed information about the event.
@@ -910,8 +903,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionCanceledEventAttributes = workflowExecutionCanceledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>CancelWorkflowExecutionFailed</code>
      * then this member is set and provides detailed information about the
@@ -956,8 +948,7 @@ public class HistoryEvent implements Serializable {
         this.cancelWorkflowExecutionFailedEventAttributes = cancelWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionContinuedAsNew</code>
      * then this member is set and provides detailed information about the
@@ -1002,8 +993,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionContinuedAsNewEventAttributes = workflowExecutionContinuedAsNewEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>ContinueAsNewWorkflowExecutionFailed</code> then this member is
@@ -1054,8 +1044,7 @@ public class HistoryEvent implements Serializable {
         this.continueAsNewWorkflowExecutionFailedEventAttributes = continueAsNewWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionTerminated</code> then
      * this member is set and provides detailed information about the event.
@@ -1100,8 +1089,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionTerminatedEventAttributes = workflowExecutionTerminatedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionCancelRequested</code>
      * then this member is set and provides detailed information about the
@@ -1146,8 +1134,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionCancelRequestedEventAttributes = workflowExecutionCancelRequestedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>DecisionTaskScheduled</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1192,8 +1179,7 @@ public class HistoryEvent implements Serializable {
         this.decisionTaskScheduledEventAttributes = decisionTaskScheduledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>DecisionTaskStarted</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1238,8 +1224,7 @@ public class HistoryEvent implements Serializable {
         this.decisionTaskStartedEventAttributes = decisionTaskStartedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>DecisionTaskCompleted</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1284,8 +1269,7 @@ public class HistoryEvent implements Serializable {
         this.decisionTaskCompletedEventAttributes = decisionTaskCompletedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>DecisionTaskTimedOut</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1330,8 +1314,7 @@ public class HistoryEvent implements Serializable {
         this.decisionTaskTimedOutEventAttributes = decisionTaskTimedOutEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskScheduled</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1376,8 +1359,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskScheduledEventAttributes = activityTaskScheduledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskStarted</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1422,8 +1404,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskStartedEventAttributes = activityTaskStartedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskCompleted</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1468,8 +1449,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskCompletedEventAttributes = activityTaskCompletedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskFailed</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1514,8 +1494,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskFailedEventAttributes = activityTaskFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskTimedOut</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1560,8 +1539,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskTimedOutEventAttributes = activityTaskTimedOutEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskCanceled</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1606,8 +1584,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskCanceledEventAttributes = activityTaskCanceledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ActivityTaskcancelRequested</code> then
      * this member is set and provides detailed information about the event.
@@ -1652,8 +1629,7 @@ public class HistoryEvent implements Serializable {
         this.activityTaskCancelRequestedEventAttributes = activityTaskCancelRequestedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>WorkflowExecutionSignaled</code> then
      * this member is set and provides detailed information about the event.
@@ -1698,8 +1674,7 @@ public class HistoryEvent implements Serializable {
         this.workflowExecutionSignaledEventAttributes = workflowExecutionSignaledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>MarkerRecorded</code> then this member
      * is set and provides detailed information about the event. It is not
@@ -1744,8 +1719,7 @@ public class HistoryEvent implements Serializable {
         this.markerRecordedEventAttributes = markerRecordedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>DecisionTaskFailed</code> then this
      * member is set and provides detailed information about the event. It is
@@ -1790,8 +1764,7 @@ public class HistoryEvent implements Serializable {
         this.recordMarkerFailedEventAttributes = recordMarkerFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>TimerStarted</code> then this member is
      * set and provides detailed information about the event. It is not set
@@ -1836,8 +1809,7 @@ public class HistoryEvent implements Serializable {
         this.timerStartedEventAttributes = timerStartedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>TimerFired</code> then this member is
      * set and provides detailed information about the event. It is not set
@@ -1882,8 +1854,7 @@ public class HistoryEvent implements Serializable {
         this.timerFiredEventAttributes = timerFiredEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>TimerCanceled</code> then this member is
      * set and provides detailed information about the event. It is not set
@@ -1928,8 +1899,7 @@ public class HistoryEvent implements Serializable {
         this.timerCanceledEventAttributes = timerCanceledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>StartChildWorkflowExecutionInitiated</code> then this member is
@@ -1980,8 +1950,7 @@ public class HistoryEvent implements Serializable {
         this.startChildWorkflowExecutionInitiatedEventAttributes = startChildWorkflowExecutionInitiatedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ChildWorkflowExecutionStarted</code>
      * then this member is set and provides detailed information about the
@@ -2026,8 +1995,7 @@ public class HistoryEvent implements Serializable {
         this.childWorkflowExecutionStartedEventAttributes = childWorkflowExecutionStartedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ChildWorkflowExecutionCompleted</code>
      * then this member is set and provides detailed information about the
@@ -2072,8 +2040,7 @@ public class HistoryEvent implements Serializable {
         this.childWorkflowExecutionCompletedEventAttributes = childWorkflowExecutionCompletedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ChildWorkflowExecutionFailed</code> then
      * this member is set and provides detailed information about the event.
@@ -2118,8 +2085,7 @@ public class HistoryEvent implements Serializable {
         this.childWorkflowExecutionFailedEventAttributes = childWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ChildWorkflowExecutionTimedOut</code>
      * then this member is set and provides detailed information about the
@@ -2164,8 +2130,7 @@ public class HistoryEvent implements Serializable {
         this.childWorkflowExecutionTimedOutEventAttributes = childWorkflowExecutionTimedOutEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ChildWorkflowExecutionCanceled</code>
      * then this member is set and provides detailed information about the
@@ -2210,8 +2175,7 @@ public class HistoryEvent implements Serializable {
         this.childWorkflowExecutionCanceledEventAttributes = childWorkflowExecutionCanceledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ChildWorkflowExecutionTerminated</code>
      * then this member is set and provides detailed information about the
@@ -2256,8 +2220,7 @@ public class HistoryEvent implements Serializable {
         this.childWorkflowExecutionTerminatedEventAttributes = childWorkflowExecutionTerminatedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>SignalExternalWorkflowExecutionInitiated</code> then this member
@@ -2308,8 +2271,7 @@ public class HistoryEvent implements Serializable {
         this.signalExternalWorkflowExecutionInitiatedEventAttributes = signalExternalWorkflowExecutionInitiatedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ExternalWorkflowExecutionSignaled</code>
      * then this member is set and provides detailed information about the
@@ -2354,8 +2316,7 @@ public class HistoryEvent implements Serializable {
         this.externalWorkflowExecutionSignaledEventAttributes = externalWorkflowExecutionSignaledEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>SignalExternalWorkflowExecutionFailed</code> then this member is
@@ -2406,8 +2367,7 @@ public class HistoryEvent implements Serializable {
         this.signalExternalWorkflowExecutionFailedEventAttributes = signalExternalWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>ExternalWorkflowExecutionCancelRequested</code> then this member
@@ -2458,8 +2418,7 @@ public class HistoryEvent implements Serializable {
         this.externalWorkflowExecutionCancelRequestedEventAttributes = externalWorkflowExecutionCancelRequestedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>RequestCancelExternalWorkflowExecutionInitiated</code> then this
@@ -2510,8 +2469,7 @@ public class HistoryEvent implements Serializable {
         this.requestCancelExternalWorkflowExecutionInitiatedEventAttributes = requestCancelExternalWorkflowExecutionInitiatedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type
      * <code>RequestCancelExternalWorkflowExecutionFailed</code> then this
@@ -2562,8 +2520,7 @@ public class HistoryEvent implements Serializable {
         this.requestCancelExternalWorkflowExecutionFailedEventAttributes = requestCancelExternalWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>ScheduleActivityTaskFailed</code> then
      * this member is set and provides detailed information about the event.
@@ -2608,8 +2565,7 @@ public class HistoryEvent implements Serializable {
         this.scheduleActivityTaskFailedEventAttributes = scheduleActivityTaskFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>RequestCancelActivityTaskFailed</code>
      * then this member is set and provides detailed information about the
@@ -2654,8 +2610,7 @@ public class HistoryEvent implements Serializable {
         this.requestCancelActivityTaskFailedEventAttributes = requestCancelActivityTaskFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>StartTimerFailed</code> then this member
      * is set and provides detailed information about the event. It is not
@@ -2700,8 +2655,7 @@ public class HistoryEvent implements Serializable {
         this.startTimerFailedEventAttributes = startTimerFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>CancelTimerFailed</code> then this
      * member is set and provides detailed information about the event. It is
@@ -2746,8 +2700,7 @@ public class HistoryEvent implements Serializable {
         this.cancelTimerFailedEventAttributes = cancelTimerFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * If the event is of type <code>StartChildWorkflowExecutionFailed</code>
      * then this member is set and provides detailed information about the
@@ -2792,8 +2745,7 @@ public class HistoryEvent implements Serializable {
         this.startChildWorkflowExecutionFailedEventAttributes = startChildWorkflowExecutionFailedEventAttributes;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

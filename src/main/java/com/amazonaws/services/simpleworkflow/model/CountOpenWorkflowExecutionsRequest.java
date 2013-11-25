@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#countOpenWorkflowExecutions(CountOpenWorkflowExecutionsRequest) CountOpenWorkflowExecutions operation}.
@@ -134,8 +136,7 @@ public class CountOpenWorkflowExecutionsRequest extends AmazonWebServiceRequest 
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * Specifies the start time criteria that workflow executions must meet
      * in order to be counted.
@@ -174,8 +175,7 @@ public class CountOpenWorkflowExecutionsRequest extends AmazonWebServiceRequest 
         this.startTimeFilter = startTimeFilter;
         return this;
     }
-    
-    
+
     /**
      * Specifies the type of the workflow executions to be counted.
      * <note><code>executionFilter</code>, <code>typeFilter</code> and
@@ -226,8 +226,7 @@ public class CountOpenWorkflowExecutionsRequest extends AmazonWebServiceRequest 
         this.typeFilter = typeFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, only executions that have a tag that matches the filter
      * are counted. <note><code>executionFilter</code>,
@@ -278,8 +277,7 @@ public class CountOpenWorkflowExecutionsRequest extends AmazonWebServiceRequest 
         this.tagFilter = tagFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, only workflow executions matching the
      * <code>WorkflowId</code> in the filter are counted.
@@ -336,8 +334,7 @@ public class CountOpenWorkflowExecutionsRequest extends AmazonWebServiceRequest 
         this.executionFilter = executionFilter;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

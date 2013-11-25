@@ -13,21 +13,24 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.directconnect.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * You can create one or more Direct Connect private virtual interfaces linking to your virtual private gateway.
+ * You can create one or more AWS Direct Connect private virtual interfaces linking to your virtual private gateway.
  * </p>
  * <p>
- * Virtual private gateway can be managed via AWS Virtual Private Cloud Console or the <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html"> EC2 CreateVpnGateway API </a> .
+ * Virtual private gateways can be managed using the Amazon Virtual Private Cloud (Amazon VPC) console or the <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html"> Amazon EC2 CreateVpnGateway action </a> .
  * </p>
  */
 public class VirtualGateway implements Serializable {
 
     /**
-     * Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * The ID of the virtual private gateway to a VPC. This only applies to
+     * private virtual interfaces. <p>Example: vgw-123er56
      */
     private String virtualGatewayId;
 
@@ -43,29 +46,35 @@ public class VirtualGateway implements Serializable {
     private String virtualGatewayState;
 
     /**
-     * Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * The ID of the virtual private gateway to a VPC. This only applies to
+     * private virtual interfaces. <p>Example: vgw-123er56
      *
-     * @return Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * @return The ID of the virtual private gateway to a VPC. This only applies to
+     *         private virtual interfaces. <p>Example: vgw-123er56
      */
     public String getVirtualGatewayId() {
         return virtualGatewayId;
     }
     
     /**
-     * Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * The ID of the virtual private gateway to a VPC. This only applies to
+     * private virtual interfaces. <p>Example: vgw-123er56
      *
-     * @param virtualGatewayId Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * @param virtualGatewayId The ID of the virtual private gateway to a VPC. This only applies to
+     *         private virtual interfaces. <p>Example: vgw-123er56
      */
     public void setVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
     }
     
     /**
-     * Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * The ID of the virtual private gateway to a VPC. This only applies to
+     * private virtual interfaces. <p>Example: vgw-123er56
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param virtualGatewayId Virtual private gateway to a VPC. <p>Example: vgw-123er56
+     * @param virtualGatewayId The ID of the virtual private gateway to a VPC. This only applies to
+     *         private virtual interfaces. <p>Example: vgw-123er56
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -74,8 +83,7 @@ public class VirtualGateway implements Serializable {
         this.virtualGatewayId = virtualGatewayId;
         return this;
     }
-    
-    
+
     /**
      * State of the virtual private gateway. <ul> <li><b>Pending</b>: This is
      * the initial state after calling <i>CreateVpnGateway</i>.</li>
@@ -144,8 +152,7 @@ public class VirtualGateway implements Serializable {
         this.virtualGatewayState = virtualGatewayState;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

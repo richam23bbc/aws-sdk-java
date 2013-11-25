@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#updateApp(UpdateAppRequest) UpdateApp operation}.
@@ -108,8 +110,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.appId = appId;
         return this;
     }
-    
-    
+
     /**
      * The app name.
      *
@@ -142,8 +143,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * A description of the app.
      *
@@ -176,8 +176,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The app type.
      * <p>
@@ -225,8 +224,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.type = type;
         return this;
     }
-    
-    
+
     /**
      * The app type.
      * <p>
@@ -260,7 +258,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.type = type.toString();
         return this;
     }
-    
+
     /**
      * A <code>Source</code> object that specifies the app repository.
      *
@@ -293,8 +291,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.appSource = appSource;
         return this;
     }
-    
-    
+
     /**
      * The app's virtual host settings, with multiple domains separated by
      * commas. For example: <code>'www.example.com, example.com'</code>
@@ -303,7 +300,6 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
      *         commas. For example: <code>'www.example.com, example.com'</code>
      */
     public java.util.List<String> getDomains() {
-        
         if (domains == null) {
               domains = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               domains.setAutoConstruct(true);
@@ -371,7 +367,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
 
         return this;
     }
-    
+
     /**
      * Whether SSL is enabled for the app.
      *
@@ -404,8 +400,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.enableSsl = enableSsl;
         return this;
     }
-    
-    
+
     /**
      * Whether SSL is enabled for the app.
      *
@@ -414,7 +409,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
     public Boolean getEnableSsl() {
         return enableSsl;
     }
-    
+
     /**
      * An <code>SslConfiguration</code> object with the SSL configuration.
      *
@@ -447,8 +442,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         this.sslConfiguration = sslConfiguration;
         return this;
     }
-    
-    
+
     /**
      * One or more user-defined key/value pairs to be added to the stack
      * attributes bag.
@@ -491,8 +485,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
         setAttributes(attributes);
         return this;
     }
-    
-   	
+
     /**
      * One or more user-defined key/value pairs to be added to the stack
      * attributes bag.
@@ -513,7 +506,7 @@ public class UpdateAppRequest extends AmazonWebServiceRequest implements Seriali
 		this.attributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Attributes.
 	 * <p>

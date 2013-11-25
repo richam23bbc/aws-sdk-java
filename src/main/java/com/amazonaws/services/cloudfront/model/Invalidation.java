@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -88,8 +90,7 @@ public class Invalidation implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * The status of the invalidation request. When the invalidation batch is
      * finished, the status is Completed.
@@ -128,8 +129,7 @@ public class Invalidation implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The date and time the invalidation request was first made.
      *
@@ -162,8 +162,7 @@ public class Invalidation implements Serializable {
         this.createTime = createTime;
         return this;
     }
-    
-    
+
     /**
      * The current invalidation information for the batch request.
      *
@@ -196,8 +195,7 @@ public class Invalidation implements Serializable {
         this.invalidationBatch = invalidationBatch;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

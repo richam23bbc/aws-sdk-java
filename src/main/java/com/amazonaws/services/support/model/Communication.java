@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -89,8 +91,7 @@ public class Communication implements Serializable {
         this.caseId = caseId;
         return this;
     }
-    
-    
+
     /**
      * Contains the text of the the commmunication between the customer and
      * AWS Support.
@@ -129,8 +130,7 @@ public class Communication implements Serializable {
         this.body = body;
         return this;
     }
-    
-    
+
     /**
      * Email address of the account that submitted the AWS Support case.
      *
@@ -163,8 +163,7 @@ public class Communication implements Serializable {
         this.submittedBy = submittedBy;
         return this;
     }
-    
-    
+
     /**
      * Time the support case was created.
      *
@@ -197,8 +196,7 @@ public class Communication implements Serializable {
         this.timeCreated = timeCreated;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

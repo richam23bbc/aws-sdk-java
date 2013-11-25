@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.RevokeSecurityGroupIngressRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#revokeSecurityGroupIngress(RevokeSecurityGroupIngressRequest) RevokeSecurityGroupIngress operation}.
@@ -96,8 +98,6 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
      */
     public RevokeSecurityGroupIngressRequest() {}
     
-
-
     /**
      * Constructs a new RevokeSecurityGroupIngressRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -117,8 +117,6 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         setIpPermissions(ipPermissions);
     }
 
-    
-    
     /**
      * Name of the standard (EC2) security group to modify. The group must
      * belong to your account. Can be used instead of GroupID for standard
@@ -163,8 +161,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * ID of the standard (EC2) or VPC security group to modify. The group
      * must belong to your account. Required for VPC security groups; can be
@@ -209,8 +206,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.groupId = groupId;
         return this;
     }
-    
-    
+
     /**
      * Deprecated
      *
@@ -243,8 +239,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.sourceSecurityGroupName = sourceSecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * Deprecated
      *
@@ -277,8 +272,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.sourceSecurityGroupOwnerId = sourceSecurityGroupOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Deprecated
      *
@@ -311,8 +305,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.ipProtocol = ipProtocol;
         return this;
     }
-    
-    
+
     /**
      * Deprecated
      *
@@ -345,8 +338,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.fromPort = fromPort;
         return this;
     }
-    
-    
+
     /**
      * Deprecated
      *
@@ -379,8 +371,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.toPort = toPort;
         return this;
     }
-    
-    
+
     /**
      * Deprecated
      *
@@ -413,8 +404,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
         this.cidrIp = cidrIp;
         return this;
     }
-    
-    
+
     /**
      * List of IP permissions to revoke on the specified security group. For
      * an IP permission to be removed, it must exactly match one of the IP
@@ -429,7 +419,6 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
      *         offers more flexibility and control.
      */
     public java.util.List<IpPermission> getIpPermissions() {
-        
         if (ipPermissions == null) {
               ipPermissions = new com.amazonaws.internal.ListWithAutoConstructFlag<IpPermission>();
               ipPermissions.setAutoConstruct(true);
@@ -515,7 +504,7 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

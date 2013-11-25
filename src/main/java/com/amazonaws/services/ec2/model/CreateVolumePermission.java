@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -30,6 +32,9 @@ public class CreateVolumePermission implements Serializable {
     /**
      * The group that is allowed to create volumes from the snapshot
      * (currently supports "all").
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>all
      */
     private String group;
 
@@ -65,14 +70,18 @@ public class CreateVolumePermission implements Serializable {
         this.userId = userId;
         return this;
     }
-    
-    
+
     /**
      * The group that is allowed to create volumes from the snapshot
      * (currently supports "all").
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>all
      *
      * @return The group that is allowed to create volumes from the snapshot
      *         (currently supports "all").
+     *
+     * @see PermissionGroup
      */
     public String getGroup() {
         return group;
@@ -81,9 +90,14 @@ public class CreateVolumePermission implements Serializable {
     /**
      * The group that is allowed to create volumes from the snapshot
      * (currently supports "all").
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>all
      *
      * @param group The group that is allowed to create volumes from the snapshot
      *         (currently supports "all").
+     *
+     * @see PermissionGroup
      */
     public void setGroup(String group) {
         this.group = group;
@@ -94,19 +108,61 @@ public class CreateVolumePermission implements Serializable {
      * (currently supports "all").
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>all
      *
      * @param group The group that is allowed to create volumes from the snapshot
      *         (currently supports "all").
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see PermissionGroup
      */
     public CreateVolumePermission withGroup(String group) {
         this.group = group;
         return this;
     }
+
+    /**
+     * The group that is allowed to create volumes from the snapshot
+     * (currently supports "all").
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>all
+     *
+     * @param group The group that is allowed to create volumes from the snapshot
+     *         (currently supports "all").
+     *
+     * @see PermissionGroup
+     */
+    public void setGroup(PermissionGroup group) {
+        this.group = group.toString();
+    }
     
-    
+    /**
+     * The group that is allowed to create volumes from the snapshot
+     * (currently supports "all").
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>all
+     *
+     * @param group The group that is allowed to create volumes from the snapshot
+     *         (currently supports "all").
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see PermissionGroup
+     */
+    public CreateVolumePermission withGroup(PermissionGroup group) {
+        this.group = group.toString();
+        return this;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#listServerCertificates(ListServerCertificatesRequest) ListServerCertificates operation}.
@@ -59,7 +61,8 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
      * of server certificates you want in the response. If there are
      * additional server certificates beyond the maximum you specify, the
      * <code>IsTruncated</code> response element will be set to
-     * <code>true</code>.
+     * <code>true</code>. This parameter is optional. If you do not include
+     * it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -140,8 +143,7 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
         this.pathPrefix = pathPrefix;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results, and only in a subsequent
      * request after you've received a response where the results are
@@ -204,14 +206,14 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results to indicate the maximum number
      * of server certificates you want in the response. If there are
      * additional server certificates beyond the maximum you specify, the
      * <code>IsTruncated</code> response element will be set to
-     * <code>true</code>.
+     * <code>true</code>. This parameter is optional. If you do not include
+     * it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -220,7 +222,8 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
      *         of server certificates you want in the response. If there are
      *         additional server certificates beyond the maximum you specify, the
      *         <code>IsTruncated</code> response element will be set to
-     *         <code>true</code>.
+     *         <code>true</code>. This parameter is optional. If you do not include
+     *         it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -231,7 +234,8 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
      * of server certificates you want in the response. If there are
      * additional server certificates beyond the maximum you specify, the
      * <code>IsTruncated</code> response element will be set to
-     * <code>true</code>.
+     * <code>true</code>. This parameter is optional. If you do not include
+     * it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -240,7 +244,8 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
      *         of server certificates you want in the response. If there are
      *         additional server certificates beyond the maximum you specify, the
      *         <code>IsTruncated</code> response element will be set to
-     *         <code>true</code>.
+     *         <code>true</code>. This parameter is optional. If you do not include
+     *         it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -251,7 +256,8 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
      * of server certificates you want in the response. If there are
      * additional server certificates beyond the maximum you specify, the
      * <code>IsTruncated</code> response element will be set to
-     * <code>true</code>.
+     * <code>true</code>. This parameter is optional. If you do not include
+     * it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -262,7 +268,8 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
      *         of server certificates you want in the response. If there are
      *         additional server certificates beyond the maximum you specify, the
      *         <code>IsTruncated</code> response element will be set to
-     *         <code>true</code>.
+     *         <code>true</code>. This parameter is optional. If you do not include
+     *         it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -271,8 +278,7 @@ public class ListServerCertificatesRequest extends AmazonWebServiceRequest imple
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.glacier.AmazonGlacier#deleteArchive(DeleteArchiveRequest) DeleteArchive operation}.
@@ -76,8 +78,6 @@ public class DeleteArchiveRequest extends AmazonWebServiceRequest implements Ser
      */
     public DeleteArchiveRequest() {}
     
-
-
     /**
      * Constructs a new DeleteArchiveRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -90,10 +90,6 @@ public class DeleteArchiveRequest extends AmazonWebServiceRequest implements Ser
         setVaultName(vaultName);
         setArchiveId(archiveId);
     }
-
-    
-    
-
 
     /**
      * Constructs a new DeleteArchiveRequest object.
@@ -114,8 +110,6 @@ public class DeleteArchiveRequest extends AmazonWebServiceRequest implements Ser
         setArchiveId(archiveId);
     }
 
-    
-    
     /**
      * The <code>AccountId</code> is the AWS Account ID. You can specify
      * either the AWS Account ID or optionally a '-', in which case Amazon
@@ -172,8 +166,7 @@ public class DeleteArchiveRequest extends AmazonWebServiceRequest implements Ser
         this.accountId = accountId;
         return this;
     }
-    
-    
+
     /**
      * The name of the vault.
      *
@@ -206,8 +199,7 @@ public class DeleteArchiveRequest extends AmazonWebServiceRequest implements Ser
         this.vaultName = vaultName;
         return this;
     }
-    
-    
+
     /**
      * The ID of the archive to delete.
      *
@@ -240,8 +232,7 @@ public class DeleteArchiveRequest extends AmazonWebServiceRequest implements Ser
         this.archiveId = archiveId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

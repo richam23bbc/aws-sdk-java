@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.sqs.AmazonSQS#listQueues(ListQueuesRequest) ListQueues operation}.
@@ -38,8 +40,6 @@ public class ListQueuesRequest extends AmazonWebServiceRequest implements Serial
      */
     public ListQueuesRequest() {}
     
-
-
     /**
      * Constructs a new ListQueuesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -53,8 +53,6 @@ public class ListQueuesRequest extends AmazonWebServiceRequest implements Serial
         setQueueNamePrefix(queueNamePrefix);
     }
 
-    
-    
     /**
      * A string to use for filtering the list results. Only those queues
      * whose name begins with the specified string are returned.
@@ -93,8 +91,7 @@ public class ListQueuesRequest extends AmazonWebServiceRequest implements Serial
         this.queueNamePrefix = queueNamePrefix;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

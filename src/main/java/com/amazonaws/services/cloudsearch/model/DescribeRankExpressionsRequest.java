@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudsearch.AmazonCloudSearch#describeRankExpressions(DescribeRankExpressionsRequest) DescribeRankExpressions operation}.
@@ -114,8 +116,7 @@ public class DescribeRankExpressionsRequest extends AmazonWebServiceRequest impl
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * Limits the <code>DescribeRankExpressions</code> response to the
      * specified fields.
@@ -124,7 +125,6 @@ public class DescribeRankExpressionsRequest extends AmazonWebServiceRequest impl
      *         specified fields.
      */
     public java.util.List<String> getRankNames() {
-        
         if (rankNames == null) {
               rankNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               rankNames.setAutoConstruct(true);
@@ -192,7 +192,7 @@ public class DescribeRankExpressionsRequest extends AmazonWebServiceRequest impl
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

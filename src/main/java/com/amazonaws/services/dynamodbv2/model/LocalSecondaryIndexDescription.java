@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -106,8 +108,7 @@ public class LocalSecondaryIndexDescription implements Serializable {
         this.indexName = indexName;
         return this;
     }
-    
-    
+
     /**
      * Represents the complete index key schema, which consists of one or
      * more pairs of attribute names and key types (<code>HASH</code> or
@@ -121,7 +122,6 @@ public class LocalSecondaryIndexDescription implements Serializable {
      *         <code>RANGE</code>).
      */
     public java.util.List<KeySchemaElement> getKeySchema() {
-        
         return keySchema;
     }
     
@@ -200,7 +200,7 @@ public class LocalSecondaryIndexDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Represents attributes that are copied (projected) from the table into
      * the index. These are in addition to the primary key attributes and
@@ -245,8 +245,7 @@ public class LocalSecondaryIndexDescription implements Serializable {
         this.projection = projection;
         return this;
     }
-    
-    
+
     /**
      * Represents the total size of the index, in bytes. Amazon DynamoDB
      * updates this value approximately every six hours. Recent changes might
@@ -291,8 +290,7 @@ public class LocalSecondaryIndexDescription implements Serializable {
         this.indexSizeBytes = indexSizeBytes;
         return this;
     }
-    
-    
+
     /**
      * Represents the number of items in the index. Amazon DynamoDB updates
      * this value approximately every six hours. Recent changes might not be
@@ -337,8 +335,7 @@ public class LocalSecondaryIndexDescription implements Serializable {
         this.itemCount = itemCount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

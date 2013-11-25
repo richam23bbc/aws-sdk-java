@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#describeReservedNodeOfferings(DescribeReservedNodeOfferingsRequest) DescribeReservedNodeOfferings operation}.
@@ -91,8 +93,7 @@ public class DescribeReservedNodeOfferingsRequest extends AmazonWebServiceReques
         this.reservedNodeOfferingId = reservedNodeOfferingId;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -149,8 +150,7 @@ public class DescribeReservedNodeOfferingsRequest extends AmazonWebServiceReques
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned by a previous
      * <a>DescribeReservedNodeOfferings</a> request to indicate the first
@@ -207,8 +207,7 @@ public class DescribeReservedNodeOfferingsRequest extends AmazonWebServiceReques
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

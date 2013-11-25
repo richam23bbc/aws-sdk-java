@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -80,8 +82,7 @@ public class Tag implements Serializable {
         this.key = key;
         return this;
     }
-    
-    
+
     /**
      * <i>Required</i>. A string containing the value for this tag. You can
      * specify a maximum of 256 characters for a tag value.
@@ -120,8 +121,7 @@ public class Tag implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

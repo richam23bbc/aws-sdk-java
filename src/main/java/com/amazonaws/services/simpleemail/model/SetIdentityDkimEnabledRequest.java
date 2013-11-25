@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleemail.AmazonSimpleEmailService#setIdentityDkimEnabled(SetIdentityDkimEnabledRequest) SetIdentityDkimEnabled operation}.
@@ -85,8 +87,7 @@ public class SetIdentityDkimEnabledRequest extends AmazonWebServiceRequest imple
         this.identity = identity;
         return this;
     }
-    
-    
+
     /**
      * Sets whether DKIM signing is enabled for an identity. Set to
      * <code>true</code> to enable DKIM signing for this identity;
@@ -131,8 +132,7 @@ public class SetIdentityDkimEnabledRequest extends AmazonWebServiceRequest imple
         this.dkimEnabled = dkimEnabled;
         return this;
     }
-    
-    
+
     /**
      * Sets whether DKIM signing is enabled for an identity. Set to
      * <code>true</code> to enable DKIM signing for this identity;
@@ -145,7 +145,7 @@ public class SetIdentityDkimEnabledRequest extends AmazonWebServiceRequest imple
     public Boolean getDkimEnabled() {
         return dkimEnabled;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

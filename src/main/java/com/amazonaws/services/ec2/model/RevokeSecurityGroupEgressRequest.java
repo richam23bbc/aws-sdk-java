@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.RevokeSecurityGroupEgressRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#revokeSecurityGroupEgress(RevokeSecurityGroupEgressRequest) RevokeSecurityGroupEgress operation}.
@@ -114,8 +116,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.groupId = groupId;
         return this;
     }
-    
-    
+
     /**
      * Deprecated.
      *
@@ -148,8 +149,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.sourceSecurityGroupName = sourceSecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * Deprecated.
      *
@@ -182,8 +182,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.sourceSecurityGroupOwnerId = sourceSecurityGroupOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Deprecated.
      *
@@ -216,8 +215,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.ipProtocol = ipProtocol;
         return this;
     }
-    
-    
+
     /**
      * Deprecated.
      *
@@ -250,8 +248,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.fromPort = fromPort;
         return this;
     }
-    
-    
+
     /**
      * Deprecated.
      *
@@ -284,8 +281,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.toPort = toPort;
         return this;
     }
-    
-    
+
     /**
      * Deprecated.
      *
@@ -318,8 +314,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
         this.cidrIp = cidrIp;
         return this;
     }
-    
-    
+
     /**
      * List of IP permissions to authorize on the specified security group.
      * Specifying permissions through IP permissions is the preferred way of
@@ -330,7 +325,6 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
      *         authorizing permissions since it offers more flexibility and control.
      */
     public java.util.List<IpPermission> getIpPermissions() {
-        
         if (ipPermissions == null) {
               ipPermissions = new com.amazonaws.internal.ListWithAutoConstructFlag<IpPermission>();
               ipPermissions.setAutoConstruct(true);
@@ -404,7 +398,7 @@ public class RevokeSecurityGroupEgressRequest extends AmazonWebServiceRequest im
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

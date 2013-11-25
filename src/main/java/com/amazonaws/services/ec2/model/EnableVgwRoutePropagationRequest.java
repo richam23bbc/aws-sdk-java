@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#enableVgwRoutePropagation(EnableVgwRoutePropagationRequest) EnableVgwRoutePropagation operation}.
@@ -60,8 +62,7 @@ public class EnableVgwRoutePropagationRequest extends AmazonWebServiceRequest im
         this.routeTableId = routeTableId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the GatewayId property for this object.
      *
@@ -94,8 +95,7 @@ public class EnableVgwRoutePropagationRequest extends AmazonWebServiceRequest im
         this.gatewayId = gatewayId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

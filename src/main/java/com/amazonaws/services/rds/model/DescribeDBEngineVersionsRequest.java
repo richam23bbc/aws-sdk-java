@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#describeDBEngineVersions(DescribeDBEngineVersionsRequest) DescribeDBEngineVersions operation}.
@@ -37,7 +39,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
     private String engineVersion;
 
     /**
-     * The name of a specific DB Parameter Group family to return details
+     * The name of a specific DB parameter group family to return details
      * for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      * characters</li> <li>First character must be a letter</li> <li>Cannot
      * end with a hyphen or contain two consecutive hyphens</li> </ul>
@@ -111,8 +113,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.engine = engine;
         return this;
     }
-    
-    
+
     /**
      * The database engine version to return. <p>Example: <code>5.1.49</code>
      *
@@ -145,15 +146,14 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
-     * The name of a specific DB Parameter Group family to return details
+     * The name of a specific DB parameter group family to return details
      * for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      * characters</li> <li>First character must be a letter</li> <li>Cannot
      * end with a hyphen or contain two consecutive hyphens</li> </ul>
      *
-     * @return The name of a specific DB Parameter Group family to return details
+     * @return The name of a specific DB parameter group family to return details
      *         for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      *         characters</li> <li>First character must be a letter</li> <li>Cannot
      *         end with a hyphen or contain two consecutive hyphens</li> </ul>
@@ -163,12 +163,12 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
     }
     
     /**
-     * The name of a specific DB Parameter Group family to return details
+     * The name of a specific DB parameter group family to return details
      * for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      * characters</li> <li>First character must be a letter</li> <li>Cannot
      * end with a hyphen or contain two consecutive hyphens</li> </ul>
      *
-     * @param dBParameterGroupFamily The name of a specific DB Parameter Group family to return details
+     * @param dBParameterGroupFamily The name of a specific DB parameter group family to return details
      *         for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      *         characters</li> <li>First character must be a letter</li> <li>Cannot
      *         end with a hyphen or contain two consecutive hyphens</li> </ul>
@@ -178,14 +178,14 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
     }
     
     /**
-     * The name of a specific DB Parameter Group family to return details
+     * The name of a specific DB parameter group family to return details
      * for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      * characters</li> <li>First character must be a letter</li> <li>Cannot
      * end with a hyphen or contain two consecutive hyphens</li> </ul>
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBParameterGroupFamily The name of a specific DB Parameter Group family to return details
+     * @param dBParameterGroupFamily The name of a specific DB parameter group family to return details
      *         for. <p>Constraints: <ul> <li>Must be 1 to 255 alphanumeric
      *         characters</li> <li>First character must be a letter</li> <li>Cannot
      *         end with a hyphen or contain two consecutive hyphens</li> </ul>
@@ -197,8 +197,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.dBParameterGroupFamily = dBParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more than
      * the <code>MaxRecords</code> value is available, a pagination token
@@ -255,8 +254,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional pagination token provided by a previous request. If this
      * parameter is specified, the response includes only records beyond the
@@ -301,8 +299,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Indicates that only the default version of the specified engine or
      * engine and major version combination is returned.
@@ -341,8 +338,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.defaultOnly = defaultOnly;
         return this;
     }
-    
-    
+
     /**
      * Indicates that only the default version of the specified engine or
      * engine and major version combination is returned.
@@ -353,7 +349,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
     public Boolean getDefaultOnly() {
         return defaultOnly;
     }
-    
+
     /**
      * If this parameter is specified, and if the requested engine supports
      * the CharacterSetName parameter for CreateDBInstance, the response
@@ -398,8 +394,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
         this.listSupportedCharacterSets = listSupportedCharacterSets;
         return this;
     }
-    
-    
+
     /**
      * If this parameter is specified, and if the requested engine supports
      * the CharacterSetName parameter for CreateDBInstance, the response
@@ -412,7 +407,7 @@ public class DescribeDBEngineVersionsRequest extends AmazonWebServiceRequest imp
     public Boolean getListSupportedCharacterSets() {
         return listSupportedCharacterSets;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

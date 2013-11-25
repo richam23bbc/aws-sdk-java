@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.route53.AmazonRoute53#createHostedZone(CreateHostedZoneRequest) CreateHostedZone operation}.
@@ -85,8 +87,6 @@ public class CreateHostedZoneRequest extends AmazonWebServiceRequest implements 
      */
     public CreateHostedZoneRequest() {}
     
-
-
     /**
      * Constructs a new CreateHostedZoneRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -116,8 +116,6 @@ public class CreateHostedZoneRequest extends AmazonWebServiceRequest implements 
         setCallerReference(callerReference);
     }
 
-    
-    
     /**
      * The name of the domain. This must be a fully-specified domain, for
      * example, www.example.com. The trailing dot is optional; Route 53
@@ -207,8 +205,7 @@ public class CreateHostedZoneRequest extends AmazonWebServiceRequest implements 
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * A unique string that identifies the request and that allows failed
      * <code>CreateHostedZone</code> requests to be retried without the risk
@@ -298,8 +295,7 @@ public class CreateHostedZoneRequest extends AmazonWebServiceRequest implements 
         this.callerReference = callerReference;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains an optional comment about your hosted
      * zone.
@@ -338,8 +334,7 @@ public class CreateHostedZoneRequest extends AmazonWebServiceRequest implements 
         this.hostedZoneConfig = hostedZoneConfig;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

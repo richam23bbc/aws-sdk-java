@@ -13,11 +13,13 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * A JSON object containing the GatewayARN of the gateway for which working storage was configured.
+ * A JSON object containing the of the gateway for which working storage was configured.
  * </p>
  */
 public class AddWorkingStorageResult implements Serializable {
@@ -85,8 +87,7 @@ public class AddWorkingStorageResult implements Serializable {
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

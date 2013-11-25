@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#deleteChapCredentials(DeleteChapCredentialsRequest) DeleteChapCredentials operation}.
@@ -98,8 +100,7 @@ public class DeleteChapCredentialsRequest extends AmazonWebServiceRequest implem
         this.targetARN = targetARN;
         return this;
     }
-    
-    
+
     /**
      * The iSCSI initiator that connects to the target.
      * <p>
@@ -144,8 +145,7 @@ public class DeleteChapCredentialsRequest extends AmazonWebServiceRequest implem
         this.initiatorName = initiatorName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

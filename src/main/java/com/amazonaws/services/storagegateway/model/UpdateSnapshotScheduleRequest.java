@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#updateSnapshotSchedule(UpdateSnapshotScheduleRequest) UpdateSnapshotSchedule operation}.
@@ -23,7 +25,7 @@ import java.io.Serializable;
  * </p>
  * <p>
  * The default snapshot schedule for volume is once every 24 hours, starting at the creation time of the volume. You can use this API to change the
- * shapshot schedule configured for the volume.
+ * snapshot schedule configured for the volume.
  * </p>
  * <p>
  * In the request you must identify the gateway volume whose snapshot schedule you want to update, and the schedule information, including when you want
@@ -117,8 +119,7 @@ public class UpdateSnapshotScheduleRequest extends AmazonWebServiceRequest imple
         this.volumeARN = volumeARN;
         return this;
     }
-    
-    
+
     /**
      * The hour of the day at which the snapshot schedule begins represented
      * as <i>hh</i>, where <i>hh</i> is the hour (0 to 23). The hour of the
@@ -172,8 +173,7 @@ public class UpdateSnapshotScheduleRequest extends AmazonWebServiceRequest imple
         this.startAt = startAt;
         return this;
     }
-    
-    
+
     /**
      * Frequency of snapshots. Specify the number of hours between snapshots.
      * <p>
@@ -215,8 +215,7 @@ public class UpdateSnapshotScheduleRequest extends AmazonWebServiceRequest imple
         this.recurrenceInHours = recurrenceInHours;
         return this;
     }
-    
-    
+
     /**
      * Optional description of the snapshot that overwrites the existing
      * description.
@@ -264,8 +263,7 @@ public class UpdateSnapshotScheduleRequest extends AmazonWebServiceRequest imple
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

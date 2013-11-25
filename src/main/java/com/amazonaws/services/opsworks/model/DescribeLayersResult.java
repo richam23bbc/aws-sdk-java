@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeLayersResult implements Serializable {
      * @return An array of <code>Layer</code> objects that describe the layers.
      */
     public java.util.List<Layer> getLayers() {
-        
         if (layers == null) {
               layers = new com.amazonaws.internal.ListWithAutoConstructFlag<Layer>();
               layers.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeLayersResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -38,7 +40,6 @@ public class DescribeDBLogFilesResult implements Serializable {
      * @return The DB log files returned.
      */
     public java.util.List<DescribeDBLogFilesDetails> getDescribeDBLogFiles() {
-        
         if (describeDBLogFiles == null) {
               describeDBLogFiles = new com.amazonaws.internal.ListWithAutoConstructFlag<DescribeDBLogFilesDetails>();
               describeDBLogFiles.setAutoConstruct(true);
@@ -100,7 +101,7 @@ public class DescribeDBLogFilesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An optional paging token.
      *
@@ -133,8 +134,7 @@ public class DescribeDBLogFilesResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

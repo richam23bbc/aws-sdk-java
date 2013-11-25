@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#updateSigningCertificate(UpdateSigningCertificateRequest) UpdateSigningCertificate operation}.
@@ -23,12 +25,12 @@ import java.io.Serializable;
  * certificate as part of a certificate rotation work flow.
  * </p>
  * <p>
- * If the <code>UserName</code> field is not specified, the UserName is determined implicitly based on the AWS Access Key ID used to sign the request.
+ * If the <code>UserName</code> field is not specified, the UserName is determined implicitly based on the AWS access key ID used to sign the request.
  * Because this action works for access keys under the AWS account, this API can be used to manage root credentials even if the AWS account has no
  * associated users.
  * </p>
  * <p>
- * For information about rotating certificates, see <a href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/index.html?ManagingCredentials.html">
+ * For information about rotating certificates, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?ManagingCredentials.html">
  * Managing Keys and Certificates </a> in <i>Using AWS Identity and Access Management</i> .
  * </p>
  *
@@ -70,8 +72,6 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
      */
     public UpdateSigningCertificateRequest() {}
     
-
-
     /**
      * Constructs a new UpdateSigningCertificateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -88,8 +88,6 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
         setStatus(status);
     }
 
-    
-    
     /**
      * Constructs a new UpdateSigningCertificateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -105,7 +103,7 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.certificateId = certificateId;
         this.status = status.toString();
     }
-    
+
     /**
      * Name of the user the signing certificate belongs to.
      * <p>
@@ -150,8 +148,7 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The ID of the signing certificate you want to update.
      * <p>
@@ -196,8 +193,7 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.certificateId = certificateId;
         return this;
     }
-    
-    
+
     /**
      * The status you want to assign to the certificate. <code>Active</code>
      * means the certificate can be used for API calls to AWS, while
@@ -257,8 +253,7 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The status you want to assign to the certificate. <code>Active</code>
      * means the certificate can be used for API calls to AWS, while
@@ -300,7 +295,7 @@ public class UpdateSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.status = status.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

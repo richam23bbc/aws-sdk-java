@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -50,8 +52,6 @@ public class UpdateCondition implements Serializable {
      */
     public UpdateCondition() {}
     
-
-
     /**
      * Constructs a new UpdateCondition object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -74,8 +74,6 @@ public class UpdateCondition implements Serializable {
         setExists(exists);
     }
 
-    
-    
     /**
      * The name of the attribute involved in the condition.
      *
@@ -108,8 +106,7 @@ public class UpdateCondition implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The value of an attribute. This value can only be specified when the
      * <code>Exists</code> parameter is equal to <code>true</code>.
@@ -148,8 +145,7 @@ public class UpdateCondition implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * A value specifying whether or not the specified attribute must exist
      * with the specified value in order for the update condition to be
@@ -212,8 +208,7 @@ public class UpdateCondition implements Serializable {
         this.exists = exists;
         return this;
     }
-    
-    
+
     /**
      * A value specifying whether or not the specified attribute must exist
      * with the specified value in order for the update condition to be
@@ -232,7 +227,7 @@ public class UpdateCondition implements Serializable {
     public Boolean getExists() {
         return exists;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

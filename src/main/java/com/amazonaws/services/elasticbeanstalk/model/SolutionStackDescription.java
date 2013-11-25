@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -76,15 +78,13 @@ public class SolutionStackDescription implements Serializable {
         this.solutionStackName = solutionStackName;
         return this;
     }
-    
-    
+
     /**
      * The permitted file types allowed for a solution stack.
      *
      * @return The permitted file types allowed for a solution stack.
      */
     public java.util.List<String> getPermittedFileTypes() {
-        
         if (permittedFileTypes == null) {
               permittedFileTypes = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               permittedFileTypes.setAutoConstruct(true);
@@ -146,7 +146,7 @@ public class SolutionStackDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

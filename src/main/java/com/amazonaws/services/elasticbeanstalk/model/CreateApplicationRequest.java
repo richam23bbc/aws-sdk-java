@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#createApplication(CreateApplicationRequest) CreateApplication operation}.
@@ -54,8 +56,6 @@ public class CreateApplicationRequest extends AmazonWebServiceRequest implements
      */
     public CreateApplicationRequest() {}
     
-
-
     /**
      * Constructs a new CreateApplicationRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -70,8 +70,6 @@ public class CreateApplicationRequest extends AmazonWebServiceRequest implements
         setApplicationName(applicationName);
     }
 
-    
-    
     /**
      * The name of the application. <p> Constraint: This name must be unique
      * within your account. If the specified name already exists, the action
@@ -125,8 +123,7 @@ public class CreateApplicationRequest extends AmazonWebServiceRequest implements
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * Describes the application.
      * <p>
@@ -168,8 +165,7 @@ public class CreateApplicationRequest extends AmazonWebServiceRequest implements
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

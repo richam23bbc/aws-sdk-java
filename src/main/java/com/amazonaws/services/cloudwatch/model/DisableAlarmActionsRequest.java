@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudwatch.AmazonCloudWatch#disableAlarmActions(DisableAlarmActionsRequest) DisableAlarmActions operation}.
@@ -44,7 +46,6 @@ public class DisableAlarmActionsRequest extends AmazonWebServiceRequest implemen
      * @return The names of the alarms to disable actions for.
      */
     public java.util.List<String> getAlarmNames() {
-        
         if (alarmNames == null) {
               alarmNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               alarmNames.setAutoConstruct(true);
@@ -115,7 +116,7 @@ public class DisableAlarmActionsRequest extends AmazonWebServiceRequest implemen
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

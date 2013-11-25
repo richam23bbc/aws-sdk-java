@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -96,8 +98,7 @@ public class DescribeResizeResult implements Serializable {
         this.targetNodeType = targetNodeType;
         return this;
     }
-    
-    
+
     /**
      * The number of nodes that the cluster will have after the resize is
      * complete.
@@ -136,8 +137,7 @@ public class DescribeResizeResult implements Serializable {
         this.targetNumberOfNodes = targetNumberOfNodes;
         return this;
     }
-    
-    
+
     /**
      * The cluster type after the resize is complete. <p>Valid Values:
      * <code>multi-node</code> | <code>single-node</code>
@@ -176,8 +176,7 @@ public class DescribeResizeResult implements Serializable {
         this.targetClusterType = targetClusterType;
         return this;
     }
-    
-    
+
     /**
      * The status of the resize operation. <p>Valid Values: <code>NONE</code>
      * | <code>IN_PROGRESS</code> | <code>FAILED</code> |
@@ -222,8 +221,7 @@ public class DescribeResizeResult implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The names of tables that have been completely imported . <p>Valid
      * Values: List of table names.
@@ -232,7 +230,6 @@ public class DescribeResizeResult implements Serializable {
      *         Values: List of table names.
      */
     public java.util.List<String> getImportTablesCompleted() {
-        
         if (importTablesCompleted == null) {
               importTablesCompleted = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               importTablesCompleted.setAutoConstruct(true);
@@ -300,7 +297,7 @@ public class DescribeResizeResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The names of tables that are being currently imported. <p>Valid
      * Values: List of table names.
@@ -309,7 +306,6 @@ public class DescribeResizeResult implements Serializable {
      *         Values: List of table names.
      */
     public java.util.List<String> getImportTablesInProgress() {
-        
         if (importTablesInProgress == null) {
               importTablesInProgress = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               importTablesInProgress.setAutoConstruct(true);
@@ -377,7 +373,7 @@ public class DescribeResizeResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The names of tables that have not been yet imported. <p>Valid Values:
      * List of table names
@@ -386,7 +382,6 @@ public class DescribeResizeResult implements Serializable {
      *         List of table names
      */
     public java.util.List<String> getImportTablesNotStarted() {
-        
         if (importTablesNotStarted == null) {
               importTablesNotStarted = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               importTablesNotStarted.setAutoConstruct(true);
@@ -454,7 +449,7 @@ public class DescribeResizeResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

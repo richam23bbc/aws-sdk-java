@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticloadbalancing.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeLoadBalancerPoliciesResult implements Serializable {
      * @return A list of policy description structures.
      */
     public java.util.List<PolicyDescription> getPolicyDescriptions() {
-        
         if (policyDescriptions == null) {
               policyDescriptions = new com.amazonaws.internal.ListWithAutoConstructFlag<PolicyDescription>();
               policyDescriptions.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeLoadBalancerPoliciesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#getDistributionConfig(GetDistributionConfigRequest) GetDistributionConfig operation}.
@@ -37,8 +39,6 @@ public class GetDistributionConfigRequest extends AmazonWebServiceRequest implem
      */
     public GetDistributionConfigRequest() {}
     
-
-
     /**
      * Constructs a new GetDistributionConfigRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -50,8 +50,6 @@ public class GetDistributionConfigRequest extends AmazonWebServiceRequest implem
         setId(id);
     }
 
-    
-    
     /**
      * The distribution's id.
      *
@@ -84,8 +82,7 @@ public class GetDistributionConfigRequest extends AmazonWebServiceRequest implem
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

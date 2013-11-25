@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -118,7 +120,7 @@ public class AutoScalingGroup implements Serializable {
     /**
      * The name of the cluster placement group, if applicable. For more
      * information, go to <a
-     * href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      * Using Cluster Instances</a> in the Amazon EC2 User Guide.
      * <p>
      * <b>Constraints:</b><br/>
@@ -146,7 +148,8 @@ public class AutoScalingGroup implements Serializable {
     private com.amazonaws.internal.ListWithAutoConstructFlag<EnabledMetric> enabledMetrics;
 
     /**
-     * A list of status conditions for the Auto Scaling group.
+     * The current state of the Auto Scaling group when a
+     * <a>DeleteAutoScalingGroup</a> action is in progress.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 255<br/>
@@ -209,8 +212,7 @@ public class AutoScalingGroup implements Serializable {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the Auto Scaling group.
      * <p>
@@ -255,8 +257,7 @@ public class AutoScalingGroup implements Serializable {
         this.autoScalingGroupARN = autoScalingGroupARN;
         return this;
     }
-    
-    
+
     /**
      * Specifies the name of the associated <a>LaunchConfiguration</a>.
      * <p>
@@ -301,8 +302,7 @@ public class AutoScalingGroup implements Serializable {
         this.launchConfigurationName = launchConfigurationName;
         return this;
     }
-    
-    
+
     /**
      * Contains the minimum size of the Auto Scaling group.
      *
@@ -335,8 +335,7 @@ public class AutoScalingGroup implements Serializable {
         this.minSize = minSize;
         return this;
     }
-    
-    
+
     /**
      * Contains the maximum size of the Auto Scaling group.
      *
@@ -369,8 +368,7 @@ public class AutoScalingGroup implements Serializable {
         this.maxSize = maxSize;
         return this;
     }
-    
-    
+
     /**
      * Specifies the desired capacity for the Auto Scaling group.
      *
@@ -403,8 +401,7 @@ public class AutoScalingGroup implements Serializable {
         this.desiredCapacity = desiredCapacity;
         return this;
     }
-    
-    
+
     /**
      * The number of seconds after a scaling activity completes before any
      * further scaling activities can start.
@@ -443,8 +440,7 @@ public class AutoScalingGroup implements Serializable {
         this.defaultCooldown = defaultCooldown;
         return this;
     }
-    
-    
+
     /**
      * Contains a list of Availability Zones for the group.
      * <p>
@@ -454,7 +450,6 @@ public class AutoScalingGroup implements Serializable {
      * @return Contains a list of Availability Zones for the group.
      */
     public java.util.List<String> getAvailabilityZones() {
-        
         if (availabilityZones == null) {
               availabilityZones = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               availabilityZones.setAutoConstruct(true);
@@ -525,14 +520,13 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of load balancers associated with this Auto Scaling group.
      *
      * @return A list of load balancers associated with this Auto Scaling group.
      */
     public java.util.List<String> getLoadBalancerNames() {
-        
         if (loadBalancerNames == null) {
               loadBalancerNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               loadBalancerNames.setAutoConstruct(true);
@@ -594,7 +588,7 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The service of interest for the health status check, either "EC2" for
      * Amazon EC2 or "ELB" for Elastic Load Balancing.
@@ -645,8 +639,7 @@ public class AutoScalingGroup implements Serializable {
         this.healthCheckType = healthCheckType;
         return this;
     }
-    
-    
+
     /**
      * The length of time that Auto Scaling waits before checking an
      * instance's health status. The grace period begins when an instance
@@ -691,15 +684,13 @@ public class AutoScalingGroup implements Serializable {
         this.healthCheckGracePeriod = healthCheckGracePeriod;
         return this;
     }
-    
-    
+
     /**
      * Provides a summary list of Amazon EC2 instances.
      *
      * @return Provides a summary list of Amazon EC2 instances.
      */
     public java.util.List<Instance> getInstances() {
-        
         if (instances == null) {
               instances = new com.amazonaws.internal.ListWithAutoConstructFlag<Instance>();
               instances.setAutoConstruct(true);
@@ -761,7 +752,7 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Specifies the date and time the Auto Scaling group was created.
      *
@@ -794,15 +785,13 @@ public class AutoScalingGroup implements Serializable {
         this.createdTime = createdTime;
         return this;
     }
-    
-    
+
     /**
      * Suspended processes associated with this Auto Scaling group.
      *
      * @return Suspended processes associated with this Auto Scaling group.
      */
     public java.util.List<SuspendedProcess> getSuspendedProcesses() {
-        
         if (suspendedProcesses == null) {
               suspendedProcesses = new com.amazonaws.internal.ListWithAutoConstructFlag<SuspendedProcess>();
               suspendedProcesses.setAutoConstruct(true);
@@ -864,11 +853,11 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The name of the cluster placement group, if applicable. For more
      * information, go to <a
-     * href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      * Using Cluster Instances</a> in the Amazon EC2 User Guide.
      * <p>
      * <b>Constraints:</b><br/>
@@ -877,7 +866,7 @@ public class AutoScalingGroup implements Serializable {
      *
      * @return The name of the cluster placement group, if applicable. For more
      *         information, go to <a
-     *         href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      *         Using Cluster Instances</a> in the Amazon EC2 User Guide.
      */
     public String getPlacementGroup() {
@@ -887,7 +876,7 @@ public class AutoScalingGroup implements Serializable {
     /**
      * The name of the cluster placement group, if applicable. For more
      * information, go to <a
-     * href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      * Using Cluster Instances</a> in the Amazon EC2 User Guide.
      * <p>
      * <b>Constraints:</b><br/>
@@ -896,7 +885,7 @@ public class AutoScalingGroup implements Serializable {
      *
      * @param placementGroup The name of the cluster placement group, if applicable. For more
      *         information, go to <a
-     *         href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      *         Using Cluster Instances</a> in the Amazon EC2 User Guide.
      */
     public void setPlacementGroup(String placementGroup) {
@@ -906,7 +895,7 @@ public class AutoScalingGroup implements Serializable {
     /**
      * The name of the cluster placement group, if applicable. For more
      * information, go to <a
-     * href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      * Using Cluster Instances</a> in the Amazon EC2 User Guide.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
@@ -917,7 +906,7 @@ public class AutoScalingGroup implements Serializable {
      *
      * @param placementGroup The name of the cluster placement group, if applicable. For more
      *         information, go to <a
-     *         href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
+     *         href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cluster_computing.html">
      *         Using Cluster Instances</a> in the Amazon EC2 User Guide.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -927,8 +916,7 @@ public class AutoScalingGroup implements Serializable {
         this.placementGroup = placementGroup;
         return this;
     }
-    
-    
+
     /**
      * The subnet identifier for the Amazon VPC connection, if applicable.
      * You can specify several subnets in a comma-separated list. <p> When
@@ -997,15 +985,13 @@ public class AutoScalingGroup implements Serializable {
         this.vPCZoneIdentifier = vPCZoneIdentifier;
         return this;
     }
-    
-    
+
     /**
      * A list of metrics enabled for this Auto Scaling group.
      *
      * @return A list of metrics enabled for this Auto Scaling group.
      */
     public java.util.List<EnabledMetric> getEnabledMetrics() {
-        
         if (enabledMetrics == null) {
               enabledMetrics = new com.amazonaws.internal.ListWithAutoConstructFlag<EnabledMetric>();
               enabledMetrics.setAutoConstruct(true);
@@ -1067,35 +1053,40 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
-     * A list of status conditions for the Auto Scaling group.
+     * The current state of the Auto Scaling group when a
+     * <a>DeleteAutoScalingGroup</a> action is in progress.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 255<br/>
      * <b>Pattern: </b>[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*<br/>
      *
-     * @return A list of status conditions for the Auto Scaling group.
+     * @return The current state of the Auto Scaling group when a
+     *         <a>DeleteAutoScalingGroup</a> action is in progress.
      */
     public String getStatus() {
         return status;
     }
     
     /**
-     * A list of status conditions for the Auto Scaling group.
+     * The current state of the Auto Scaling group when a
+     * <a>DeleteAutoScalingGroup</a> action is in progress.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 255<br/>
      * <b>Pattern: </b>[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*<br/>
      *
-     * @param status A list of status conditions for the Auto Scaling group.
+     * @param status The current state of the Auto Scaling group when a
+     *         <a>DeleteAutoScalingGroup</a> action is in progress.
      */
     public void setStatus(String status) {
         this.status = status;
     }
     
     /**
-     * A list of status conditions for the Auto Scaling group.
+     * The current state of the Auto Scaling group when a
+     * <a>DeleteAutoScalingGroup</a> action is in progress.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -1103,7 +1094,8 @@ public class AutoScalingGroup implements Serializable {
      * <b>Length: </b>1 - 255<br/>
      * <b>Pattern: </b>[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*<br/>
      *
-     * @param status A list of status conditions for the Auto Scaling group.
+     * @param status The current state of the Auto Scaling group when a
+     *         <a>DeleteAutoScalingGroup</a> action is in progress.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -1112,15 +1104,13 @@ public class AutoScalingGroup implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * A list of tags for the Auto Scaling group.
      *
      * @return A list of tags for the Auto Scaling group.
      */
     public java.util.List<TagDescription> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<TagDescription>();
               tags.setAutoConstruct(true);
@@ -1182,7 +1172,7 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A standalone termination policy or a list of termination policies for
      * this Auto Scaling group.
@@ -1191,7 +1181,6 @@ public class AutoScalingGroup implements Serializable {
      *         this Auto Scaling group.
      */
     public java.util.List<String> getTerminationPolicies() {
-        
         if (terminationPolicies == null) {
               terminationPolicies = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               terminationPolicies.setAutoConstruct(true);
@@ -1259,7 +1248,7 @@ public class AutoScalingGroup implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

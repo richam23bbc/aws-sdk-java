@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -44,8 +46,6 @@ public class AttributeDefinition implements Serializable {
      */
     public AttributeDefinition() {}
     
-
-
     /**
      * Constructs a new AttributeDefinition object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -59,8 +59,6 @@ public class AttributeDefinition implements Serializable {
         setAttributeType(attributeType);
     }
 
-    
-    
     /**
      * Constructs a new AttributeDefinition object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -73,7 +71,7 @@ public class AttributeDefinition implements Serializable {
         this.attributeName = attributeName;
         this.attributeType = attributeType.toString();
     }
-    
+
     /**
      * A name for the attribute.
      * <p>
@@ -115,8 +113,7 @@ public class AttributeDefinition implements Serializable {
         this.attributeName = attributeName;
         return this;
     }
-    
-    
+
     /**
      * The data type for the attribute.
      * <p>
@@ -164,8 +161,7 @@ public class AttributeDefinition implements Serializable {
         this.attributeType = attributeType;
         return this;
     }
-    
-    
+
     /**
      * The data type for the attribute.
      * <p>
@@ -199,7 +195,7 @@ public class AttributeDefinition implements Serializable {
         this.attributeType = attributeType.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

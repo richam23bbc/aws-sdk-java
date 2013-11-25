@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk#deleteConfigurationTemplate(DeleteConfigurationTemplateRequest) DeleteConfigurationTemplate operation}.
@@ -52,8 +54,6 @@ public class DeleteConfigurationTemplateRequest extends AmazonWebServiceRequest 
      */
     public DeleteConfigurationTemplateRequest() {}
     
-
-
     /**
      * Constructs a new DeleteConfigurationTemplateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -68,8 +68,6 @@ public class DeleteConfigurationTemplateRequest extends AmazonWebServiceRequest 
         setTemplateName(templateName);
     }
 
-    
-    
     /**
      * The name of the application to delete the configuration template from.
      * <p>
@@ -111,8 +109,7 @@ public class DeleteConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * The name of the configuration template to delete.
      * <p>
@@ -154,8 +151,7 @@ public class DeleteConfigurationTemplateRequest extends AmazonWebServiceRequest 
         this.templateName = templateName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

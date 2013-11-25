@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#modifyReplicationGroup(ModifyReplicationGroupRequest) ModifyReplicationGroup operation}.
@@ -152,8 +154,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.replicationGroupId = replicationGroupId;
         return this;
     }
-    
-    
+
     /**
      * A description for the replication group. Maximum length is 255
      * characters.
@@ -192,8 +193,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.replicationGroupDescription = replicationGroupDescription;
         return this;
     }
-    
-    
+
     /**
      * A list of cache security group names to authorize for the clusters in
      * this replication group. This change is asynchronously applied as soon
@@ -210,7 +210,6 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
      *         alphanumeric characters. Must not be "Default".
      */
     public java.util.List<String> getCacheSecurityGroupNames() {
-        
         if (cacheSecurityGroupNames == null) {
               cacheSecurityGroupNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               cacheSecurityGroupNames.setAutoConstruct(true);
@@ -302,7 +301,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
 
         return this;
     }
-    
+
     /**
      * Specifies the VPC Security Groups associated with the cache clusters
      * in the replication group. <p>This parameter can be used only with
@@ -315,7 +314,6 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
      *         Virtual Private Cloud (VPC).
      */
     public java.util.List<String> getSecurityGroupIds() {
-        
         if (securityGroupIds == null) {
               securityGroupIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               securityGroupIds.setAutoConstruct(true);
@@ -395,7 +393,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
 
         return this;
     }
-    
+
     /**
      * The weekly time range (in UTC) during which replication group system
      * maintenance can occur. Note that system maintenance may result in an
@@ -458,8 +456,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the SNS topic to which notifications
      * will be sent. <note> The SNS topic owner must be same as the
@@ -504,8 +501,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.notificationTopicArn = notificationTopicArn;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache parameter group to apply to all of the cache
      * nodes in this replication group. This change is asynchronously applied
@@ -556,8 +552,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The status of the Amazon SNS notification topic for the replication
      * group. Notifications are sent only if the status is <i>active</i>.
@@ -602,8 +597,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.notificationTopicStatus = notificationTopicStatus;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, this parameter causes the modifications in this
      * request and any pending modifications to be applied, asynchronously
@@ -678,8 +672,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.applyImmediately = applyImmediately;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, this parameter causes the modifications in this
      * request and any pending modifications to be applied, asynchronously
@@ -702,7 +695,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
     public Boolean getApplyImmediately() {
         return applyImmediately;
     }
-    
+
     /**
      * The upgraded version of the cache engine to be run on the nodes in the
      * replication group..
@@ -741,8 +734,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
      * Determines whether minor engine upgrades will be applied automatically
      * to all of the cache nodes in the replication group during the
@@ -793,8 +785,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
     }
-    
-    
+
     /**
      * Determines whether minor engine upgrades will be applied automatically
      * to all of the cache nodes in the replication group during the
@@ -809,7 +800,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
     public Boolean getAutoMinorVersionUpgrade() {
         return autoMinorVersionUpgrade;
     }
-    
+
     /**
      * If this parameter is specified, ElastiCache will promote each of the
      * nodes in the specified cache cluster to the primary role. The nodes of
@@ -854,8 +845,7 @@ public class ModifyReplicationGroupRequest extends AmazonWebServiceRequest imple
         this.primaryClusterId = primaryClusterId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

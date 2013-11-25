@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#addWorkingStorage(AddWorkingStorageRequest) AddWorkingStorage operation}.
@@ -106,8 +108,7 @@ public class AddWorkingStorageRequest extends AmazonWebServiceRequest implements
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
      * An array of strings that identify disks that are to be configured as
      * working storage. Each string have a minimum length of 1 and maximum
@@ -120,7 +121,6 @@ public class AddWorkingStorageRequest extends AmazonWebServiceRequest implements
      *         API.
      */
     public java.util.List<String> getDiskIds() {
-        
         if (diskIds == null) {
               diskIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               diskIds.setAutoConstruct(true);
@@ -200,7 +200,7 @@ public class AddWorkingStorageRequest extends AmazonWebServiceRequest implements
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

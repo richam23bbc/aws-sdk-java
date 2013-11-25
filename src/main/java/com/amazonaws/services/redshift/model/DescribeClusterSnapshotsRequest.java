@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#describeClusterSnapshots(DescribeClusterSnapshotsRequest) DescribeClusterSnapshots operation}.
@@ -128,8 +130,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The snapshot identifier of the snapshot about which to return
      * information.
@@ -168,8 +169,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The type of snapshots for which you are requesting information. By
      * default, snapshots of all types are returned. <p> Valid Values:
@@ -214,8 +214,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.snapshotType = snapshotType;
         return this;
     }
-    
-    
+
     /**
      * A value that requests only snapshots created at or after the specified
      * time. The time value is specified in ISO 8601 format. For more
@@ -272,8 +271,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.startTime = startTime;
         return this;
     }
-    
-    
+
     /**
      * A time value that requests only snapshots created at or before the
      * specified time. The time value is specified in ISO 8601 format. For
@@ -330,8 +328,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.endTime = endTime;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of snapshot records to include in the response. If
      * more records exist than the specified <code>MaxRecords</code> value,
@@ -394,8 +391,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned by a previous
      * <a>DescribeClusterSnapshots</a> request to indicate the first snapshot
@@ -440,8 +436,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * The AWS customer account used to create or copy the snapshot. Use this
      * field to filter the results to snapshots owned by a particular
@@ -492,8 +487,7 @@ public class DescribeClusterSnapshotsRequest extends AmazonWebServiceRequest imp
         this.ownerAccount = ownerAccount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

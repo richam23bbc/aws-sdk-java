@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.ReportInstanceStatusRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#reportInstanceStatus(ReportInstanceStatusRequest) ReportInstanceStatus operation}.
@@ -44,7 +46,6 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
      * @return The value of the Instances property for this object.
      */
     public java.util.List<String> getInstances() {
-        
         if (instances == null) {
               instances = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               instances.setAutoConstruct(true);
@@ -106,11 +107,16 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
 
         return this;
     }
-    
+
     /**
      * Returns the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>ok, impaired
      *
      * @return The value of the Status property for this object.
+     *
+     * @see ReportStatusType
      */
     public String getStatus() {
         return status;
@@ -118,8 +124,13 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
     
     /**
      * Sets the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>ok, impaired
      *
      * @param status The new value for the Status property for this object.
+     *
+     * @see ReportStatusType
      */
     public void setStatus(String status) {
         this.status = status;
@@ -129,18 +140,56 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
      * Sets the value of the Status property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>ok, impaired
      *
      * @param status The new value for the Status property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see ReportStatusType
      */
     public ReportInstanceStatusRequest withStatus(String status) {
         this.status = status;
         return this;
     }
+
+    /**
+     * Sets the value of the Status property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>ok, impaired
+     *
+     * @param status The new value for the Status property for this object.
+     *
+     * @see ReportStatusType
+     */
+    public void setStatus(ReportStatusType status) {
+        this.status = status.toString();
+    }
     
-    
+    /**
+     * Sets the value of the Status property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>ok, impaired
+     *
+     * @param status The new value for the Status property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see ReportStatusType
+     */
+    public ReportInstanceStatusRequest withStatus(ReportStatusType status) {
+        this.status = status.toString();
+        return this;
+    }
+
     /**
      * Returns the value of the StartTime property for this object.
      *
@@ -173,8 +222,7 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
         this.startTime = startTime;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the EndTime property for this object.
      *
@@ -207,15 +255,13 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
         this.endTime = endTime;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the ReasonCodes property for this object.
      *
      * @return The value of the ReasonCodes property for this object.
      */
     public java.util.List<String> getReasonCodes() {
-        
         if (reasonCodes == null) {
               reasonCodes = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               reasonCodes.setAutoConstruct(true);
@@ -277,7 +323,30 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
 
         return this;
     }
-    
+
+    /**
+     * Sets the value of the ReasonCodes property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param reasonCodes The new value for the ReasonCodes property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public ReportInstanceStatusRequest withReasonCodes(ReportInstanceReasonCodes... reasonCodes) {
+        java.util.ArrayList<String> reasonCodesCopy = new java.util.ArrayList<String>(reasonCodes.length);
+        for (ReportInstanceReasonCodes member : reasonCodes) {
+            reasonCodesCopy.add(member.toString());
+        }
+        if (getReasonCodes() == null) {
+            setReasonCodes(reasonCodesCopy);
+        } else {
+            getReasonCodes().addAll(reasonCodesCopy);
+        }
+        return this;
+    }
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -310,8 +379,7 @@ public class ReportInstanceStatusRequest extends AmazonWebServiceRequest impleme
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

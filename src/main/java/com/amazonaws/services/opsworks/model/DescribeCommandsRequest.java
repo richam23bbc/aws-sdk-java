@@ -13,13 +13,18 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describeCommands(DescribeCommandsRequest) DescribeCommands operation}.
  * <p>
  * Describes the results of specified commands.
+ * </p>
+ * <p>
+ * <b>NOTE:</b>You must specify at least one of the parameters.
  * </p>
  *
  * @see com.amazonaws.services.opsworks.AWSOpsWorks#describeCommands(DescribeCommandsRequest)
@@ -91,8 +96,7 @@ public class DescribeCommandsRequest extends AmazonWebServiceRequest implements 
         this.deploymentId = deploymentId;
         return this;
     }
-    
-    
+
     /**
      * The instance ID. If you include this parameter,
      * <code>DescribeCommands</code> returns a description of the commands
@@ -137,8 +141,7 @@ public class DescribeCommandsRequest extends AmazonWebServiceRequest implements 
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * An array of command IDs. If you include this parameter,
      * <code>DescribeCommands</code> returns a description of the specified
@@ -149,7 +152,6 @@ public class DescribeCommandsRequest extends AmazonWebServiceRequest implements 
      *         commands. Otherwise, it returns a description of every command.
      */
     public java.util.List<String> getCommandIds() {
-        
         if (commandIds == null) {
               commandIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               commandIds.setAutoConstruct(true);
@@ -223,7 +225,7 @@ public class DescribeCommandsRequest extends AmazonWebServiceRequest implements 
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

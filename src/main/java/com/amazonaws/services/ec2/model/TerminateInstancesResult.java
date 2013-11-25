@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -36,7 +38,6 @@ public class TerminateInstancesResult implements Serializable {
      *         has changed.
      */
     public java.util.List<InstanceStateChange> getTerminatingInstances() {
-        
         if (terminatingInstances == null) {
               terminatingInstances = new com.amazonaws.internal.ListWithAutoConstructFlag<InstanceStateChange>();
               terminatingInstances.setAutoConstruct(true);
@@ -104,7 +105,7 @@ public class TerminateInstancesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

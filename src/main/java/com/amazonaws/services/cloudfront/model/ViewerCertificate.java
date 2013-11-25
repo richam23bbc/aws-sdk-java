@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -73,8 +75,7 @@ public class ViewerCertificate implements Serializable {
         this.iAMCertificateId = iAMCertificateId;
         return this;
     }
-    
-    
+
     /**
      * Set to true if you want to use the default *.cloudfront.net viewer
      * certificate for this distribution. Omit this value if you are setting
@@ -119,8 +120,7 @@ public class ViewerCertificate implements Serializable {
         this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
         return this;
     }
-    
-    
+
     /**
      * Set to true if you want to use the default *.cloudfront.net viewer
      * certificate for this distribution. Omit this value if you are setting
@@ -133,7 +133,7 @@ public class ViewerCertificate implements Serializable {
     public Boolean getCloudFrontDefaultCertificate() {
         return cloudFrontDefaultCertificate;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

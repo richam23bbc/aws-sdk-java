@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#updateStreamingDistribution(UpdateStreamingDistributionRequest) UpdateStreamingDistribution operation}.
@@ -48,8 +50,6 @@ public class UpdateStreamingDistributionRequest extends AmazonWebServiceRequest 
      */
     public UpdateStreamingDistributionRequest() {}
     
-
-
     /**
      * Constructs a new UpdateStreamingDistributionRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -68,8 +68,6 @@ public class UpdateStreamingDistributionRequest extends AmazonWebServiceRequest 
         setIfMatch(ifMatch);
     }
 
-    
-    
     /**
      * The streaming distribution's configuration information.
      *
@@ -102,8 +100,7 @@ public class UpdateStreamingDistributionRequest extends AmazonWebServiceRequest 
         this.streamingDistributionConfig = streamingDistributionConfig;
         return this;
     }
-    
-    
+
     /**
      * The streaming distribution's id.
      *
@@ -136,8 +133,7 @@ public class UpdateStreamingDistributionRequest extends AmazonWebServiceRequest 
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * The value of the ETag header you received when retrieving the
      * streaming distribution's configuration. For example: E2QWRUHAPOMQZL.
@@ -176,8 +172,7 @@ public class UpdateStreamingDistributionRequest extends AmazonWebServiceRequest 
         this.ifMatch = ifMatch;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

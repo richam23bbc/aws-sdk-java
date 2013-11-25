@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.glacier.AmazonGlacier#abortMultipartUpload(AbortMultipartUploadRequest) AbortMultipartUpload operation}.
@@ -72,8 +74,6 @@ public class AbortMultipartUploadRequest extends AmazonWebServiceRequest impleme
      */
     public AbortMultipartUploadRequest() {}
     
-
-
     /**
      * Constructs a new AbortMultipartUploadRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -86,10 +86,6 @@ public class AbortMultipartUploadRequest extends AmazonWebServiceRequest impleme
         setVaultName(vaultName);
         setUploadId(uploadId);
     }
-
-    
-    
-
 
     /**
      * Constructs a new AbortMultipartUploadRequest object.
@@ -110,8 +106,6 @@ public class AbortMultipartUploadRequest extends AmazonWebServiceRequest impleme
         setUploadId(uploadId);
     }
 
-    
-    
     /**
      * The <code>AccountId</code> is the AWS Account ID. You can specify
      * either the AWS Account ID or optionally a '-', in which case Amazon
@@ -168,8 +162,7 @@ public class AbortMultipartUploadRequest extends AmazonWebServiceRequest impleme
         this.accountId = accountId;
         return this;
     }
-    
-    
+
     /**
      * The name of the vault.
      *
@@ -202,8 +195,7 @@ public class AbortMultipartUploadRequest extends AmazonWebServiceRequest impleme
         this.vaultName = vaultName;
         return this;
     }
-    
-    
+
     /**
      * The upload ID of the multipart upload to delete.
      *
@@ -236,8 +228,7 @@ public class AbortMultipartUploadRequest extends AmazonWebServiceRequest impleme
         this.uploadId = uploadId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

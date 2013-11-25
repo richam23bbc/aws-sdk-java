@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.directconnect.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.directconnect.AmazonDirectConnect#describeConnections(DescribeConnectionsRequest) DescribeConnections operation}.
@@ -22,7 +24,7 @@ import java.io.Serializable;
  * Displays all connections in this region.
  * </p>
  * <p>
- * If a connection ID is provided, it will only return this particular connection.
+ * If a connection ID is provided, the call returns only that particular connection.
  * </p>
  *
  * @see com.amazonaws.services.directconnect.AmazonDirectConnect#describeConnections(DescribeConnectionsRequest)
@@ -66,8 +68,7 @@ public class DescribeConnectionsRequest extends AmazonWebServiceRequest implemen
         this.connectionId = connectionId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

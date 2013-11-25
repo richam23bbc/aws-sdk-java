@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -209,8 +211,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.workflowType = workflowType;
         return this;
     }
-    
-    
+
     /**
      * The <code>workflowId</code> of the workflow execution. This field is
      * required. <p>The specified string must not start or end with
@@ -282,8 +283,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.workflowId = workflowId;
         return this;
     }
-    
-    
+
     /**
      * Optional data attached to the event that can be used by the decider in
      * subsequent workflow tasks. This data is not sent to the child workflow
@@ -337,8 +337,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.control = control;
         return this;
     }
-    
-    
+
     /**
      * The input to be provided to the workflow execution.
      * <p>
@@ -380,8 +379,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.input = input;
         return this;
     }
-    
-    
+
     /**
      * The total duration for this workflow execution. This overrides the
      * defaultExecutionStartToCloseTimeout specified when registering the
@@ -477,8 +475,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.executionStartToCloseTimeout = executionStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * The name of the task list to be used for decision tasks of the child
      * workflow execution. <note>A task list for this workflow execution must
@@ -565,8 +562,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.taskList = taskList;
         return this;
     }
-    
-    
+
     /**
      * Specifies the maximum duration of decision tasks for this workflow
      * execution. This parameter overrides the
@@ -674,8 +670,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.taskStartToCloseTimeout = taskStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the policy to use for the child workflow executions
      * if the workflow execution being started is terminated by calling the
@@ -825,8 +820,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.childPolicy = childPolicy;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the policy to use for the child workflow executions
      * if the workflow execution being started is terminated by calling the
@@ -928,7 +922,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
         this.childPolicy = childPolicy.toString();
         return this;
     }
-    
+
     /**
      * The list of tags to associate with the child workflow execution. A
      * maximum of 5 tags can be specified. You can list workflow executions
@@ -944,7 +938,6 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
      *         <a>ListClosedWorkflowExecutions</a> and specifying a <a>TagFilter</a>.
      */
     public java.util.List<String> getTagList() {
-        
         if (tagList == null) {
               tagList = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               tagList.setAutoConstruct(true);
@@ -1033,7 +1026,7 @@ public class StartChildWorkflowExecutionDecisionAttributes implements Serializab
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

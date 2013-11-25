@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#createCacheCluster(CreateCacheClusterRequest) CreateCacheCluster operation}.
@@ -170,8 +172,6 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
      */
     public CreateCacheClusterRequest() {}
     
-
-
     /**
      * Constructs a new CreateCacheClusterRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -220,8 +220,6 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         setCacheSecurityGroupNames(cacheSecurityGroupNames);
     }
 
-    
-    
     /**
      * The cache cluster identifier. This parameter is stored as a lowercase
      * string. <p>Constraints: <ul> <li>Must contain from 1 to 20
@@ -278,8 +276,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheClusterId = cacheClusterId;
         return this;
     }
-    
-    
+
     /**
      * The replication group to which this cache cluster should belong. If
      * this parameter is specified, the cache cluster will be added to the
@@ -336,8 +333,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.replicationGroupId = replicationGroupId;
         return this;
     }
-    
-    
+
     /**
      * The initial number of cache nodes that the cache cluster will have.
      * <p>For a Memcached cluster, valid values are between 1 and 20. If you
@@ -406,8 +402,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.numCacheNodes = numCacheNodes;
         return this;
     }
-    
-    
+
     /**
      * The compute and memory capacity of the nodes in the cache cluster.
      * <p>Valid values for Memcached: <p> <code>cache.t1.micro</code> |
@@ -518,8 +513,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheNodeType = cacheNodeType;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache engine to be used for this cache cluster.
      * <p>Valid values for this parameter are: <p><code>memcached</code> |
@@ -564,8 +558,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.engine = engine;
         return this;
     }
-    
-    
+
     /**
      * The version number of the cache engine to be used for this cluster. To
      * view the supported cache engine versions, use the
@@ -610,8 +603,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache parameter group to associate with this cache
      * cluster. If this argument is omitted, the default cache parameter
@@ -656,8 +648,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache subnet group to be used for the cache cluster.
      * <p>Use this parameter only when you are creating a cluster in an
@@ -702,8 +693,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
     }
-    
-    
+
     /**
      * A list of cache security group names to associate with this cache
      * cluster. <p>Use this parameter only when you are creating a cluster
@@ -714,7 +704,6 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
      *         outside of an Amazon Virtual Private Cloud (VPC).
      */
     public java.util.List<String> getCacheSecurityGroupNames() {
-        
         if (cacheSecurityGroupNames == null) {
               cacheSecurityGroupNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               cacheSecurityGroupNames.setAutoConstruct(true);
@@ -788,7 +777,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * One or more VPC security groups associated with the cache cluster.
      * <p>Use this parameter only when you are creating a cluster in an
@@ -799,7 +788,6 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
      *         Amazon Virtual Private Cloud (VPC).
      */
     public java.util.List<String> getSecurityGroupIds() {
-        
         if (securityGroupIds == null) {
               securityGroupIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               securityGroupIds.setAutoConstruct(true);
@@ -873,7 +861,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * A single-element string list containing an Amazon Resource Name (ARN)
      * that uniquely identifies a Redis RDB snapshot file stored in Amazon
@@ -894,7 +882,6 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
      *         <code>redis</code>.
      */
     public java.util.List<String> getSnapshotArns() {
-        
         if (snapshotArns == null) {
               snapshotArns = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               snapshotArns.setAutoConstruct(true);
@@ -998,7 +985,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * The EC2 Availability Zone in which the cache cluster will be created.
      * <p>All cache nodes belonging to a cache cluster are placed in the
@@ -1049,8 +1036,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.preferredAvailabilityZone = preferredAvailabilityZone;
         return this;
     }
-    
-    
+
     /**
      * The weekly time range (in UTC) during which system maintenance can
      * occur. <p>Example: <code>sun:05:00-sun:09:00</code>
@@ -1089,8 +1075,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
     }
-    
-    
+
     /**
      * The port number on which each of the cache nodes will accept
      * connections.
@@ -1129,8 +1114,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.port = port;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the Amazon Simple Notification
      * Service (SNS) topic to which notifications will be sent. <note> The
@@ -1181,8 +1165,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.notificationTopicArn = notificationTopicArn;
         return this;
     }
-    
-    
+
     /**
      * Determines whether minor engine upgrades will be applied automatically
      * to the cache cluster during the maintenance window. A value of
@@ -1233,8 +1216,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
     }
-    
-    
+
     /**
      * Determines whether minor engine upgrades will be applied automatically
      * to the cache cluster during the maintenance window. A value of
@@ -1249,7 +1231,7 @@ public class CreateCacheClusterRequest extends AmazonWebServiceRequest implement
     public Boolean getAutoMinorVersionUpgrade() {
         return autoMinorVersionUpgrade;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

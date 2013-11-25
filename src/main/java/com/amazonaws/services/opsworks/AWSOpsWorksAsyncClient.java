@@ -55,7 +55,7 @@ import com.amazonaws.services.opsworks.model.*;
  * </p>
  * <p>
  * When you call CreateStack, CloneStack, or UpdateStack we recommend you use the <code>ConfigurationManager</code> parameter to specify the Chef
- * version, 0.9 or 11.4. The default value is currently 0.9. However, we expect to change the default value to 11.4 in late August 2013.
+ * version, 0.9 or 11.4. The default value is currently 0.9. However, we expect to change the default value to 11.4 in September 2013.
  * </p>
  */
 public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
@@ -81,7 +81,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * All service calls made using this new client object are blocking, and will not
      * return until the service call completes.
      *
-     * @see DefaultAWSCredentialsProvider
+     * @see DefaultAWSCredentialsProviderChain
      */
     public AWSOpsWorksAsyncClient() {
         this(new DefaultAWSCredentialsProviderChain());
@@ -105,7 +105,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *                       client connects to AWSOpsWorks
      *                       (ex: proxy settings, retry counts, etc.).
      *
-     * @see DefaultAWSCredentialsProvider
+     * @see DefaultAWSCredentialsProviderChain
      */
     public AWSOpsWorksAsyncClient(ClientConfiguration clientConfiguration) {
         this(new DefaultAWSCredentialsProviderChain(), clientConfiguration, Executors.newCachedThreadPool());
@@ -291,14 +291,18 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
             
     /**
      * <p>
-     * Updates a specified user profile.
+     * Deregisters an Amazon EBS volume. The volume can then be registered by
+     * another stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param updateUserProfileRequest Container for the necessary parameters
-     *           to execute the UpdateUserProfile operation on AWSOpsWorks.
+     * @param deregisterVolumeRequest Container for the necessary parameters
+     *           to execute the DeregisterVolume operation on AWSOpsWorks.
      * 
      * @return A Java Future object containing the response from the
-     *         UpdateUserProfile service method, as returned by AWSOpsWorks.
+     *         DeregisterVolume service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -308,11 +312,11 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Void> updateUserProfileAsync(final UpdateUserProfileRequest updateUserProfileRequest) 
+    public Future<Void> deregisterVolumeAsync(final DeregisterVolumeRequest deregisterVolumeRequest) 
             throws AmazonServiceException, AmazonClientException {
         return executorService.submit(new Callable<Void>() {
             public Void call() throws Exception {
-                updateUserProfile(updateUserProfileRequest);
+                deregisterVolume(deregisterVolumeRequest);
                 return null;
 		    }
 		});
@@ -321,18 +325,22 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Updates a specified user profile.
+     * Deregisters an Amazon EBS volume. The volume can then be registered by
+     * another stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param updateUserProfileRequest Container for the necessary parameters
-     *           to execute the UpdateUserProfile operation on AWSOpsWorks.
+     * @param deregisterVolumeRequest Container for the necessary parameters
+     *           to execute the DeregisterVolume operation on AWSOpsWorks.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         UpdateUserProfile service method, as returned by AWSOpsWorks.
+     *         DeregisterVolume service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -342,169 +350,19 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Void> updateUserProfileAsync(
-            final UpdateUserProfileRequest updateUserProfileRequest,
-            final AsyncHandler<UpdateUserProfileRequest, Void> asyncHandler)
+    public Future<Void> deregisterVolumeAsync(
+            final DeregisterVolumeRequest deregisterVolumeRequest,
+            final AsyncHandler<DeregisterVolumeRequest, Void> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
         return executorService.submit(new Callable<Void>() {
             public Void call() throws Exception {
             	try {
-            		updateUserProfile(updateUserProfileRequest);
+            		deregisterVolume(deregisterVolumeRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(updateUserProfileRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Creates a new stack. For more information, see <a
-     * ocs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html">
-     * Create a New Stack </a> .
-     * </p>
-     *
-     * @param createStackRequest Container for the necessary parameters to
-     *           execute the CreateStack operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         CreateStack service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<CreateStackResult> createStackAsync(final CreateStackRequest createStackRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateStackResult>() {
-            public CreateStackResult call() throws Exception {
-                return createStack(createStackRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Creates a new stack. For more information, see <a
-     * ocs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html">
-     * Create a New Stack </a> .
-     * </p>
-     *
-     * @param createStackRequest Container for the necessary parameters to
-     *           execute the CreateStack operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         CreateStack service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<CreateStackResult> createStackAsync(
-            final CreateStackRequest createStackRequest,
-            final AsyncHandler<CreateStackRequest, CreateStackResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateStackResult>() {
-            public CreateStackResult call() throws Exception {
-            	CreateStackResult result;
-                try {
-            		result = createStack(createStackRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(createStackRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Reboots a specified instance. For more information, see <a
-     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
-     * Starting, Stopping, and Rebooting Instances </a> .
-     * </p>
-     *
-     * @param rebootInstanceRequest Container for the necessary parameters to
-     *           execute the RebootInstance operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         RebootInstance service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> rebootInstanceAsync(final RebootInstanceRequest rebootInstanceRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                rebootInstance(rebootInstanceRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Reboots a specified instance. For more information, see <a
-     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
-     * Starting, Stopping, and Rebooting Instances </a> .
-     * </p>
-     *
-     * @param rebootInstanceRequest Container for the necessary parameters to
-     *           execute the RebootInstance operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         RebootInstance service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> rebootInstanceAsync(
-            final RebootInstanceRequest rebootInstanceRequest,
-            final AsyncHandler<RebootInstanceRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		rebootInstance(rebootInstanceRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(rebootInstanceRequest, null);
+            	asyncHandler.onSuccess(deregisterVolumeRequest, null);
                	return null;
 		    }
 		});
@@ -522,6 +380,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         SetPermission service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -558,6 +417,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         SetPermission service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -587,8 +447,10 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Requests a description of a set of instances associated with a
-     * specified ID or IDs.
+     * Requests a description of a set of instances.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeInstancesRequest Container for the necessary parameters
@@ -596,6 +458,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeInstances service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -617,8 +480,10 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Requests a description of a set of instances associated with a
-     * specified ID or IDs.
+     * Requests a description of a set of instances.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeInstancesRequest Container for the necessary parameters
@@ -630,6 +495,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeInstances service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -669,6 +535,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribePermissions service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -703,6 +570,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribePermissions service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -744,6 +612,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteInstance service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -781,6 +650,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteInstance service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -820,6 +690,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         CloneStack service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -855,6 +726,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         CloneStack service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -885,16 +757,16 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Creates an instance in a specified stack. For more information, see <a
-     * s.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html">
-     * Adding an Instance to a Layer </a> .
+     * Detaches a specified Elastic Load Balancing instance from its layer.
      * </p>
      *
-     * @param createInstanceRequest Container for the necessary parameters to
-     *           execute the CreateInstance operation on AWSOpsWorks.
+     * @param detachElasticLoadBalancerRequest Container for the necessary
+     *           parameters to execute the DetachElasticLoadBalancer operation on
+     *           AWSOpsWorks.
      * 
      * @return A Java Future object containing the response from the
-     *         CreateInstance service method, as returned by AWSOpsWorks.
+     *         DetachElasticLoadBalancer service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -904,11 +776,12 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<CreateInstanceResult> createInstanceAsync(final CreateInstanceRequest createInstanceRequest) 
+    public Future<Void> detachElasticLoadBalancerAsync(final DetachElasticLoadBalancerRequest detachElasticLoadBalancerRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateInstanceResult>() {
-            public CreateInstanceResult call() throws Exception {
-                return createInstance(createInstanceRequest);
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                detachElasticLoadBalancer(detachElasticLoadBalancerRequest);
+                return null;
 		    }
 		});
     }
@@ -916,20 +789,20 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Creates an instance in a specified stack. For more information, see <a
-     * s.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html">
-     * Adding an Instance to a Layer </a> .
+     * Detaches a specified Elastic Load Balancing instance from its layer.
      * </p>
      *
-     * @param createInstanceRequest Container for the necessary parameters to
-     *           execute the CreateInstance operation on AWSOpsWorks.
+     * @param detachElasticLoadBalancerRequest Container for the necessary
+     *           parameters to execute the DetachElasticLoadBalancer operation on
+     *           AWSOpsWorks.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         CreateInstance service method, as returned by AWSOpsWorks.
+     *         DetachElasticLoadBalancer service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -939,21 +812,20 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<CreateInstanceResult> createInstanceAsync(
-            final CreateInstanceRequest createInstanceRequest,
-            final AsyncHandler<CreateInstanceRequest, CreateInstanceResult> asyncHandler)
+    public Future<Void> detachElasticLoadBalancerAsync(
+            final DetachElasticLoadBalancerRequest detachElasticLoadBalancerRequest,
+            final AsyncHandler<DetachElasticLoadBalancerRequest, Void> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateInstanceResult>() {
-            public CreateInstanceResult call() throws Exception {
-            	CreateInstanceResult result;
-                try {
-            		result = createInstance(createInstanceRequest);
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		detachElasticLoadBalancer(detachElasticLoadBalancerRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(createInstanceRequest, result);
-               	return result;
+            	asyncHandler.onSuccess(detachElasticLoadBalancerRequest, null);
+               	return null;
 		    }
 		});
     }
@@ -973,6 +845,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         StopInstance service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1012,6 +885,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         StopInstance service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1041,79 +915,6 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Detaches a specified Elastic Load Balancing instance from it's layer.
-     * </p>
-     *
-     * @param detachElasticLoadBalancerRequest Container for the necessary
-     *           parameters to execute the DetachElasticLoadBalancer operation on
-     *           AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DetachElasticLoadBalancer service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> detachElasticLoadBalancerAsync(final DetachElasticLoadBalancerRequest detachElasticLoadBalancerRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                detachElasticLoadBalancer(detachElasticLoadBalancerRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Detaches a specified Elastic Load Balancing instance from it's layer.
-     * </p>
-     *
-     * @param detachElasticLoadBalancerRequest Container for the necessary
-     *           parameters to execute the DetachElasticLoadBalancer operation on
-     *           AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DetachElasticLoadBalancer service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> detachElasticLoadBalancerAsync(
-            final DetachElasticLoadBalancerRequest detachElasticLoadBalancerRequest,
-            final AsyncHandler<DetachElasticLoadBalancerRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		detachElasticLoadBalancer(detachElasticLoadBalancerRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(detachElasticLoadBalancerRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Updates a specified app.
      * </p>
      *
@@ -1122,6 +923,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         UpdateApp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1156,6 +958,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         UpdateApp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1185,161 +988,10 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Deletes a specified app.
-     * </p>
-     *
-     * @param deleteAppRequest Container for the necessary parameters to
-     *           execute the DeleteApp operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DeleteApp service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> deleteAppAsync(final DeleteAppRequest deleteAppRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                deleteApp(deleteAppRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Deletes a specified app.
-     * </p>
-     *
-     * @param deleteAppRequest Container for the necessary parameters to
-     *           execute the DeleteApp operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DeleteApp service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> deleteAppAsync(
-            final DeleteAppRequest deleteAppRequest,
-            final AsyncHandler<DeleteAppRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		deleteApp(deleteAppRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(deleteAppRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Attaches an Elastic Load Balancing instance to a specified layer.
-     * </p>
-     * <p>
-     * <b>NOTE:</b>You must create the Elastic Load Balancing instance
-     * separately, by using the Elastic Load Balancing console, API, or CLI.
-     * For more information, see Elastic Load Balancing Developer Guide.
-     * </p>
-     *
-     * @param attachElasticLoadBalancerRequest Container for the necessary
-     *           parameters to execute the AttachElasticLoadBalancer operation on
-     *           AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         AttachElasticLoadBalancer service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> attachElasticLoadBalancerAsync(final AttachElasticLoadBalancerRequest attachElasticLoadBalancerRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                attachElasticLoadBalancer(attachElasticLoadBalancerRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Attaches an Elastic Load Balancing instance to a specified layer.
-     * </p>
-     * <p>
-     * <b>NOTE:</b>You must create the Elastic Load Balancing instance
-     * separately, by using the Elastic Load Balancing console, API, or CLI.
-     * For more information, see Elastic Load Balancing Developer Guide.
-     * </p>
-     *
-     * @param attachElasticLoadBalancerRequest Container for the necessary
-     *           parameters to execute the AttachElasticLoadBalancer operation on
-     *           AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         AttachElasticLoadBalancer service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> attachElasticLoadBalancerAsync(
-            final AttachElasticLoadBalancerRequest attachElasticLoadBalancerRequest,
-            final AsyncHandler<AttachElasticLoadBalancerRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		attachElasticLoadBalancer(attachElasticLoadBalancerRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(attachElasticLoadBalancerRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Describes the results of specified commands.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeCommandsRequest Container for the necessary parameters
@@ -1347,6 +999,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeCommands service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1370,6 +1023,9 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * <p>
      * Describes the results of specified commands.
      * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
      *
      * @param describeCommandsRequest Container for the necessary parameters
      *           to execute the DescribeCommands operation on AWSOpsWorks.
@@ -1380,6 +1036,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeCommands service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1410,14 +1067,19 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Updates a specified stack.
+     * Associates one of the stack's registered Elastic IP addresses with a
+     * specified instance. The address must first be registered with the
+     * stack by calling RegisterElasticIp. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param updateStackRequest Container for the necessary parameters to
-     *           execute the UpdateStack operation on AWSOpsWorks.
+     * @param associateElasticIpRequest Container for the necessary
+     *           parameters to execute the AssociateElasticIp operation on AWSOpsWorks.
      * 
      * @return A Java Future object containing the response from the
-     *         UpdateStack service method, as returned by AWSOpsWorks.
+     *         AssociateElasticIp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1427,11 +1089,11 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Void> updateStackAsync(final UpdateStackRequest updateStackRequest) 
+    public Future<Void> associateElasticIpAsync(final AssociateElasticIpRequest associateElasticIpRequest) 
             throws AmazonServiceException, AmazonClientException {
         return executorService.submit(new Callable<Void>() {
             public Void call() throws Exception {
-                updateStack(updateStackRequest);
+                associateElasticIp(associateElasticIpRequest);
                 return null;
 		    }
 		});
@@ -1440,18 +1102,23 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Updates a specified stack.
+     * Associates one of the stack's registered Elastic IP addresses with a
+     * specified instance. The address must first be registered with the
+     * stack by calling RegisterElasticIp. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param updateStackRequest Container for the necessary parameters to
-     *           execute the UpdateStack operation on AWSOpsWorks.
+     * @param associateElasticIpRequest Container for the necessary
+     *           parameters to execute the AssociateElasticIp operation on AWSOpsWorks.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         UpdateStack service method, as returned by AWSOpsWorks.
+     *         AssociateElasticIp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1461,19 +1128,19 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Void> updateStackAsync(
-            final UpdateStackRequest updateStackRequest,
-            final AsyncHandler<UpdateStackRequest, Void> asyncHandler)
+    public Future<Void> associateElasticIpAsync(
+            final AssociateElasticIpRequest associateElasticIpRequest,
+            final AsyncHandler<AssociateElasticIpRequest, Void> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
         return executorService.submit(new Callable<Void>() {
             public Void call() throws Exception {
             	try {
-            		updateStack(updateStackRequest);
+            		associateElasticIp(associateElasticIpRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(updateStackRequest, null);
+            	asyncHandler.onSuccess(associateElasticIpRequest, null);
                	return null;
 		    }
 		});
@@ -1481,14 +1148,18 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Creates a new user profile.
+     * Unassigns an assigned Amazon EBS volume. The volume remains registered
+     * with the stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param createUserProfileRequest Container for the necessary parameters
-     *           to execute the CreateUserProfile operation on AWSOpsWorks.
+     * @param unassignVolumeRequest Container for the necessary parameters to
+     *           execute the UnassignVolume operation on AWSOpsWorks.
      * 
      * @return A Java Future object containing the response from the
-     *         CreateUserProfile service method, as returned by AWSOpsWorks.
+     *         UnassignVolume service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1498,11 +1169,12 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<CreateUserProfileResult> createUserProfileAsync(final CreateUserProfileRequest createUserProfileRequest) 
+    public Future<Void> unassignVolumeAsync(final UnassignVolumeRequest unassignVolumeRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateUserProfileResult>() {
-            public CreateUserProfileResult call() throws Exception {
-                return createUserProfile(createUserProfileRequest);
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                unassignVolume(unassignVolumeRequest);
+                return null;
 		    }
 		});
     }
@@ -1510,18 +1182,22 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Creates a new user profile.
+     * Unassigns an assigned Amazon EBS volume. The volume remains registered
+     * with the stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param createUserProfileRequest Container for the necessary parameters
-     *           to execute the CreateUserProfile operation on AWSOpsWorks.
+     * @param unassignVolumeRequest Container for the necessary parameters to
+     *           execute the UnassignVolume operation on AWSOpsWorks.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         CreateUserProfile service method, as returned by AWSOpsWorks.
+     *         UnassignVolume service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1531,20 +1207,98 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<CreateUserProfileResult> createUserProfileAsync(
-            final CreateUserProfileRequest createUserProfileRequest,
-            final AsyncHandler<CreateUserProfileRequest, CreateUserProfileResult> asyncHandler)
+    public Future<Void> unassignVolumeAsync(
+            final UnassignVolumeRequest unassignVolumeRequest,
+            final AsyncHandler<UnassignVolumeRequest, Void> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateUserProfileResult>() {
-            public CreateUserProfileResult call() throws Exception {
-            	CreateUserProfileResult result;
-                try {
-            		result = createUserProfile(createUserProfileRequest);
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		unassignVolume(unassignVolumeRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(createUserProfileRequest, result);
+            	asyncHandler.onSuccess(unassignVolumeRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Describe an instance's RAID arrays.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeRaidArraysRequest Container for the necessary
+     *           parameters to execute the DescribeRaidArrays operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeRaidArrays service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeRaidArraysResult> describeRaidArraysAsync(final DescribeRaidArraysRequest describeRaidArraysRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeRaidArraysResult>() {
+            public DescribeRaidArraysResult call() throws Exception {
+                return describeRaidArrays(describeRaidArraysRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Describe an instance's RAID arrays.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeRaidArraysRequest Container for the necessary
+     *           parameters to execute the DescribeRaidArrays operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeRaidArrays service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeRaidArraysResult> describeRaidArraysAsync(
+            final DescribeRaidArraysRequest describeRaidArraysRequest,
+            final AsyncHandler<DescribeRaidArraysRequest, DescribeRaidArraysResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeRaidArraysResult>() {
+            public DescribeRaidArraysResult call() throws Exception {
+            	DescribeRaidArraysResult result;
+                try {
+            		result = describeRaidArrays(describeRaidArraysRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeRaidArraysRequest, result);
                	return result;
 		    }
 		});
@@ -1562,6 +1316,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         GetHostnameSuggestion service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1597,6 +1352,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         GetHostnameSuggestion service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1627,223 +1383,6 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Describe an instance's RAID arrays.
-     * </p>
-     *
-     * @param describeRaidArraysRequest Container for the necessary
-     *           parameters to execute the DescribeRaidArrays operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeRaidArrays service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeRaidArraysResult> describeRaidArraysAsync(final DescribeRaidArraysRequest describeRaidArraysRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeRaidArraysResult>() {
-            public DescribeRaidArraysResult call() throws Exception {
-                return describeRaidArrays(describeRaidArraysRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Describe an instance's RAID arrays.
-     * </p>
-     *
-     * @param describeRaidArraysRequest Container for the necessary
-     *           parameters to execute the DescribeRaidArrays operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeRaidArrays service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeRaidArraysResult> describeRaidArraysAsync(
-            final DescribeRaidArraysRequest describeRaidArraysRequest,
-            final AsyncHandler<DescribeRaidArraysRequest, DescribeRaidArraysResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeRaidArraysResult>() {
-            public DescribeRaidArraysResult call() throws Exception {
-            	DescribeRaidArraysResult result;
-                try {
-            		result = describeRaidArrays(describeRaidArraysRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeRaidArraysRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Requests a description of one or more layers in a specified stack.
-     * </p>
-     *
-     * @param describeLayersRequest Container for the necessary parameters to
-     *           execute the DescribeLayers operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeLayers service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeLayersResult> describeLayersAsync(final DescribeLayersRequest describeLayersRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeLayersResult>() {
-            public DescribeLayersResult call() throws Exception {
-                return describeLayers(describeLayersRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Requests a description of one or more layers in a specified stack.
-     * </p>
-     *
-     * @param describeLayersRequest Container for the necessary parameters to
-     *           execute the DescribeLayers operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeLayers service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeLayersResult> describeLayersAsync(
-            final DescribeLayersRequest describeLayersRequest,
-            final AsyncHandler<DescribeLayersRequest, DescribeLayersResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeLayersResult>() {
-            public DescribeLayersResult call() throws Exception {
-            	DescribeLayersResult result;
-                try {
-            		result = describeLayers(describeLayersRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeLayersRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Describes load-based auto scaling configurations for specified layers.
-     * </p>
-     *
-     * @param describeLoadBasedAutoScalingRequest Container for the necessary
-     *           parameters to execute the DescribeLoadBasedAutoScaling operation on
-     *           AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeLoadBasedAutoScaling service method, as returned by
-     *         AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeLoadBasedAutoScalingResult> describeLoadBasedAutoScalingAsync(final DescribeLoadBasedAutoScalingRequest describeLoadBasedAutoScalingRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeLoadBasedAutoScalingResult>() {
-            public DescribeLoadBasedAutoScalingResult call() throws Exception {
-                return describeLoadBasedAutoScaling(describeLoadBasedAutoScalingRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Describes load-based auto scaling configurations for specified layers.
-     * </p>
-     *
-     * @param describeLoadBasedAutoScalingRequest Container for the necessary
-     *           parameters to execute the DescribeLoadBasedAutoScaling operation on
-     *           AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeLoadBasedAutoScaling service method, as returned by
-     *         AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeLoadBasedAutoScalingResult> describeLoadBasedAutoScalingAsync(
-            final DescribeLoadBasedAutoScalingRequest describeLoadBasedAutoScalingRequest,
-            final AsyncHandler<DescribeLoadBasedAutoScalingRequest, DescribeLoadBasedAutoScalingResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeLoadBasedAutoScalingResult>() {
-            public DescribeLoadBasedAutoScalingResult call() throws Exception {
-            	DescribeLoadBasedAutoScalingResult result;
-                try {
-            		result = describeLoadBasedAutoScaling(describeLoadBasedAutoScalingRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeLoadBasedAutoScalingRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Specify the load-based auto scaling configuration for a specified
      * layer. For more information, see <a
      * azon.com/opsworks/latest/userguide/workinginstances-autoscaling.html">
@@ -1862,6 +1401,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         SetLoadBasedAutoScaling service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1906,6 +1446,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         SetLoadBasedAutoScaling service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1935,7 +1476,1734 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
+     * Describes an instance's Amazon EBS volumes.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeVolumesRequest Container for the necessary parameters
+     *           to execute the DescribeVolumes operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeVolumes service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeVolumesResult> describeVolumesAsync(final DescribeVolumesRequest describeVolumesRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeVolumesResult>() {
+            public DescribeVolumesResult call() throws Exception {
+                return describeVolumes(describeVolumesRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Describes an instance's Amazon EBS volumes.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeVolumesRequest Container for the necessary parameters
+     *           to execute the DescribeVolumes operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeVolumes service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeVolumesResult> describeVolumesAsync(
+            final DescribeVolumesRequest describeVolumesRequest,
+            final AsyncHandler<DescribeVolumesRequest, DescribeVolumesResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeVolumesResult>() {
+            public DescribeVolumesResult call() throws Exception {
+            	DescribeVolumesResult result;
+                try {
+            		result = describeVolumes(describeVolumesRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeVolumesRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Assigns one of the stack's registered Amazon EBS volumes to a
+     * specified instance. The volume must first be registered with the stack
+     * by calling RegisterVolume. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param assignVolumeRequest Container for the necessary parameters to
+     *           execute the AssignVolume operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         AssignVolume service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> assignVolumeAsync(final AssignVolumeRequest assignVolumeRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                assignVolume(assignVolumeRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Assigns one of the stack's registered Amazon EBS volumes to a
+     * specified instance. The volume must first be registered with the stack
+     * by calling RegisterVolume. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param assignVolumeRequest Container for the necessary parameters to
+     *           execute the AssignVolume operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         AssignVolume service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> assignVolumeAsync(
+            final AssignVolumeRequest assignVolumeRequest,
+            final AsyncHandler<AssignVolumeRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		assignVolume(assignVolumeRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(assignVolumeRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Describes AWS OpsWorks service errors.
+     * </p>
+     *
+     * @param describeServiceErrorsRequest Container for the necessary
+     *           parameters to execute the DescribeServiceErrors operation on
+     *           AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeServiceErrors service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeServiceErrorsResult> describeServiceErrorsAsync(final DescribeServiceErrorsRequest describeServiceErrorsRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeServiceErrorsResult>() {
+            public DescribeServiceErrorsResult call() throws Exception {
+                return describeServiceErrors(describeServiceErrorsRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Describes AWS OpsWorks service errors.
+     * </p>
+     *
+     * @param describeServiceErrorsRequest Container for the necessary
+     *           parameters to execute the DescribeServiceErrors operation on
+     *           AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeServiceErrors service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeServiceErrorsResult> describeServiceErrorsAsync(
+            final DescribeServiceErrorsRequest describeServiceErrorsRequest,
+            final AsyncHandler<DescribeServiceErrorsRequest, DescribeServiceErrorsResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeServiceErrorsResult>() {
+            public DescribeServiceErrorsResult call() throws Exception {
+            	DescribeServiceErrorsResult result;
+                try {
+            		result = describeServiceErrors(describeServiceErrorsRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeServiceErrorsRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Updates a specified layer.
+     * </p>
+     *
+     * @param updateLayerRequest Container for the necessary parameters to
+     *           execute the UpdateLayer operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateLayer service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateLayerAsync(final UpdateLayerRequest updateLayerRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                updateLayer(updateLayerRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Updates a specified layer.
+     * </p>
+     *
+     * @param updateLayerRequest Container for the necessary parameters to
+     *           execute the UpdateLayer operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateLayer service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateLayerAsync(
+            final UpdateLayerRequest updateLayerRequest,
+            final AsyncHandler<UpdateLayerRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		updateLayer(updateLayerRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(updateLayerRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Updates a registered Elastic IP address's name. For more information,
+     * see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param updateElasticIpRequest Container for the necessary parameters
+     *           to execute the UpdateElasticIp operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateElasticIp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateElasticIpAsync(final UpdateElasticIpRequest updateElasticIpRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                updateElasticIp(updateElasticIpRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Updates a registered Elastic IP address's name. For more information,
+     * see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param updateElasticIpRequest Container for the necessary parameters
+     *           to execute the UpdateElasticIp operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateElasticIp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateElasticIpAsync(
+            final UpdateElasticIpRequest updateElasticIpRequest,
+            final AsyncHandler<UpdateElasticIpRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		updateElasticIp(updateElasticIpRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(updateElasticIpRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Starts a specified instance. For more information, see <a
+     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
+     * Starting, Stopping, and Rebooting Instances </a> .
+     * </p>
+     *
+     * @param startInstanceRequest Container for the necessary parameters to
+     *           execute the StartInstance operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         StartInstance service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> startInstanceAsync(final StartInstanceRequest startInstanceRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                startInstance(startInstanceRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Starts a specified instance. For more information, see <a
+     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
+     * Starting, Stopping, and Rebooting Instances </a> .
+     * </p>
+     *
+     * @param startInstanceRequest Container for the necessary parameters to
+     *           execute the StartInstance operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         StartInstance service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> startInstanceAsync(
+            final StartInstanceRequest startInstanceRequest,
+            final AsyncHandler<StartInstanceRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		startInstance(startInstanceRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(startInstanceRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates a layer. For more information, see <a
+     * mazon.com/opsworks/latest/userguide/workinglayers-basics-create.html">
+     * How to Create a Layer </a> .
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You should use CreateLayer for noncustom layer types such
+     * as PHP App Server only if the stack does not have an existing layer of
+     * that type. A stack can have at most one instance of each noncustom
+     * layer; if you attempt to create a second instance, CreateLayer fails.
+     * A stack can have an arbitrary number of custom layers, so you can call
+     * CreateLayer as many times as you like for that layer type.
+     * </p>
+     *
+     * @param createLayerRequest Container for the necessary parameters to
+     *           execute the CreateLayer operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateLayer service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateLayerResult> createLayerAsync(final CreateLayerRequest createLayerRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateLayerResult>() {
+            public CreateLayerResult call() throws Exception {
+                return createLayer(createLayerRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates a layer. For more information, see <a
+     * mazon.com/opsworks/latest/userguide/workinglayers-basics-create.html">
+     * How to Create a Layer </a> .
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You should use CreateLayer for noncustom layer types such
+     * as PHP App Server only if the stack does not have an existing layer of
+     * that type. A stack can have at most one instance of each noncustom
+     * layer; if you attempt to create a second instance, CreateLayer fails.
+     * A stack can have an arbitrary number of custom layers, so you can call
+     * CreateLayer as many times as you like for that layer type.
+     * </p>
+     *
+     * @param createLayerRequest Container for the necessary parameters to
+     *           execute the CreateLayer operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateLayer service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateLayerResult> createLayerAsync(
+            final CreateLayerRequest createLayerRequest,
+            final AsyncHandler<CreateLayerRequest, CreateLayerResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateLayerResult>() {
+            public CreateLayerResult call() throws Exception {
+            	CreateLayerResult result;
+                try {
+            		result = createLayer(createLayerRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createLayerRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Disassociates an Elastic IP address from its instance. The address
+     * remains registered with the stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param disassociateElasticIpRequest Container for the necessary
+     *           parameters to execute the DisassociateElasticIp operation on
+     *           AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DisassociateElasticIp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> disassociateElasticIpAsync(final DisassociateElasticIpRequest disassociateElasticIpRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                disassociateElasticIp(disassociateElasticIpRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Disassociates an Elastic IP address from its instance. The address
+     * remains registered with the stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param disassociateElasticIpRequest Container for the necessary
+     *           parameters to execute the DisassociateElasticIp operation on
+     *           AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DisassociateElasticIp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> disassociateElasticIpAsync(
+            final DisassociateElasticIpRequest disassociateElasticIpRequest,
+            final AsyncHandler<DisassociateElasticIpRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		disassociateElasticIp(disassociateElasticIpRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(disassociateElasticIpRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Deletes a specified stack. You must first delete all instances,
+     * layers, and apps. For more information, see <a
+     * aws.amazon.com/opsworks/latest/userguide/workingstacks-shutting.html">
+     * Shut Down a Stack </a> .
+     * </p>
+     *
+     * @param deleteStackRequest Container for the necessary parameters to
+     *           execute the DeleteStack operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteStackAsync(final DeleteStackRequest deleteStackRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deleteStack(deleteStackRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes a specified stack. You must first delete all instances,
+     * layers, and apps. For more information, see <a
+     * aws.amazon.com/opsworks/latest/userguide/workingstacks-shutting.html">
+     * Shut Down a Stack </a> .
+     * </p>
+     *
+     * @param deleteStackRequest Container for the necessary parameters to
+     *           execute the DeleteStack operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteStackAsync(
+            final DeleteStackRequest deleteStackRequest,
+            final AsyncHandler<DeleteStackRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deleteStack(deleteStackRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteStackRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Starts stack's instances.
+     * </p>
+     *
+     * @param startStackRequest Container for the necessary parameters to
+     *           execute the StartStack operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         StartStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> startStackAsync(final StartStackRequest startStackRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                startStack(startStackRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Starts stack's instances.
+     * </p>
+     *
+     * @param startStackRequest Container for the necessary parameters to
+     *           execute the StartStack operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         StartStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> startStackAsync(
+            final StartStackRequest startStackRequest,
+            final AsyncHandler<StartStackRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		startStack(startStackRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(startStackRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Registers an Amazon EBS volume with a specified stack. A volume can be
+     * registered with only one stack at a time. If the volume is already
+     * registered, you must first deregister it by calling DeregisterVolume.
+     * For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param registerVolumeRequest Container for the necessary parameters to
+     *           execute the RegisterVolume operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RegisterVolume service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<RegisterVolumeResult> registerVolumeAsync(final RegisterVolumeRequest registerVolumeRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<RegisterVolumeResult>() {
+            public RegisterVolumeResult call() throws Exception {
+                return registerVolume(registerVolumeRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Registers an Amazon EBS volume with a specified stack. A volume can be
+     * registered with only one stack at a time. If the volume is already
+     * registered, you must first deregister it by calling DeregisterVolume.
+     * For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param registerVolumeRequest Container for the necessary parameters to
+     *           execute the RegisterVolume operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RegisterVolume service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<RegisterVolumeResult> registerVolumeAsync(
+            final RegisterVolumeRequest registerVolumeRequest,
+            final AsyncHandler<RegisterVolumeRequest, RegisterVolumeResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<RegisterVolumeResult>() {
+            public RegisterVolumeResult call() throws Exception {
+            	RegisterVolumeResult result;
+                try {
+            		result = registerVolume(registerVolumeRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(registerVolumeRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Updates a specified user profile.
+     * </p>
+     *
+     * @param updateUserProfileRequest Container for the necessary parameters
+     *           to execute the UpdateUserProfile operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateUserProfile service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateUserProfileAsync(final UpdateUserProfileRequest updateUserProfileRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                updateUserProfile(updateUserProfileRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Updates a specified user profile.
+     * </p>
+     *
+     * @param updateUserProfileRequest Container for the necessary parameters
+     *           to execute the UpdateUserProfile operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateUserProfile service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateUserProfileAsync(
+            final UpdateUserProfileRequest updateUserProfileRequest,
+            final AsyncHandler<UpdateUserProfileRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		updateUserProfile(updateUserProfileRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(updateUserProfileRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates a new stack. For more information, see <a
+     * ocs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html">
+     * Create a New Stack </a> .
+     * </p>
+     *
+     * @param createStackRequest Container for the necessary parameters to
+     *           execute the CreateStack operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateStackResult> createStackAsync(final CreateStackRequest createStackRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateStackResult>() {
+            public CreateStackResult call() throws Exception {
+                return createStack(createStackRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates a new stack. For more information, see <a
+     * ocs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html">
+     * Create a New Stack </a> .
+     * </p>
+     *
+     * @param createStackRequest Container for the necessary parameters to
+     *           execute the CreateStack operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateStackResult> createStackAsync(
+            final CreateStackRequest createStackRequest,
+            final AsyncHandler<CreateStackRequest, CreateStackResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateStackResult>() {
+            public CreateStackResult call() throws Exception {
+            	CreateStackResult result;
+                try {
+            		result = createStack(createStackRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createStackRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Reboots a specified instance. For more information, see <a
+     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
+     * Starting, Stopping, and Rebooting Instances </a> .
+     * </p>
+     *
+     * @param rebootInstanceRequest Container for the necessary parameters to
+     *           execute the RebootInstance operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RebootInstance service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> rebootInstanceAsync(final RebootInstanceRequest rebootInstanceRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                rebootInstance(rebootInstanceRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Reboots a specified instance. For more information, see <a
+     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
+     * Starting, Stopping, and Rebooting Instances </a> .
+     * </p>
+     *
+     * @param rebootInstanceRequest Container for the necessary parameters to
+     *           execute the RebootInstance operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         RebootInstance service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> rebootInstanceAsync(
+            final RebootInstanceRequest rebootInstanceRequest,
+            final AsyncHandler<RebootInstanceRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		rebootInstance(rebootInstanceRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(rebootInstanceRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates an instance in a specified stack. For more information, see <a
+     * s.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html">
+     * Adding an Instance to a Layer </a> .
+     * </p>
+     *
+     * @param createInstanceRequest Container for the necessary parameters to
+     *           execute the CreateInstance operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateInstance service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateInstanceResult> createInstanceAsync(final CreateInstanceRequest createInstanceRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateInstanceResult>() {
+            public CreateInstanceResult call() throws Exception {
+                return createInstance(createInstanceRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates an instance in a specified stack. For more information, see <a
+     * s.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html">
+     * Adding an Instance to a Layer </a> .
+     * </p>
+     *
+     * @param createInstanceRequest Container for the necessary parameters to
+     *           execute the CreateInstance operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateInstance service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateInstanceResult> createInstanceAsync(
+            final CreateInstanceRequest createInstanceRequest,
+            final AsyncHandler<CreateInstanceRequest, CreateInstanceResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateInstanceResult>() {
+            public CreateInstanceResult call() throws Exception {
+            	CreateInstanceResult result;
+                try {
+            		result = createInstance(createInstanceRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createInstanceRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Deletes a specified app.
+     * </p>
+     *
+     * @param deleteAppRequest Container for the necessary parameters to
+     *           execute the DeleteApp operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteApp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteAppAsync(final DeleteAppRequest deleteAppRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deleteApp(deleteAppRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deletes a specified app.
+     * </p>
+     *
+     * @param deleteAppRequest Container for the necessary parameters to
+     *           execute the DeleteApp operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeleteApp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deleteAppAsync(
+            final DeleteAppRequest deleteAppRequest,
+            final AsyncHandler<DeleteAppRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deleteApp(deleteAppRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deleteAppRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Deregisters a specified Elastic IP address. The address can then be
+     * registered by another stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param deregisterElasticIpRequest Container for the necessary
+     *           parameters to execute the DeregisterElasticIp operation on
+     *           AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeregisterElasticIp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deregisterElasticIpAsync(final DeregisterElasticIpRequest deregisterElasticIpRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                deregisterElasticIp(deregisterElasticIpRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Deregisters a specified Elastic IP address. The address can then be
+     * registered by another stack. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param deregisterElasticIpRequest Container for the necessary
+     *           parameters to execute the DeregisterElasticIp operation on
+     *           AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DeregisterElasticIp service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> deregisterElasticIpAsync(
+            final DeregisterElasticIpRequest deregisterElasticIpRequest,
+            final AsyncHandler<DeregisterElasticIpRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		deregisterElasticIp(deregisterElasticIpRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(deregisterElasticIpRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Attaches an Elastic Load Balancing load balancer to a specified layer.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must create the Elastic Load Balancing instance
+     * separately, by using the Elastic Load Balancing console, API, or CLI.
+     * For more information, see Elastic Load Balancing Developer Guide.
+     * </p>
+     *
+     * @param attachElasticLoadBalancerRequest Container for the necessary
+     *           parameters to execute the AttachElasticLoadBalancer operation on
+     *           AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         AttachElasticLoadBalancer service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> attachElasticLoadBalancerAsync(final AttachElasticLoadBalancerRequest attachElasticLoadBalancerRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                attachElasticLoadBalancer(attachElasticLoadBalancerRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Attaches an Elastic Load Balancing load balancer to a specified layer.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must create the Elastic Load Balancing instance
+     * separately, by using the Elastic Load Balancing console, API, or CLI.
+     * For more information, see Elastic Load Balancing Developer Guide.
+     * </p>
+     *
+     * @param attachElasticLoadBalancerRequest Container for the necessary
+     *           parameters to execute the AttachElasticLoadBalancer operation on
+     *           AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         AttachElasticLoadBalancer service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> attachElasticLoadBalancerAsync(
+            final AttachElasticLoadBalancerRequest attachElasticLoadBalancerRequest,
+            final AsyncHandler<AttachElasticLoadBalancerRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		attachElasticLoadBalancer(attachElasticLoadBalancerRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(attachElasticLoadBalancerRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Updates a specified stack.
+     * </p>
+     *
+     * @param updateStackRequest Container for the necessary parameters to
+     *           execute the UpdateStack operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateStackAsync(final UpdateStackRequest updateStackRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                updateStack(updateStackRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Updates a specified stack.
+     * </p>
+     *
+     * @param updateStackRequest Container for the necessary parameters to
+     *           execute the UpdateStack operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateStack service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateStackAsync(
+            final UpdateStackRequest updateStackRequest,
+            final AsyncHandler<UpdateStackRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		updateStack(updateStackRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(updateStackRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Creates a new user profile.
+     * </p>
+     *
+     * @param createUserProfileRequest Container for the necessary parameters
+     *           to execute the CreateUserProfile operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateUserProfile service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateUserProfileResult> createUserProfileAsync(final CreateUserProfileRequest createUserProfileRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateUserProfileResult>() {
+            public CreateUserProfileResult call() throws Exception {
+                return createUserProfile(createUserProfileRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Creates a new user profile.
+     * </p>
+     *
+     * @param createUserProfileRequest Container for the necessary parameters
+     *           to execute the CreateUserProfile operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         CreateUserProfile service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<CreateUserProfileResult> createUserProfileAsync(
+            final CreateUserProfileRequest createUserProfileRequest,
+            final AsyncHandler<CreateUserProfileRequest, CreateUserProfileResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<CreateUserProfileResult>() {
+            public CreateUserProfileResult call() throws Exception {
+            	CreateUserProfileResult result;
+                try {
+            		result = createUserProfile(createUserProfileRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(createUserProfileRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Requests a description of one or more layers in a specified stack.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeLayersRequest Container for the necessary parameters to
+     *           execute the DescribeLayers operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeLayers service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeLayersResult> describeLayersAsync(final DescribeLayersRequest describeLayersRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeLayersResult>() {
+            public DescribeLayersResult call() throws Exception {
+                return describeLayers(describeLayersRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Requests a description of one or more layers in a specified stack.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeLayersRequest Container for the necessary parameters to
+     *           execute the DescribeLayers operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeLayers service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeLayersResult> describeLayersAsync(
+            final DescribeLayersRequest describeLayersRequest,
+            final AsyncHandler<DescribeLayersRequest, DescribeLayersResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeLayersResult>() {
+            public DescribeLayersResult call() throws Exception {
+            	DescribeLayersResult result;
+                try {
+            		result = describeLayers(describeLayersRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeLayersRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Describes load-based auto scaling configurations for specified layers.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeLoadBasedAutoScalingRequest Container for the necessary
+     *           parameters to execute the DescribeLoadBasedAutoScaling operation on
+     *           AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeLoadBasedAutoScaling service method, as returned by
+     *         AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeLoadBasedAutoScalingResult> describeLoadBasedAutoScalingAsync(final DescribeLoadBasedAutoScalingRequest describeLoadBasedAutoScalingRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeLoadBasedAutoScalingResult>() {
+            public DescribeLoadBasedAutoScalingResult call() throws Exception {
+                return describeLoadBasedAutoScaling(describeLoadBasedAutoScalingRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Describes load-based auto scaling configurations for specified layers.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeLoadBasedAutoScalingRequest Container for the necessary
+     *           parameters to execute the DescribeLoadBasedAutoScaling operation on
+     *           AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeLoadBasedAutoScaling service method, as returned by
+     *         AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeLoadBasedAutoScalingResult> describeLoadBasedAutoScalingAsync(
+            final DescribeLoadBasedAutoScalingRequest describeLoadBasedAutoScalingRequest,
+            final AsyncHandler<DescribeLoadBasedAutoScalingRequest, DescribeLoadBasedAutoScalingResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeLoadBasedAutoScalingResult>() {
+            public DescribeLoadBasedAutoScalingResult call() throws Exception {
+            	DescribeLoadBasedAutoScalingResult result;
+                try {
+            		result = describeLoadBasedAutoScaling(describeLoadBasedAutoScalingRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeLoadBasedAutoScalingRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Describes a stack's Elastic Load Balancing instances.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeElasticLoadBalancersRequest Container for the necessary
@@ -1945,6 +3213,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * @return A Java Future object containing the response from the
      *         DescribeElasticLoadBalancers service method, as returned by
      *         AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -1968,6 +3237,9 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * <p>
      * Describes a stack's Elastic Load Balancing instances.
      * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
      *
      * @param describeElasticLoadBalancersRequest Container for the necessary
      *           parameters to execute the DescribeElasticLoadBalancers operation on
@@ -1980,6 +3252,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * @return A Java Future object containing the response from the
      *         DescribeElasticLoadBalancers service method, as returned by
      *         AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2021,6 +3294,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteLayer service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2058,6 +3332,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteLayer service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2099,6 +3374,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         SetTimeBasedAutoScaling service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2137,6 +3413,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         SetTimeBasedAutoScaling service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2166,77 +3443,6 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Describes an instance's Amazon EBS volumes.
-     * </p>
-     *
-     * @param describeVolumesRequest Container for the necessary parameters
-     *           to execute the DescribeVolumes operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeVolumes service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeVolumesResult> describeVolumesAsync(final DescribeVolumesRequest describeVolumesRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeVolumesResult>() {
-            public DescribeVolumesResult call() throws Exception {
-                return describeVolumes(describeVolumesRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Describes an instance's Amazon EBS volumes.
-     * </p>
-     *
-     * @param describeVolumesRequest Container for the necessary parameters
-     *           to execute the DescribeVolumes operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeVolumes service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeVolumesResult> describeVolumesAsync(
-            final DescribeVolumesRequest describeVolumesRequest,
-            final AsyncHandler<DescribeVolumesRequest, DescribeVolumesResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeVolumesResult>() {
-            public DescribeVolumesResult call() throws Exception {
-            	DescribeVolumesResult result;
-                try {
-            		result = describeVolumes(describeVolumesRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeVolumesRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Creates an app for a specified stack. For more information, see <a
      * s.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html">
      * Creating Apps </a> .
@@ -2247,6 +3453,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateApp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2282,6 +3489,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateApp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2312,83 +3520,6 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Describes time-based auto scaling configurations for specified
-     * instances.
-     * </p>
-     *
-     * @param describeTimeBasedAutoScalingRequest Container for the necessary
-     *           parameters to execute the DescribeTimeBasedAutoScaling operation on
-     *           AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeTimeBasedAutoScaling service method, as returned by
-     *         AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeTimeBasedAutoScalingResult> describeTimeBasedAutoScalingAsync(final DescribeTimeBasedAutoScalingRequest describeTimeBasedAutoScalingRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeTimeBasedAutoScalingResult>() {
-            public DescribeTimeBasedAutoScalingResult call() throws Exception {
-                return describeTimeBasedAutoScaling(describeTimeBasedAutoScalingRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Describes time-based auto scaling configurations for specified
-     * instances.
-     * </p>
-     *
-     * @param describeTimeBasedAutoScalingRequest Container for the necessary
-     *           parameters to execute the DescribeTimeBasedAutoScaling operation on
-     *           AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeTimeBasedAutoScaling service method, as returned by
-     *         AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeTimeBasedAutoScalingResult> describeTimeBasedAutoScalingAsync(
-            final DescribeTimeBasedAutoScalingRequest describeTimeBasedAutoScalingRequest,
-            final AsyncHandler<DescribeTimeBasedAutoScalingRequest, DescribeTimeBasedAutoScalingResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeTimeBasedAutoScalingResult>() {
-            public DescribeTimeBasedAutoScalingResult call() throws Exception {
-            	DescribeTimeBasedAutoScalingResult result;
-                try {
-            		result = describeTimeBasedAutoScaling(describeTimeBasedAutoScalingRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeTimeBasedAutoScalingRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Deletes a user profile.
      * </p>
      *
@@ -2397,6 +3528,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteUserProfile service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2431,6 +3563,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DeleteUserProfile service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2460,6 +3593,170 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
+     * Describes time-based auto scaling configurations for specified
+     * instances.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeTimeBasedAutoScalingRequest Container for the necessary
+     *           parameters to execute the DescribeTimeBasedAutoScaling operation on
+     *           AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeTimeBasedAutoScaling service method, as returned by
+     *         AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeTimeBasedAutoScalingResult> describeTimeBasedAutoScalingAsync(final DescribeTimeBasedAutoScalingRequest describeTimeBasedAutoScalingRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeTimeBasedAutoScalingResult>() {
+            public DescribeTimeBasedAutoScalingResult call() throws Exception {
+                return describeTimeBasedAutoScaling(describeTimeBasedAutoScalingRequest);
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Describes time-based auto scaling configurations for specified
+     * instances.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
+     *
+     * @param describeTimeBasedAutoScalingRequest Container for the necessary
+     *           parameters to execute the DescribeTimeBasedAutoScaling operation on
+     *           AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         DescribeTimeBasedAutoScaling service method, as returned by
+     *         AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<DescribeTimeBasedAutoScalingResult> describeTimeBasedAutoScalingAsync(
+            final DescribeTimeBasedAutoScalingRequest describeTimeBasedAutoScalingRequest,
+            final AsyncHandler<DescribeTimeBasedAutoScalingRequest, DescribeTimeBasedAutoScalingResult> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<DescribeTimeBasedAutoScalingResult>() {
+            public DescribeTimeBasedAutoScalingResult call() throws Exception {
+            	DescribeTimeBasedAutoScalingResult result;
+                try {
+            		result = describeTimeBasedAutoScaling(describeTimeBasedAutoScalingRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(describeTimeBasedAutoScalingRequest, result);
+               	return result;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
+     * Updates an Amazon EBS volume's name or mount point. For more
+     * information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param updateVolumeRequest Container for the necessary parameters to
+     *           execute the UpdateVolume operation on AWSOpsWorks.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateVolume service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateVolumeAsync(final UpdateVolumeRequest updateVolumeRequest) 
+            throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+                updateVolume(updateVolumeRequest);
+                return null;
+		    }
+		});
+    }
+
+    
+    /**
+     * <p>
+     * Updates an Amazon EBS volume's name or mount point. For more
+     * information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
+     * </p>
+     *
+     * @param updateVolumeRequest Container for the necessary parameters to
+     *           execute the UpdateVolume operation on AWSOpsWorks.
+     * @param asyncHandler Asynchronous callback handler for events in the
+     *           life-cycle of the request. Users could provide the implementation of
+     *           the four callback methods in this interface to process the operation
+     *           result or handle the exception.
+     * 
+     * @return A Java Future object containing the response from the
+     *         UpdateVolume service method, as returned by AWSOpsWorks.
+     * 
+     *
+     * @throws AmazonClientException
+     *             If any internal errors are encountered inside the client while
+     *             attempting to make the request or handle the response.  For example
+     *             if a network connection is not available.
+     * @throws AmazonServiceException
+     *             If an error response is returned by AWSOpsWorks indicating
+     *             either a problem with the data in the request, or a server side issue.
+     */
+    public Future<Void> updateVolumeAsync(
+            final UpdateVolumeRequest updateVolumeRequest,
+            final AsyncHandler<UpdateVolumeRequest, Void> asyncHandler)
+                    throws AmazonServiceException, AmazonClientException {
+        return executorService.submit(new Callable<Void>() {
+            public Void call() throws Exception {
+            	try {
+            		updateVolume(updateVolumeRequest);
+            	} catch (Exception ex) {
+            	    asyncHandler.onError(ex);
+    				throw ex;
+            	}
+            	asyncHandler.onSuccess(updateVolumeRequest, null);
+               	return null;
+		    }
+		});
+    }
+    
+    /**
+     * <p>
      * Describe specified users.
      * </p>
      *
@@ -2469,6 +3766,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeUserProfiles service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2503,6 +3801,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeUserProfiles service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2541,6 +3840,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         UpdateInstance service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2575,6 +3875,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         UpdateInstance service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2604,80 +3905,10 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Describes AWS OpsWorks service errors.
-     * </p>
-     *
-     * @param describeServiceErrorsRequest Container for the necessary
-     *           parameters to execute the DescribeServiceErrors operation on
-     *           AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeServiceErrors service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeServiceErrorsResult> describeServiceErrorsAsync(final DescribeServiceErrorsRequest describeServiceErrorsRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeServiceErrorsResult>() {
-            public DescribeServiceErrorsResult call() throws Exception {
-                return describeServiceErrors(describeServiceErrorsRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Describes AWS OpsWorks service errors.
-     * </p>
-     *
-     * @param describeServiceErrorsRequest Container for the necessary
-     *           parameters to execute the DescribeServiceErrors operation on
-     *           AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DescribeServiceErrors service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<DescribeServiceErrorsResult> describeServiceErrorsAsync(
-            final DescribeServiceErrorsRequest describeServiceErrorsRequest,
-            final AsyncHandler<DescribeServiceErrorsRequest, DescribeServiceErrorsResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<DescribeServiceErrorsResult>() {
-            public DescribeServiceErrorsResult call() throws Exception {
-            	DescribeServiceErrorsResult result;
-                try {
-            		result = describeServiceErrors(describeServiceErrorsRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(describeServiceErrorsRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Requests a description of a specified set of deployments.
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeDeploymentsRequest Container for the necessary
@@ -2686,6 +3917,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeDeployments service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2709,6 +3941,9 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * <p>
      * Requests a description of a specified set of deployments.
      * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
      *
      * @param describeDeploymentsRequest Container for the necessary
      *           parameters to execute the DescribeDeployments operation on
@@ -2720,6 +3955,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeDeployments service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2750,14 +3986,20 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Updates a specified layer.
+     * Registers an Elastic IP address with a specified stack. An address can
+     * be registered with only one stack at a time. If the address is already
+     * registered, you must first deregister it by calling
+     * DeregisterElasticIp. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param updateLayerRequest Container for the necessary parameters to
-     *           execute the UpdateLayer operation on AWSOpsWorks.
+     * @param registerElasticIpRequest Container for the necessary parameters
+     *           to execute the RegisterElasticIp operation on AWSOpsWorks.
      * 
      * @return A Java Future object containing the response from the
-     *         UpdateLayer service method, as returned by AWSOpsWorks.
+     *         RegisterElasticIp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2767,12 +4009,11 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Void> updateLayerAsync(final UpdateLayerRequest updateLayerRequest) 
+    public Future<RegisterElasticIpResult> registerElasticIpAsync(final RegisterElasticIpRequest registerElasticIpRequest) 
             throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                updateLayer(updateLayerRequest);
-                return null;
+        return executorService.submit(new Callable<RegisterElasticIpResult>() {
+            public RegisterElasticIpResult call() throws Exception {
+                return registerElasticIp(registerElasticIpRequest);
 		    }
 		});
     }
@@ -2780,18 +4021,24 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Updates a specified layer.
+     * Registers an Elastic IP address with a specified stack. An address can
+     * be registered with only one stack at a time. If the address is already
+     * registered, you must first deregister it by calling
+     * DeregisterElasticIp. For more information, see <a
+     * "http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">
+     * </a> .
      * </p>
      *
-     * @param updateLayerRequest Container for the necessary parameters to
-     *           execute the UpdateLayer operation on AWSOpsWorks.
+     * @param registerElasticIpRequest Container for the necessary parameters
+     *           to execute the RegisterElasticIp operation on AWSOpsWorks.
      * @param asyncHandler Asynchronous callback handler for events in the
      *           life-cycle of the request. Users could provide the implementation of
      *           the four callback methods in this interface to process the operation
      *           result or handle the exception.
      * 
      * @return A Java Future object containing the response from the
-     *         UpdateLayer service method, as returned by AWSOpsWorks.
+     *         RegisterElasticIp service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2801,104 +4048,33 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      *             If an error response is returned by AWSOpsWorks indicating
      *             either a problem with the data in the request, or a server side issue.
      */
-    public Future<Void> updateLayerAsync(
-            final UpdateLayerRequest updateLayerRequest,
-            final AsyncHandler<UpdateLayerRequest, Void> asyncHandler)
+    public Future<RegisterElasticIpResult> registerElasticIpAsync(
+            final RegisterElasticIpRequest registerElasticIpRequest,
+            final AsyncHandler<RegisterElasticIpRequest, RegisterElasticIpResult> asyncHandler)
                     throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		updateLayer(updateLayerRequest);
+        return executorService.submit(new Callable<RegisterElasticIpResult>() {
+            public RegisterElasticIpResult call() throws Exception {
+            	RegisterElasticIpResult result;
+                try {
+            		result = registerElasticIp(registerElasticIpRequest);
             	} catch (Exception ex) {
             	    asyncHandler.onError(ex);
     				throw ex;
             	}
-            	asyncHandler.onSuccess(updateLayerRequest, null);
-               	return null;
+            	asyncHandler.onSuccess(registerElasticIpRequest, result);
+               	return result;
 		    }
 		});
     }
     
     /**
      * <p>
-     * Starts a specified instance. For more information, see <a
-     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
-     * Starting, Stopping, and Rebooting Instances </a> .
-     * </p>
-     *
-     * @param startInstanceRequest Container for the necessary parameters to
-     *           execute the StartInstance operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         StartInstance service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> startInstanceAsync(final StartInstanceRequest startInstanceRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                startInstance(startInstanceRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Starts a specified instance. For more information, see <a
-     * .amazon.com/opsworks/latest/userguide/workinginstances-starting.html">
-     * Starting, Stopping, and Rebooting Instances </a> .
-     * </p>
-     *
-     * @param startInstanceRequest Container for the necessary parameters to
-     *           execute the StartInstance operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         StartInstance service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> startInstanceAsync(
-            final StartInstanceRequest startInstanceRequest,
-            final AsyncHandler<StartInstanceRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		startInstance(startInstanceRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(startInstanceRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Describes an instance's <a
+     * Describes <a
      * aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">
      * Elastic IP addresses </a> .
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeElasticIpsRequest Container for the necessary
@@ -2906,6 +4082,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeElasticIps service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2927,9 +4104,12 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Describes an instance's <a
+     * Describes <a
      * aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">
      * Elastic IP addresses </a> .
+     * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
      * </p>
      *
      * @param describeElasticIpsRequest Container for the necessary
@@ -2941,6 +4121,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeElasticIps service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -2979,6 +4160,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeStacks service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3012,6 +4194,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeStacks service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3044,12 +4227,16 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * <p>
      * Requests a description of a specified set of apps.
      * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
      *
      * @param describeAppsRequest Container for the necessary parameters to
      *           execute the DescribeApps operation on AWSOpsWorks.
      * 
      * @return A Java Future object containing the response from the
      *         DescribeApps service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3073,6 +4260,9 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * <p>
      * Requests a description of a specified set of apps.
      * </p>
+     * <p>
+     * <b>NOTE:</b>You must specify at least one of the parameters.
+     * </p>
      *
      * @param describeAppsRequest Container for the necessary parameters to
      *           execute the DescribeApps operation on AWSOpsWorks.
@@ -3083,6 +4273,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         DescribeApps service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3113,245 +4304,6 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
     
     /**
      * <p>
-     * Creates a layer. For more information, see <a
-     * mazon.com/opsworks/latest/userguide/workinglayers-basics-create.html">
-     * How to Create a Layer </a> .
-     * </p>
-     * <p>
-     * <b>NOTE:</b>You should use CreateLayer for non-custom layer types such
-     * as PHP App Server only if the stack does not have an existing layer of
-     * that type. A stack can have at most one instance of each non-custom
-     * layer; if you attempt to create a second instance, CreateLayer fails.
-     * A stack can have an arbitrary number of custom layers, so you can call
-     * CreateLayer as many times as you like for that layer type.
-     * </p>
-     *
-     * @param createLayerRequest Container for the necessary parameters to
-     *           execute the CreateLayer operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         CreateLayer service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<CreateLayerResult> createLayerAsync(final CreateLayerRequest createLayerRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateLayerResult>() {
-            public CreateLayerResult call() throws Exception {
-                return createLayer(createLayerRequest);
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Creates a layer. For more information, see <a
-     * mazon.com/opsworks/latest/userguide/workinglayers-basics-create.html">
-     * How to Create a Layer </a> .
-     * </p>
-     * <p>
-     * <b>NOTE:</b>You should use CreateLayer for non-custom layer types such
-     * as PHP App Server only if the stack does not have an existing layer of
-     * that type. A stack can have at most one instance of each non-custom
-     * layer; if you attempt to create a second instance, CreateLayer fails.
-     * A stack can have an arbitrary number of custom layers, so you can call
-     * CreateLayer as many times as you like for that layer type.
-     * </p>
-     *
-     * @param createLayerRequest Container for the necessary parameters to
-     *           execute the CreateLayer operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         CreateLayer service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<CreateLayerResult> createLayerAsync(
-            final CreateLayerRequest createLayerRequest,
-            final AsyncHandler<CreateLayerRequest, CreateLayerResult> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<CreateLayerResult>() {
-            public CreateLayerResult call() throws Exception {
-            	CreateLayerResult result;
-                try {
-            		result = createLayer(createLayerRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(createLayerRequest, result);
-               	return result;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Deletes a specified stack. You must first delete all instances,
-     * layers, and apps. For more information, see <a
-     * aws.amazon.com/opsworks/latest/userguide/workingstacks-shutting.html">
-     * Shut Down a Stack </a> .
-     * </p>
-     *
-     * @param deleteStackRequest Container for the necessary parameters to
-     *           execute the DeleteStack operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DeleteStack service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> deleteStackAsync(final DeleteStackRequest deleteStackRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                deleteStack(deleteStackRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Deletes a specified stack. You must first delete all instances,
-     * layers, and apps. For more information, see <a
-     * aws.amazon.com/opsworks/latest/userguide/workingstacks-shutting.html">
-     * Shut Down a Stack </a> .
-     * </p>
-     *
-     * @param deleteStackRequest Container for the necessary parameters to
-     *           execute the DeleteStack operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         DeleteStack service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> deleteStackAsync(
-            final DeleteStackRequest deleteStackRequest,
-            final AsyncHandler<DeleteStackRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		deleteStack(deleteStackRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(deleteStackRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
-     * Starts stack's instances.
-     * </p>
-     *
-     * @param startStackRequest Container for the necessary parameters to
-     *           execute the StartStack operation on AWSOpsWorks.
-     * 
-     * @return A Java Future object containing the response from the
-     *         StartStack service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> startStackAsync(final StartStackRequest startStackRequest) 
-            throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-                startStack(startStackRequest);
-                return null;
-		    }
-		});
-    }
-
-    
-    /**
-     * <p>
-     * Starts stack's instances.
-     * </p>
-     *
-     * @param startStackRequest Container for the necessary parameters to
-     *           execute the StartStack operation on AWSOpsWorks.
-     * @param asyncHandler Asynchronous callback handler for events in the
-     *           life-cycle of the request. Users could provide the implementation of
-     *           the four callback methods in this interface to process the operation
-     *           result or handle the exception.
-     * 
-     * @return A Java Future object containing the response from the
-     *         StartStack service method, as returned by AWSOpsWorks.
-     *
-     * @throws AmazonClientException
-     *             If any internal errors are encountered inside the client while
-     *             attempting to make the request or handle the response.  For example
-     *             if a network connection is not available.
-     * @throws AmazonServiceException
-     *             If an error response is returned by AWSOpsWorks indicating
-     *             either a problem with the data in the request, or a server side issue.
-     */
-    public Future<Void> startStackAsync(
-            final StartStackRequest startStackRequest,
-            final AsyncHandler<StartStackRequest, Void> asyncHandler)
-                    throws AmazonServiceException, AmazonClientException {
-        return executorService.submit(new Callable<Void>() {
-            public Void call() throws Exception {
-            	try {
-            		startStack(startStackRequest);
-            	} catch (Exception ex) {
-            	    asyncHandler.onError(ex);
-    				throw ex;
-            	}
-            	asyncHandler.onSuccess(startStackRequest, null);
-               	return null;
-		    }
-		});
-    }
-    
-    /**
-     * <p>
      * Stops a specified stack.
      * </p>
      *
@@ -3360,6 +4312,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         StopStack service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3394,6 +4347,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         StopStack service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3447,6 +4401,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateDeployment service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while
@@ -3496,6 +4451,7 @@ public class AWSOpsWorksAsyncClient extends AWSOpsWorksClient
      * 
      * @return A Java Future object containing the response from the
      *         CreateDeployment service method, as returned by AWSOpsWorks.
+     * 
      *
      * @throws AmazonClientException
      *             If any internal errors are encountered inside the client while

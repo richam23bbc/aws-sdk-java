@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -40,7 +42,6 @@ public class DescribeOptionGroupOptionsResult implements Serializable {
      * @return List of available option group options.
      */
     public java.util.List<OptionGroupOption> getOptionGroupOptions() {
-        
         if (optionGroupOptions == null) {
               optionGroupOptions = new com.amazonaws.internal.ListWithAutoConstructFlag<OptionGroupOption>();
               optionGroupOptions.setAutoConstruct(true);
@@ -102,7 +103,7 @@ public class DescribeOptionGroupOptionsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An optional pagination token provided by a previous request. If this
      * parameter is specified, the response includes only records beyond the
@@ -147,8 +148,7 @@ public class DescribeOptionGroupOptionsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

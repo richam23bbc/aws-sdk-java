@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -70,8 +72,7 @@ public class Endpoint implements Serializable {
         this.address = address;
         return this;
     }
-    
-    
+
     /**
      * The port number that the cache engine is listening on.
      *
@@ -104,8 +105,7 @@ public class Endpoint implements Serializable {
         this.port = port;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

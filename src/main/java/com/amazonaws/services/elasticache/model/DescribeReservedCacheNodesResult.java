@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -65,8 +67,7 @@ public class DescribeReservedCacheNodesResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * A list of reserved cache nodes. Each element in the list contains
      * detailed information about one node.
@@ -75,7 +76,6 @@ public class DescribeReservedCacheNodesResult implements Serializable {
      *         detailed information about one node.
      */
     public java.util.List<ReservedCacheNode> getReservedCacheNodes() {
-        
         if (reservedCacheNodes == null) {
               reservedCacheNodes = new com.amazonaws.internal.ListWithAutoConstructFlag<ReservedCacheNode>();
               reservedCacheNodes.setAutoConstruct(true);
@@ -143,7 +143,7 @@ public class DescribeReservedCacheNodesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

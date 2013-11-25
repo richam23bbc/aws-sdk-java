@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -79,8 +81,7 @@ public class DescribeClusterParameterGroupsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * A list of <a>ClusterParameterGroup</a> instances. Each instance
      * describes one cluster parameter group.
@@ -89,7 +90,6 @@ public class DescribeClusterParameterGroupsResult implements Serializable {
      *         describes one cluster parameter group.
      */
     public java.util.List<ClusterParameterGroup> getParameterGroups() {
-        
         if (parameterGroups == null) {
               parameterGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<ClusterParameterGroup>();
               parameterGroups.setAutoConstruct(true);
@@ -157,7 +157,7 @@ public class DescribeClusterParameterGroupsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

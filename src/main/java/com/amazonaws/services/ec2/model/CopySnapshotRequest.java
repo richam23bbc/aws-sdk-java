@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CopySnapshotRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#copySnapshot(CopySnapshotRequest) CopySnapshot operation}.
@@ -64,8 +66,7 @@ public class CopySnapshotRequest extends AmazonWebServiceRequest implements Seri
         this.sourceRegion = sourceRegion;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the SourceSnapshotId property for this object.
      *
@@ -98,8 +99,7 @@ public class CopySnapshotRequest extends AmazonWebServiceRequest implements Seri
         this.sourceSnapshotId = sourceSnapshotId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -132,8 +132,7 @@ public class CopySnapshotRequest extends AmazonWebServiceRequest implements Seri
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

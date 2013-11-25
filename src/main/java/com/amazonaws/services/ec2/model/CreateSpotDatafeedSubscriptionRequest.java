@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CreateSpotDatafeedSubscriptionRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#createSpotDatafeedSubscription(CreateSpotDatafeedSubscriptionRequest) CreateSpotDatafeedSubscription operation}.
@@ -49,8 +51,6 @@ public class CreateSpotDatafeedSubscriptionRequest extends AmazonWebServiceReque
      */
     public CreateSpotDatafeedSubscriptionRequest() {}
     
-
-
     /**
      * Constructs a new CreateSpotDatafeedSubscriptionRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -63,8 +63,6 @@ public class CreateSpotDatafeedSubscriptionRequest extends AmazonWebServiceReque
         setBucket(bucket);
     }
 
-    
-    
     /**
      * The Amazon S3 bucket in which to store the Spot Instance datafeed.
      *
@@ -97,8 +95,7 @@ public class CreateSpotDatafeedSubscriptionRequest extends AmazonWebServiceReque
         this.bucket = bucket;
         return this;
     }
-    
-    
+
     /**
      * The prefix that is prepended to datafeed files.
      *
@@ -131,8 +128,7 @@ public class CreateSpotDatafeedSubscriptionRequest extends AmazonWebServiceReque
         this.prefix = prefix;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

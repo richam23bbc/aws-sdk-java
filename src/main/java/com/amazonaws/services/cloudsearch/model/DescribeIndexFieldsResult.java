@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeIndexFieldsResult implements Serializable {
      * @return The index fields configured for the domain.
      */
     public java.util.List<IndexFieldStatus> getIndexFields() {
-        
         if (indexFields == null) {
               indexFields = new com.amazonaws.internal.ListWithAutoConstructFlag<IndexFieldStatus>();
               indexFields.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeIndexFieldsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

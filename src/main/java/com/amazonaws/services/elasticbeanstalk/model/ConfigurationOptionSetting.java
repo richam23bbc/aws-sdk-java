@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -43,8 +45,6 @@ public class ConfigurationOptionSetting implements Serializable {
      */
     public ConfigurationOptionSetting() {}
     
-
-
     /**
      * Constructs a new ConfigurationOptionSetting object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -61,8 +61,6 @@ public class ConfigurationOptionSetting implements Serializable {
         setValue(value);
     }
 
-    
-    
     /**
      * A unique namespace identifying the option's associated AWS resource.
      *
@@ -95,8 +93,7 @@ public class ConfigurationOptionSetting implements Serializable {
         this.namespace = namespace;
         return this;
     }
-    
-    
+
     /**
      * The name of the configuration option.
      *
@@ -129,8 +126,7 @@ public class ConfigurationOptionSetting implements Serializable {
         this.optionName = optionName;
         return this;
     }
-    
-    
+
     /**
      * The current value for the configuration option.
      *
@@ -163,8 +159,7 @@ public class ConfigurationOptionSetting implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

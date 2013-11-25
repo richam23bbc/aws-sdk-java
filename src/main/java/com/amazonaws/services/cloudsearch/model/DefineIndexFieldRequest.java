@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudsearch.AmazonCloudSearch#defineIndexField(DefineIndexFieldRequest) DefineIndexField operation}.
@@ -116,8 +118,7 @@ public class DefineIndexFieldRequest extends AmazonWebServiceRequest implements 
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * Defines a field in the index, including its name, type, and the source
      * of its data. The <code>IndexFieldType</code> indicates which of the
@@ -168,8 +169,7 @@ public class DefineIndexFieldRequest extends AmazonWebServiceRequest implements 
         this.indexField = indexField;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

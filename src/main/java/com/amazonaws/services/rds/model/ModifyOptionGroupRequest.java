@@ -13,13 +13,15 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#modifyOptionGroup(ModifyOptionGroupRequest) ModifyOptionGroup operation}.
  * <p>
- * Modifies an existing Option Group.
+ * Modifies an existing option group.
  * </p>
  *
  * @see com.amazonaws.services.rds.AmazonRDS#modifyOptionGroup(ModifyOptionGroupRequest)
@@ -38,21 +40,21 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     private String optionGroupName;
 
     /**
-     * Options in this list are added to the Option Group or, if already
+     * Options in this list are added to the option group or, if already
      * present, the specified configuration is used to update the existing
      * configuration.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<OptionConfiguration> optionsToInclude;
 
     /**
-     * Options in this list are removed from the Option Group.
+     * Options in this list are removed from the option group.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<String> optionsToRemove;
 
     /**
      * Indicates whether the changes should be applied immediately, or during
      * the next maintenance window for each instance associated with the
-     * Option Group.
+     * option group.
      */
     private Boolean applyImmediately;
 
@@ -124,19 +126,17 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
         this.optionGroupName = optionGroupName;
         return this;
     }
-    
-    
+
     /**
-     * Options in this list are added to the Option Group or, if already
+     * Options in this list are added to the option group or, if already
      * present, the specified configuration is used to update the existing
      * configuration.
      *
-     * @return Options in this list are added to the Option Group or, if already
+     * @return Options in this list are added to the option group or, if already
      *         present, the specified configuration is used to update the existing
      *         configuration.
      */
     public java.util.List<OptionConfiguration> getOptionsToInclude() {
-        
         if (optionsToInclude == null) {
               optionsToInclude = new com.amazonaws.internal.ListWithAutoConstructFlag<OptionConfiguration>();
               optionsToInclude.setAutoConstruct(true);
@@ -145,11 +145,11 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * Options in this list are added to the Option Group or, if already
+     * Options in this list are added to the option group or, if already
      * present, the specified configuration is used to update the existing
      * configuration.
      *
-     * @param optionsToInclude Options in this list are added to the Option Group or, if already
+     * @param optionsToInclude Options in this list are added to the option group or, if already
      *         present, the specified configuration is used to update the existing
      *         configuration.
      */
@@ -164,13 +164,13 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * Options in this list are added to the Option Group or, if already
+     * Options in this list are added to the option group or, if already
      * present, the specified configuration is used to update the existing
      * configuration.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param optionsToInclude Options in this list are added to the Option Group or, if already
+     * @param optionsToInclude Options in this list are added to the option group or, if already
      *         present, the specified configuration is used to update the existing
      *         configuration.
      *
@@ -186,13 +186,13 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * Options in this list are added to the Option Group or, if already
+     * Options in this list are added to the option group or, if already
      * present, the specified configuration is used to update the existing
      * configuration.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param optionsToInclude Options in this list are added to the Option Group or, if already
+     * @param optionsToInclude Options in this list are added to the option group or, if already
      *         present, the specified configuration is used to update the existing
      *         configuration.
      *
@@ -210,14 +210,13 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
 
         return this;
     }
-    
+
     /**
-     * Options in this list are removed from the Option Group.
+     * Options in this list are removed from the option group.
      *
-     * @return Options in this list are removed from the Option Group.
+     * @return Options in this list are removed from the option group.
      */
     public java.util.List<String> getOptionsToRemove() {
-        
         if (optionsToRemove == null) {
               optionsToRemove = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               optionsToRemove.setAutoConstruct(true);
@@ -226,9 +225,9 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * Options in this list are removed from the Option Group.
+     * Options in this list are removed from the option group.
      *
-     * @param optionsToRemove Options in this list are removed from the Option Group.
+     * @param optionsToRemove Options in this list are removed from the option group.
      */
     public void setOptionsToRemove(java.util.Collection<String> optionsToRemove) {
         if (optionsToRemove == null) {
@@ -241,11 +240,11 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * Options in this list are removed from the Option Group.
+     * Options in this list are removed from the option group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param optionsToRemove Options in this list are removed from the Option Group.
+     * @param optionsToRemove Options in this list are removed from the option group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -259,11 +258,11 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * Options in this list are removed from the Option Group.
+     * Options in this list are removed from the option group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param optionsToRemove Options in this list are removed from the Option Group.
+     * @param optionsToRemove Options in this list are removed from the option group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -279,15 +278,15 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
 
         return this;
     }
-    
+
     /**
      * Indicates whether the changes should be applied immediately, or during
      * the next maintenance window for each instance associated with the
-     * Option Group.
+     * option group.
      *
      * @return Indicates whether the changes should be applied immediately, or during
      *         the next maintenance window for each instance associated with the
-     *         Option Group.
+     *         option group.
      */
     public Boolean isApplyImmediately() {
         return applyImmediately;
@@ -296,11 +295,11 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     /**
      * Indicates whether the changes should be applied immediately, or during
      * the next maintenance window for each instance associated with the
-     * Option Group.
+     * option group.
      *
      * @param applyImmediately Indicates whether the changes should be applied immediately, or during
      *         the next maintenance window for each instance associated with the
-     *         Option Group.
+     *         option group.
      */
     public void setApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
@@ -309,13 +308,13 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
     /**
      * Indicates whether the changes should be applied immediately, or during
      * the next maintenance window for each instance associated with the
-     * Option Group.
+     * option group.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param applyImmediately Indicates whether the changes should be applied immediately, or during
      *         the next maintenance window for each instance associated with the
-     *         Option Group.
+     *         option group.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -324,21 +323,20 @@ public class ModifyOptionGroupRequest extends AmazonWebServiceRequest implements
         this.applyImmediately = applyImmediately;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether the changes should be applied immediately, or during
      * the next maintenance window for each instance associated with the
-     * Option Group.
+     * option group.
      *
      * @return Indicates whether the changes should be applied immediately, or during
      *         the next maintenance window for each instance associated with the
-     *         Option Group.
+     *         option group.
      */
     public Boolean getApplyImmediately() {
         return applyImmediately;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

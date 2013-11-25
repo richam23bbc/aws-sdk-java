@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -94,8 +96,7 @@ public class Field implements Serializable {
         this.key = key;
         return this;
     }
-    
-    
+
     /**
      * The field value, expressed as a String.
      * <p>
@@ -140,8 +141,7 @@ public class Field implements Serializable {
         this.stringValue = stringValue;
         return this;
     }
-    
-    
+
     /**
      * The field value, expressed as the identifier of another object.
      * <p>
@@ -186,8 +186,7 @@ public class Field implements Serializable {
         this.refValue = refValue;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

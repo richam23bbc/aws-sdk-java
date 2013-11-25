@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#deleteAttributes(DeleteAttributesRequest) DeleteAttributes operation}.
@@ -69,8 +71,6 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
      */
     public DeleteAttributesRequest() {}
     
-
-
     /**
      * Constructs a new DeleteAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -86,10 +86,6 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
         setDomainName(domainName);
         setItemName(itemName);
     }
-
-    
-    
-
 
     /**
      * Constructs a new DeleteAttributesRequest object.
@@ -110,10 +106,6 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
         setItemName(itemName);
         setAttributes(attributes);
     }
-
-    
-    
-
 
     /**
      * Constructs a new DeleteAttributesRequest object.
@@ -140,8 +132,6 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
         setExpected(expected);
     }
 
-    
-    
     /**
      * The name of the domain in which to perform the operation.
      *
@@ -174,8 +164,7 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * The name of the item. Similar to rows on a spreadsheet, items
      * represent individual objects that contain one or more value-attribute
@@ -220,8 +209,7 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
         this.itemName = itemName;
         return this;
     }
-    
-    
+
     /**
      * A list of Attributes. Similar to columns on a spreadsheet, attributes
      * represent categories of data that can be assigned to items.
@@ -230,7 +218,6 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
      *         represent categories of data that can be assigned to items.
      */
     public java.util.List<Attribute> getAttributes() {
-        
         if (attributes == null) {
               attributes = new com.amazonaws.internal.ListWithAutoConstructFlag<Attribute>();
               attributes.setAutoConstruct(true);
@@ -298,7 +285,7 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
 
         return this;
     }
-    
+
     /**
      * The update condition which, if specified, determines whether the
      * specified attributes will be deleted or not. The update condition must
@@ -349,8 +336,7 @@ public class DeleteAttributesRequest extends AmazonWebServiceRequest implements 
         this.expected = expected;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

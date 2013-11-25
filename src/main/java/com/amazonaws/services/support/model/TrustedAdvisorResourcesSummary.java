@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -86,8 +88,7 @@ public class TrustedAdvisorResourcesSummary implements Serializable {
         this.resourcesProcessed = resourcesProcessed;
         return this;
     }
-    
-    
+
     /**
      * Reports the number of AWS resources that were flagged in your Trusted
      * Advisor check.
@@ -126,8 +127,7 @@ public class TrustedAdvisorResourcesSummary implements Serializable {
         this.resourcesFlagged = resourcesFlagged;
         return this;
     }
-    
-    
+
     /**
      * Indicates the number of resources ignored by Trusted Advisor due to
      * unavailability of information.
@@ -166,8 +166,7 @@ public class TrustedAdvisorResourcesSummary implements Serializable {
         this.resourcesIgnored = resourcesIgnored;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether the specified AWS resource has had its participation
      * in Trusted Advisor checks suppressed.
@@ -206,8 +205,7 @@ public class TrustedAdvisorResourcesSummary implements Serializable {
         this.resourcesSuppressed = resourcesSuppressed;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

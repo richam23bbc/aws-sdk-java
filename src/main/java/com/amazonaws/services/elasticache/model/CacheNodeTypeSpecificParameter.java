@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -104,8 +106,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.parameterName = parameterName;
         return this;
     }
-    
-    
+
     /**
      * A description of the parameter.
      *
@@ -138,8 +139,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The source of the parameter value.
      *
@@ -172,8 +172,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.source = source;
         return this;
     }
-    
-    
+
     /**
      * The valid data type for the parameter.
      *
@@ -206,8 +205,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.dataType = dataType;
         return this;
     }
-    
-    
+
     /**
      * The valid range of values for the parameter.
      *
@@ -240,8 +238,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.allowedValues = allowedValues;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether (<code>true</code>) or not (<code>false</code>) the
      * parameter can be modified. Some parameters have security or
@@ -286,8 +283,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.isModifiable = isModifiable;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether (<code>true</code>) or not (<code>false</code>) the
      * parameter can be modified. Some parameters have security or
@@ -300,7 +296,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
     public Boolean getIsModifiable() {
         return isModifiable;
     }
-    
+
     /**
      * The earliest cache engine version to which the parameter can apply.
      *
@@ -333,8 +329,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
     }
-    
-    
+
     /**
      * A list of cache node types and their corresponding values for this
      * parameter.
@@ -343,7 +338,6 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
      *         parameter.
      */
     public java.util.List<CacheNodeTypeSpecificValue> getCacheNodeTypeSpecificValues() {
-        
         if (cacheNodeTypeSpecificValues == null) {
               cacheNodeTypeSpecificValues = new com.amazonaws.internal.ListWithAutoConstructFlag<CacheNodeTypeSpecificValue>();
               cacheNodeTypeSpecificValues.setAutoConstruct(true);
@@ -411,7 +405,7 @@ public class CacheNodeTypeSpecificParameter implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

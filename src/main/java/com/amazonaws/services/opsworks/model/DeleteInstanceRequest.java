@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#deleteInstance(DeleteInstanceRequest) DeleteInstance operation}.
@@ -74,8 +76,7 @@ public class DeleteInstanceRequest extends AmazonWebServiceRequest implements Se
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * Whether to delete the instance Elastic IP address.
      *
@@ -108,8 +109,7 @@ public class DeleteInstanceRequest extends AmazonWebServiceRequest implements Se
         this.deleteElasticIp = deleteElasticIp;
         return this;
     }
-    
-    
+
     /**
      * Whether to delete the instance Elastic IP address.
      *
@@ -118,7 +118,7 @@ public class DeleteInstanceRequest extends AmazonWebServiceRequest implements Se
     public Boolean getDeleteElasticIp() {
         return deleteElasticIp;
     }
-    
+
     /**
      * Whether to delete the instance Amazon EBS volumes.
      *
@@ -151,8 +151,7 @@ public class DeleteInstanceRequest extends AmazonWebServiceRequest implements Se
         this.deleteVolumes = deleteVolumes;
         return this;
     }
-    
-    
+
     /**
      * Whether to delete the instance Amazon EBS volumes.
      *
@@ -161,7 +160,7 @@ public class DeleteInstanceRequest extends AmazonWebServiceRequest implements Se
     public Boolean getDeleteVolumes() {
         return deleteVolumes;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

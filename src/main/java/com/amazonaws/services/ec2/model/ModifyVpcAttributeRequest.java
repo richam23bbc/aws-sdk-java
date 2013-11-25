@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#modifyVpcAttribute(ModifyVpcAttributeRequest) ModifyVpcAttribute operation}.
@@ -68,8 +70,7 @@ public class ModifyVpcAttributeRequest extends AmazonWebServiceRequest implement
         this.vpcId = vpcId;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -102,8 +103,7 @@ public class ModifyVpcAttributeRequest extends AmazonWebServiceRequest implement
         this.enableDnsSupport = enableDnsSupport;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -112,7 +112,7 @@ public class ModifyVpcAttributeRequest extends AmazonWebServiceRequest implement
     public Boolean getEnableDnsSupport() {
         return enableDnsSupport;
     }
-    
+
     /**
      * Boolean value
      *
@@ -145,8 +145,7 @@ public class ModifyVpcAttributeRequest extends AmazonWebServiceRequest implement
         this.enableDnsHostnames = enableDnsHostnames;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -155,7 +154,7 @@ public class ModifyVpcAttributeRequest extends AmazonWebServiceRequest implement
     public Boolean getEnableDnsHostnames() {
         return enableDnsHostnames;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

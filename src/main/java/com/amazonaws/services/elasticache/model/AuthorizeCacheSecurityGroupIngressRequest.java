@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#authorizeCacheSecurityGroupIngress(AuthorizeCacheSecurityGroupIngressRequest) AuthorizeCacheSecurityGroupIngress operation}.
@@ -54,8 +56,6 @@ public class AuthorizeCacheSecurityGroupIngressRequest extends AmazonWebServiceR
      */
     public AuthorizeCacheSecurityGroupIngressRequest() {}
     
-
-
     /**
      * Constructs a new AuthorizeCacheSecurityGroupIngressRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -76,8 +76,6 @@ public class AuthorizeCacheSecurityGroupIngressRequest extends AmazonWebServiceR
         setEC2SecurityGroupOwnerId(eC2SecurityGroupOwnerId);
     }
 
-    
-    
     /**
      * The cache security group which will allow network ingress.
      *
@@ -110,8 +108,7 @@ public class AuthorizeCacheSecurityGroupIngressRequest extends AmazonWebServiceR
         this.cacheSecurityGroupName = cacheSecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * The Amazon EC2 security group to be authorized for ingress to the
      * cache security group.
@@ -150,8 +147,7 @@ public class AuthorizeCacheSecurityGroupIngressRequest extends AmazonWebServiceR
         this.eC2SecurityGroupName = eC2SecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * The AWS account number of the Amazon EC2 security group owner. Note
      * that this is not the same thing as an AWS access key ID - you must
@@ -196,8 +192,7 @@ public class AuthorizeCacheSecurityGroupIngressRequest extends AmazonWebServiceR
         this.eC2SecurityGroupOwnerId = eC2SecurityGroupOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

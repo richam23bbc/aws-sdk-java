@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -79,8 +81,7 @@ public class WorkflowTypeFilter implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * Version of the workflow type.
      * <p>
@@ -122,8 +123,7 @@ public class WorkflowTypeFilter implements Serializable {
         this.version = version;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

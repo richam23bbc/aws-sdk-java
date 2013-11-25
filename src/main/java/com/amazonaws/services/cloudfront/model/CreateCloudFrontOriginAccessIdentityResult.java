@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,7 @@ public class CreateCloudFrontOriginAccessIdentityResult implements Serializable 
         this.cloudFrontOriginAccessIdentity = cloudFrontOriginAccessIdentity;
         return this;
     }
-    
-    
+
     /**
      * The fully qualified URI of the new origin access identity just
      * created. For example:
@@ -117,8 +118,7 @@ public class CreateCloudFrontOriginAccessIdentityResult implements Serializable 
         this.location = location;
         return this;
     }
-    
-    
+
     /**
      * The current version of the origin access identity created.
      *
@@ -151,8 +151,7 @@ public class CreateCloudFrontOriginAccessIdentityResult implements Serializable 
         this.eTag = eTag;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

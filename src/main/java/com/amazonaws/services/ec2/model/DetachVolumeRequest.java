@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DetachVolumeRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#detachVolume(DetachVolumeRequest) DetachVolume operation}.
@@ -62,8 +64,6 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
      */
     public DetachVolumeRequest() {}
     
-
-
     /**
      * Constructs a new DetachVolumeRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -75,8 +75,6 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
         setVolumeId(volumeId);
     }
 
-    
-    
     /**
      * The ID of the volume to detach.
      *
@@ -109,8 +107,7 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
         this.volumeId = volumeId;
         return this;
     }
-    
-    
+
     /**
      * The ID of the instance from which to detach the the specified volume.
      *
@@ -143,8 +140,7 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * The device name to which the volume is attached on the specified
      * instance.
@@ -183,8 +179,7 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
         this.device = device;
         return this;
     }
-    
-    
+
     /**
      * Forces detachment if the previous detachment attempt did not occur
      * cleanly (logging into an instance, unmounting the volume, and
@@ -259,8 +254,7 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
         this.force = force;
         return this;
     }
-    
-    
+
     /**
      * Forces detachment if the previous detachment attempt did not occur
      * cleanly (logging into an instance, unmounting the volume, and
@@ -283,7 +277,7 @@ public class DetachVolumeRequest extends AmazonWebServiceRequest implements Seri
     public Boolean getForce() {
         return force;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

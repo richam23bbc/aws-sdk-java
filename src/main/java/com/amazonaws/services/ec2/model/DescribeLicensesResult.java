@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -35,7 +37,6 @@ public class DescribeLicensesResult implements Serializable {
      *         instance.
      */
     public java.util.List<License> getLicenses() {
-        
         if (licenses == null) {
               licenses = new com.amazonaws.internal.ListWithAutoConstructFlag<License>();
               licenses.setAutoConstruct(true);
@@ -103,7 +104,7 @@ public class DescribeLicensesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

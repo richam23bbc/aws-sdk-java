@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -66,8 +68,7 @@ public class CookieNames implements Serializable {
         this.quantity = quantity;
         return this;
     }
-    
-    
+
     /**
      * Optional: A complex type that contains whitelisted cookies for this
      * cache behavior. If Quantity is 0, you can omit Items.
@@ -76,7 +77,6 @@ public class CookieNames implements Serializable {
      *         cache behavior. If Quantity is 0, you can omit Items.
      */
     public java.util.List<String> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               items.setAutoConstruct(true);
@@ -144,7 +144,7 @@ public class CookieNames implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,13 +13,15 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#deleteOptionGroup(DeleteOptionGroupRequest) DeleteOptionGroup operation}.
  * <p>
- * Deletes an existing Option Group.
+ * Deletes an existing option group.
  * </p>
  *
  * @see com.amazonaws.services.rds.AmazonRDS#deleteOptionGroup(DeleteOptionGroupRequest)
@@ -28,16 +30,16 @@ public class DeleteOptionGroupRequest extends AmazonWebServiceRequest implements
 
     /**
      * The name of the option group to be deleted. <note>You cannot delete
-     * default Option Groups.</note>
+     * default option groups.</note>
      */
     private String optionGroupName;
 
     /**
      * The name of the option group to be deleted. <note>You cannot delete
-     * default Option Groups.</note>
+     * default option groups.</note>
      *
      * @return The name of the option group to be deleted. <note>You cannot delete
-     *         default Option Groups.</note>
+     *         default option groups.</note>
      */
     public String getOptionGroupName() {
         return optionGroupName;
@@ -45,10 +47,10 @@ public class DeleteOptionGroupRequest extends AmazonWebServiceRequest implements
     
     /**
      * The name of the option group to be deleted. <note>You cannot delete
-     * default Option Groups.</note>
+     * default option groups.</note>
      *
      * @param optionGroupName The name of the option group to be deleted. <note>You cannot delete
-     *         default Option Groups.</note>
+     *         default option groups.</note>
      */
     public void setOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
@@ -56,12 +58,12 @@ public class DeleteOptionGroupRequest extends AmazonWebServiceRequest implements
     
     /**
      * The name of the option group to be deleted. <note>You cannot delete
-     * default Option Groups.</note>
+     * default option groups.</note>
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param optionGroupName The name of the option group to be deleted. <note>You cannot delete
-     *         default Option Groups.</note>
+     *         default option groups.</note>
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -70,8 +72,7 @@ public class DeleteOptionGroupRequest extends AmazonWebServiceRequest implements
         this.optionGroupName = optionGroupName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

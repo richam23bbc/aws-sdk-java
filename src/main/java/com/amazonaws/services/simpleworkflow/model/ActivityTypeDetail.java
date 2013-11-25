@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -113,8 +115,7 @@ public class ActivityTypeDetail implements Serializable {
         this.typeInfo = typeInfo;
         return this;
     }
-    
-    
+
     /**
      * The configuration settings registered with the activity type.
      *
@@ -147,8 +148,7 @@ public class ActivityTypeDetail implements Serializable {
         this.configuration = configuration;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

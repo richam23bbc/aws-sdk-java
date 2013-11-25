@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CreateNetworkInterfaceRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#createNetworkInterface(CreateNetworkInterfaceRequest) CreateNetworkInterface operation}.
@@ -70,8 +72,7 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
         this.subnetId = subnetId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -104,8 +105,7 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PrivateIpAddress property for this object.
      *
@@ -138,15 +138,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
         this.privateIpAddress = privateIpAddress;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Groups property for this object.
      *
      * @return The value of the Groups property for this object.
      */
     public java.util.List<String> getGroups() {
-        
         if (groups == null) {
               groups = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               groups.setAutoConstruct(true);
@@ -208,14 +206,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
         return this;
     }
-    
+
     /**
      * Returns the value of the PrivateIpAddresses property for this object.
      *
      * @return The value of the PrivateIpAddresses property for this object.
      */
     public java.util.List<PrivateIpAddressSpecification> getPrivateIpAddresses() {
-        
         if (privateIpAddresses == null) {
               privateIpAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<PrivateIpAddressSpecification>();
               privateIpAddresses.setAutoConstruct(true);
@@ -277,7 +274,7 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
         return this;
     }
-    
+
     /**
      * Returns the value of the SecondaryPrivateIpAddressCount property for
      * this object.
@@ -316,8 +313,7 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

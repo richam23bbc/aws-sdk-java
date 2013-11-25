@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -101,8 +103,7 @@ public class AlarmHistoryItem implements Serializable {
         this.alarmName = alarmName;
         return this;
     }
-    
-    
+
     /**
      * The time stamp for the alarm history item.
      *
@@ -135,8 +136,7 @@ public class AlarmHistoryItem implements Serializable {
         this.timestamp = timestamp;
         return this;
     }
-    
-    
+
     /**
      * The type of alarm history item.
      * <p>
@@ -184,8 +184,7 @@ public class AlarmHistoryItem implements Serializable {
         this.historyItemType = historyItemType;
         return this;
     }
-    
-    
+
     /**
      * The type of alarm history item.
      * <p>
@@ -219,7 +218,7 @@ public class AlarmHistoryItem implements Serializable {
         this.historyItemType = historyItemType.toString();
         return this;
     }
-    
+
     /**
      * A human-readable summary of the alarm history.
      * <p>
@@ -261,8 +260,7 @@ public class AlarmHistoryItem implements Serializable {
         this.historySummary = historySummary;
         return this;
     }
-    
-    
+
     /**
      * Machine-readable data about the alarm in JSON format.
      * <p>
@@ -304,8 +302,7 @@ public class AlarmHistoryItem implements Serializable {
         this.historyData = historyData;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

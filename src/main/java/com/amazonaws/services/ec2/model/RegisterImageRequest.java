@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.RegisterImageRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#registerImage(RegisterImageRequest) RegisterImage operation}.
@@ -58,6 +60,9 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * The architecture of the image. <p> Valid Values: <code>i386</code>,
      * <code>x86_64</code>
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>i386, x86_64
      */
     private String architecture;
 
@@ -86,14 +91,16 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<BlockDeviceMapping> blockDeviceMappings;
 
+    private String virtualizationType;
+
+    private String sriovNetSupport;
+
     /**
      * Default constructor for a new RegisterImageRequest object.  Callers should use the
      * setter or fluent setter (with...) methods to initialize this object after creating it.
      */
     public RegisterImageRequest() {}
     
-
-
     /**
      * Constructs a new RegisterImageRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -106,8 +113,6 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         setImageLocation(imageLocation);
     }
 
-    
-    
     /**
      * The full path to your AMI manifest in Amazon S3 storage.
      *
@@ -140,8 +145,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         this.imageLocation = imageLocation;
         return this;
     }
-    
-    
+
     /**
      * The name to give the new Amazon Machine Image. <p> Constraints: 3-128
      * alphanumeric characters, parenthesis (<code>()</code>), commas
@@ -192,8 +196,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The description describing the new AMI.
      *
@@ -226,14 +229,18 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The architecture of the image. <p> Valid Values: <code>i386</code>,
      * <code>x86_64</code>
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>i386, x86_64
      *
      * @return The architecture of the image. <p> Valid Values: <code>i386</code>,
      *         <code>x86_64</code>
+     *
+     * @see ArchitectureValues
      */
     public String getArchitecture() {
         return architecture;
@@ -242,9 +249,14 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * The architecture of the image. <p> Valid Values: <code>i386</code>,
      * <code>x86_64</code>
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>i386, x86_64
      *
      * @param architecture The architecture of the image. <p> Valid Values: <code>i386</code>,
      *         <code>x86_64</code>
+     *
+     * @see ArchitectureValues
      */
     public void setArchitecture(String architecture) {
         this.architecture = architecture;
@@ -255,19 +267,61 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * <code>x86_64</code>
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>i386, x86_64
      *
      * @param architecture The architecture of the image. <p> Valid Values: <code>i386</code>,
      *         <code>x86_64</code>
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see ArchitectureValues
      */
     public RegisterImageRequest withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
     }
+
+    /**
+     * The architecture of the image. <p> Valid Values: <code>i386</code>,
+     * <code>x86_64</code>
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>i386, x86_64
+     *
+     * @param architecture The architecture of the image. <p> Valid Values: <code>i386</code>,
+     *         <code>x86_64</code>
+     *
+     * @see ArchitectureValues
+     */
+    public void setArchitecture(ArchitectureValues architecture) {
+        this.architecture = architecture.toString();
+    }
     
-    
+    /**
+     * The architecture of the image. <p> Valid Values: <code>i386</code>,
+     * <code>x86_64</code>
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>i386, x86_64
+     *
+     * @param architecture The architecture of the image. <p> Valid Values: <code>i386</code>,
+     *         <code>x86_64</code>
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see ArchitectureValues
+     */
+    public RegisterImageRequest withArchitecture(ArchitectureValues architecture) {
+        this.architecture = architecture.toString();
+        return this;
+    }
+
     /**
      * The optional ID of a specific kernel to register with the new AMI.
      *
@@ -300,8 +354,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         this.kernelId = kernelId;
         return this;
     }
-    
-    
+
     /**
      * The optional ID of a specific ramdisk to register with the new AMI.
      * <p> Some kernels require additional drivers at launch. Check the
@@ -352,8 +405,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         this.ramdiskId = ramdiskId;
         return this;
     }
-    
-    
+
     /**
      * The root device name (e.g., <code>/dev/sda1</code>).
      *
@@ -386,8 +438,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         this.rootDeviceName = rootDeviceName;
         return this;
     }
-    
-    
+
     /**
      * The block device mappings for the new AMI, which specify how different
      * block devices (ex: EBS volumes and ephemeral drives) will be exposed
@@ -398,7 +449,6 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      *         on instances launched from the new image.
      */
     public java.util.List<BlockDeviceMapping> getBlockDeviceMappings() {
-        
         if (blockDeviceMappings == null) {
               blockDeviceMappings = new com.amazonaws.internal.ListWithAutoConstructFlag<BlockDeviceMapping>();
               blockDeviceMappings.setAutoConstruct(true);
@@ -472,7 +522,73 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
+
+    /**
+     * Returns the value of the VirtualizationType property for this object.
+     *
+     * @return The value of the VirtualizationType property for this object.
+     */
+    public String getVirtualizationType() {
+        return virtualizationType;
+    }
     
+    /**
+     * Sets the value of the VirtualizationType property for this object.
+     *
+     * @param virtualizationType The new value for the VirtualizationType property for this object.
+     */
+    public void setVirtualizationType(String virtualizationType) {
+        this.virtualizationType = virtualizationType;
+    }
+    
+    /**
+     * Sets the value of the VirtualizationType property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param virtualizationType The new value for the VirtualizationType property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public RegisterImageRequest withVirtualizationType(String virtualizationType) {
+        this.virtualizationType = virtualizationType;
+        return this;
+    }
+
+    /**
+     * Returns the value of the SriovNetSupport property for this object.
+     *
+     * @return The value of the SriovNetSupport property for this object.
+     */
+    public String getSriovNetSupport() {
+        return sriovNetSupport;
+    }
+    
+    /**
+     * Sets the value of the SriovNetSupport property for this object.
+     *
+     * @param sriovNetSupport The new value for the SriovNetSupport property for this object.
+     */
+    public void setSriovNetSupport(String sriovNetSupport) {
+        this.sriovNetSupport = sriovNetSupport;
+    }
+    
+    /**
+     * Sets the value of the SriovNetSupport property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param sriovNetSupport The new value for the SriovNetSupport property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public RegisterImageRequest withSriovNetSupport(String sriovNetSupport) {
+        this.sriovNetSupport = sriovNetSupport;
+        return this;
+    }
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to
@@ -504,7 +620,9 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         if (getKernelId() != null) sb.append("KernelId: " + getKernelId() + ",");
         if (getRamdiskId() != null) sb.append("RamdiskId: " + getRamdiskId() + ",");
         if (getRootDeviceName() != null) sb.append("RootDeviceName: " + getRootDeviceName() + ",");
-        if (getBlockDeviceMappings() != null) sb.append("BlockDeviceMappings: " + getBlockDeviceMappings() );
+        if (getBlockDeviceMappings() != null) sb.append("BlockDeviceMappings: " + getBlockDeviceMappings() + ",");
+        if (getVirtualizationType() != null) sb.append("VirtualizationType: " + getVirtualizationType() + ",");
+        if (getSriovNetSupport() != null) sb.append("SriovNetSupport: " + getSriovNetSupport() );
         sb.append("}");
         return sb.toString();
     }
@@ -522,6 +640,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getRamdiskId() == null) ? 0 : getRamdiskId().hashCode()); 
         hashCode = prime * hashCode + ((getRootDeviceName() == null) ? 0 : getRootDeviceName().hashCode()); 
         hashCode = prime * hashCode + ((getBlockDeviceMappings() == null) ? 0 : getBlockDeviceMappings().hashCode()); 
+        hashCode = prime * hashCode + ((getVirtualizationType() == null) ? 0 : getVirtualizationType().hashCode()); 
+        hashCode = prime * hashCode + ((getSriovNetSupport() == null) ? 0 : getSriovNetSupport().hashCode()); 
         return hashCode;
     }
     
@@ -549,6 +669,10 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         if (other.getRootDeviceName() != null && other.getRootDeviceName().equals(this.getRootDeviceName()) == false) return false; 
         if (other.getBlockDeviceMappings() == null ^ this.getBlockDeviceMappings() == null) return false;
         if (other.getBlockDeviceMappings() != null && other.getBlockDeviceMappings().equals(this.getBlockDeviceMappings()) == false) return false; 
+        if (other.getVirtualizationType() == null ^ this.getVirtualizationType() == null) return false;
+        if (other.getVirtualizationType() != null && other.getVirtualizationType().equals(this.getVirtualizationType()) == false) return false; 
+        if (other.getSriovNetSupport() == null ^ this.getSriovNetSupport() == null) return false;
+        if (other.getSriovNetSupport() != null && other.getSriovNetSupport().equals(this.getSriovNetSupport()) == false) return false; 
         return true;
     }
     

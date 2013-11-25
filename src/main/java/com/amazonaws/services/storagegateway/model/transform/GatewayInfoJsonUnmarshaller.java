@@ -22,8 +22,8 @@ import com.amazonaws.services.storagegateway.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
-import org.codehaus.jackson.JsonToken;
-import static org.codehaus.jackson.JsonToken.*;
+import com.fasterxml.jackson.core.JsonToken;
+import static com.fasterxml.jackson.core.JsonToken.*;
 
 
 /**
@@ -44,6 +44,7 @@ public class GatewayInfoJsonUnmarshaller implements Unmarshaller<GatewayInfo, Js
 
         JsonToken token = context.currentToken;
         if (token == null) token = context.nextToken();
+        if (token == VALUE_NULL) return null;
 
         while (true) {
             if (token == null) break;
@@ -53,6 +54,14 @@ public class GatewayInfoJsonUnmarshaller implements Unmarshaller<GatewayInfo, Js
                 if (context.testExpression("GatewayARN", targetDepth)) {
                     context.nextToken();
                     gatewayInfo.setGatewayARN(StringJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("GatewayType", targetDepth)) {
+                    context.nextToken();
+                    gatewayInfo.setGatewayType(StringJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("GatewayOperationalState", targetDepth)) {
+                    context.nextToken();
+                    gatewayInfo.setGatewayOperationalState(StringJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

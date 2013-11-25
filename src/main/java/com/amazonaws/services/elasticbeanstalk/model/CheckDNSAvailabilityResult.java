@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -103,8 +105,7 @@ public class CheckDNSAvailabilityResult implements Serializable {
         this.available = available;
         return this;
     }
-    
-    
+
     /**
      * Indicates if the specified CNAME is available: <enumValues> <value
      * name="true"> <p> <code>true</code> : The CNAME is available. </value>
@@ -123,7 +124,7 @@ public class CheckDNSAvailabilityResult implements Serializable {
     public Boolean getAvailable() {
         return available;
     }
-    
+
     /**
      * The fully qualified CNAME to reserve when <a>CreateEnvironment</a> is
      * called with the provided prefix.
@@ -171,8 +172,7 @@ public class CheckDNSAvailabilityResult implements Serializable {
         this.fullyQualifiedCNAME = fullyQualifiedCNAME;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.CreateVpnConnectionRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#createVpnConnection(CreateVpnConnectionRequest) CreateVpnConnection operation}.
@@ -62,8 +64,6 @@ public class CreateVpnConnectionRequest extends AmazonWebServiceRequest implemen
      */
     public CreateVpnConnectionRequest() {}
     
-
-
     /**
      * Constructs a new CreateVpnConnectionRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -79,8 +79,6 @@ public class CreateVpnConnectionRequest extends AmazonWebServiceRequest implemen
         setVpnGatewayId(vpnGatewayId);
     }
 
-    
-    
     /**
      * The type of VPN connection.
      *
@@ -113,8 +111,7 @@ public class CreateVpnConnectionRequest extends AmazonWebServiceRequest implemen
         this.type = type;
         return this;
     }
-    
-    
+
     /**
      * The ID of the customer gateway.
      *
@@ -147,8 +144,7 @@ public class CreateVpnConnectionRequest extends AmazonWebServiceRequest implemen
         this.customerGatewayId = customerGatewayId;
         return this;
     }
-    
-    
+
     /**
      * The ID of the VPN gateway.
      *
@@ -181,8 +177,7 @@ public class CreateVpnConnectionRequest extends AmazonWebServiceRequest implemen
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Options property for this object.
      *
@@ -215,8 +210,7 @@ public class CreateVpnConnectionRequest extends AmazonWebServiceRequest implemen
         this.options = options;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

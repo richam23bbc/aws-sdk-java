@@ -13,12 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
 
+
 /**
- * <p>
- * The Amazon Resource Name (ARN) of the gateway for which upload buffer was configured.
- * </p>
+ * Add Upload Buffer Result
  */
 public class AddUploadBufferResult implements Serializable {
 
@@ -85,8 +85,7 @@ public class AddUploadBufferResult implements Serializable {
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

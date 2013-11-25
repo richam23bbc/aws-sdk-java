@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#purchaseReservedCacheNodesOffering(PurchaseReservedCacheNodesOfferingRequest) PurchaseReservedCacheNodesOffering operation}.
@@ -82,8 +84,7 @@ public class PurchaseReservedCacheNodesOfferingRequest extends AmazonWebServiceR
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
     }
-    
-    
+
     /**
      * A customer-specified identifier to track this reservation. <p>Example:
      * myreservationID
@@ -122,8 +123,7 @@ public class PurchaseReservedCacheNodesOfferingRequest extends AmazonWebServiceR
         this.reservedCacheNodeId = reservedCacheNodeId;
         return this;
     }
-    
-    
+
     /**
      * The number of cache node instances to reserve. <p>Default:
      * <code>1</code>
@@ -162,8 +162,7 @@ public class PurchaseReservedCacheNodesOfferingRequest extends AmazonWebServiceR
         this.cacheNodeCount = cacheNodeCount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

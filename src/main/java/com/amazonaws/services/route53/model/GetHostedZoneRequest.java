@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.route53.AmazonRoute53#getHostedZone(GetHostedZoneRequest) GetHostedZone operation}.
@@ -42,8 +44,6 @@ public class GetHostedZoneRequest extends AmazonWebServiceRequest implements Ser
      */
     public GetHostedZoneRequest() {}
     
-
-
     /**
      * Constructs a new GetHostedZoneRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -56,8 +56,6 @@ public class GetHostedZoneRequest extends AmazonWebServiceRequest implements Ser
         setId(id);
     }
 
-    
-    
     /**
      * The ID of the hosted zone for which you want to get a list of the name
      * servers in the delegation set.
@@ -105,8 +103,7 @@ public class GetHostedZoneRequest extends AmazonWebServiceRequest implements Ser
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -261,8 +263,7 @@ public class Decision implements Serializable {
         this.decisionType = decisionType;
         return this;
     }
-    
-    
+
     /**
      * Specifies the type of the decision.
      * <p>
@@ -296,7 +297,7 @@ public class Decision implements Serializable {
         this.decisionType = decisionType.toString();
         return this;
     }
-    
+
     /**
      * Provides details of the <code>ScheduleActivityTask</code> decision. It
      * is not set for other decision types.
@@ -335,8 +336,7 @@ public class Decision implements Serializable {
         this.scheduleActivityTaskDecisionAttributes = scheduleActivityTaskDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>RequestCancelActivityTask</code>
      * decision. It is not set for other decision types.
@@ -375,8 +375,7 @@ public class Decision implements Serializable {
         this.requestCancelActivityTaskDecisionAttributes = requestCancelActivityTaskDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>CompleteWorkflowExecution</code>
      * decision. It is not set for other decision types.
@@ -415,8 +414,7 @@ public class Decision implements Serializable {
         this.completeWorkflowExecutionDecisionAttributes = completeWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>FailWorkflowExecution</code> decision.
      * It is not set for other decision types.
@@ -455,8 +453,7 @@ public class Decision implements Serializable {
         this.failWorkflowExecutionDecisionAttributes = failWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>CancelWorkflowExecution</code> decision.
      * It is not set for other decision types.
@@ -495,8 +492,7 @@ public class Decision implements Serializable {
         this.cancelWorkflowExecutionDecisionAttributes = cancelWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>ContinueAsNewWorkflowExecution</code>
      * decision. It is not set for other decision types.
@@ -535,8 +531,7 @@ public class Decision implements Serializable {
         this.continueAsNewWorkflowExecutionDecisionAttributes = continueAsNewWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>RecordMarker</code> decision. It is not
      * set for other decision types.
@@ -575,8 +570,7 @@ public class Decision implements Serializable {
         this.recordMarkerDecisionAttributes = recordMarkerDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>StartTimer</code> decision. It is not
      * set for other decision types.
@@ -615,8 +609,7 @@ public class Decision implements Serializable {
         this.startTimerDecisionAttributes = startTimerDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>CancelTimer</code> decision. It is not
      * set for other decision types.
@@ -655,8 +648,7 @@ public class Decision implements Serializable {
         this.cancelTimerDecisionAttributes = cancelTimerDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>SignalExternalWorkflowExecution</code>
      * decision. It is not set for other decision types.
@@ -695,8 +687,7 @@ public class Decision implements Serializable {
         this.signalExternalWorkflowExecutionDecisionAttributes = signalExternalWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the
      * <code>RequestCancelExternalWorkflowExecution</code> decision. It is
@@ -741,8 +732,7 @@ public class Decision implements Serializable {
         this.requestCancelExternalWorkflowExecutionDecisionAttributes = requestCancelExternalWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Provides details of the <code>StartChildWorkflowExecution</code>
      * decision. It is not set for other decision types.
@@ -781,8 +771,7 @@ public class Decision implements Serializable {
         this.startChildWorkflowExecutionDecisionAttributes = startChildWorkflowExecutionDecisionAttributes;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

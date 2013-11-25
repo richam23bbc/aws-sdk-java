@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudformation.AmazonCloudFormation#describeStackResource(DescribeStackResourceRequest) DescribeStackResource operation}.
@@ -79,8 +81,7 @@ public class DescribeStackResourceRequest extends AmazonWebServiceRequest implem
         this.stackName = stackName;
         return this;
     }
-    
-    
+
     /**
      * The logical name of the resource as specified in the template.
      * <p>Default: There is no default value.
@@ -119,8 +120,7 @@ public class DescribeStackResourceRequest extends AmazonWebServiceRequest implem
         this.logicalResourceId = logicalResourceId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

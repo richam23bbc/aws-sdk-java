@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -92,8 +94,7 @@ public class DomainInfo implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The status of the domain: <ul> <li> <b>REGISTERED</b>: The domain is
      * properly registered and available. You can use this domain for
@@ -171,8 +172,7 @@ public class DomainInfo implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The status of the domain: <ul> <li> <b>REGISTERED</b>: The domain is
      * properly registered and available. You can use this domain for
@@ -226,7 +226,7 @@ public class DomainInfo implements Serializable {
         this.status = status.toString();
         return this;
     }
-    
+
     /**
      * The description of the domain provided through <a>RegisterDomain</a>.
      * <p>
@@ -268,8 +268,7 @@ public class DomainInfo implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

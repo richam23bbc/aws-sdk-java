@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#terminateWorkflowExecution(TerminateWorkflowExecutionRequest) TerminateWorkflowExecution operation}.
@@ -160,8 +162,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The workflowId of the workflow execution to terminate.
      * <p>
@@ -203,8 +204,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.workflowId = workflowId;
         return this;
     }
-    
-    
+
     /**
      * The runId of the workflow execution to terminate.
      * <p>
@@ -246,8 +246,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.runId = runId;
         return this;
     }
-    
-    
+
     /**
      * An optional descriptive reason for terminating the workflow execution.
      * <p>
@@ -289,8 +288,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.reason = reason;
         return this;
     }
-    
-    
+
     /**
      * Optional details for terminating the workflow execution.
      * <p>
@@ -332,8 +330,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.details = details;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the policy to use for the child workflow executions
      * of the workflow execution being terminated. This policy overrides the
@@ -465,8 +462,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.childPolicy = childPolicy;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the policy to use for the child workflow executions
      * of the workflow execution being terminated. This policy overrides the
@@ -556,7 +552,7 @@ public class TerminateWorkflowExecutionRequest extends AmazonWebServiceRequest i
         this.childPolicy = childPolicy.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

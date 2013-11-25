@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -93,8 +95,7 @@ public class GetGroupPolicyResult implements Serializable {
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * The name of the policy.
      * <p>
@@ -139,8 +140,7 @@ public class GetGroupPolicyResult implements Serializable {
         this.policyName = policyName;
         return this;
     }
-    
-    
+
     /**
      * The policy document.
      * <p>
@@ -185,8 +185,7 @@ public class GetGroupPolicyResult implements Serializable {
         this.policyDocument = policyDocument;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

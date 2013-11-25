@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -106,8 +108,7 @@ public class PipelineDescription implements Serializable {
         this.pipelineId = pipelineId;
         return this;
     }
-    
-    
+
     /**
      * Name of the pipeline.
      * <p>
@@ -152,8 +153,7 @@ public class PipelineDescription implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * A list of read-only fields that contain metadata about the pipeline:
      * @userId, @accountId, and @pipelineState.
@@ -162,7 +162,6 @@ public class PipelineDescription implements Serializable {
      *         @userId, @accountId, and @pipelineState.
      */
     public java.util.List<Field> getFields() {
-        
         if (fields == null) {
               fields = new com.amazonaws.internal.ListWithAutoConstructFlag<Field>();
               fields.setAutoConstruct(true);
@@ -230,7 +229,7 @@ public class PipelineDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Description of the pipeline.
      * <p>
@@ -275,8 +274,7 @@ public class PipelineDescription implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

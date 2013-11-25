@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Disk Image Volume Description
@@ -56,8 +58,7 @@ public class DiskImageVolumeDescription implements Serializable {
         this.size = size;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Id property for this object.
      *
@@ -90,8 +91,7 @@ public class DiskImageVolumeDescription implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

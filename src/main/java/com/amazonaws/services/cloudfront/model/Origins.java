@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -67,8 +69,7 @@ public class Origins implements Serializable {
         this.quantity = quantity;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains origins for this distribution.
      * <p>
@@ -78,7 +79,6 @@ public class Origins implements Serializable {
      * @return A complex type that contains origins for this distribution.
      */
     public java.util.List<Origin> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<Origin>();
               items.setAutoConstruct(true);
@@ -149,7 +149,7 @@ public class Origins implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DeleteKeyPairRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#deleteKeyPair(DeleteKeyPairRequest) DeleteKeyPair operation}.
@@ -39,8 +41,6 @@ public class DeleteKeyPairRequest extends AmazonWebServiceRequest implements Ser
      */
     public DeleteKeyPairRequest() {}
     
-
-
     /**
      * Constructs a new DeleteKeyPairRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -52,8 +52,6 @@ public class DeleteKeyPairRequest extends AmazonWebServiceRequest implements Ser
         setKeyName(keyName);
     }
 
-    
-    
     /**
      * The name of the Amazon EC2 key pair to delete.
      *
@@ -86,8 +84,7 @@ public class DeleteKeyPairRequest extends AmazonWebServiceRequest implements Ser
         this.keyName = keyName;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

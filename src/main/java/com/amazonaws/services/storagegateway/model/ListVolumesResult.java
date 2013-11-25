@@ -13,19 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
 
+
 /**
- * <p>
- * A JSON object containing the following fields:
- * </p>
- * 
- * <ul>
- * <li> GatewayARN </li>
- * <li> ListVolumesOutput$Marker </li>
- * <li> ListVolumesOutput$VolumeInfos </li>
- * 
- * </ul>
+ * List Volumes Result
  */
 public class ListVolumesResult implements Serializable {
 
@@ -39,21 +32,8 @@ public class ListVolumesResult implements Serializable {
      */
     private String gatewayARN;
 
-    /**
-     * Use the marker in your next request to continue pagination of iSCSI
-     * volumes. If there are no more volumes to list, this field does not
-     * appear in the response body.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Length: </b>1 - 1000<br/>
-     */
     private String marker;
 
-    /**
-     * An array of <a>VolumeInfo</a> objects, where each object describes an
-     * iSCSI volume. If no volumes are defined for the gateway, then
-     * <code>VolumeInfos</code> is an empty array "[]".
-     */
     private com.amazonaws.internal.ListWithAutoConstructFlag<VolumeInfo> volumeInfos;
 
     /**
@@ -109,53 +89,40 @@ public class ListVolumesResult implements Serializable {
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
-     * Use the marker in your next request to continue pagination of iSCSI
-     * volumes. If there are no more volumes to list, this field does not
-     * appear in the response body.
+     * Returns the value of the Marker property for this object.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 1000<br/>
      *
-     * @return Use the marker in your next request to continue pagination of iSCSI
-     *         volumes. If there are no more volumes to list, this field does not
-     *         appear in the response body.
+     * @return The value of the Marker property for this object.
      */
     public String getMarker() {
         return marker;
     }
     
     /**
-     * Use the marker in your next request to continue pagination of iSCSI
-     * volumes. If there are no more volumes to list, this field does not
-     * appear in the response body.
+     * Sets the value of the Marker property for this object.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 1000<br/>
      *
-     * @param marker Use the marker in your next request to continue pagination of iSCSI
-     *         volumes. If there are no more volumes to list, this field does not
-     *         appear in the response body.
+     * @param marker The new value for the Marker property for this object.
      */
     public void setMarker(String marker) {
         this.marker = marker;
     }
     
     /**
-     * Use the marker in your next request to continue pagination of iSCSI
-     * volumes. If there are no more volumes to list, this field does not
-     * appear in the response body.
+     * Sets the value of the Marker property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 1000<br/>
      *
-     * @param marker Use the marker in your next request to continue pagination of iSCSI
-     *         volumes. If there are no more volumes to list, this field does not
-     *         appear in the response body.
+     * @param marker The new value for the Marker property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -164,19 +131,13 @@ public class ListVolumesResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
-     * An array of <a>VolumeInfo</a> objects, where each object describes an
-     * iSCSI volume. If no volumes are defined for the gateway, then
-     * <code>VolumeInfos</code> is an empty array "[]".
+     * Returns the value of the VolumeInfos property for this object.
      *
-     * @return An array of <a>VolumeInfo</a> objects, where each object describes an
-     *         iSCSI volume. If no volumes are defined for the gateway, then
-     *         <code>VolumeInfos</code> is an empty array "[]".
+     * @return The value of the VolumeInfos property for this object.
      */
     public java.util.List<VolumeInfo> getVolumeInfos() {
-        
         if (volumeInfos == null) {
               volumeInfos = new com.amazonaws.internal.ListWithAutoConstructFlag<VolumeInfo>();
               volumeInfos.setAutoConstruct(true);
@@ -185,13 +146,9 @@ public class ListVolumesResult implements Serializable {
     }
     
     /**
-     * An array of <a>VolumeInfo</a> objects, where each object describes an
-     * iSCSI volume. If no volumes are defined for the gateway, then
-     * <code>VolumeInfos</code> is an empty array "[]".
+     * Sets the value of the VolumeInfos property for this object.
      *
-     * @param volumeInfos An array of <a>VolumeInfo</a> objects, where each object describes an
-     *         iSCSI volume. If no volumes are defined for the gateway, then
-     *         <code>VolumeInfos</code> is an empty array "[]".
+     * @param volumeInfos The new value for the VolumeInfos property for this object.
      */
     public void setVolumeInfos(java.util.Collection<VolumeInfo> volumeInfos) {
         if (volumeInfos == null) {
@@ -204,15 +161,11 @@ public class ListVolumesResult implements Serializable {
     }
     
     /**
-     * An array of <a>VolumeInfo</a> objects, where each object describes an
-     * iSCSI volume. If no volumes are defined for the gateway, then
-     * <code>VolumeInfos</code> is an empty array "[]".
+     * Sets the value of the VolumeInfos property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param volumeInfos An array of <a>VolumeInfo</a> objects, where each object describes an
-     *         iSCSI volume. If no volumes are defined for the gateway, then
-     *         <code>VolumeInfos</code> is an empty array "[]".
+     * @param volumeInfos The new value for the VolumeInfos property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -226,15 +179,11 @@ public class ListVolumesResult implements Serializable {
     }
     
     /**
-     * An array of <a>VolumeInfo</a> objects, where each object describes an
-     * iSCSI volume. If no volumes are defined for the gateway, then
-     * <code>VolumeInfos</code> is an empty array "[]".
+     * Sets the value of the VolumeInfos property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param volumeInfos An array of <a>VolumeInfo</a> objects, where each object describes an
-     *         iSCSI volume. If no volumes are defined for the gateway, then
-     *         <code>VolumeInfos</code> is an empty array "[]".
+     * @param volumeInfos The new value for the VolumeInfos property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -250,7 +199,7 @@ public class ListVolumesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

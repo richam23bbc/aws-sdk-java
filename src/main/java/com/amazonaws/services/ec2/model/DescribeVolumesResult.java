@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeVolumesResult implements Serializable {
      * @return The list of described EBS volumes.
      */
     public java.util.List<Volume> getVolumes() {
-        
         if (volumes == null) {
               volumes = new com.amazonaws.internal.ListWithAutoConstructFlag<Volume>();
               volumes.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeVolumesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

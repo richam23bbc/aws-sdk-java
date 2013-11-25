@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleemail.AmazonSimpleEmailService#setIdentityFeedbackForwardingEnabled(SetIdentityFeedbackForwardingEnabledRequest) SetIdentityFeedbackForwardingEnabled operation}.
@@ -83,8 +85,7 @@ public class SetIdentityFeedbackForwardingEnabledRequest extends AmazonWebServic
         this.identity = identity;
         return this;
     }
-    
-    
+
     /**
      * Sets whether Amazon SES will forward feedback notifications as email.
      * <code>true</code> specifies that Amazon SES will forward feedback
@@ -153,8 +154,7 @@ public class SetIdentityFeedbackForwardingEnabledRequest extends AmazonWebServic
         this.forwardingEnabled = forwardingEnabled;
         return this;
     }
-    
-    
+
     /**
      * Sets whether Amazon SES will forward feedback notifications as email.
      * <code>true</code> specifies that Amazon SES will forward feedback
@@ -175,7 +175,7 @@ public class SetIdentityFeedbackForwardingEnabledRequest extends AmazonWebServic
     public Boolean getForwardingEnabled() {
         return forwardingEnabled;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

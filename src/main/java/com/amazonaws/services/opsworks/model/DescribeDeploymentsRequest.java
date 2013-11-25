@@ -13,13 +13,18 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describeDeployments(DescribeDeploymentsRequest) DescribeDeployments operation}.
  * <p>
  * Requests a description of a specified set of deployments.
+ * </p>
+ * <p>
+ * <b>NOTE:</b>You must specify at least one of the parameters.
  * </p>
  *
  * @see com.amazonaws.services.opsworks.AWSOpsWorks#describeDeployments(DescribeDeploymentsRequest)
@@ -92,8 +97,7 @@ public class DescribeDeploymentsRequest extends AmazonWebServiceRequest implemen
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * The app ID. If you include this parameter,
      * <code>DescribeDeployments</code> returns a description of the commands
@@ -138,8 +142,7 @@ public class DescribeDeploymentsRequest extends AmazonWebServiceRequest implemen
         this.appId = appId;
         return this;
     }
-    
-    
+
     /**
      * An array of deployment IDs to be described. If you include this
      * parameter, <code>DescribeDeployments</code> returns a description of
@@ -152,7 +155,6 @@ public class DescribeDeploymentsRequest extends AmazonWebServiceRequest implemen
      *         every deployment.
      */
     public java.util.List<String> getDeploymentIds() {
-        
         if (deploymentIds == null) {
               deploymentIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               deploymentIds.setAutoConstruct(true);
@@ -232,7 +234,7 @@ public class DescribeDeploymentsRequest extends AmazonWebServiceRequest implemen
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

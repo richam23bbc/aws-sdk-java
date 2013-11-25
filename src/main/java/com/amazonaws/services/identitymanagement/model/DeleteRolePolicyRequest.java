@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#deleteRolePolicy(DeleteRolePolicyRequest) DeleteRolePolicy operation}.
@@ -88,8 +90,7 @@ public class DeleteRolePolicyRequest extends AmazonWebServiceRequest implements 
         this.roleName = roleName;
         return this;
     }
-    
-    
+
     /**
      * Name of the policy document to delete.
      * <p>
@@ -134,8 +135,7 @@ public class DeleteRolePolicyRequest extends AmazonWebServiceRequest implements 
         this.policyName = policyName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

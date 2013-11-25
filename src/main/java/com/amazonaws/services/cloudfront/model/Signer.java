@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -93,8 +95,7 @@ public class Signer implements Serializable {
         this.awsAccountNumber = awsAccountNumber;
         return this;
     }
-    
-    
+
     /**
      * A complex type that lists the active CloudFront key pairs, if any,
      * that are associated with AwsAccountNumber.
@@ -133,8 +134,7 @@ public class Signer implements Serializable {
         this.keyPairIds = keyPairIds;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

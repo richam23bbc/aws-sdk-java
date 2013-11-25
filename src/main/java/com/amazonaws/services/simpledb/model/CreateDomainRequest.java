@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#createDomain(CreateDomainRequest) CreateDomain operation}.
@@ -50,8 +52,6 @@ public class CreateDomainRequest extends AmazonWebServiceRequest implements Seri
      */
     public CreateDomainRequest() {}
     
-
-
     /**
      * Constructs a new CreateDomainRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -65,8 +65,6 @@ public class CreateDomainRequest extends AmazonWebServiceRequest implements Seri
         setDomainName(domainName);
     }
 
-    
-    
     /**
      * The name of the domain to create. The name can range between 3 and 255
      * characters and can contain the following characters: a-z, A-Z, 0-9,
@@ -111,8 +109,7 @@ public class CreateDomainRequest extends AmazonWebServiceRequest implements Seri
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

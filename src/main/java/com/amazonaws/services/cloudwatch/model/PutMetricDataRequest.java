@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudwatch.AmazonCloudWatch#putMetricData(PutMetricDataRequest) PutMetricData operation}.
@@ -97,15 +99,13 @@ public class PutMetricDataRequest extends AmazonWebServiceRequest implements Ser
         this.namespace = namespace;
         return this;
     }
-    
-    
+
     /**
      * A list of data describing the metric.
      *
      * @return A list of data describing the metric.
      */
     public java.util.List<MetricDatum> getMetricData() {
-        
         if (metricData == null) {
               metricData = new com.amazonaws.internal.ListWithAutoConstructFlag<MetricDatum>();
               metricData.setAutoConstruct(true);
@@ -167,7 +167,7 @@ public class PutMetricDataRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -74,8 +76,7 @@ public class UserProfile implements Serializable {
         this.iamUserArn = iamUserArn;
         return this;
     }
-    
-    
+
     /**
      * The user name.
      *
@@ -108,8 +109,7 @@ public class UserProfile implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The user's SSH user name.
      *
@@ -142,8 +142,7 @@ public class UserProfile implements Serializable {
         this.sshUsername = sshUsername;
         return this;
     }
-    
-    
+
     /**
      * The user's SSH public key.
      *
@@ -176,8 +175,7 @@ public class UserProfile implements Serializable {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

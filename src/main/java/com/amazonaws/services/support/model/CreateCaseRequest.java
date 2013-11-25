@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.support.AWSSupport#createCase(CreateCaseRequest) CreateCase operation}.
@@ -152,8 +154,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.subject = subject;
         return this;
     }
-    
-    
+
     /**
      * Code for the AWS service returned by the call to <a
      * href="http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html"
@@ -207,8 +208,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.serviceCode = serviceCode;
         return this;
     }
-    
-    
+
     /**
      * Code for the severity level returned by the call to <a
      * href="http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html"
@@ -271,8 +271,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.severityCode = severityCode;
         return this;
     }
-    
-    
+
     /**
      * Specifies the category of problem for the AWS Support case.
      *
@@ -305,8 +304,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.categoryCode = categoryCode;
         return this;
     }
-    
-    
+
     /**
      * Parameter that represents the communication body text when you create
      * an AWS Support case by calling <a
@@ -366,8 +364,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.communicationBody = communicationBody;
         return this;
     }
-    
-    
+
     /**
      * List of email addresses that AWS Support copies on case
      * correspondence.
@@ -379,7 +376,6 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
      *         correspondence.
      */
     public java.util.List<String> getCcEmailAddresses() {
-        
         if (ccEmailAddresses == null) {
               ccEmailAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               ccEmailAddresses.setAutoConstruct(true);
@@ -456,7 +452,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * Specifies the ISO 639-1 code for the language in which AWS provides
      * support. AWS Support currently supports English and Japanese, for
@@ -507,8 +503,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.language = language;
         return this;
     }
-    
-    
+
     /**
      * Field passed as a parameter in a <a
      * href="http://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html"
@@ -553,8 +548,7 @@ public class CreateCaseRequest extends AmazonWebServiceRequest implements Serial
         this.issueType = issueType;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

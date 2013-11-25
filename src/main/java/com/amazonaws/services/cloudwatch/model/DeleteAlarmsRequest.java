@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudwatch.AmazonCloudWatch#deleteAlarms(DeleteAlarmsRequest) DeleteAlarms operation}.
@@ -43,7 +45,6 @@ public class DeleteAlarmsRequest extends AmazonWebServiceRequest implements Seri
      * @return A list of alarms to be deleted.
      */
     public java.util.List<String> getAlarmNames() {
-        
         if (alarmNames == null) {
               alarmNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               alarmNames.setAutoConstruct(true);
@@ -114,7 +115,7 @@ public class DeleteAlarmsRequest extends AmazonWebServiceRequest implements Seri
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

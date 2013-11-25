@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -79,8 +81,7 @@ public class DescribeClustersResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * A list of <a>Cluster</a> objects, where each object describes one
      * cluster.
@@ -89,7 +90,6 @@ public class DescribeClustersResult implements Serializable {
      *         cluster.
      */
     public java.util.List<Cluster> getClusters() {
-        
         if (clusters == null) {
               clusters = new com.amazonaws.internal.ListWithAutoConstructFlag<Cluster>();
               clusters.setAutoConstruct(true);
@@ -157,7 +157,7 @@ public class DescribeClustersResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

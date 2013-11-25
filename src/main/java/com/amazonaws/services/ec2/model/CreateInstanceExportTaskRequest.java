@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#createInstanceExportTask(CreateInstanceExportTaskRequest) CreateInstanceExportTask operation}.
@@ -64,8 +66,7 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the InstanceId property for this object.
      *
@@ -98,13 +99,12 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the TargetEnvironment property for this object.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>citrix, vmware
+     * <b>Allowed Values: </b>citrix, vmware, microsoft
      *
      * @return The value of the TargetEnvironment property for this object.
      *
@@ -118,7 +118,7 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
      * Sets the value of the TargetEnvironment property for this object.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>citrix, vmware
+     * <b>Allowed Values: </b>citrix, vmware, microsoft
      *
      * @param targetEnvironment The new value for the TargetEnvironment property for this object.
      *
@@ -134,7 +134,7 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>citrix, vmware
+     * <b>Allowed Values: </b>citrix, vmware, microsoft
      *
      * @param targetEnvironment The new value for the TargetEnvironment property for this object.
      *
@@ -147,13 +147,12 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
         this.targetEnvironment = targetEnvironment;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the TargetEnvironment property for this object.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>citrix, vmware
+     * <b>Allowed Values: </b>citrix, vmware, microsoft
      *
      * @param targetEnvironment The new value for the TargetEnvironment property for this object.
      *
@@ -169,7 +168,7 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Allowed Values: </b>citrix, vmware
+     * <b>Allowed Values: </b>citrix, vmware, microsoft
      *
      * @param targetEnvironment The new value for the TargetEnvironment property for this object.
      *
@@ -182,7 +181,7 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
         this.targetEnvironment = targetEnvironment.toString();
         return this;
     }
-    
+
     /**
      * Returns the value of the ExportToS3Task property for this object.
      *
@@ -215,8 +214,7 @@ public class CreateInstanceExportTaskRequest extends AmazonWebServiceRequest imp
         this.exportToS3Task = exportToS3Task;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

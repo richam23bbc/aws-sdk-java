@@ -13,15 +13,17 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#deleteAccountAlias(DeleteAccountAliasRequest) DeleteAccountAlias operation}.
  * <p>
  * Deletes the specified AWS account alias. For information about using an AWS account alias, see <a
- * href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/AccountAlias.html"> Using an Alias for Your AWS Account ID </a> in <i>Using AWS Identity
- * and Access Management</i> .
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html"> Using an Alias for Your AWS Account ID </a> in <i>Using AWS Identity and
+ * Access Management</i> .
  * </p>
  *
  * @see com.amazonaws.services.identitymanagement.AmazonIdentityManagement#deleteAccountAlias(DeleteAccountAliasRequest)
@@ -43,8 +45,6 @@ public class DeleteAccountAliasRequest extends AmazonWebServiceRequest implement
      */
     public DeleteAccountAliasRequest() {}
     
-
-
     /**
      * Constructs a new DeleteAccountAliasRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -56,8 +56,6 @@ public class DeleteAccountAliasRequest extends AmazonWebServiceRequest implement
         setAccountAlias(accountAlias);
     }
 
-    
-    
     /**
      * Name of the account alias to delete.
      * <p>
@@ -102,8 +100,7 @@ public class DeleteAccountAliasRequest extends AmazonWebServiceRequest implement
         this.accountAlias = accountAlias;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

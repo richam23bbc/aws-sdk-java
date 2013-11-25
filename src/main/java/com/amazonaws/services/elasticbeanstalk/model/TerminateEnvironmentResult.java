@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -187,8 +189,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.environmentName = environmentName;
         return this;
     }
-    
-    
+
     /**
      * The ID of this environment.
      *
@@ -221,8 +222,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.environmentId = environmentId;
         return this;
     }
-    
-    
+
     /**
      * The name of the application associated with this environment.
      * <p>
@@ -264,8 +264,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * The application version deployed in this environment.
      * <p>
@@ -307,8 +306,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.versionLabel = versionLabel;
         return this;
     }
-    
-    
+
     /**
      * The name of the <code>SolutionStack</code> deployed with this
      * environment.
@@ -356,8 +354,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.solutionStackName = solutionStackName;
         return this;
     }
-    
-    
+
     /**
      * The name of the configuration template used to originally launch this
      * environment.
@@ -405,8 +402,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.templateName = templateName;
         return this;
     }
-    
-    
+
     /**
      * Describes this environment.
      * <p>
@@ -448,8 +444,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The URL to the LoadBalancer for this environment.
      *
@@ -482,8 +477,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.endpointURL = endpointURL;
         return this;
     }
-    
-    
+
     /**
      * The URL to the CNAME for this environment.
      * <p>
@@ -525,8 +519,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.cNAME = cNAME;
         return this;
     }
-    
-    
+
     /**
      * The creation date for this environment.
      *
@@ -559,8 +552,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.dateCreated = dateCreated;
         return this;
     }
-    
-    
+
     /**
      * The last modified date for this environment.
      *
@@ -593,8 +585,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.dateUpdated = dateUpdated;
         return this;
     }
-    
-    
+
     /**
      * The current operational status of the environment: <ul> <li>
      * <code>Launching</code>: Environment is in the process of initial
@@ -690,8 +681,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The current operational status of the environment: <ul> <li>
      * <code>Launching</code>: Environment is in the process of initial
@@ -757,7 +747,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.status = status.toString();
         return this;
     }
-    
+
     /**
      * Describes the health status of the environment. AWS Elastic Beanstalk
      * indicates the failure levels for a running environment: <enumValues>
@@ -907,8 +897,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.health = health;
         return this;
     }
-    
-    
+
     /**
      * Describes the health status of the environment. AWS Elastic Beanstalk
      * indicates the failure levels for a running environment: <enumValues>
@@ -1010,7 +999,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.health = health.toString();
         return this;
     }
-    
+
     /**
      * The description of the AWS resources used by this environment.
      *
@@ -1043,8 +1032,7 @@ public class TerminateEnvironmentResult implements Serializable {
         this.resources = resources;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

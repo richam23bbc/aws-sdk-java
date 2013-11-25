@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#revokeCacheSecurityGroupIngress(RevokeCacheSecurityGroupIngressRequest) RevokeCacheSecurityGroupIngress operation}.
@@ -50,8 +52,6 @@ public class RevokeCacheSecurityGroupIngressRequest extends AmazonWebServiceRequ
      */
     public RevokeCacheSecurityGroupIngressRequest() {}
     
-
-
     /**
      * Constructs a new RevokeCacheSecurityGroupIngressRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -72,8 +72,6 @@ public class RevokeCacheSecurityGroupIngressRequest extends AmazonWebServiceRequ
         setEC2SecurityGroupOwnerId(eC2SecurityGroupOwnerId);
     }
 
-    
-    
     /**
      * The name of the cache security group to revoke ingress from.
      *
@@ -106,8 +104,7 @@ public class RevokeCacheSecurityGroupIngressRequest extends AmazonWebServiceRequ
         this.cacheSecurityGroupName = cacheSecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * The name of the Amazon EC2 security group to revoke access from.
      *
@@ -140,8 +137,7 @@ public class RevokeCacheSecurityGroupIngressRequest extends AmazonWebServiceRequ
         this.eC2SecurityGroupName = eC2SecurityGroupName;
         return this;
     }
-    
-    
+
     /**
      * The AWS account number of the Amazon EC2 security group owner. Note
      * that this is not the same thing as an AWS access key ID - you must
@@ -186,8 +182,7 @@ public class RevokeCacheSecurityGroupIngressRequest extends AmazonWebServiceRequ
         this.eC2SecurityGroupOwnerId = eC2SecurityGroupOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

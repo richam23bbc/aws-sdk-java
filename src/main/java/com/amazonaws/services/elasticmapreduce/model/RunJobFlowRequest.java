@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticmapreduce.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduce#runJobFlow(RunJobFlowRequest) RunJobFlow operation}.
@@ -56,8 +58,8 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
     private String name;
 
     /**
-     * Specifies the location in Amazon S3 to write the log files of the job
-     * flow. If a value is not provided, logs are not created.
+     * The location in Amazon S3 to write the log files of the job flow. If a
+     * value is not provided, logs are not created.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 10280<br/>
@@ -78,14 +80,12 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * The version of the Amazon Machine Image (AMI) to use when launching
      * Amazon EC2 instances in the job flow. The following values are valid:
      * <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     * the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     * specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     * <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     * 1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     * <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     * modify the version of Hadoop from the defaults shown above. <p>For
-     * details about the AMI versions currently supported by Amazon
-     * ElasticMapReduce, go to <a
+     * the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     * multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     * 0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     * <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     * from the defaults shown above. <p>For details about the AMI versions
+     * currently supported by Amazon Elastic MapReduce, go to <a
      * href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      * Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      * MapReduce Developer's Guide.</i>
@@ -172,8 +172,6 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      */
     public RunJobFlowRequest() {}
     
-
-
     /**
      * Constructs a new RunJobFlowRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -188,8 +186,6 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         setInstances(instances);
     }
 
-    
-    
     /**
      * The name of the job flow.
      * <p>
@@ -234,41 +230,40 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.name = name;
         return this;
     }
-    
-    
+
     /**
-     * Specifies the location in Amazon S3 to write the log files of the job
-     * flow. If a value is not provided, logs are not created.
+     * The location in Amazon S3 to write the log files of the job flow. If a
+     * value is not provided, logs are not created.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 10280<br/>
      * <b>Pattern: </b>[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*<br/>
      *
-     * @return Specifies the location in Amazon S3 to write the log files of the job
-     *         flow. If a value is not provided, logs are not created.
+     * @return The location in Amazon S3 to write the log files of the job flow. If a
+     *         value is not provided, logs are not created.
      */
     public String getLogUri() {
         return logUri;
     }
     
     /**
-     * Specifies the location in Amazon S3 to write the log files of the job
-     * flow. If a value is not provided, logs are not created.
+     * The location in Amazon S3 to write the log files of the job flow. If a
+     * value is not provided, logs are not created.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>0 - 10280<br/>
      * <b>Pattern: </b>[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*<br/>
      *
-     * @param logUri Specifies the location in Amazon S3 to write the log files of the job
-     *         flow. If a value is not provided, logs are not created.
+     * @param logUri The location in Amazon S3 to write the log files of the job flow. If a
+     *         value is not provided, logs are not created.
      */
     public void setLogUri(String logUri) {
         this.logUri = logUri;
     }
     
     /**
-     * Specifies the location in Amazon S3 to write the log files of the job
-     * flow. If a value is not provided, logs are not created.
+     * The location in Amazon S3 to write the log files of the job flow. If a
+     * value is not provided, logs are not created.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -276,8 +271,8 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * <b>Length: </b>0 - 10280<br/>
      * <b>Pattern: </b>[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*<br/>
      *
-     * @param logUri Specifies the location in Amazon S3 to write the log files of the job
-     *         flow. If a value is not provided, logs are not created.
+     * @param logUri The location in Amazon S3 to write the log files of the job flow. If a
+     *         value is not provided, logs are not created.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -286,8 +281,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.logUri = logUri;
         return this;
     }
-    
-    
+
     /**
      * A JSON string for selecting additional features.
      * <p>
@@ -332,20 +326,17 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.additionalInfo = additionalInfo;
         return this;
     }
-    
-    
+
     /**
      * The version of the Amazon Machine Image (AMI) to use when launching
      * Amazon EC2 instances in the job flow. The following values are valid:
      * <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     * the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     * specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     * <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     * 1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     * <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     * modify the version of Hadoop from the defaults shown above. <p>For
-     * details about the AMI versions currently supported by Amazon
-     * ElasticMapReduce, go to <a
+     * the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     * multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     * 0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     * <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     * from the defaults shown above. <p>For details about the AMI versions
+     * currently supported by Amazon Elastic MapReduce, go to <a
      * href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      * Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      * MapReduce Developer's Guide.</i>
@@ -357,14 +348,12 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * @return The version of the Amazon Machine Image (AMI) to use when launching
      *         Amazon EC2 instances in the job flow. The following values are valid:
      *         <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     *         the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     *         specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     *         <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     *         1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     *         <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     *         modify the version of Hadoop from the defaults shown above. <p>For
-     *         details about the AMI versions currently supported by Amazon
-     *         ElasticMapReduce, go to <a
+     *         the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     *         multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     *         0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     *         <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     *         from the defaults shown above. <p>For details about the AMI versions
+     *         currently supported by Amazon Elastic MapReduce, go to <a
      *         href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      *         Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      *         MapReduce Developer's Guide.</i>
@@ -377,14 +366,12 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * The version of the Amazon Machine Image (AMI) to use when launching
      * Amazon EC2 instances in the job flow. The following values are valid:
      * <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     * the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     * specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     * <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     * 1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     * <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     * modify the version of Hadoop from the defaults shown above. <p>For
-     * details about the AMI versions currently supported by Amazon
-     * ElasticMapReduce, go to <a
+     * the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     * multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     * 0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     * <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     * from the defaults shown above. <p>For details about the AMI versions
+     * currently supported by Amazon Elastic MapReduce, go to <a
      * href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      * Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      * MapReduce Developer's Guide.</i>
@@ -396,14 +383,12 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * @param amiVersion The version of the Amazon Machine Image (AMI) to use when launching
      *         Amazon EC2 instances in the job flow. The following values are valid:
      *         <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     *         the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     *         specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     *         <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     *         1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     *         <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     *         modify the version of Hadoop from the defaults shown above. <p>For
-     *         details about the AMI versions currently supported by Amazon
-     *         ElasticMapReduce, go to <a
+     *         the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     *         multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     *         0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     *         <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     *         from the defaults shown above. <p>For details about the AMI versions
+     *         currently supported by Amazon Elastic MapReduce, go to <a
      *         href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      *         Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      *         MapReduce Developer's Guide.</i>
@@ -416,14 +401,12 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * The version of the Amazon Machine Image (AMI) to use when launching
      * Amazon EC2 instances in the job flow. The following values are valid:
      * <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     * the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     * specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     * <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     * 1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     * <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     * modify the version of Hadoop from the defaults shown above. <p>For
-     * details about the AMI versions currently supported by Amazon
-     * ElasticMapReduce, go to <a
+     * the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     * multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     * 0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     * <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     * from the defaults shown above. <p>For details about the AMI versions
+     * currently supported by Amazon Elastic MapReduce, go to <a
      * href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      * Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      * MapReduce Developer's Guide.</i>
@@ -437,14 +420,12 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      * @param amiVersion The version of the Amazon Machine Image (AMI) to use when launching
      *         Amazon EC2 instances in the job flow. The following values are valid:
      *         <ul> <li>"latest" (uses the latest AMI)</li> <li>The version number of
-     *         the AMI to use, for example, "2.0"</li> </ul> <p>If this value is not
-     *         specified, the job flow uses the default of (AMI 1.0, Hadoop 0.18).
-     *         <p>If the AMI supports multiple versions of Hadoop (for example, AMI
-     *         1.0 supports both Hadoop 0.18 and 0.20) you can use the
-     *         <a>JobFlowInstancesConfig</a> <code>HadoopVersion</code> parameter to
-     *         modify the version of Hadoop from the defaults shown above. <p>For
-     *         details about the AMI versions currently supported by Amazon
-     *         ElasticMapReduce, go to <a
+     *         the AMI to use, for example, "2.0"</li> </ul> <p>If the AMI supports
+     *         multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop
+     *         0.18 and 0.20) you can use the <a>JobFlowInstancesConfig</a>
+     *         <code>HadoopVersion</code> parameter to modify the version of Hadoop
+     *         from the defaults shown above. <p>For details about the AMI versions
+     *         currently supported by Amazon Elastic MapReduce, go to <a
      *         href="http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/EnvironmentConfig_AMIVersion.html#ami-versions-supported">AMI
      *         Versions Supported in Elastic MapReduce</a> in the <i>Amazon Elastic
      *         MapReduce Developer's Guide.</i>
@@ -456,8 +437,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.amiVersion = amiVersion;
         return this;
     }
-    
-    
+
     /**
      * A specification of the number and type of Amazon EC2 instances on
      * which to run the job flow.
@@ -496,15 +476,13 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.instances = instances;
         return this;
     }
-    
-    
+
     /**
      * A list of steps to be executed by the job flow.
      *
      * @return A list of steps to be executed by the job flow.
      */
     public java.util.List<StepConfig> getSteps() {
-        
         if (steps == null) {
               steps = new com.amazonaws.internal.ListWithAutoConstructFlag<StepConfig>();
               steps.setAutoConstruct(true);
@@ -566,7 +544,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * A list of bootstrap actions that will be run before Hadoop is started
      * on the cluster nodes.
@@ -575,7 +553,6 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      *         on the cluster nodes.
      */
     public java.util.List<BootstrapActionConfig> getBootstrapActions() {
-        
         if (bootstrapActions == null) {
               bootstrapActions = new com.amazonaws.internal.ListWithAutoConstructFlag<BootstrapActionConfig>();
               bootstrapActions.setAutoConstruct(true);
@@ -643,7 +620,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * A list of strings that indicates third-party software to use with the
      * job flow. For more information, go to <a
@@ -666,7 +643,6 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      *         <li>"mapr-m5" - launch the job flow using MapR M5 Edition.</li> </ul>
      */
     public java.util.List<String> getSupportedProducts() {
-        
         if (supportedProducts == null) {
               supportedProducts = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               supportedProducts.setAutoConstruct(true);
@@ -776,7 +752,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * A list of strings that indicates third-party software to use with the
      * job flow that accepts a user argument list. EMR accepts and forwards
@@ -809,7 +785,6 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
      *         respectively.</li> </ul>
      */
     public java.util.List<SupportedProductConfig> getNewSupportedProducts() {
-        
         if (newSupportedProducts == null) {
               newSupportedProducts = new com.amazonaws.internal.ListWithAutoConstructFlag<SupportedProductConfig>();
               newSupportedProducts.setAutoConstruct(true);
@@ -949,7 +924,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
 
         return this;
     }
-    
+
     /**
      * Whether the job flow is visible to all IAM users of the AWS account
      * associated with the job flow. If this value is set to
@@ -1012,8 +987,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.visibleToAllUsers = visibleToAllUsers;
         return this;
     }
-    
-    
+
     /**
      * Whether the job flow is visible to all IAM users of the AWS account
      * associated with the job flow. If this value is set to
@@ -1032,7 +1006,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
     public Boolean getVisibleToAllUsers() {
         return visibleToAllUsers;
     }
-    
+
     /**
      * An IAM role for the job flow. The EC2 instances of the job flow assume
      * this role. The default role is <code>EMRJobflowDefault</code>. In
@@ -1095,8 +1069,7 @@ public class RunJobFlowRequest extends AmazonWebServiceRequest implements Serial
         this.jobFlowRole = jobFlowRole;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

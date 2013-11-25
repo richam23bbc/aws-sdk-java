@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -81,15 +83,13 @@ public class ValidationError implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * A description of the validation error.
      *
      * @return A description of the validation error.
      */
     public java.util.List<String> getErrors() {
-        
         if (errors == null) {
               errors = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               errors.setAutoConstruct(true);
@@ -151,7 +151,7 @@ public class ValidationError implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

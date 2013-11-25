@@ -13,18 +13,14 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
  * A JSON object containing the following fields:
  * </p>
- * 
- * <ul>
- * <li> DeleteChapCredentialsOutput$InitiatorName </li>
- * <li> DeleteChapCredentialsOutput$TargetARN </li>
- * 
- * </ul>
  */
 public class DeleteChapCredentialsResult implements Serializable {
 
@@ -86,8 +82,7 @@ public class DeleteChapCredentialsResult implements Serializable {
         this.targetARN = targetARN;
         return this;
     }
-    
-    
+
     /**
      * The iSCSI initiator that connects to the target.
      * <p>
@@ -132,8 +127,7 @@ public class DeleteChapCredentialsResult implements Serializable {
         this.initiatorName = initiatorName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

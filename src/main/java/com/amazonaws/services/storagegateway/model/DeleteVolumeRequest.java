@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#deleteVolume(DeleteVolumeRequest) DeleteVolume operation}.
@@ -26,8 +28,8 @@ import java.io.Serializable;
  * Before you delete a gateway volume, make sure there are no iSCSI connections to the volume you are deleting. You should also make sure there is no
  * snapshot in progress. You can use the Amazon Elastic Compute Cloud (Amazon EC2) API to query snapshots on the volume you are deleting and check the
  * snapshot status. For more information, go to <a
- * href="http://docs.amazonwebservices.com/AWSEC2/latest/APIReference/ApiReference-query-DescribeSnapshots.html"> DescribeSnapshots </a> in the
- * <i>Amazon Elastic Compute Cloud API Reference</i> .
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DescribeSnapshots.html"> DescribeSnapshots </a> in the <i>Amazon
+ * Elastic Compute Cloud API Reference</i> .
  * </p>
  * <p>
  * In the request, you must provide the Amazon Resource Name (ARN) of the storage volume you want to delete.
@@ -93,8 +95,7 @@ public class DeleteVolumeRequest extends AmazonWebServiceRequest implements Seri
         this.volumeARN = volumeARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

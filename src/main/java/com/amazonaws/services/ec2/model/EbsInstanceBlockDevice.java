@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -29,6 +31,9 @@ public class EbsInstanceBlockDevice implements Serializable {
 
     /**
      * The status of the EBS volume.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>attaching, attached, detaching, detached
      */
     private String status;
 
@@ -76,12 +81,16 @@ public class EbsInstanceBlockDevice implements Serializable {
         this.volumeId = volumeId;
         return this;
     }
-    
-    
+
     /**
      * The status of the EBS volume.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>attaching, attached, detaching, detached
      *
      * @return The status of the EBS volume.
+     *
+     * @see AttachmentStatus
      */
     public String getStatus() {
         return status;
@@ -89,8 +98,13 @@ public class EbsInstanceBlockDevice implements Serializable {
     
     /**
      * The status of the EBS volume.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>attaching, attached, detaching, detached
      *
      * @param status The status of the EBS volume.
+     *
+     * @see AttachmentStatus
      */
     public void setStatus(String status) {
         this.status = status;
@@ -100,18 +114,56 @@ public class EbsInstanceBlockDevice implements Serializable {
      * The status of the EBS volume.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>attaching, attached, detaching, detached
      *
      * @param status The status of the EBS volume.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see AttachmentStatus
      */
     public EbsInstanceBlockDevice withStatus(String status) {
         this.status = status;
         return this;
     }
+
+    /**
+     * The status of the EBS volume.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>attaching, attached, detaching, detached
+     *
+     * @param status The status of the EBS volume.
+     *
+     * @see AttachmentStatus
+     */
+    public void setStatus(AttachmentStatus status) {
+        this.status = status.toString();
+    }
     
-    
+    /**
+     * The status of the EBS volume.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>attaching, attached, detaching, detached
+     *
+     * @param status The status of the EBS volume.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see AttachmentStatus
+     */
+    public EbsInstanceBlockDevice withStatus(AttachmentStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
     /**
      * The time at which the EBS volume was attached to the associated
      * instance.
@@ -150,8 +202,7 @@ public class EbsInstanceBlockDevice implements Serializable {
         this.attachTime = attachTime;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the Amazon EBS volume is deleted on instance
      * termination.
@@ -190,8 +241,7 @@ public class EbsInstanceBlockDevice implements Serializable {
         this.deleteOnTermination = deleteOnTermination;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the Amazon EBS volume is deleted on instance
      * termination.
@@ -202,7 +252,7 @@ public class EbsInstanceBlockDevice implements Serializable {
     public Boolean getDeleteOnTermination() {
         return deleteOnTermination;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

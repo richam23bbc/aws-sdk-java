@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.support.AWSSupport#describeCommunications(DescribeCommunicationsRequest) DescribeCommunications operation}.
@@ -106,8 +108,7 @@ public class DescribeCommunicationsRequest extends AmazonWebServiceRequest imple
         this.caseId = caseId;
         return this;
     }
-    
-    
+
     /**
      * End date for a filtered date search on support case communications.
      *
@@ -140,8 +141,7 @@ public class DescribeCommunicationsRequest extends AmazonWebServiceRequest imple
         this.beforeTime = beforeTime;
         return this;
     }
-    
-    
+
     /**
      * Start date for a filtered date search on support case communications.
      *
@@ -174,8 +174,7 @@ public class DescribeCommunicationsRequest extends AmazonWebServiceRequest imple
         this.afterTime = afterTime;
         return this;
     }
-    
-    
+
     /**
      * Defines a resumption point for pagination.
      *
@@ -208,8 +207,7 @@ public class DescribeCommunicationsRequest extends AmazonWebServiceRequest imple
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Integer that sets the maximum number of results to return before
      * paginating.
@@ -257,8 +255,7 @@ public class DescribeCommunicationsRequest extends AmazonWebServiceRequest imple
         this.maxResults = maxResults;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

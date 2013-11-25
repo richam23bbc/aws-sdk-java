@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#describeStorediSCSIVolumes(DescribeStorediSCSIVolumesRequest) DescribeStorediSCSIVolumes operation}.
@@ -47,7 +49,6 @@ public class DescribeStorediSCSIVolumesRequest extends AmazonWebServiceRequest i
      *         for a gateway.
      */
     public java.util.List<String> getVolumeARNs() {
-        
         if (volumeARNs == null) {
               volumeARNs = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               volumeARNs.setAutoConstruct(true);
@@ -127,7 +128,7 @@ public class DescribeStorediSCSIVolumesRequest extends AmazonWebServiceRequest i
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

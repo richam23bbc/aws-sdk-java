@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.route53.AmazonRoute53#listHealthChecks(ListHealthChecksRequest) ListHealthChecks operation}.
@@ -109,8 +111,7 @@ public class ListHealthChecksRequest extends AmazonWebServiceRequest implements 
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Specify the maximum number of health checks to return per page of
      * results.
@@ -149,8 +150,7 @@ public class ListHealthChecksRequest extends AmazonWebServiceRequest implements 
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

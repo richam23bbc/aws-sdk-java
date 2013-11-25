@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Import Instance Volume Detail Item
@@ -66,8 +68,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.bytesConverted = bytesConverted;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AvailabilityZone property for this object.
      *
@@ -100,8 +101,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.availabilityZone = availabilityZone;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Image property for this object.
      *
@@ -134,8 +134,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.image = image;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Volume property for this object.
      *
@@ -168,8 +167,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.volume = volume;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Status property for this object.
      *
@@ -202,8 +200,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the StatusMessage property for this object.
      *
@@ -236,8 +233,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.statusMessage = statusMessage;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Description property for this object.
      *
@@ -270,8 +266,7 @@ public class ImportInstanceVolumeDetailItem implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

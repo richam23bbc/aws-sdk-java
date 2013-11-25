@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.support.AWSSupport#addCommunicationToCase(AddCommunicationToCaseRequest) AddCommunicationToCase operation}.
@@ -103,8 +105,7 @@ public class AddCommunicationToCaseRequest extends AmazonWebServiceRequest imple
         this.caseId = caseId;
         return this;
     }
-    
-    
+
     /**
      * Represents the body of an email communication added to the support
      * case.
@@ -152,8 +153,7 @@ public class AddCommunicationToCaseRequest extends AmazonWebServiceRequest imple
         this.communicationBody = communicationBody;
         return this;
     }
-    
-    
+
     /**
      * Represents any email addresses contained in the CC line of an email
      * added to the support case.
@@ -165,7 +165,6 @@ public class AddCommunicationToCaseRequest extends AmazonWebServiceRequest imple
      *         added to the support case.
      */
     public java.util.List<String> getCcEmailAddresses() {
-        
         if (ccEmailAddresses == null) {
               ccEmailAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               ccEmailAddresses.setAutoConstruct(true);
@@ -242,7 +241,7 @@ public class AddCommunicationToCaseRequest extends AmazonWebServiceRequest imple
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

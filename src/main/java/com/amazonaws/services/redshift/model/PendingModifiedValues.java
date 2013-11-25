@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -92,8 +94,7 @@ public class PendingModifiedValues implements Serializable {
         this.masterUserPassword = masterUserPassword;
         return this;
     }
-    
-    
+
     /**
      * The pending or in-progress change of the cluster's node type.
      *
@@ -126,8 +127,7 @@ public class PendingModifiedValues implements Serializable {
         this.nodeType = nodeType;
         return this;
     }
-    
-    
+
     /**
      * The pending or in-progress change of the number nodes in the cluster.
      *
@@ -160,8 +160,7 @@ public class PendingModifiedValues implements Serializable {
         this.numberOfNodes = numberOfNodes;
         return this;
     }
-    
-    
+
     /**
      * The pending or in-progress change of the cluster type.
      *
@@ -194,8 +193,7 @@ public class PendingModifiedValues implements Serializable {
         this.clusterType = clusterType;
         return this;
     }
-    
-    
+
     /**
      * The pending or in-progress change of the service version.
      *
@@ -228,8 +226,7 @@ public class PendingModifiedValues implements Serializable {
         this.clusterVersion = clusterVersion;
         return this;
     }
-    
-    
+
     /**
      * The pending or in-progress change of the automated snapshot retention
      * period.
@@ -268,8 +265,7 @@ public class PendingModifiedValues implements Serializable {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

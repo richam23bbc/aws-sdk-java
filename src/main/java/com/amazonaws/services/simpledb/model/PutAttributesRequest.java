@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#putAttributes(PutAttributesRequest) PutAttributes operation}.
@@ -91,8 +93,6 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
      */
     public PutAttributesRequest() {}
     
-
-
     /**
      * Constructs a new PutAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -108,10 +108,6 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
         setItemName(itemName);
         setAttributes(attributes);
     }
-
-    
-    
-
 
     /**
      * Constructs a new PutAttributesRequest object.
@@ -134,8 +130,6 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
         setExpected(expected);
     }
 
-    
-    
     /**
      * The name of the domain in which to perform the operation.
      *
@@ -168,8 +162,7 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * The name of the item.
      *
@@ -202,15 +195,13 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
         this.itemName = itemName;
         return this;
     }
-    
-    
+
     /**
      * The list of attributes.
      *
      * @return The list of attributes.
      */
     public java.util.List<ReplaceableAttribute> getAttributes() {
-        
         if (attributes == null) {
               attributes = new com.amazonaws.internal.ListWithAutoConstructFlag<ReplaceableAttribute>();
               attributes.setAutoConstruct(true);
@@ -272,7 +263,7 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
-    
+
     /**
      * The update condition which, if specified, determines whether the
      * specified attributes will be updated or not. The update condition must
@@ -323,8 +314,7 @@ public class PutAttributesRequest extends AmazonWebServiceRequest implements Ser
         this.expected = expected;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

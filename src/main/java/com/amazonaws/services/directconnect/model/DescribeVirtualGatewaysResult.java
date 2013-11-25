@@ -13,27 +13,28 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.directconnect.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * A structure containing a list of virtual gateways.
+ * A structure containing a list of virtual private gateways.
  * </p>
  */
 public class DescribeVirtualGatewaysResult implements Serializable {
 
     /**
-     * A list of virtual gateways.
+     * A list of virtual private gateways.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<VirtualGateway> virtualGateways;
 
     /**
-     * A list of virtual gateways.
+     * A list of virtual private gateways.
      *
-     * @return A list of virtual gateways.
+     * @return A list of virtual private gateways.
      */
     public java.util.List<VirtualGateway> getVirtualGateways() {
-        
         if (virtualGateways == null) {
               virtualGateways = new com.amazonaws.internal.ListWithAutoConstructFlag<VirtualGateway>();
               virtualGateways.setAutoConstruct(true);
@@ -42,9 +43,9 @@ public class DescribeVirtualGatewaysResult implements Serializable {
     }
     
     /**
-     * A list of virtual gateways.
+     * A list of virtual private gateways.
      *
-     * @param virtualGateways A list of virtual gateways.
+     * @param virtualGateways A list of virtual private gateways.
      */
     public void setVirtualGateways(java.util.Collection<VirtualGateway> virtualGateways) {
         if (virtualGateways == null) {
@@ -57,11 +58,11 @@ public class DescribeVirtualGatewaysResult implements Serializable {
     }
     
     /**
-     * A list of virtual gateways.
+     * A list of virtual private gateways.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param virtualGateways A list of virtual gateways.
+     * @param virtualGateways A list of virtual private gateways.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -75,11 +76,11 @@ public class DescribeVirtualGatewaysResult implements Serializable {
     }
     
     /**
-     * A list of virtual gateways.
+     * A list of virtual private gateways.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param virtualGateways A list of virtual gateways.
+     * @param virtualGateways A list of virtual private gateways.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -95,7 +96,7 @@ public class DescribeVirtualGatewaysResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

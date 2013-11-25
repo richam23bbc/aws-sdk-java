@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.AssociateAddressRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#associateAddress(AssociateAddressRequest) AssociateAddress operation}.
@@ -60,8 +62,6 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
      */
     public AssociateAddressRequest() {}
     
-
-
     /**
      * Constructs a new AssociateAddressRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -75,8 +75,6 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         setPublicIp(publicIp);
     }
 
-    
-    
     /**
      * The instance to associate with the IP address.
      *
@@ -109,8 +107,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * IP address that you are assigning to the instance.
      *
@@ -143,8 +140,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         this.publicIp = publicIp;
         return this;
     }
-    
-    
+
     /**
      * The allocation ID that AWS returned when you allocated the elastic IP
      * address for use with Amazon VPC.
@@ -183,8 +179,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         this.allocationId = allocationId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the NetworkInterfaceId property for this object.
      *
@@ -217,8 +212,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PrivateIpAddress property for this object.
      *
@@ -251,8 +245,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         this.privateIpAddress = privateIpAddress;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AllowReassociation property for this object.
      *
@@ -285,8 +278,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
         this.allowReassociation = allowReassociation;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AllowReassociation property for this object.
      *
@@ -295,7 +287,7 @@ public class AssociateAddressRequest extends AmazonWebServiceRequest implements 
     public Boolean getAllowReassociation() {
         return allowReassociation;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -78,8 +80,7 @@ public class ForwardedValues implements Serializable {
         this.queryString = queryString;
         return this;
     }
-    
-    
+
     /**
      * Indicates whether you want CloudFront to forward query strings to the
      * origin that is associated with this cache behavior. If so, specify
@@ -92,7 +93,7 @@ public class ForwardedValues implements Serializable {
     public Boolean getQueryString() {
         return queryString;
     }
-    
+
     /**
      * A complex type that specifies how CloudFront handles cookies.
      *
@@ -125,8 +126,7 @@ public class ForwardedValues implements Serializable {
         this.cookies = cookies;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

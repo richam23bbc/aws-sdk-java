@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -105,8 +107,7 @@ public class CookiePreference implements Serializable {
         this.forward = forward;
         return this;
     }
-    
-    
+
     /**
      * Use this element to specify whether you want CloudFront to forward
      * cookies to the origin that is associated with this cache behavior. You
@@ -152,7 +153,7 @@ public class CookiePreference implements Serializable {
         this.forward = forward.toString();
         return this;
     }
-    
+
     /**
      * A complex type that specifies the whitelisted cookies, if any, that
      * you want CloudFront to forward to your origin that is associated with
@@ -197,8 +198,7 @@ public class CookiePreference implements Serializable {
         this.whitelistedNames = whitelistedNames;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

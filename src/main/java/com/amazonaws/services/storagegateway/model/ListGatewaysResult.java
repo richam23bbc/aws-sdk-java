@@ -13,43 +13,25 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
 
+
 /**
- * <p>
- * A JSON object containing the following fields:
- * </p>
- * 
- * <ul>
- * <li> ListGatewaysOutput$Gateways </li>
- * <li> ListGatewaysOutput$Marker </li>
- * 
- * </ul>
+ * List Gateways Result
  */
 public class ListGatewaysResult implements Serializable {
 
-    /**
-     * An array of <a>GatewayInfo</a> objects.
-     */
     private com.amazonaws.internal.ListWithAutoConstructFlag<GatewayInfo> gateways;
 
-    /**
-     * Use the marker in your next request to fetch the next set of gateways
-     * in the list. If there are no more gateways to list, this field does
-     * not appear in the response.
-     * <p>
-     * <b>Constraints:</b><br/>
-     * <b>Length: </b>1 - 1000<br/>
-     */
     private String marker;
 
     /**
-     * An array of <a>GatewayInfo</a> objects.
+     * Returns the value of the Gateways property for this object.
      *
-     * @return An array of <a>GatewayInfo</a> objects.
+     * @return The value of the Gateways property for this object.
      */
     public java.util.List<GatewayInfo> getGateways() {
-        
         if (gateways == null) {
               gateways = new com.amazonaws.internal.ListWithAutoConstructFlag<GatewayInfo>();
               gateways.setAutoConstruct(true);
@@ -58,9 +40,9 @@ public class ListGatewaysResult implements Serializable {
     }
     
     /**
-     * An array of <a>GatewayInfo</a> objects.
+     * Sets the value of the Gateways property for this object.
      *
-     * @param gateways An array of <a>GatewayInfo</a> objects.
+     * @param gateways The new value for the Gateways property for this object.
      */
     public void setGateways(java.util.Collection<GatewayInfo> gateways) {
         if (gateways == null) {
@@ -73,11 +55,11 @@ public class ListGatewaysResult implements Serializable {
     }
     
     /**
-     * An array of <a>GatewayInfo</a> objects.
+     * Sets the value of the Gateways property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param gateways An array of <a>GatewayInfo</a> objects.
+     * @param gateways The new value for the Gateways property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -91,11 +73,11 @@ public class ListGatewaysResult implements Serializable {
     }
     
     /**
-     * An array of <a>GatewayInfo</a> objects.
+     * Sets the value of the Gateways property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param gateways An array of <a>GatewayInfo</a> objects.
+     * @param gateways The new value for the Gateways property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -111,52 +93,40 @@ public class ListGatewaysResult implements Serializable {
 
         return this;
     }
-    
+
     /**
-     * Use the marker in your next request to fetch the next set of gateways
-     * in the list. If there are no more gateways to list, this field does
-     * not appear in the response.
+     * Returns the value of the Marker property for this object.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 1000<br/>
      *
-     * @return Use the marker in your next request to fetch the next set of gateways
-     *         in the list. If there are no more gateways to list, this field does
-     *         not appear in the response.
+     * @return The value of the Marker property for this object.
      */
     public String getMarker() {
         return marker;
     }
     
     /**
-     * Use the marker in your next request to fetch the next set of gateways
-     * in the list. If there are no more gateways to list, this field does
-     * not appear in the response.
+     * Sets the value of the Marker property for this object.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 1000<br/>
      *
-     * @param marker Use the marker in your next request to fetch the next set of gateways
-     *         in the list. If there are no more gateways to list, this field does
-     *         not appear in the response.
+     * @param marker The new value for the Marker property for this object.
      */
     public void setMarker(String marker) {
         this.marker = marker;
     }
     
     /**
-     * Use the marker in your next request to fetch the next set of gateways
-     * in the list. If there are no more gateways to list, this field does
-     * not appear in the response.
+     * Sets the value of the Marker property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Length: </b>1 - 1000<br/>
      *
-     * @param marker Use the marker in your next request to fetch the next set of gateways
-     *         in the list. If there are no more gateways to list, this field does
-     *         not appear in the response.
+     * @param marker The new value for the Marker property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -165,8 +135,7 @@ public class ListGatewaysResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -40,8 +42,6 @@ public class DeleteMessageBatchRequestEntry implements Serializable {
      */
     public DeleteMessageBatchRequestEntry() {}
     
-
-
     /**
      * Constructs a new DeleteMessageBatchRequestEntry object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -57,8 +57,6 @@ public class DeleteMessageBatchRequestEntry implements Serializable {
         setReceiptHandle(receiptHandle);
     }
 
-    
-    
     /**
      * An identifier for this particular receipt handle. This is used to
      * communicate the result. Note that the <code>Id</code>s of a batch
@@ -103,8 +101,7 @@ public class DeleteMessageBatchRequestEntry implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * A receipt handle.
      *
@@ -137,8 +134,7 @@ public class DeleteMessageBatchRequestEntry implements Serializable {
         this.receiptHandle = receiptHandle;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

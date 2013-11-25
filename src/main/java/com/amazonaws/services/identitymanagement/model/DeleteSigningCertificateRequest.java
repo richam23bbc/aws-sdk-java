@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#deleteSigningCertificate(DeleteSigningCertificateRequest) DeleteSigningCertificate operation}.
@@ -22,7 +24,7 @@ import java.io.Serializable;
  * Deletes the specified signing certificate associated with the specified user.
  * </p>
  * <p>
- * If you do not specify a user name, IAM determines the user name implicitly based on the AWS Access Key ID signing the request. Because this action
+ * If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the request. Because this action
  * works for access keys under the AWS account, you can use this API to manage root credentials even if the AWS account has no associated users.
  * </p>
  *
@@ -54,8 +56,6 @@ public class DeleteSigningCertificateRequest extends AmazonWebServiceRequest imp
      */
     public DeleteSigningCertificateRequest() {}
     
-
-
     /**
      * Constructs a new DeleteSigningCertificateRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -67,8 +67,6 @@ public class DeleteSigningCertificateRequest extends AmazonWebServiceRequest imp
         setCertificateId(certificateId);
     }
 
-    
-    
     /**
      * Name of the user the signing certificate belongs to.
      * <p>
@@ -113,8 +111,7 @@ public class DeleteSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * ID of the signing certificate to delete.
      * <p>
@@ -159,8 +156,7 @@ public class DeleteSigningCertificateRequest extends AmazonWebServiceRequest imp
         this.certificateId = certificateId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

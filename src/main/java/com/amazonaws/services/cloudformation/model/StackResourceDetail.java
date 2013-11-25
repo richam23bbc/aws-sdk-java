@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -45,7 +47,7 @@ public class StackResourceDetail implements Serializable {
 
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      */
     private String resourceType;
@@ -76,7 +78,7 @@ public class StackResourceDetail implements Serializable {
     /**
      * The JSON format content of the <code>Metadata</code> attribute
      * declared for the resource. For more information, see <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      * Attribute</a> in the AWS CloudFormation User Guide.
      */
     private String metadata;
@@ -113,8 +115,7 @@ public class StackResourceDetail implements Serializable {
         this.stackName = stackName;
         return this;
     }
-    
-    
+
     /**
      * Unique identifier of the stack.
      *
@@ -147,8 +148,7 @@ public class StackResourceDetail implements Serializable {
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * The logical name of the resource specified in the template.
      *
@@ -181,8 +181,7 @@ public class StackResourceDetail implements Serializable {
         this.logicalResourceId = logicalResourceId;
         return this;
     }
-    
-    
+
     /**
      * The name or unique identifier that corresponds to a physical instance
      * ID of a resource supported by AWS CloudFormation.
@@ -221,15 +220,14 @@ public class StackResourceDetail implements Serializable {
         this.physicalResourceId = physicalResourceId;
         return this;
     }
-    
-    
+
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      *
      * @return Type of the resource. (For more information, go to the <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      *         CloudFormation User Guide</a>.)
      */
     public String getResourceType() {
@@ -238,11 +236,11 @@ public class StackResourceDetail implements Serializable {
     
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      *
      * @param resourceType Type of the resource. (For more information, go to the <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      *         CloudFormation User Guide</a>.)
      */
     public void setResourceType(String resourceType) {
@@ -251,13 +249,13 @@ public class StackResourceDetail implements Serializable {
     
     /**
      * Type of the resource. (For more information, go to the <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      * CloudFormation User Guide</a>.)
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param resourceType Type of the resource. (For more information, go to the <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide">AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide">AWS
      *         CloudFormation User Guide</a>.)
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -267,8 +265,7 @@ public class StackResourceDetail implements Serializable {
         this.resourceType = resourceType;
         return this;
     }
-    
-    
+
     /**
      * Time the status was updated.
      *
@@ -301,8 +298,7 @@ public class StackResourceDetail implements Serializable {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
     }
-    
-    
+
     /**
      * Current status of the resource.
      * <p>
@@ -350,8 +346,7 @@ public class StackResourceDetail implements Serializable {
         this.resourceStatus = resourceStatus;
         return this;
     }
-    
-    
+
     /**
      * Current status of the resource.
      * <p>
@@ -385,7 +380,7 @@ public class StackResourceDetail implements Serializable {
         this.resourceStatus = resourceStatus.toString();
         return this;
     }
-    
+
     /**
      * Success/failure message associated with the resource.
      *
@@ -418,8 +413,7 @@ public class StackResourceDetail implements Serializable {
         this.resourceStatusReason = resourceStatusReason;
         return this;
     }
-    
-    
+
     /**
      * User defined description associated with the resource.
      *
@@ -452,17 +446,16 @@ public class StackResourceDetail implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * The JSON format content of the <code>Metadata</code> attribute
      * declared for the resource. For more information, see <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      * Attribute</a> in the AWS CloudFormation User Guide.
      *
      * @return The JSON format content of the <code>Metadata</code> attribute
      *         declared for the resource. For more information, see <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      *         Attribute</a> in the AWS CloudFormation User Guide.
      */
     public String getMetadata() {
@@ -472,12 +465,12 @@ public class StackResourceDetail implements Serializable {
     /**
      * The JSON format content of the <code>Metadata</code> attribute
      * declared for the resource. For more information, see <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      * Attribute</a> in the AWS CloudFormation User Guide.
      *
      * @param metadata The JSON format content of the <code>Metadata</code> attribute
      *         declared for the resource. For more information, see <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      *         Attribute</a> in the AWS CloudFormation User Guide.
      */
     public void setMetadata(String metadata) {
@@ -487,14 +480,14 @@ public class StackResourceDetail implements Serializable {
     /**
      * The JSON format content of the <code>Metadata</code> attribute
      * declared for the resource. For more information, see <a
-     * href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      * Attribute</a> in the AWS CloudFormation User Guide.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param metadata The JSON format content of the <code>Metadata</code> attribute
      *         declared for the resource. For more information, see <a
-     *         href="http://docs.amazonwebservices.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
      *         Attribute</a> in the AWS CloudFormation User Guide.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -504,8 +497,7 @@ public class StackResourceDetail implements Serializable {
         this.metadata = metadata;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

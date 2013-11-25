@@ -13,13 +13,15 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#describeReservedDBInstancesOfferings(DescribeReservedDBInstancesOfferingsRequest) DescribeReservedDBInstancesOfferings operation}.
  * <p>
- * Lists available reserved DB Instance offerings.
+ * Lists available reserved DB instance offerings.
  * </p>
  *
  * @see com.amazonaws.services.rds.AmazonRDS#describeReservedDBInstancesOfferings(DescribeReservedDBInstancesOfferingsRequest)
@@ -35,8 +37,8 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
     private String reservedDBInstancesOfferingId;
 
     /**
-     * The DB Instance class filter value. Specify this parameter to show
-     * only the available offerings matching the specified DB Instance class.
+     * The DB instance class filter value. Specify this parameter to show
+     * only the available offerings matching the specified DB instance class.
      */
     private String dBInstanceClass;
 
@@ -139,38 +141,37 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
     }
-    
-    
+
     /**
-     * The DB Instance class filter value. Specify this parameter to show
-     * only the available offerings matching the specified DB Instance class.
+     * The DB instance class filter value. Specify this parameter to show
+     * only the available offerings matching the specified DB instance class.
      *
-     * @return The DB Instance class filter value. Specify this parameter to show
-     *         only the available offerings matching the specified DB Instance class.
+     * @return The DB instance class filter value. Specify this parameter to show
+     *         only the available offerings matching the specified DB instance class.
      */
     public String getDBInstanceClass() {
         return dBInstanceClass;
     }
     
     /**
-     * The DB Instance class filter value. Specify this parameter to show
-     * only the available offerings matching the specified DB Instance class.
+     * The DB instance class filter value. Specify this parameter to show
+     * only the available offerings matching the specified DB instance class.
      *
-     * @param dBInstanceClass The DB Instance class filter value. Specify this parameter to show
-     *         only the available offerings matching the specified DB Instance class.
+     * @param dBInstanceClass The DB instance class filter value. Specify this parameter to show
+     *         only the available offerings matching the specified DB instance class.
      */
     public void setDBInstanceClass(String dBInstanceClass) {
         this.dBInstanceClass = dBInstanceClass;
     }
     
     /**
-     * The DB Instance class filter value. Specify this parameter to show
-     * only the available offerings matching the specified DB Instance class.
+     * The DB instance class filter value. Specify this parameter to show
+     * only the available offerings matching the specified DB instance class.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBInstanceClass The DB Instance class filter value. Specify this parameter to show
-     *         only the available offerings matching the specified DB Instance class.
+     * @param dBInstanceClass The DB instance class filter value. Specify this parameter to show
+     *         only the available offerings matching the specified DB instance class.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -179,8 +180,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.dBInstanceClass = dBInstanceClass;
         return this;
     }
-    
-    
+
     /**
      * Duration filter value, specified in years or seconds. Specify this
      * parameter to show only reservations for this duration. <p>Valid
@@ -225,8 +225,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.duration = duration;
         return this;
     }
-    
-    
+
     /**
      * Product description filter value. Specify this parameter to show only
      * the available offerings matching the specified product description.
@@ -265,8 +264,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.productDescription = productDescription;
         return this;
     }
-    
-    
+
     /**
      * The offering type filter value. Specify this parameter to show only
      * the available offerings matching the specified offering type. <p>Valid
@@ -317,8 +315,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.offeringType = offeringType;
         return this;
     }
-    
-    
+
     /**
      * The Multi-AZ filter value. Specify this parameter to show only the
      * available offerings matching the specified Multi-AZ parameter.
@@ -357,8 +354,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.multiAZ = multiAZ;
         return this;
     }
-    
-    
+
     /**
      * The Multi-AZ filter value. Specify this parameter to show only the
      * available offerings matching the specified Multi-AZ parameter.
@@ -369,7 +365,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
     public Boolean getMultiAZ() {
         return multiAZ;
     }
-    
+
     /**
      * The maximum number of records to include in the response. If more than
      * the <code>MaxRecords</code> value is available, a pagination token
@@ -426,8 +422,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional pagination token provided by a previous request. If this
      * parameter is specified, the response includes only records beyond the
@@ -472,8 +467,7 @@ public class DescribeReservedDBInstancesOfferingsRequest extends AmazonWebServic
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

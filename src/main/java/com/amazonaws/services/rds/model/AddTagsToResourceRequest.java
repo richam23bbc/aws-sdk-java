@@ -13,17 +13,20 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#addTagsToResource(AddTagsToResourceRequest) AddTagsToResource operation}.
  * <p>
- * Adds metadata tags to a DB Instance. These tags can also be used with cost allocation reporting to track cost associated with a DB Instance.
+ * Adds metadata tags to an Amazon RDS resource. These tags can also be used with cost allocation reporting to track cost associated with Amazon RDS
+ * resources, or used in Condition statement in IAM policy for Amazon RDS.
  * </p>
  * <p>
- * For an overview on tagging DB Instances, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html"> DB Instance Tags.
- * </a>
+ * For an overview on tagging Amazon RDS resources, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html"> Tagging
+ * Amazon RDS Resources </a> .
  * </p>
  *
  * @see com.amazonaws.services.rds.AmazonRDS#addTagsToResource(AddTagsToResourceRequest)
@@ -31,26 +34,29 @@ import java.io.Serializable;
 public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * The DB Instance the tags will be added to. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource the tags will be added to. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      */
     private String resourceName;
 
     /**
-     * The tags to be assigned to the DB Instance.
+     * The tags to be assigned to the Amazon RDS resource.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<Tag> tags;
 
     /**
-     * The DB Instance the tags will be added to. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource the tags will be added to. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      *
-     * @return The DB Instance the tags will be added to. This value is an Amazon
-     *         Resource Name (ARN). For information about creating an ARN, see <a
+     * @return The Amazon RDS resource the tags will be added to. This value is an
+     *         Amazon Resource Name (ARN). For information about creating an ARN, see
+     *         <a
      *         href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      *         Constructing an RDS Amazon Resource Name (ARN)</a>.
      */
@@ -59,13 +65,15 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * The DB Instance the tags will be added to. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource the tags will be added to. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      *
-     * @param resourceName The DB Instance the tags will be added to. This value is an Amazon
-     *         Resource Name (ARN). For information about creating an ARN, see <a
+     * @param resourceName The Amazon RDS resource the tags will be added to. This value is an
+     *         Amazon Resource Name (ARN). For information about creating an ARN, see
+     *         <a
      *         href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      *         Constructing an RDS Amazon Resource Name (ARN)</a>.
      */
@@ -74,15 +82,17 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * The DB Instance the tags will be added to. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource the tags will be added to. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param resourceName The DB Instance the tags will be added to. This value is an Amazon
-     *         Resource Name (ARN). For information about creating an ARN, see <a
+     * @param resourceName The Amazon RDS resource the tags will be added to. This value is an
+     *         Amazon Resource Name (ARN). For information about creating an ARN, see
+     *         <a
      *         href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      *         Constructing an RDS Amazon Resource Name (ARN)</a>.
      *
@@ -93,15 +103,13 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
         this.resourceName = resourceName;
         return this;
     }
-    
-    
+
     /**
-     * The tags to be assigned to the DB Instance.
+     * The tags to be assigned to the Amazon RDS resource.
      *
-     * @return The tags to be assigned to the DB Instance.
+     * @return The tags to be assigned to the Amazon RDS resource.
      */
     public java.util.List<Tag> getTags() {
-        
         if (tags == null) {
               tags = new com.amazonaws.internal.ListWithAutoConstructFlag<Tag>();
               tags.setAutoConstruct(true);
@@ -110,9 +118,9 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * The tags to be assigned to the DB Instance.
+     * The tags to be assigned to the Amazon RDS resource.
      *
-     * @param tags The tags to be assigned to the DB Instance.
+     * @param tags The tags to be assigned to the Amazon RDS resource.
      */
     public void setTags(java.util.Collection<Tag> tags) {
         if (tags == null) {
@@ -125,11 +133,11 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * The tags to be assigned to the DB Instance.
+     * The tags to be assigned to the Amazon RDS resource.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param tags The tags to be assigned to the DB Instance.
+     * @param tags The tags to be assigned to the Amazon RDS resource.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -143,11 +151,11 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
     }
     
     /**
-     * The tags to be assigned to the DB Instance.
+     * The tags to be assigned to the Amazon RDS resource.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param tags The tags to be assigned to the DB Instance.
+     * @param tags The tags to be assigned to the Amazon RDS resource.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -163,7 +171,7 @@ public class AddTagsToResourceRequest extends AmazonWebServiceRequest implements
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

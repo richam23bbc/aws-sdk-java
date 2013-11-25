@@ -13,17 +13,19 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#listTagsForResource(ListTagsForResourceRequest) ListTagsForResource operation}.
  * <p>
- * Lists all tags on a DB Instance.
+ * Lists all tags on an Amazon RDS resource.
  * </p>
  * <p>
- * For an overview on tagging DB Instances, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html"> DB Instance Tags.
- * </a>
+ * For an overview on tagging an Amazon RDS resource, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html"> Tagging
+ * Amazon RDS Resources </a> .
  * </p>
  *
  * @see com.amazonaws.services.rds.AmazonRDS#listTagsForResource(ListTagsForResourceRequest)
@@ -31,21 +33,24 @@ import java.io.Serializable;
 public class ListTagsForResourceRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * The DB Instance with tags to be listed. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource with tags to be listed. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      */
     private String resourceName;
 
     /**
-     * The DB Instance with tags to be listed. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource with tags to be listed. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      *
-     * @return The DB Instance with tags to be listed. This value is an Amazon
-     *         Resource Name (ARN). For information about creating an ARN, see <a
+     * @return The Amazon RDS resource with tags to be listed. This value is an
+     *         Amazon Resource Name (ARN). For information about creating an ARN, see
+     *         <a
      *         href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      *         Constructing an RDS Amazon Resource Name (ARN)</a>.
      */
@@ -54,13 +59,15 @@ public class ListTagsForResourceRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The DB Instance with tags to be listed. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource with tags to be listed. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      *
-     * @param resourceName The DB Instance with tags to be listed. This value is an Amazon
-     *         Resource Name (ARN). For information about creating an ARN, see <a
+     * @param resourceName The Amazon RDS resource with tags to be listed. This value is an
+     *         Amazon Resource Name (ARN). For information about creating an ARN, see
+     *         <a
      *         href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      *         Constructing an RDS Amazon Resource Name (ARN)</a>.
      */
@@ -69,15 +76,17 @@ public class ListTagsForResourceRequest extends AmazonWebServiceRequest implemen
     }
     
     /**
-     * The DB Instance with tags to be listed. This value is an Amazon
-     * Resource Name (ARN). For information about creating an ARN, see <a
+     * The Amazon RDS resource with tags to be listed. This value is an
+     * Amazon Resource Name (ARN). For information about creating an ARN, see
+     * <a
      * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      * Constructing an RDS Amazon Resource Name (ARN)</a>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param resourceName The DB Instance with tags to be listed. This value is an Amazon
-     *         Resource Name (ARN). For information about creating an ARN, see <a
+     * @param resourceName The Amazon RDS resource with tags to be listed. This value is an
+     *         Amazon Resource Name (ARN). For information about creating an ARN, see
+     *         <a
      *         href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN">
      *         Constructing an RDS Amazon Resource Name (ARN)</a>.
      *
@@ -88,8 +97,7 @@ public class ListTagsForResourceRequest extends AmazonWebServiceRequest implemen
         this.resourceName = resourceName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

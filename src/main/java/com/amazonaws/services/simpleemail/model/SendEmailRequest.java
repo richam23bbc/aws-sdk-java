@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleemail.AmazonSimpleEmailService#sendEmail(SendEmailRequest) SendEmail operation}.
@@ -79,8 +81,6 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
      */
     public SendEmailRequest() {}
     
-
-
     /**
      * Constructs a new SendEmailRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -97,8 +97,6 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
         setMessage(message);
     }
 
-    
-    
     /**
      * The identity's email address.
      *
@@ -131,8 +129,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
         this.source = source;
         return this;
     }
-    
-    
+
     /**
      * The destination for this email, composed of To:, CC:, and BCC: fields.
      *
@@ -165,8 +162,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
         this.destination = destination;
         return this;
     }
-    
-    
+
     /**
      * The message to be sent.
      *
@@ -199,8 +195,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
         this.message = message;
         return this;
     }
-    
-    
+
     /**
      * The reply-to email address(es) for the message. If the recipient
      * replies to the message, each reply-to address will receive the reply.
@@ -209,7 +204,6 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
      *         replies to the message, each reply-to address will receive the reply.
      */
     public java.util.List<String> getReplyToAddresses() {
-        
         if (replyToAddresses == null) {
               replyToAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               replyToAddresses.setAutoConstruct(true);
@@ -277,7 +271,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
 
         return this;
     }
-    
+
     /**
      * The email address to which bounce notifications are to be forwarded.
      * If the message cannot be delivered to the recipient, then an error
@@ -334,8 +328,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest implements Seriali
         this.returnPath = returnPath;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

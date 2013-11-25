@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.glacier.AmazonGlacier#getVaultNotifications(GetVaultNotificationsRequest) GetVaultNotifications operation}.
@@ -65,8 +67,6 @@ public class GetVaultNotificationsRequest extends AmazonWebServiceRequest implem
      */
     public GetVaultNotificationsRequest() {}
     
-
-
     /**
      * Constructs a new GetVaultNotificationsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -77,10 +77,6 @@ public class GetVaultNotificationsRequest extends AmazonWebServiceRequest implem
     public GetVaultNotificationsRequest(String vaultName) {
         setVaultName(vaultName);
     }
-
-    
-    
-
 
     /**
      * Constructs a new GetVaultNotificationsRequest object.
@@ -99,8 +95,6 @@ public class GetVaultNotificationsRequest extends AmazonWebServiceRequest implem
         setVaultName(vaultName);
     }
 
-    
-    
     /**
      * The <code>AccountId</code> is the AWS Account ID. You can specify
      * either the AWS Account ID or optionally a '-', in which case Amazon
@@ -157,8 +151,7 @@ public class GetVaultNotificationsRequest extends AmazonWebServiceRequest implem
         this.accountId = accountId;
         return this;
     }
-    
-    
+
     /**
      * The name of the vault.
      *
@@ -191,8 +184,7 @@ public class GetVaultNotificationsRequest extends AmazonWebServiceRequest implem
         this.vaultName = vaultName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

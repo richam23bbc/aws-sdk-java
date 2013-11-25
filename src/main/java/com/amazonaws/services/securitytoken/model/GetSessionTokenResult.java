@@ -13,11 +13,13 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.securitytoken.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * Contains the result of a successful invocation of the GetSessionToken action.
+ * Contains the result of a successful call to the GetSessionToken action, including temporary AWS credentials that can be used to make AWS requests.
  * </p>
  */
 public class GetSessionTokenResult implements Serializable {
@@ -59,8 +61,7 @@ public class GetSessionTokenResult implements Serializable {
         this.credentials = credentials;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

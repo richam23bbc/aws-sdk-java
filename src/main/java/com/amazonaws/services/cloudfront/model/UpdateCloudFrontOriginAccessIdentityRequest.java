@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudfront.AmazonCloudFront#updateCloudFrontOriginAccessIdentity(UpdateCloudFrontOriginAccessIdentityRequest) UpdateCloudFrontOriginAccessIdentity operation}.
@@ -48,8 +50,6 @@ public class UpdateCloudFrontOriginAccessIdentityRequest extends AmazonWebServic
      */
     public UpdateCloudFrontOriginAccessIdentityRequest() {}
     
-
-
     /**
      * Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -67,8 +67,6 @@ public class UpdateCloudFrontOriginAccessIdentityRequest extends AmazonWebServic
         setIfMatch(ifMatch);
     }
 
-    
-    
     /**
      * The identity's configuration information.
      *
@@ -101,8 +99,7 @@ public class UpdateCloudFrontOriginAccessIdentityRequest extends AmazonWebServic
         this.cloudFrontOriginAccessIdentityConfig = cloudFrontOriginAccessIdentityConfig;
         return this;
     }
-    
-    
+
     /**
      * The identity's id.
      *
@@ -135,8 +132,7 @@ public class UpdateCloudFrontOriginAccessIdentityRequest extends AmazonWebServic
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * The value of the ETag header you received when retrieving the
      * identity's configuration. For example: E2QWRUHAPOMQZL.
@@ -175,8 +171,7 @@ public class UpdateCloudFrontOriginAccessIdentityRequest extends AmazonWebServic
         this.ifMatch = ifMatch;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

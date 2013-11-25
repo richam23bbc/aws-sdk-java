@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeStacksResult implements Serializable {
      * @return An array of <code>Stack</code> objects that describe the stacks.
      */
     public java.util.List<Stack> getStacks() {
-        
         if (stacks == null) {
               stacks = new com.amazonaws.internal.ListWithAutoConstructFlag<Stack>();
               stacks.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeStacksResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -63,8 +65,7 @@ public class AllocateAddressResult implements Serializable {
         this.publicIp = publicIp;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the Domain property for this object.
      * <p>
@@ -112,8 +113,7 @@ public class AllocateAddressResult implements Serializable {
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * Sets the value of the Domain property for this object.
      * <p>
@@ -147,7 +147,7 @@ public class AllocateAddressResult implements Serializable {
         this.domain = domain.toString();
         return this;
     }
-    
+
     /**
      * Returns the value of the AllocationId property for this object.
      *
@@ -180,8 +180,7 @@ public class AllocateAddressResult implements Serializable {
         this.allocationId = allocationId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

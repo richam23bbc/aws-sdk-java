@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -106,8 +108,7 @@ public class TagDescription implements Serializable {
         this.resourceId = resourceId;
         return this;
     }
-    
-    
+
     /**
      * The kind of resource to which the tag is applied. Currently, Auto
      * Scaling supports the <code>auto-scaling-group</code> resource type.
@@ -155,8 +156,7 @@ public class TagDescription implements Serializable {
         this.resourceType = resourceType;
         return this;
     }
-    
-    
+
     /**
      * The key of the tag.
      * <p>
@@ -201,8 +201,7 @@ public class TagDescription implements Serializable {
         this.key = key;
         return this;
     }
-    
-    
+
     /**
      * The value of the tag.
      * <p>
@@ -247,8 +246,7 @@ public class TagDescription implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the new tag will be applied to instances launched
      * after the tag is created. The same behavior applies to updates: If you
@@ -299,8 +297,7 @@ public class TagDescription implements Serializable {
         this.propagateAtLaunch = propagateAtLaunch;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the new tag will be applied to instances launched
      * after the tag is created. The same behavior applies to updates: If you
@@ -315,7 +312,7 @@ public class TagDescription implements Serializable {
     public Boolean getPropagateAtLaunch() {
         return propagateAtLaunch;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

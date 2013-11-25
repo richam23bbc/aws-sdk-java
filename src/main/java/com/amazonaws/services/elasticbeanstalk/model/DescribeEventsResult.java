@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -40,7 +42,6 @@ public class DescribeEventsResult implements Serializable {
      * @return A list of <a>EventDescription</a>.
      */
     public java.util.List<EventDescription> getEvents() {
-        
         if (events == null) {
               events = new com.amazonaws.internal.ListWithAutoConstructFlag<EventDescription>();
               events.setAutoConstruct(true);
@@ -102,7 +103,7 @@ public class DescribeEventsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * If returned, this indicates that there are more results to obtain. Use
      * this token in the next <a>DescribeEvents</a> call to get the next
@@ -147,8 +148,7 @@ public class DescribeEventsResult implements Serializable {
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

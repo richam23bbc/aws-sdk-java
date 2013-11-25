@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DescribeRouteTablesRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#describeRouteTables(DescribeRouteTablesRequest) DescribeRouteTables operation}.
@@ -61,7 +63,6 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      * @return One or more route table IDs.
      */
     public java.util.List<String> getRouteTableIds() {
-        
         if (routeTableIds == null) {
               routeTableIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               routeTableIds.setAutoConstruct(true);
@@ -123,7 +124,7 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
         return this;
     }
-    
+
     /**
      * A list of filters used to match properties for Route Tables. For a
      * complete reference to the available filter keys for this operation,
@@ -138,7 +139,6 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      *         EC2 API reference</a>.
      */
     public java.util.List<Filter> getFilters() {
-        
         if (filters == null) {
               filters = new com.amazonaws.internal.ListWithAutoConstructFlag<Filter>();
               filters.setAutoConstruct(true);
@@ -224,7 +224,7 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
         return this;
     }
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

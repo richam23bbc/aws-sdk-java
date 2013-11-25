@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -49,8 +51,6 @@ public class ActiveTrustedSigners implements Serializable {
      */
     public ActiveTrustedSigners() {}
     
-
-
     /**
      * Constructs a new ActiveTrustedSigners object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -65,8 +65,6 @@ public class ActiveTrustedSigners implements Serializable {
         setItems(items);
     }
 
-    
-    
     /**
      * Each active trusted signer.
      *
@@ -99,8 +97,7 @@ public class ActiveTrustedSigners implements Serializable {
         this.enabled = enabled;
         return this;
     }
-    
-    
+
     /**
      * Each active trusted signer.
      *
@@ -109,7 +106,7 @@ public class ActiveTrustedSigners implements Serializable {
     public Boolean getEnabled() {
         return enabled;
     }
-    
+
     /**
      * The number of unique trusted signers included in all cache behaviors.
      * For example, if three cache behaviors all list the same three AWS
@@ -154,8 +151,7 @@ public class ActiveTrustedSigners implements Serializable {
         this.quantity = quantity;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains one Signer complex type for each unique
      * trusted signer that is specified in the TrustedSigners complex type,
@@ -168,7 +164,6 @@ public class ActiveTrustedSigners implements Serializable {
      *         the other cache behaviors.
      */
     public java.util.List<Signer> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<Signer>();
               items.setAutoConstruct(true);
@@ -248,7 +243,7 @@ public class ActiveTrustedSigners implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -98,6 +100,11 @@ public class Instance implements Serializable {
      * and Endpoints</a>.
      */
     private String availabilityZone;
+
+    /**
+     * The instance's subnet ID, if the stack is running in a VPC.
+     */
+    private String subnetId;
 
     /**
      * The instance public DNS name.
@@ -234,8 +241,7 @@ public class Instance implements Serializable {
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * The ID of the associated Amazon EC2 instance.
      *
@@ -268,8 +274,7 @@ public class Instance implements Serializable {
         this.ec2InstanceId = ec2InstanceId;
         return this;
     }
-    
-    
+
     /**
      * The instance host name.
      *
@@ -302,8 +307,7 @@ public class Instance implements Serializable {
         this.hostname = hostname;
         return this;
     }
-    
-    
+
     /**
      * The stack ID.
      *
@@ -336,15 +340,13 @@ public class Instance implements Serializable {
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * An array containing the instance layer IDs.
      *
      * @return An array containing the instance layer IDs.
      */
     public java.util.List<String> getLayerIds() {
-        
         if (layerIds == null) {
               layerIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               layerIds.setAutoConstruct(true);
@@ -406,14 +408,13 @@ public class Instance implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An array containing the instance security group IDs.
      *
      * @return An array containing the instance security group IDs.
      */
     public java.util.List<String> getSecurityGroupIds() {
-        
         if (securityGroupIds == null) {
               securityGroupIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               securityGroupIds.setAutoConstruct(true);
@@ -475,7 +476,7 @@ public class Instance implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The instance type. AWS OpsWorks supports all instance types except
      * Cluster Compute, Cluster GPU, and High Memory Cluster. For more
@@ -544,8 +545,7 @@ public class Instance implements Serializable {
         this.instanceType = instanceType;
         return this;
     }
-    
-    
+
     /**
      * The ARN of the instance's IAM profile. For more information about IAM
      * ARNs, see <a
@@ -596,8 +596,7 @@ public class Instance implements Serializable {
         this.instanceProfileArn = instanceProfileArn;
         return this;
     }
-    
-    
+
     /**
      * The instance status: <ul> <li>requested</li> <li>booting</li>
      * <li>running_setup</li> <li>online</li> <li>setup_failed</li>
@@ -648,8 +647,7 @@ public class Instance implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The instance operating system.
      *
@@ -682,8 +680,7 @@ public class Instance implements Serializable {
         this.os = os;
         return this;
     }
-    
-    
+
     /**
      * A custom AMI ID to be used to create the instance. The AMI should be
      * based on one of the standard AWS OpsWorks APIs: Amazon Linux or Ubuntu
@@ -734,8 +731,7 @@ public class Instance implements Serializable {
         this.amiId = amiId;
         return this;
     }
-    
-    
+
     /**
      * The instance Availability Zone. For more information, see <a
      * href="http://docs.aws.amazon.com/general/latest/gr/rande.html">Regions
@@ -780,8 +776,40 @@ public class Instance implements Serializable {
         this.availabilityZone = availabilityZone;
         return this;
     }
+
+    /**
+     * The instance's subnet ID, if the stack is running in a VPC.
+     *
+     * @return The instance's subnet ID, if the stack is running in a VPC.
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
     
+    /**
+     * The instance's subnet ID, if the stack is running in a VPC.
+     *
+     * @param subnetId The instance's subnet ID, if the stack is running in a VPC.
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
     
+    /**
+     * The instance's subnet ID, if the stack is running in a VPC.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param subnetId The instance's subnet ID, if the stack is running in a VPC.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     */
+    public Instance withSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+        return this;
+    }
+
     /**
      * The instance public DNS name.
      *
@@ -814,8 +842,7 @@ public class Instance implements Serializable {
         this.publicDns = publicDns;
         return this;
     }
-    
-    
+
     /**
      * The instance private DNS name.
      *
@@ -848,8 +875,7 @@ public class Instance implements Serializable {
         this.privateDns = privateDns;
         return this;
     }
-    
-    
+
     /**
      * The instance public IP address.
      *
@@ -882,8 +908,7 @@ public class Instance implements Serializable {
         this.publicIp = publicIp;
         return this;
     }
-    
-    
+
     /**
      * The instance private IP address.
      *
@@ -916,8 +941,7 @@ public class Instance implements Serializable {
         this.privateIp = privateIp;
         return this;
     }
-    
-    
+
     /**
      * The instance <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic
@@ -962,8 +986,7 @@ public class Instance implements Serializable {
         this.elasticIp = elasticIp;
         return this;
     }
-    
-    
+
     /**
      * The instance's auto scaling type, which has three possible values:
      * <ul> <li><b>AlwaysRunning</b>: A 24/7 instance, which is not affected
@@ -1047,8 +1070,7 @@ public class Instance implements Serializable {
         this.autoScalingType = autoScalingType;
         return this;
     }
-    
-    
+
     /**
      * The instance's auto scaling type, which has three possible values:
      * <ul> <li><b>AlwaysRunning</b>: A 24/7 instance, which is not affected
@@ -1106,7 +1128,7 @@ public class Instance implements Serializable {
         this.autoScalingType = autoScalingType.toString();
         return this;
     }
-    
+
     /**
      * The instance SSH key name.
      *
@@ -1139,8 +1161,7 @@ public class Instance implements Serializable {
         this.sshKeyName = sshKeyName;
         return this;
     }
-    
-    
+
     /**
      * The SSH key's RSA fingerprint.
      *
@@ -1173,8 +1194,7 @@ public class Instance implements Serializable {
         this.sshHostRsaKeyFingerprint = sshHostRsaKeyFingerprint;
         return this;
     }
-    
-    
+
     /**
      * The SSH key's DSA fingerprint.
      *
@@ -1207,8 +1227,7 @@ public class Instance implements Serializable {
         this.sshHostDsaKeyFingerprint = sshHostDsaKeyFingerprint;
         return this;
     }
-    
-    
+
     /**
      * The time that the instance was created.
      *
@@ -1241,8 +1260,7 @@ public class Instance implements Serializable {
         this.createdAt = createdAt;
         return this;
     }
-    
-    
+
     /**
      * The ID of the last service error. For more information, call
      * <a>DescribeServiceErrors</a>.
@@ -1281,8 +1299,7 @@ public class Instance implements Serializable {
         this.lastServiceErrorId = lastServiceErrorId;
         return this;
     }
-    
-    
+
     /**
      * The instance architecture, "i386" or "x86_64".
      * <p>
@@ -1330,8 +1347,7 @@ public class Instance implements Serializable {
         this.architecture = architecture;
         return this;
     }
-    
-    
+
     /**
      * The instance architecture, "i386" or "x86_64".
      * <p>
@@ -1365,7 +1381,7 @@ public class Instance implements Serializable {
         this.architecture = architecture.toString();
         return this;
     }
-    
+
     /**
      * The instance root device type. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">Storage
@@ -1425,8 +1441,7 @@ public class Instance implements Serializable {
         this.rootDeviceType = rootDeviceType;
         return this;
     }
-    
-    
+
     /**
      * The instance root device type. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">Storage
@@ -1468,7 +1483,7 @@ public class Instance implements Serializable {
         this.rootDeviceType = rootDeviceType.toString();
         return this;
     }
-    
+
     /**
      * The root device volume ID.
      *
@@ -1501,8 +1516,7 @@ public class Instance implements Serializable {
         this.rootDeviceVolumeId = rootDeviceVolumeId;
         return this;
     }
-    
-    
+
     /**
      * Whether to install operating system and package updates when the
      * instance boots. The default value is <code>true</code>. If this value
@@ -1583,8 +1597,7 @@ public class Instance implements Serializable {
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
     }
-    
-    
+
     /**
      * Whether to install operating system and package updates when the
      * instance boots. The default value is <code>true</code>. If this value
@@ -1609,7 +1622,7 @@ public class Instance implements Serializable {
     public Boolean getInstallUpdatesOnBoot() {
         return installUpdatesOnBoot;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
@@ -1634,6 +1647,7 @@ public class Instance implements Serializable {
         if (getOs() != null) sb.append("Os: " + getOs() + ",");
         if (getAmiId() != null) sb.append("AmiId: " + getAmiId() + ",");
         if (getAvailabilityZone() != null) sb.append("AvailabilityZone: " + getAvailabilityZone() + ",");
+        if (getSubnetId() != null) sb.append("SubnetId: " + getSubnetId() + ",");
         if (getPublicDns() != null) sb.append("PublicDns: " + getPublicDns() + ",");
         if (getPrivateDns() != null) sb.append("PrivateDns: " + getPrivateDns() + ",");
         if (getPublicIp() != null) sb.append("PublicIp: " + getPublicIp() + ",");
@@ -1670,6 +1684,7 @@ public class Instance implements Serializable {
         hashCode = prime * hashCode + ((getOs() == null) ? 0 : getOs().hashCode()); 
         hashCode = prime * hashCode + ((getAmiId() == null) ? 0 : getAmiId().hashCode()); 
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode()); 
+        hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode()); 
         hashCode = prime * hashCode + ((getPublicDns() == null) ? 0 : getPublicDns().hashCode()); 
         hashCode = prime * hashCode + ((getPrivateDns() == null) ? 0 : getPrivateDns().hashCode()); 
         hashCode = prime * hashCode + ((getPublicIp() == null) ? 0 : getPublicIp().hashCode()); 
@@ -1720,6 +1735,8 @@ public class Instance implements Serializable {
         if (other.getAmiId() != null && other.getAmiId().equals(this.getAmiId()) == false) return false; 
         if (other.getAvailabilityZone() == null ^ this.getAvailabilityZone() == null) return false;
         if (other.getAvailabilityZone() != null && other.getAvailabilityZone().equals(this.getAvailabilityZone()) == false) return false; 
+        if (other.getSubnetId() == null ^ this.getSubnetId() == null) return false;
+        if (other.getSubnetId() != null && other.getSubnetId().equals(this.getSubnetId()) == false) return false; 
         if (other.getPublicDns() == null ^ this.getPublicDns() == null) return false;
         if (other.getPublicDns() != null && other.getPublicDns().equals(this.getPublicDns()) == false) return false; 
         if (other.getPrivateDns() == null ^ this.getPrivateDns() == null) return false;

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -78,8 +80,7 @@ public class LoadBasedAutoScalingConfiguration implements Serializable {
         this.layerId = layerId;
         return this;
     }
-    
-    
+
     /**
      * Whether load-based auto scaling is enabled for the layer.
      *
@@ -112,8 +113,7 @@ public class LoadBasedAutoScalingConfiguration implements Serializable {
         this.enable = enable;
         return this;
     }
-    
-    
+
     /**
      * Whether load-based auto scaling is enabled for the layer.
      *
@@ -122,7 +122,7 @@ public class LoadBasedAutoScalingConfiguration implements Serializable {
     public Boolean getEnable() {
         return enable;
     }
-    
+
     /**
      * A <code>LoadBasedAutoscalingInstruction</code> object that describes
      * the upscaling configuration, which defines how and when AWS OpsWorks
@@ -167,8 +167,7 @@ public class LoadBasedAutoScalingConfiguration implements Serializable {
         this.upScaling = upScaling;
         return this;
     }
-    
-    
+
     /**
      * A <code>LoadBasedAutoscalingInstruction</code> object that describes
      * the downscaling configuration, which defines how and when AWS OpsWorks
@@ -213,8 +212,7 @@ public class LoadBasedAutoScalingConfiguration implements Serializable {
         this.downScaling = downScaling;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

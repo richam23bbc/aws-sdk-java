@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudwatch.AmazonCloudWatch#describeAlarmHistory(DescribeAlarmHistoryRequest) DescribeAlarmHistory operation}.
@@ -111,8 +113,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.alarmName = alarmName;
         return this;
     }
-    
-    
+
     /**
      * The type of alarm histories to retrieve.
      * <p>
@@ -160,8 +161,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.historyItemType = historyItemType;
         return this;
     }
-    
-    
+
     /**
      * The type of alarm histories to retrieve.
      * <p>
@@ -195,7 +195,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.historyItemType = historyItemType.toString();
         return this;
     }
-    
+
     /**
      * The starting date to retrieve alarm history.
      *
@@ -228,8 +228,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.startDate = startDate;
         return this;
     }
-    
-    
+
     /**
      * The ending date to retrieve alarm history.
      *
@@ -262,8 +261,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.endDate = endDate;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of alarm history records to retrieve.
      * <p>
@@ -305,8 +303,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * The token returned by a previous call to indicate that there is more
      * data available.
@@ -345,8 +342,7 @@ public class DescribeAlarmHistoryRequest extends AmazonWebServiceRequest impleme
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.route53.AmazonRoute53#createHealthCheck(CreateHealthCheckRequest) CreateHealthCheck operation}.
@@ -134,8 +136,7 @@ public class CreateHealthCheckRequest extends AmazonWebServiceRequest implements
         this.callerReference = callerReference;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains health check configuration.
      *
@@ -168,8 +169,7 @@ public class CreateHealthCheckRequest extends AmazonWebServiceRequest implements
         this.healthCheckConfig = healthCheckConfig;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

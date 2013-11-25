@@ -170,6 +170,9 @@ public class UpdateLayerRequestMarshaller implements Marshaller<Request<UpdateLa
             if (updateLayerRequest.isAutoAssignElasticIps() != null) {
                 jsonWriter.key("AutoAssignElasticIps").value(updateLayerRequest.isAutoAssignElasticIps());
             }
+            if (updateLayerRequest.isAutoAssignPublicIps() != null) {
+                jsonWriter.key("AutoAssignPublicIps").value(updateLayerRequest.isAutoAssignPublicIps());
+            }
             Recipes customRecipes = updateLayerRequest.getCustomRecipes();
             if (customRecipes != null) {
 
@@ -265,10 +268,5 @@ public class UpdateLayerRequestMarshaller implements Marshaller<Request<UpdateLa
         
 
         return request;
-    }
-
-    private String getString(String s) {
-        if (s == null) return "";
-        return s;
     }
 }

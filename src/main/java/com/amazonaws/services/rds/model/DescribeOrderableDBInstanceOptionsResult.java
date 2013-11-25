@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -24,7 +26,7 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
 
     /**
      * An <a>OrderableDBInstanceOption</a> structure containing information
-     * about orderable options for the DB Instance.
+     * about orderable options for the DB instance.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<OrderableDBInstanceOption> orderableDBInstanceOptions;
 
@@ -38,13 +40,12 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
 
     /**
      * An <a>OrderableDBInstanceOption</a> structure containing information
-     * about orderable options for the DB Instance.
+     * about orderable options for the DB instance.
      *
      * @return An <a>OrderableDBInstanceOption</a> structure containing information
-     *         about orderable options for the DB Instance.
+     *         about orderable options for the DB instance.
      */
     public java.util.List<OrderableDBInstanceOption> getOrderableDBInstanceOptions() {
-        
         if (orderableDBInstanceOptions == null) {
               orderableDBInstanceOptions = new com.amazonaws.internal.ListWithAutoConstructFlag<OrderableDBInstanceOption>();
               orderableDBInstanceOptions.setAutoConstruct(true);
@@ -54,10 +55,10 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
     
     /**
      * An <a>OrderableDBInstanceOption</a> structure containing information
-     * about orderable options for the DB Instance.
+     * about orderable options for the DB instance.
      *
      * @param orderableDBInstanceOptions An <a>OrderableDBInstanceOption</a> structure containing information
-     *         about orderable options for the DB Instance.
+     *         about orderable options for the DB instance.
      */
     public void setOrderableDBInstanceOptions(java.util.Collection<OrderableDBInstanceOption> orderableDBInstanceOptions) {
         if (orderableDBInstanceOptions == null) {
@@ -71,12 +72,12 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
     
     /**
      * An <a>OrderableDBInstanceOption</a> structure containing information
-     * about orderable options for the DB Instance.
+     * about orderable options for the DB instance.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param orderableDBInstanceOptions An <a>OrderableDBInstanceOption</a> structure containing information
-     *         about orderable options for the DB Instance.
+     *         about orderable options for the DB instance.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -91,12 +92,12 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
     
     /**
      * An <a>OrderableDBInstanceOption</a> structure containing information
-     * about orderable options for the DB Instance.
+     * about orderable options for the DB instance.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param orderableDBInstanceOptions An <a>OrderableDBInstanceOption</a> structure containing information
-     *         about orderable options for the DB Instance.
+     *         about orderable options for the DB instance.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -112,7 +113,7 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An optional pagination token provided by a previous
      * OrderableDBInstanceOptions request. If this parameter is specified,
@@ -163,8 +164,7 @@ public class DescribeOrderableDBInstanceOptionsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

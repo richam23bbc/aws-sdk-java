@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elastictranscoder.AmazonElasticTranscoder#createPreset(CreatePresetRequest) CreatePreset operation}.
@@ -55,11 +57,12 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
     private String description;
 
     /**
-     * The container type for the output file. This value must be
-     * <code>mp4</code>.
+     * The container type for the output file. Valid values include
+     * <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     * and <code>webm</code>.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)<br/>
+     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)|(^mp3$)|(^ogg$)<br/>
      */
     private String container;
 
@@ -126,8 +129,7 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * A description of the preset.
      * <p>
@@ -169,47 +171,52 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
         this.description = description;
         return this;
     }
-    
-    
+
     /**
-     * The container type for the output file. This value must be
-     * <code>mp4</code>.
+     * The container type for the output file. Valid values include
+     * <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     * and <code>webm</code>.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)<br/>
+     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)|(^mp3$)|(^ogg$)<br/>
      *
-     * @return The container type for the output file. This value must be
-     *         <code>mp4</code>.
+     * @return The container type for the output file. Valid values include
+     *         <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     *         and <code>webm</code>.
      */
     public String getContainer() {
         return container;
     }
     
     /**
-     * The container type for the output file. This value must be
-     * <code>mp4</code>.
+     * The container type for the output file. Valid values include
+     * <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     * and <code>webm</code>.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)<br/>
+     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)|(^mp3$)|(^ogg$)<br/>
      *
-     * @param container The container type for the output file. This value must be
-     *         <code>mp4</code>.
+     * @param container The container type for the output file. Valid values include
+     *         <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     *         and <code>webm</code>.
      */
     public void setContainer(String container) {
         this.container = container;
     }
     
     /**
-     * The container type for the output file. This value must be
-     * <code>mp4</code>.
+     * The container type for the output file. Valid values include
+     * <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     * and <code>webm</code>.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
      * <b>Constraints:</b><br/>
-     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)<br/>
+     * <b>Pattern: </b>(^mp4$)|(^ts$)|(^webm$)|(^mp3$)|(^ogg$)<br/>
      *
-     * @param container The container type for the output file. This value must be
-     *         <code>mp4</code>.
+     * @param container The container type for the output file. Valid values include
+     *         <code>mp3</code>, <code>mp4</code>, <code>ogg</code>, <code>ts</code>,
+     *         and <code>webm</code>.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -218,8 +225,7 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
         this.container = container;
         return this;
     }
-    
-    
+
     /**
      * A section of the request body that specifies the video parameters.
      *
@@ -252,8 +258,7 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
         this.video = video;
         return this;
     }
-    
-    
+
     /**
      * A section of the request body that specifies the audio parameters.
      *
@@ -286,8 +291,7 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
         this.audio = audio;
         return this;
     }
-    
-    
+
     /**
      * A section of the request body that specifies the thumbnail parameters,
      * if any.
@@ -326,8 +330,7 @@ public class CreatePresetRequest extends AmazonWebServiceRequest implements Seri
         this.thumbnails = thumbnails;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

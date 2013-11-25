@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.route53.AmazonRoute53#deleteHostedZone(DeleteHostedZoneRequest) DeleteHostedZone operation}.
@@ -52,8 +54,6 @@ public class DeleteHostedZoneRequest extends AmazonWebServiceRequest implements 
      */
     public DeleteHostedZoneRequest() {}
     
-
-
     /**
      * Constructs a new DeleteHostedZoneRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -67,8 +67,6 @@ public class DeleteHostedZoneRequest extends AmazonWebServiceRequest implements 
         setId(id);
     }
 
-    
-    
     /**
      * The ID of the request. Include this ID in a call to <a>GetChange</a>
      * to track when the change has propagated to all Route 53 DNS servers.
@@ -116,8 +114,7 @@ public class DeleteHostedZoneRequest extends AmazonWebServiceRequest implements 
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

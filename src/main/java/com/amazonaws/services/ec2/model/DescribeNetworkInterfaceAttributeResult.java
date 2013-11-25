@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Describe Network Interface Attribute Result
@@ -68,8 +70,7 @@ public class DescribeNetworkInterfaceAttributeResult implements Serializable {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * String value
      *
@@ -102,8 +103,7 @@ public class DescribeNetworkInterfaceAttributeResult implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -136,8 +136,7 @@ public class DescribeNetworkInterfaceAttributeResult implements Serializable {
         this.sourceDestCheck = sourceDestCheck;
         return this;
     }
-    
-    
+
     /**
      * Boolean value
      *
@@ -146,14 +145,13 @@ public class DescribeNetworkInterfaceAttributeResult implements Serializable {
     public Boolean getSourceDestCheck() {
         return sourceDestCheck;
     }
-    
+
     /**
      * Returns the value of the Groups property for this object.
      *
      * @return The value of the Groups property for this object.
      */
     public java.util.List<GroupIdentifier> getGroups() {
-        
         if (groups == null) {
               groups = new com.amazonaws.internal.ListWithAutoConstructFlag<GroupIdentifier>();
               groups.setAutoConstruct(true);
@@ -215,7 +213,7 @@ public class DescribeNetworkInterfaceAttributeResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns the value of the Attachment property for this object.
      *
@@ -248,8 +246,7 @@ public class DescribeNetworkInterfaceAttributeResult implements Serializable {
         this.attachment = attachment;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

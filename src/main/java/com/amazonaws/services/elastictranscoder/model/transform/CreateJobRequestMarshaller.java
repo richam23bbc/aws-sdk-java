@@ -156,6 +156,79 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                     }
                     jsonWriter.endArray();
                 }
+                JobAlbumArt albumArt = output.getAlbumArt();
+                if (albumArt != null) {
+
+                    jsonWriter.key("AlbumArt");
+                    jsonWriter.object();
+
+                    if (albumArt.getMergePolicy() != null) {
+                        jsonWriter.key("MergePolicy").value(albumArt.getMergePolicy());
+                    }
+
+                    com.amazonaws.internal.ListWithAutoConstructFlag<Artwork> artworkList = (com.amazonaws.internal.ListWithAutoConstructFlag<Artwork>)(albumArt.getArtwork());
+                    if (artworkList != null && !(artworkList.isAutoConstruct() && artworkList.isEmpty())) {
+
+                        jsonWriter.key("Artwork");
+                        jsonWriter.array();
+
+                        for (Artwork artworkListValue : artworkList) {
+                            if (artworkListValue != null) {
+                                jsonWriter.object();
+                                if (artworkListValue.getInputKey() != null) {
+                                    jsonWriter.key("InputKey").value(artworkListValue.getInputKey());
+                                }
+                                if (artworkListValue.getMaxWidth() != null) {
+                                    jsonWriter.key("MaxWidth").value(artworkListValue.getMaxWidth());
+                                }
+                                if (artworkListValue.getMaxHeight() != null) {
+                                    jsonWriter.key("MaxHeight").value(artworkListValue.getMaxHeight());
+                                }
+                                if (artworkListValue.getSizingPolicy() != null) {
+                                    jsonWriter.key("SizingPolicy").value(artworkListValue.getSizingPolicy());
+                                }
+                                if (artworkListValue.getPaddingPolicy() != null) {
+                                    jsonWriter.key("PaddingPolicy").value(artworkListValue.getPaddingPolicy());
+                                }
+                                if (artworkListValue.getAlbumArtFormat() != null) {
+                                    jsonWriter.key("AlbumArtFormat").value(artworkListValue.getAlbumArtFormat());
+                                }
+                                jsonWriter.endObject();
+                            }
+                        }
+                        jsonWriter.endArray();
+                    }
+                    jsonWriter.endObject();
+                }
+
+                com.amazonaws.internal.ListWithAutoConstructFlag<Clip> compositionList = (com.amazonaws.internal.ListWithAutoConstructFlag<Clip>)(output.getComposition());
+                if (compositionList != null && !(compositionList.isAutoConstruct() && compositionList.isEmpty())) {
+
+                    jsonWriter.key("Composition");
+                    jsonWriter.array();
+
+                    for (Clip compositionListValue : compositionList) {
+                        if (compositionListValue != null) {
+                            jsonWriter.object();
+                            TimeSpan timeSpan = compositionListValue.getTimeSpan();
+                            if (timeSpan != null) {
+
+                                jsonWriter.key("TimeSpan");
+                                jsonWriter.object();
+
+                                if (timeSpan.getStartTime() != null) {
+                                    jsonWriter.key("StartTime").value(timeSpan.getStartTime());
+                                }
+                                if (timeSpan.getDuration() != null) {
+                                    jsonWriter.key("Duration").value(timeSpan.getDuration());
+                                }
+                                jsonWriter.endObject();
+                            }
+                            jsonWriter.endObject();
+                        }
+                    }
+                    jsonWriter.endArray();
+                }
                 jsonWriter.endObject();
             }
 
@@ -198,6 +271,79 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                                     }
                                     if (watermarksListValue.getInputKey() != null) {
                                         jsonWriter.key("InputKey").value(watermarksListValue.getInputKey());
+                                    }
+                                    jsonWriter.endObject();
+                                }
+                            }
+                            jsonWriter.endArray();
+                        }
+                        JobAlbumArt albumArt = outputsListValue.getAlbumArt();
+                        if (albumArt != null) {
+
+                            jsonWriter.key("AlbumArt");
+                            jsonWriter.object();
+
+                            if (albumArt.getMergePolicy() != null) {
+                                jsonWriter.key("MergePolicy").value(albumArt.getMergePolicy());
+                            }
+
+                            com.amazonaws.internal.ListWithAutoConstructFlag<Artwork> artworkList = (com.amazonaws.internal.ListWithAutoConstructFlag<Artwork>)(albumArt.getArtwork());
+                            if (artworkList != null && !(artworkList.isAutoConstruct() && artworkList.isEmpty())) {
+
+                                jsonWriter.key("Artwork");
+                                jsonWriter.array();
+
+                                for (Artwork artworkListValue : artworkList) {
+                                    if (artworkListValue != null) {
+                                        jsonWriter.object();
+                                        if (artworkListValue.getInputKey() != null) {
+                                            jsonWriter.key("InputKey").value(artworkListValue.getInputKey());
+                                        }
+                                        if (artworkListValue.getMaxWidth() != null) {
+                                            jsonWriter.key("MaxWidth").value(artworkListValue.getMaxWidth());
+                                        }
+                                        if (artworkListValue.getMaxHeight() != null) {
+                                            jsonWriter.key("MaxHeight").value(artworkListValue.getMaxHeight());
+                                        }
+                                        if (artworkListValue.getSizingPolicy() != null) {
+                                            jsonWriter.key("SizingPolicy").value(artworkListValue.getSizingPolicy());
+                                        }
+                                        if (artworkListValue.getPaddingPolicy() != null) {
+                                            jsonWriter.key("PaddingPolicy").value(artworkListValue.getPaddingPolicy());
+                                        }
+                                        if (artworkListValue.getAlbumArtFormat() != null) {
+                                            jsonWriter.key("AlbumArtFormat").value(artworkListValue.getAlbumArtFormat());
+                                        }
+                                        jsonWriter.endObject();
+                                    }
+                                }
+                                jsonWriter.endArray();
+                            }
+                            jsonWriter.endObject();
+                        }
+
+                        com.amazonaws.internal.ListWithAutoConstructFlag<Clip> compositionList = (com.amazonaws.internal.ListWithAutoConstructFlag<Clip>)(outputsListValue.getComposition());
+                        if (compositionList != null && !(compositionList.isAutoConstruct() && compositionList.isEmpty())) {
+
+                            jsonWriter.key("Composition");
+                            jsonWriter.array();
+
+                            for (Clip compositionListValue : compositionList) {
+                                if (compositionListValue != null) {
+                                    jsonWriter.object();
+                                    TimeSpan timeSpan = compositionListValue.getTimeSpan();
+                                    if (timeSpan != null) {
+
+                                        jsonWriter.key("TimeSpan");
+                                        jsonWriter.object();
+
+                                        if (timeSpan.getStartTime() != null) {
+                                            jsonWriter.key("StartTime").value(timeSpan.getStartTime());
+                                        }
+                                        if (timeSpan.getDuration() != null) {
+                                            jsonWriter.key("Duration").value(timeSpan.getDuration());
+                                        }
+                                        jsonWriter.endObject();
                                     }
                                     jsonWriter.endObject();
                                 }
@@ -261,10 +407,5 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
         
 
         return request;
-    }
-
-    private String getString(String s) {
-        if (s == null) return "";
-        return s;
     }
 }

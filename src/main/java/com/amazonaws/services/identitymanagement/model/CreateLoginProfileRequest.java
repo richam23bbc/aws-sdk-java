@@ -13,15 +13,17 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#createLoginProfile(CreateLoginProfileRequest) CreateLoginProfile operation}.
  * <p>
- * Creates a password for the specified user, giving the user the ability to access AWS services through the AWS Management Console. For more
- * information about managing passwords, see <a href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/index.html?Using_ManagingLogins.html">
- * Managing Passwords </a> in <i>Using IAM</i> .
+ * Creates a password for the specified user, giving the user the ability to access AWS services through the AWS Management Console. For more information
+ * about managing passwords, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?Using_ManagingLogins.html"> Managing Passwords </a>
+ * in <i>Using IAM</i> .
  * </p>
  *
  * @see com.amazonaws.services.identitymanagement.AmazonIdentityManagement#createLoginProfile(CreateLoginProfileRequest)
@@ -52,8 +54,6 @@ public class CreateLoginProfileRequest extends AmazonWebServiceRequest implement
      */
     public CreateLoginProfileRequest() {}
     
-
-
     /**
      * Constructs a new CreateLoginProfileRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -67,8 +67,6 @@ public class CreateLoginProfileRequest extends AmazonWebServiceRequest implement
         setPassword(password);
     }
 
-    
-    
     /**
      * Name of the user to create a password for.
      * <p>
@@ -113,8 +111,7 @@ public class CreateLoginProfileRequest extends AmazonWebServiceRequest implement
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The new password for the user name.
      * <p>
@@ -159,8 +156,7 @@ public class CreateLoginProfileRequest extends AmazonWebServiceRequest implement
         this.password = password;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

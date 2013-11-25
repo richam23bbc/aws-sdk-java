@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#countPendingActivityTasks(CountPendingActivityTasksRequest) CountPendingActivityTasks operation}.
@@ -99,8 +101,7 @@ public class CountPendingActivityTasksRequest extends AmazonWebServiceRequest im
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The name of the task list.
      *
@@ -133,8 +134,7 @@ public class CountPendingActivityTasksRequest extends AmazonWebServiceRequest im
         this.taskList = taskList;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

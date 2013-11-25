@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DeleteVpnGatewayRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#deleteVpnGateway(DeleteVpnGatewayRequest) DeleteVpnGateway operation}.
@@ -41,8 +43,6 @@ public class DeleteVpnGatewayRequest extends AmazonWebServiceRequest implements 
      */
     public DeleteVpnGatewayRequest() {}
     
-
-
     /**
      * Constructs a new DeleteVpnGatewayRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -54,8 +54,6 @@ public class DeleteVpnGatewayRequest extends AmazonWebServiceRequest implements 
         setVpnGatewayId(vpnGatewayId);
     }
 
-    
-    
     /**
      * The ID of the VPN gateway to delete.
      *
@@ -88,8 +86,7 @@ public class DeleteVpnGatewayRequest extends AmazonWebServiceRequest implements 
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

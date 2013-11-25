@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.autoscaling.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.autoscaling.AmazonAutoScaling#disableMetricsCollection(DisableMetricsCollectionRequest) DisableMetricsCollection operation}.
@@ -91,8 +93,7 @@ public class DisableMetricsCollectionRequest extends AmazonWebServiceRequest imp
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
-    
-    
+
     /**
      * The list of metrics to disable. If no metrics are specified, all
      * metrics are disabled. The following metrics are supported: <ul>
@@ -111,7 +112,6 @@ public class DisableMetricsCollectionRequest extends AmazonWebServiceRequest imp
      *         </ul>
      */
     public java.util.List<String> getMetrics() {
-        
         if (metrics == null) {
               metrics = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               metrics.setAutoConstruct(true);
@@ -209,7 +209,7 @@ public class DisableMetricsCollectionRequest extends AmazonWebServiceRequest imp
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

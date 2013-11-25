@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -43,8 +45,6 @@ public class Destination implements Serializable {
      */
     public Destination() {}
     
-
-
     /**
      * Constructs a new Destination object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -56,15 +56,12 @@ public class Destination implements Serializable {
         setToAddresses(toAddresses);
     }
 
-    
-    
     /**
      * The To: field(s) of the message.
      *
      * @return The To: field(s) of the message.
      */
     public java.util.List<String> getToAddresses() {
-        
         if (toAddresses == null) {
               toAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               toAddresses.setAutoConstruct(true);
@@ -126,14 +123,13 @@ public class Destination implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The CC: field(s) of the message.
      *
      * @return The CC: field(s) of the message.
      */
     public java.util.List<String> getCcAddresses() {
-        
         if (ccAddresses == null) {
               ccAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               ccAddresses.setAutoConstruct(true);
@@ -195,14 +191,13 @@ public class Destination implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The BCC: field(s) of the message.
      *
      * @return The BCC: field(s) of the message.
      */
     public java.util.List<String> getBccAddresses() {
-        
         if (bccAddresses == null) {
               bccAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               bccAddresses.setAutoConstruct(true);
@@ -264,7 +259,7 @@ public class Destination implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

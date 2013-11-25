@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeAppsResult implements Serializable {
      * @return An array of <code>App</code> objects that describe the specified apps.
      */
     public java.util.List<App> getApps() {
-        
         if (apps == null) {
               apps = new com.amazonaws.internal.ListWithAutoConstructFlag<App>();
               apps.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeAppsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

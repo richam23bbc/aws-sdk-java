@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -32,7 +34,6 @@ public class DescribePlacementGroupsResult implements Serializable {
      * @return Contains information about the specified <code>PlacementGroups</code>.
      */
     public java.util.List<PlacementGroup> getPlacementGroups() {
-        
         if (placementGroups == null) {
               placementGroups = new com.amazonaws.internal.ListWithAutoConstructFlag<PlacementGroup>();
               placementGroups.setAutoConstruct(true);
@@ -94,7 +95,7 @@ public class DescribePlacementGroupsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

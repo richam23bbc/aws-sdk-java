@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.datapipeline.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.datapipeline.DataPipeline#pollForTask(PollForTaskRequest) PollForTask operation}.
@@ -144,8 +146,7 @@ public class PollForTaskRequest extends AmazonWebServiceRequest implements Seria
         this.workerGroup = workerGroup;
         return this;
     }
-    
-    
+
     /**
      * The public DNS name of the calling task runner.
      * <p>
@@ -190,8 +191,7 @@ public class PollForTaskRequest extends AmazonWebServiceRequest implements Seria
         this.hostname = hostname;
         return this;
     }
-    
-    
+
     /**
      * Identity information for the Amazon EC2 instance that is hosting the
      * task runner. You can get this value by calling the URI,
@@ -272,8 +272,7 @@ public class PollForTaskRequest extends AmazonWebServiceRequest implements Seria
         this.instanceIdentity = instanceIdentity;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

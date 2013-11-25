@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -43,7 +45,6 @@ public class WorkflowExecutionInfos implements Serializable {
      * @return The list of workflow information structures.
      */
     public java.util.List<WorkflowExecutionInfo> getExecutionInfos() {
-        
         if (executionInfos == null) {
               executionInfos = new com.amazonaws.internal.ListWithAutoConstructFlag<WorkflowExecutionInfo>();
               executionInfos.setAutoConstruct(true);
@@ -105,7 +106,7 @@ public class WorkflowExecutionInfos implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The token of the next page in the result. If set, the results have
      * more than one page. The next page can be retrieved by repeating the
@@ -159,8 +160,7 @@ public class WorkflowExecutionInfos implements Serializable {
         this.nextPageToken = nextPageToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

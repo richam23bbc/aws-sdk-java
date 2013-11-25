@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,7 @@ public class RecurringCharge implements Serializable {
         this.recurringChargeAmount = recurringChargeAmount;
         return this;
     }
-    
-    
+
     /**
      * The frequency at which the recurring charge amount is applied.
      *
@@ -105,8 +106,7 @@ public class RecurringCharge implements Serializable {
         this.recurringChargeFrequency = recurringChargeFrequency;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

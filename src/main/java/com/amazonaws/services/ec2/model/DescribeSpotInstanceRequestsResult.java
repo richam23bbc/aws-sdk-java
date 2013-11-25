@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Describe Spot Instance Requests Result
@@ -29,7 +31,6 @@ public class DescribeSpotInstanceRequestsResult implements Serializable {
      * @return The value of the SpotInstanceRequests property for this object.
      */
     public java.util.List<SpotInstanceRequest> getSpotInstanceRequests() {
-        
         if (spotInstanceRequests == null) {
               spotInstanceRequests = new com.amazonaws.internal.ListWithAutoConstructFlag<SpotInstanceRequest>();
               spotInstanceRequests.setAutoConstruct(true);
@@ -91,7 +92,7 @@ public class DescribeSpotInstanceRequestsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

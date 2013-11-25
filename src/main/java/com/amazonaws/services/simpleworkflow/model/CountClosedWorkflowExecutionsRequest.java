@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#countClosedWorkflowExecutions(CountClosedWorkflowExecutionsRequest) CountClosedWorkflowExecutions operation}.
@@ -156,8 +158,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * If specified, only workflow executions that meet the start time
      * criteria of the filter are counted. <note><code>startTimeFilter</code>
@@ -208,8 +209,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.startTimeFilter = startTimeFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, only workflow executions that meet the close time
      * criteria of the filter are counted. <note><code>startTimeFilter</code>
@@ -260,8 +260,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.closeTimeFilter = closeTimeFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, only workflow executions matching the
      * <code>WorkflowId</code> in the filter are counted.
@@ -318,8 +317,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.executionFilter = executionFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, indicates the type of the workflow executions to be
      * counted. <note><code>closeStatusFilter</code>,
@@ -376,8 +374,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.typeFilter = typeFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, only executions that have a tag that matches the filter
      * are counted. <note><code>closeStatusFilter</code>,
@@ -434,8 +431,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.tagFilter = tagFilter;
         return this;
     }
-    
-    
+
     /**
      * If specified, only workflow executions that match this close status
      * are counted. This filter has an affect only if
@@ -498,8 +494,7 @@ public class CountClosedWorkflowExecutionsRequest extends AmazonWebServiceReques
         this.closeStatusFilter = closeStatusFilter;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#registerDomain(RegisterDomainRequest) RegisterDomain operation}.
@@ -152,8 +154,7 @@ public class RegisterDomainRequest extends AmazonWebServiceRequest implements Se
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * Textual description of the domain.
      * <p>
@@ -195,8 +196,7 @@ public class RegisterDomainRequest extends AmazonWebServiceRequest implements Se
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Specifies the duration--<b><i>in days</i></b>--for which the record
      * (including the history) of workflow executions in this domain should
@@ -268,8 +268,7 @@ public class RegisterDomainRequest extends AmazonWebServiceRequest implements Se
         this.workflowExecutionRetentionPeriodInDays = workflowExecutionRetentionPeriodInDays;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

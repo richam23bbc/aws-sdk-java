@@ -47,7 +47,7 @@ public class ListLocalDisksRequestMarshaller implements Marshaller<Request<ListL
     }
 
         Request<ListLocalDisksRequest> request = new DefaultRequest<ListLocalDisksRequest>(listLocalDisksRequest, "AWSStorageGateway");
-        String target = "StorageGateway_20120630.ListLocalDisks";
+        String target = "StorageGateway_20130630.ListLocalDisks";
         request.addHeader("X-Amz-Target", target);
         request.addHeader("Content-Type", "application/x-amz-json-1.1");
 
@@ -102,10 +102,5 @@ public class ListLocalDisksRequestMarshaller implements Marshaller<Request<ListL
         
 
         return request;
-    }
-
-    private String getString(String s) {
-        if (s == null) return "";
-        return s;
     }
 }

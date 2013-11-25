@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -70,7 +72,6 @@ public class Recipes implements Serializable {
      *         <code>setup</code> event.
      */
     public java.util.List<String> getSetup() {
-        
         if (setup == null) {
               setup = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               setup.setAutoConstruct(true);
@@ -138,7 +139,7 @@ public class Recipes implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An array of custom recipe names to be run following a
      * <code>configure</code> event.
@@ -147,7 +148,6 @@ public class Recipes implements Serializable {
      *         <code>configure</code> event.
      */
     public java.util.List<String> getConfigure() {
-        
         if (configure == null) {
               configure = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               configure.setAutoConstruct(true);
@@ -215,7 +215,7 @@ public class Recipes implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An array of custom recipe names to be run following a
      * <code>deploy</code> event.
@@ -224,7 +224,6 @@ public class Recipes implements Serializable {
      *         <code>deploy</code> event.
      */
     public java.util.List<String> getDeploy() {
-        
         if (deploy == null) {
               deploy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               deploy.setAutoConstruct(true);
@@ -292,7 +291,7 @@ public class Recipes implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An array of custom recipe names to be run following a
      * <code>undeploy</code> event.
@@ -301,7 +300,6 @@ public class Recipes implements Serializable {
      *         <code>undeploy</code> event.
      */
     public java.util.List<String> getUndeploy() {
-        
         if (undeploy == null) {
               undeploy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               undeploy.setAutoConstruct(true);
@@ -369,7 +367,7 @@ public class Recipes implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An array of custom recipe names to be run following a
      * <code>shutdown</code> event.
@@ -378,7 +376,6 @@ public class Recipes implements Serializable {
      *         <code>shutdown</code> event.
      */
     public java.util.List<String> getShutdown() {
-        
         if (shutdown == null) {
               shutdown = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               shutdown.setAutoConstruct(true);
@@ -446,7 +443,7 @@ public class Recipes implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

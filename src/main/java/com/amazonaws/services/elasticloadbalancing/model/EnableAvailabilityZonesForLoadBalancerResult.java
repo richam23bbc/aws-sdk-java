@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticloadbalancing.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -23,17 +25,16 @@ import java.io.Serializable;
 public class EnableAvailabilityZonesForLoadBalancerResult implements Serializable {
 
     /**
-     * An updated list of Availability Zones for the LoadBalancer.
+     * An updated list of Availability Zones for the load balancer.
      */
     private com.amazonaws.internal.ListWithAutoConstructFlag<String> availabilityZones;
 
     /**
-     * An updated list of Availability Zones for the LoadBalancer.
+     * An updated list of Availability Zones for the load balancer.
      *
-     * @return An updated list of Availability Zones for the LoadBalancer.
+     * @return An updated list of Availability Zones for the load balancer.
      */
     public java.util.List<String> getAvailabilityZones() {
-        
         if (availabilityZones == null) {
               availabilityZones = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               availabilityZones.setAutoConstruct(true);
@@ -42,9 +43,9 @@ public class EnableAvailabilityZonesForLoadBalancerResult implements Serializabl
     }
     
     /**
-     * An updated list of Availability Zones for the LoadBalancer.
+     * An updated list of Availability Zones for the load balancer.
      *
-     * @param availabilityZones An updated list of Availability Zones for the LoadBalancer.
+     * @param availabilityZones An updated list of Availability Zones for the load balancer.
      */
     public void setAvailabilityZones(java.util.Collection<String> availabilityZones) {
         if (availabilityZones == null) {
@@ -57,11 +58,11 @@ public class EnableAvailabilityZonesForLoadBalancerResult implements Serializabl
     }
     
     /**
-     * An updated list of Availability Zones for the LoadBalancer.
+     * An updated list of Availability Zones for the load balancer.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param availabilityZones An updated list of Availability Zones for the LoadBalancer.
+     * @param availabilityZones An updated list of Availability Zones for the load balancer.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -75,11 +76,11 @@ public class EnableAvailabilityZonesForLoadBalancerResult implements Serializabl
     }
     
     /**
-     * An updated list of Availability Zones for the LoadBalancer.
+     * An updated list of Availability Zones for the load balancer.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param availabilityZones An updated list of Availability Zones for the LoadBalancer.
+     * @param availabilityZones An updated list of Availability Zones for the load balancer.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -95,7 +96,7 @@ public class EnableAvailabilityZonesForLoadBalancerResult implements Serializabl
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

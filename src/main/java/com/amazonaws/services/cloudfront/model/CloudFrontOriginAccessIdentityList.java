@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -98,8 +100,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * If IsTruncated is true, this element is present and contains the value
      * you can use for the Marker request parameter to continue listing your
@@ -144,8 +145,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
         this.nextMarker = nextMarker;
         return this;
     }
-    
-    
+
     /**
      * The value you provided for the MaxItems request parameter.
      *
@@ -178,8 +178,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * A flag that indicates whether more origin access identities remain to
      * be listed. If your results were truncated, you can make a follow-up
@@ -230,8 +229,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
         this.isTruncated = isTruncated;
         return this;
     }
-    
-    
+
     /**
      * A flag that indicates whether more origin access identities remain to
      * be listed. If your results were truncated, you can make a follow-up
@@ -246,7 +244,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
     public Boolean getIsTruncated() {
         return isTruncated;
     }
-    
+
     /**
      * The number of CloudFront origin access identities that were created by
      * the current AWS account.
@@ -285,8 +283,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
         this.quantity = quantity;
         return this;
     }
-    
-    
+
     /**
      * A complex type that contains one CloudFrontOriginAccessIdentitySummary
      * element for each origin access identity that was created by the
@@ -297,7 +294,6 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
      *         current AWS account.
      */
     public java.util.List<CloudFrontOriginAccessIdentitySummary> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<CloudFrontOriginAccessIdentitySummary>();
               items.setAutoConstruct(true);
@@ -371,7 +367,7 @@ public class CloudFrontOriginAccessIdentityList implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -113,8 +115,7 @@ public class EventSubscription implements Serializable {
         this.customerAwsId = customerAwsId;
         return this;
     }
-    
-    
+
     /**
      * The RDS event notification subscription Id.
      *
@@ -147,8 +148,7 @@ public class EventSubscription implements Serializable {
         this.custSubscriptionId = custSubscriptionId;
         return this;
     }
-    
-    
+
     /**
      * The topic ARN of the RDS event notification subscription.
      *
@@ -181,8 +181,7 @@ public class EventSubscription implements Serializable {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
-    
-    
+
     /**
      * The status of the RDS event notification subscription. <p>Constraints:
      * <p>Can be one of the following: creating | modifying | deleting |
@@ -245,8 +244,7 @@ public class EventSubscription implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The time the RDS event notification subscription was created.
      *
@@ -279,8 +277,7 @@ public class EventSubscription implements Serializable {
         this.subscriptionCreationTime = subscriptionCreationTime;
         return this;
     }
-    
-    
+
     /**
      * The source type for the RDS event notification subscription.
      *
@@ -313,15 +310,13 @@ public class EventSubscription implements Serializable {
         this.sourceType = sourceType;
         return this;
     }
-    
-    
+
     /**
      * A list of source Ids for the RDS event notification subscription.
      *
      * @return A list of source Ids for the RDS event notification subscription.
      */
     public java.util.List<String> getSourceIdsList() {
-        
         if (sourceIdsList == null) {
               sourceIdsList = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               sourceIdsList.setAutoConstruct(true);
@@ -383,7 +378,7 @@ public class EventSubscription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A list of event categories for the RDS event notification
      * subscription.
@@ -392,7 +387,6 @@ public class EventSubscription implements Serializable {
      *         subscription.
      */
     public java.util.List<String> getEventCategoriesList() {
-        
         if (eventCategoriesList == null) {
               eventCategoriesList = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               eventCategoriesList.setAutoConstruct(true);
@@ -460,7 +454,7 @@ public class EventSubscription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A Boolean value indicating if the subscription is enabled. True
      * indicates the subscription is enabled.
@@ -499,8 +493,7 @@ public class EventSubscription implements Serializable {
         this.enabled = enabled;
         return this;
     }
-    
-    
+
     /**
      * A Boolean value indicating if the subscription is enabled. True
      * indicates the subscription is enabled.
@@ -511,7 +504,7 @@ public class EventSubscription implements Serializable {
     public Boolean getEnabled() {
         return enabled;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

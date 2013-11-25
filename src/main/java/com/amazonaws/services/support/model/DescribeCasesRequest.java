@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.support.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.support.AWSSupport#describeCases(DescribeCasesRequest) DescribeCases operation}.
@@ -99,7 +101,6 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
      *         returned. The maximum number of cases is 100.
      */
     public java.util.List<String> getCaseIdList() {
-        
         if (caseIdList == null) {
               caseIdList = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               caseIdList.setAutoConstruct(true);
@@ -176,7 +177,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
 
         return this;
     }
-    
+
     /**
      * String that corresponds to the ID value displayed for a case in the
      * AWS Support Center user interface.
@@ -215,8 +216,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.displayId = displayId;
         return this;
     }
-    
-    
+
     /**
      * Start date for a filtered date search on support case communications.
      *
@@ -249,8 +249,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.afterTime = afterTime;
         return this;
     }
-    
-    
+
     /**
      * End date for a filtered date search on support case communications.
      *
@@ -283,8 +282,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.beforeTime = beforeTime;
         return this;
     }
-    
-    
+
     /**
      * Boolean that indicates whether or not resolved support cases should be
      * listed in the <a
@@ -335,8 +333,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.includeResolvedCases = includeResolvedCases;
         return this;
     }
-    
-    
+
     /**
      * Boolean that indicates whether or not resolved support cases should be
      * listed in the <a
@@ -351,7 +348,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
     public Boolean getIncludeResolvedCases() {
         return includeResolvedCases;
     }
-    
+
     /**
      * Defines a resumption point for pagination.
      *
@@ -384,8 +381,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Integer that sets the maximum number of results to return before
      * paginating.
@@ -433,8 +429,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.maxResults = maxResults;
         return this;
     }
-    
-    
+
     /**
      * Specifies the ISO 639-1 code for the language in which AWS provides
      * support. AWS Support currently supports English and Japanese, for
@@ -485,8 +480,7 @@ public class DescribeCasesRequest extends AmazonWebServiceRequest implements Ser
         this.language = language;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

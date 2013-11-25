@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -74,8 +76,7 @@ public class OrderableClusterOption implements Serializable {
         this.clusterVersion = clusterVersion;
         return this;
     }
-    
-    
+
     /**
      * The cluster type, for example <code>multi-node</code>.
      *
@@ -108,8 +109,7 @@ public class OrderableClusterOption implements Serializable {
         this.clusterType = clusterType;
         return this;
     }
-    
-    
+
     /**
      * The node type for the orderable cluster.
      *
@@ -142,15 +142,13 @@ public class OrderableClusterOption implements Serializable {
         this.nodeType = nodeType;
         return this;
     }
-    
-    
+
     /**
      * A list of availability zones for the orderable cluster.
      *
      * @return A list of availability zones for the orderable cluster.
      */
     public java.util.List<AvailabilityZone> getAvailabilityZones() {
-        
         if (availabilityZones == null) {
               availabilityZones = new com.amazonaws.internal.ListWithAutoConstructFlag<AvailabilityZone>();
               availabilityZones.setAutoConstruct(true);
@@ -212,7 +210,7 @@ public class OrderableClusterOption implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

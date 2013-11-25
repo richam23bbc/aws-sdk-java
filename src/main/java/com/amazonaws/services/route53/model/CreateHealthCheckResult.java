@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -74,8 +76,7 @@ public class CreateHealthCheckResult implements Serializable {
         this.healthCheck = healthCheck;
         return this;
     }
-    
-    
+
     /**
      * The unique URL representing the new health check.
      * <p>
@@ -117,8 +118,7 @@ public class CreateHealthCheckResult implements Serializable {
         this.location = location;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

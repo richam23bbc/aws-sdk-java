@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -44,7 +46,6 @@ public class ListJobsResult implements Serializable {
      *         the job.
      */
     public java.util.List<GlacierJobDescription> getJobList() {
-        
         if (jobList == null) {
               jobList = new com.amazonaws.internal.ListWithAutoConstructFlag<GlacierJobDescription>();
               jobList.setAutoConstruct(true);
@@ -112,7 +113,7 @@ public class ListJobsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An opaque string that represents where to continue pagination of the
      * results. You use this value in a new List Jobs request to obtain more
@@ -163,8 +164,7 @@ public class ListJobsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpledb.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpledb.AmazonSimpleDB#batchDeleteAttributes(BatchDeleteAttributesRequest) BatchDeleteAttributes operation}.
@@ -60,8 +62,6 @@ public class BatchDeleteAttributesRequest extends AmazonWebServiceRequest implem
      */
     public BatchDeleteAttributesRequest() {}
     
-
-
     /**
      * Constructs a new BatchDeleteAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -76,8 +76,6 @@ public class BatchDeleteAttributesRequest extends AmazonWebServiceRequest implem
         setItems(items);
     }
 
-    
-    
     /**
      * The name of the domain in which the attributes are being deleted.
      *
@@ -110,15 +108,13 @@ public class BatchDeleteAttributesRequest extends AmazonWebServiceRequest implem
         this.domainName = domainName;
         return this;
     }
-    
-    
+
     /**
      * A list of items on which to perform the operation.
      *
      * @return A list of items on which to perform the operation.
      */
     public java.util.List<DeletableItem> getItems() {
-        
         if (items == null) {
               items = new com.amazonaws.internal.ListWithAutoConstructFlag<DeletableItem>();
               items.setAutoConstruct(true);
@@ -180,7 +176,7 @@ public class BatchDeleteAttributesRequest extends AmazonWebServiceRequest implem
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

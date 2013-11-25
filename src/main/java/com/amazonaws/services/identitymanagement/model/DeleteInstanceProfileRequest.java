@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#deleteInstanceProfile(DeleteInstanceProfileRequest) DeleteInstanceProfile operation}.
@@ -26,7 +28,7 @@ import java.io.Serializable;
  * instance profile that is associated with a running instance will break any applications running on the instance.
  * </p>
  * <p>
- * For more information about instance profiles, go to <a href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/AboutInstanceProfiles.html"> About
+ * For more information about instance profiles, go to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html"> About
  * Instance Profiles </a> .
  * </p>
  *
@@ -87,8 +89,7 @@ public class DeleteInstanceProfileRequest extends AmazonWebServiceRequest implem
         this.instanceProfileName = instanceProfileName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

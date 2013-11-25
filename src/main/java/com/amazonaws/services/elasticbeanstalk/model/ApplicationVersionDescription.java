@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -109,8 +111,7 @@ public class ApplicationVersionDescription implements Serializable {
         this.applicationName = applicationName;
         return this;
     }
-    
-    
+
     /**
      * The description of this application version.
      * <p>
@@ -152,8 +153,7 @@ public class ApplicationVersionDescription implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * A label uniquely identifying the version for the associated
      * application.
@@ -201,8 +201,7 @@ public class ApplicationVersionDescription implements Serializable {
         this.versionLabel = versionLabel;
         return this;
     }
-    
-    
+
     /**
      * The location where the source bundle is located for this version.
      *
@@ -235,8 +234,7 @@ public class ApplicationVersionDescription implements Serializable {
         this.sourceBundle = sourceBundle;
         return this;
     }
-    
-    
+
     /**
      * The creation date of the application version.
      *
@@ -269,8 +267,7 @@ public class ApplicationVersionDescription implements Serializable {
         this.dateCreated = dateCreated;
         return this;
     }
-    
-    
+
     /**
      * The last modified date of the application version.
      *
@@ -303,8 +300,7 @@ public class ApplicationVersionDescription implements Serializable {
         this.dateUpdated = dateUpdated;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -123,6 +123,9 @@ public class CreateInstanceRequestMarshaller implements Marshaller<Request<Creat
             if (createInstanceRequest.getAvailabilityZone() != null) {
                 jsonWriter.key("AvailabilityZone").value(createInstanceRequest.getAvailabilityZone());
             }
+            if (createInstanceRequest.getSubnetId() != null) {
+                jsonWriter.key("SubnetId").value(createInstanceRequest.getSubnetId());
+            }
             if (createInstanceRequest.getArchitecture() != null) {
                 jsonWriter.key("Architecture").value(createInstanceRequest.getArchitecture());
             }
@@ -146,10 +149,5 @@ public class CreateInstanceRequestMarshaller implements Marshaller<Request<Creat
         
 
         return request;
-    }
-
-    private String getString(String s) {
-        if (s == null) return "";
-        return s;
     }
 }

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -65,8 +67,7 @@ public class DescribeCacheEngineVersionsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * A list of cache engine version details. Each element in the list
      * contains detailed information about once cache engine version.
@@ -75,7 +76,6 @@ public class DescribeCacheEngineVersionsResult implements Serializable {
      *         contains detailed information about once cache engine version.
      */
     public java.util.List<CacheEngineVersion> getCacheEngineVersions() {
-        
         if (cacheEngineVersions == null) {
               cacheEngineVersions = new com.amazonaws.internal.ListWithAutoConstructFlag<CacheEngineVersion>();
               cacheEngineVersions.setAutoConstruct(true);
@@ -143,7 +143,7 @@ public class DescribeCacheEngineVersionsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

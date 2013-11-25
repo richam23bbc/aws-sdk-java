@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -97,8 +99,7 @@ public class WorkflowExecutionOpenCounts implements Serializable {
         this.openActivityTasks = openActivityTasks;
         return this;
     }
-    
-    
+
     /**
      * The count of decision tasks whose status is OPEN. A workflow execution
      * can have at most one open decision task.
@@ -146,8 +147,7 @@ public class WorkflowExecutionOpenCounts implements Serializable {
         this.openDecisionTasks = openDecisionTasks;
         return this;
     }
-    
-    
+
     /**
      * The count of timers started by this workflow execution that have not
      * fired yet.
@@ -195,8 +195,7 @@ public class WorkflowExecutionOpenCounts implements Serializable {
         this.openTimers = openTimers;
         return this;
     }
-    
-    
+
     /**
      * The count of child workflow executions whose status is OPEN.
      * <p>
@@ -238,8 +237,7 @@ public class WorkflowExecutionOpenCounts implements Serializable {
         this.openChildWorkflowExecutions = openChildWorkflowExecutions;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

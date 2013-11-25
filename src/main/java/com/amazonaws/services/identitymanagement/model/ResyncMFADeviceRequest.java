@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#resyncMFADevice(ResyncMFADeviceRequest) ResyncMFADevice operation}.
@@ -68,8 +70,6 @@ public class ResyncMFADeviceRequest extends AmazonWebServiceRequest implements S
      */
     public ResyncMFADeviceRequest() {}
     
-
-
     /**
      * Constructs a new ResyncMFADeviceRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -91,8 +91,6 @@ public class ResyncMFADeviceRequest extends AmazonWebServiceRequest implements S
         setAuthenticationCode2(authenticationCode2);
     }
 
-    
-    
     /**
      * Name of the user whose MFA device you want to resynchronize.
      * <p>
@@ -137,8 +135,7 @@ public class ResyncMFADeviceRequest extends AmazonWebServiceRequest implements S
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * Serial number that uniquely identifies the MFA device.
      * <p>
@@ -183,8 +180,7 @@ public class ResyncMFADeviceRequest extends AmazonWebServiceRequest implements S
         this.serialNumber = serialNumber;
         return this;
     }
-    
-    
+
     /**
      * An authentication code emitted by the device.
      * <p>
@@ -229,8 +225,7 @@ public class ResyncMFADeviceRequest extends AmazonWebServiceRequest implements S
         this.authenticationCode1 = authenticationCode1;
         return this;
     }
-    
-    
+
     /**
      * A subsequent authentication code emitted by the device.
      * <p>
@@ -275,8 +270,7 @@ public class ResyncMFADeviceRequest extends AmazonWebServiceRequest implements S
         this.authenticationCode2 = authenticationCode2;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#describeOptionGroupOptions(DescribeOptionGroupOptionsRequest) DescribeOptionGroupOptions operation}.
@@ -92,8 +94,7 @@ public class DescribeOptionGroupOptionsRequest extends AmazonWebServiceRequest i
         this.engineName = engineName;
         return this;
     }
-    
-    
+
     /**
      * If specified, filters the results to include only options for the
      * specified major engine version.
@@ -132,8 +133,7 @@ public class DescribeOptionGroupOptionsRequest extends AmazonWebServiceRequest i
         this.majorEngineVersion = majorEngineVersion;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -190,8 +190,7 @@ public class DescribeOptionGroupOptionsRequest extends AmazonWebServiceRequest i
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional pagination token provided by a previous request. If this
      * parameter is specified, the response includes only records beyond the
@@ -236,8 +235,7 @@ public class DescribeOptionGroupOptionsRequest extends AmazonWebServiceRequest i
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

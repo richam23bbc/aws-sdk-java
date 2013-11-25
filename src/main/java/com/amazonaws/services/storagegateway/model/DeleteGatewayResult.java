@@ -13,11 +13,13 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
- * A JSON object containing the GatewayARN of the deleted gateway.
+ * A JSON object containing the of the deleted gateway.
  * </p>
  */
 public class DeleteGatewayResult implements Serializable {
@@ -85,8 +87,7 @@ public class DeleteGatewayResult implements Serializable {
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeUserProfilesResult implements Serializable {
      * @return A <code>Users</code> object that describes the specified users.
      */
     public java.util.List<UserProfile> getUserProfiles() {
-        
         if (userProfiles == null) {
               userProfiles = new com.amazonaws.internal.ListWithAutoConstructFlag<UserProfile>();
               userProfiles.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeUserProfilesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

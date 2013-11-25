@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -77,8 +79,7 @@ public class IPRange implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * Specifies the IP range.
      *
@@ -111,8 +112,7 @@ public class IPRange implements Serializable {
         this.cIDRIP = cIDRIP;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

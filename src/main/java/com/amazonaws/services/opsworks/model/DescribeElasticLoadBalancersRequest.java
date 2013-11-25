@@ -13,13 +13,18 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.opsworks.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.opsworks.AWSOpsWorks#describeElasticLoadBalancers(DescribeElasticLoadBalancersRequest) DescribeElasticLoadBalancers operation}.
  * <p>
  * Describes a stack's Elastic Load Balancing instances.
+ * </p>
+ * <p>
+ * <b>NOTE:</b>You must specify at least one of the parameters.
  * </p>
  *
  * @see com.amazonaws.services.opsworks.AWSOpsWorks#describeElasticLoadBalancers(DescribeElasticLoadBalancersRequest)
@@ -27,8 +32,8 @@ import java.io.Serializable;
 public class DescribeElasticLoadBalancersRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * A stack ID. The action describes the Elastic Load Balancing instances
-     * for the stack.
+     * A stack ID. The action describes the stack's Elastic Load Balancing
+     * instances.
      */
     private String stackId;
 
@@ -39,35 +44,35 @@ public class DescribeElasticLoadBalancersRequest extends AmazonWebServiceRequest
     private com.amazonaws.internal.ListWithAutoConstructFlag<String> layerIds;
 
     /**
-     * A stack ID. The action describes the Elastic Load Balancing instances
-     * for the stack.
+     * A stack ID. The action describes the stack's Elastic Load Balancing
+     * instances.
      *
-     * @return A stack ID. The action describes the Elastic Load Balancing instances
-     *         for the stack.
+     * @return A stack ID. The action describes the stack's Elastic Load Balancing
+     *         instances.
      */
     public String getStackId() {
         return stackId;
     }
     
     /**
-     * A stack ID. The action describes the Elastic Load Balancing instances
-     * for the stack.
+     * A stack ID. The action describes the stack's Elastic Load Balancing
+     * instances.
      *
-     * @param stackId A stack ID. The action describes the Elastic Load Balancing instances
-     *         for the stack.
+     * @param stackId A stack ID. The action describes the stack's Elastic Load Balancing
+     *         instances.
      */
     public void setStackId(String stackId) {
         this.stackId = stackId;
     }
     
     /**
-     * A stack ID. The action describes the Elastic Load Balancing instances
-     * for the stack.
+     * A stack ID. The action describes the stack's Elastic Load Balancing
+     * instances.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param stackId A stack ID. The action describes the Elastic Load Balancing instances
-     *         for the stack.
+     * @param stackId A stack ID. The action describes the stack's Elastic Load Balancing
+     *         instances.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -76,8 +81,7 @@ public class DescribeElasticLoadBalancersRequest extends AmazonWebServiceRequest
         this.stackId = stackId;
         return this;
     }
-    
-    
+
     /**
      * A list of layer IDs. The action describes the Elastic Load Balancing
      * instances for the specified layers.
@@ -86,7 +90,6 @@ public class DescribeElasticLoadBalancersRequest extends AmazonWebServiceRequest
      *         instances for the specified layers.
      */
     public java.util.List<String> getLayerIds() {
-        
         if (layerIds == null) {
               layerIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               layerIds.setAutoConstruct(true);
@@ -154,7 +157,7 @@ public class DescribeElasticLoadBalancersRequest extends AmazonWebServiceRequest
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -90,8 +92,7 @@ public class IdentityVerificationAttributes implements Serializable {
         this.verificationStatus = verificationStatus;
         return this;
     }
-    
-    
+
     /**
      * The verification status of the identity: "Pending", "Success",
      * "Failed", or "TemporaryFailure".
@@ -129,7 +130,7 @@ public class IdentityVerificationAttributes implements Serializable {
         this.verificationStatus = verificationStatus.toString();
         return this;
     }
-    
+
     /**
      * The verification token for a domain identity. Null for email address
      * identities.
@@ -168,8 +169,7 @@ public class IdentityVerificationAttributes implements Serializable {
         this.verificationToken = verificationToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#registerActivityType(RegisterActivityTypeRequest) RegisterActivityType operation}.
@@ -209,8 +211,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * The name of the activity type within the domain. <p>The specified
      * string must not start or end with whitespace. It must not contain a
@@ -276,8 +277,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The version of the activity type. <note> The activity type consists of
      * the name and version, the combination of which must be unique within
@@ -355,8 +355,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.version = version;
         return this;
     }
-    
-    
+
     /**
      * A textual description of the activity type.
      * <p>
@@ -398,8 +397,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the default maximum duration that a worker can take
      * to process tasks of this activity type. This default can be overridden
@@ -477,8 +475,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.defaultTaskStartToCloseTimeout = defaultTaskStartToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the default maximum time before which a worker
      * processing a task of this type must report progress by calling
@@ -598,8 +595,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.defaultTaskHeartbeatTimeout = defaultTaskHeartbeatTimeout;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the default task list to use for scheduling tasks of
      * this activity type. This default task list is used if a task list is
@@ -650,8 +646,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.defaultTaskList = defaultTaskList;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the default maximum duration that a task of this
      * activity type can wait before being assigned to a worker. This default
@@ -729,8 +724,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.defaultTaskScheduleToStartTimeout = defaultTaskScheduleToStartTimeout;
         return this;
     }
-    
-    
+
     /**
      * If set, specifies the default maximum duration for a task of this
      * activity type. This default can be overridden when scheduling an
@@ -808,8 +802,7 @@ public class RegisterActivityTypeRequest extends AmazonWebServiceRequest impleme
         this.defaultTaskScheduleToCloseTimeout = defaultTaskScheduleToCloseTimeout;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

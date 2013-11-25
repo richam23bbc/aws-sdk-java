@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -94,8 +96,7 @@ public class ListPartsResult implements Serializable {
         this.multipartUploadId = multipartUploadId;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the vault to which the multipart
      * upload was initiated.
@@ -134,8 +135,7 @@ public class ListPartsResult implements Serializable {
         this.vaultARN = vaultARN;
         return this;
     }
-    
-    
+
     /**
      * The description of the archive that was specified in the Initiate
      * Multipart Upload request.
@@ -174,8 +174,7 @@ public class ListPartsResult implements Serializable {
         this.archiveDescription = archiveDescription;
         return this;
     }
-    
-    
+
     /**
      * The part size in bytes.
      *
@@ -208,8 +207,7 @@ public class ListPartsResult implements Serializable {
         this.partSizeInBytes = partSizeInBytes;
         return this;
     }
-    
-    
+
     /**
      * The UTC time at which the multipart upload was initiated.
      *
@@ -242,15 +240,13 @@ public class ListPartsResult implements Serializable {
         this.creationDate = creationDate;
         return this;
     }
-    
-    
+
     /**
      * A list of the part sizes of the multipart upload.
      *
      * @return A list of the part sizes of the multipart upload.
      */
     public java.util.List<PartListElement> getParts() {
-        
         if (parts == null) {
               parts = new com.amazonaws.internal.ListWithAutoConstructFlag<PartListElement>();
               parts.setAutoConstruct(true);
@@ -312,7 +308,7 @@ public class ListPartsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * An opaque string that represents where to continue pagination of the
      * results. You use the marker in a new List Parts request to obtain more
@@ -363,8 +359,7 @@ public class ListPartsResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

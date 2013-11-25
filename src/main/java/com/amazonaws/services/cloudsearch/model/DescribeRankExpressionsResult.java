@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudsearch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -33,7 +35,6 @@ public class DescribeRankExpressionsResult implements Serializable {
      * @return The rank expressions configured for the domain.
      */
     public java.util.List<RankExpressionStatus> getRankExpressions() {
-        
         if (rankExpressions == null) {
               rankExpressions = new com.amazonaws.internal.ListWithAutoConstructFlag<RankExpressionStatus>();
               rankExpressions.setAutoConstruct(true);
@@ -95,7 +96,7 @@ public class DescribeRankExpressionsResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

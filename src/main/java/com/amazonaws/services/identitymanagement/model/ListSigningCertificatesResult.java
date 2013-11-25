@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -52,7 +54,6 @@ public class ListSigningCertificatesResult implements Serializable {
      * @return A list of the user's signing certificate information.
      */
     public java.util.List<SigningCertificate> getCertificates() {
-        
         if (certificates == null) {
               certificates = new com.amazonaws.internal.ListWithAutoConstructFlag<SigningCertificate>();
               certificates.setAutoConstruct(true);
@@ -114,7 +115,7 @@ public class ListSigningCertificatesResult implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A flag that indicates whether there are more certificate IDs to list.
      * If your results were truncated, you can make a subsequent pagination
@@ -165,8 +166,7 @@ public class ListSigningCertificatesResult implements Serializable {
         this.isTruncated = isTruncated;
         return this;
     }
-    
-    
+
     /**
      * A flag that indicates whether there are more certificate IDs to list.
      * If your results were truncated, you can make a subsequent pagination
@@ -181,7 +181,7 @@ public class ListSigningCertificatesResult implements Serializable {
     public Boolean getIsTruncated() {
         return isTruncated;
     }
-    
+
     /**
      * If <code>IsTruncated</code> is <code>true</code>, this element is
      * present and contains the value to use for the <code>Marker</code>
@@ -238,8 +238,7 @@ public class ListSigningCertificatesResult implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

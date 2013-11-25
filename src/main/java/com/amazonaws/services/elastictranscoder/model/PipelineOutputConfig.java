@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elastictranscoder.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -193,8 +195,7 @@ public class PipelineOutputConfig implements Serializable {
         this.bucket = bucket;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 storage class, <code>Standard</code> or
      * <code>ReducedRedundancy</code>, that you want Elastic Transcoder to
@@ -254,8 +255,7 @@ public class PipelineOutputConfig implements Serializable {
         this.storageClass = storageClass;
         return this;
     }
-    
-    
+
     /**
      * Optional. The <code>Permissions</code> object specifies which users
      * and/or predefined Amazon S3 groups you want to have access to
@@ -289,7 +289,6 @@ public class PipelineOutputConfig implements Serializable {
      *         permissions to any other user or group.
      */
     public java.util.List<Permission> getPermissions() {
-        
         if (permissions == null) {
               permissions = new com.amazonaws.internal.ListWithAutoConstructFlag<Permission>();
               permissions.setAutoConstruct(true);
@@ -432,7 +431,7 @@ public class PipelineOutputConfig implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

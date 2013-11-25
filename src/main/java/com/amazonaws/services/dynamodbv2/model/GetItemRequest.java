@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.dynamodbv2.AmazonDynamoDB#getItem(GetItemRequest) GetItem operation}.
@@ -80,8 +82,6 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
      */
     public GetItemRequest() {}
     
-
-
     /**
      * Constructs a new GetItemRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -96,8 +96,24 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
         setKey(key);
     }
 
-    
-    
+    /**
+     * Constructs a new GetItemRequest object.
+     * Callers should use the setter or fluent setter (with...) methods to
+     * initialize any additional object members.
+     * 
+     * @param tableName The name of the table containing the requested item.
+     * @param key A map of attribute names to <i>AttributeValue</i> objects,
+     * representing the primary key of the item to retrieve.
+     * @param consistentRead If set to <code>true</code>, then the operation
+     * uses strongly consistent reads; otherwise, eventually consistent reads
+     * are used.
+     */
+    public GetItemRequest(String tableName, java.util.Map<String,AttributeValue> key, Boolean consistentRead) {
+        setTableName(tableName);
+        setKey(key);
+        setConsistentRead(consistentRead);
+    }
+
     /**
      * The name of the table containing the requested item.
      * <p>
@@ -142,8 +158,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
         this.tableName = tableName;
         return this;
     }
-    
-    
+
     /**
      * A map of attribute names to <i>AttributeValue</i> objects,
      * representing the primary key of the item to retrieve.
@@ -183,8 +198,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
         setKey(key);
         return this;
     }
-    
-   	
+
     /**
      * A map of attribute names to <i>AttributeValue</i> objects,
      * representing the primary key of the item to retrieve.
@@ -219,12 +233,12 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
      *
      * @param hashKey Primary hash key.
      * @param rangeKey Primary range key. (null if it a hash-only table)
-     */    
+     */
     public GetItemRequest withKey(java.util.Map.Entry<String, AttributeValue> hashKey, java.util.Map.Entry<String, AttributeValue> rangeKey) throws IllegalArgumentException {
     	setKey(hashKey, rangeKey);
     	return this;
     }
-	
+
     /**
      * A map of attribute names to <i>AttributeValue</i> objects,
      * representing the primary key of the item to retrieve.
@@ -244,7 +258,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
 		this.key.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Key.
 	 * <p>
@@ -270,7 +284,6 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
      *         result.
      */
     public java.util.List<String> getAttributesToGet() {
-        
         return attributesToGet;
     }
     
@@ -355,7 +368,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
 
         return this;
     }
-    
+
     /**
      * If set to <code>true</code>, then the operation uses strongly
      * consistent reads; otherwise, eventually consistent reads are used.
@@ -394,8 +407,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
         this.consistentRead = consistentRead;
         return this;
     }
-    
-    
+
     /**
      * If set to <code>true</code>, then the operation uses strongly
      * consistent reads; otherwise, eventually consistent reads are used.
@@ -406,7 +418,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
     public Boolean getConsistentRead() {
         return consistentRead;
     }
-    
+
     /**
      * If set to <code>TOTAL</code>, <i>ConsumedCapacity</i> is included in
      * the response; if set to <code>NONE</code> (the default),
@@ -466,8 +478,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
     }
-    
-    
+
     /**
      * If set to <code>TOTAL</code>, <i>ConsumedCapacity</i> is included in
      * the response; if set to <code>NONE</code> (the default),
@@ -509,7 +520,7 @@ public class GetItemRequest extends AmazonWebServiceRequest implements Serializa
         this.returnConsumedCapacity = returnConsumedCapacity.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

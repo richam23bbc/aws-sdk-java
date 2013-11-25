@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,7 @@ public class InstanceBlockDeviceMapping implements Serializable {
         this.deviceName = deviceName;
         return this;
     }
-    
-    
+
     /**
      * The optional EBS device mapped to the specified device name.
      *
@@ -105,8 +106,7 @@ public class InstanceBlockDeviceMapping implements Serializable {
         this.ebs = ebs;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.storagegateway.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.storagegateway.AWSStorageGateway#listVolumes(ListVolumesRequest) ListVolumes operation}.
@@ -114,8 +116,7 @@ public class ListVolumesRequest extends AmazonWebServiceRequest implements Seria
         this.gatewayARN = gatewayARN;
         return this;
     }
-    
-    
+
     /**
      * A string that indicates the position at which to begin the returned
      * list of volumes. Obtain the marker from the response of a previous
@@ -169,8 +170,7 @@ public class ListVolumesRequest extends AmazonWebServiceRequest implements Seria
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Specifies that the list of volumes returned be limited to the
      * specified number of items.
@@ -218,8 +218,7 @@ public class ListVolumesRequest extends AmazonWebServiceRequest implements Seria
         this.limit = limit;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudwatch.AmazonCloudWatch#describeAlarms(DescribeAlarmsRequest) DescribeAlarms operation}.
@@ -83,7 +85,6 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
      * @return A list of alarm names to retrieve information for.
      */
     public java.util.List<String> getAlarmNames() {
-        
         if (alarmNames == null) {
               alarmNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               alarmNames.setAutoConstruct(true);
@@ -154,7 +155,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
 
         return this;
     }
-    
+
     /**
      * The alarm name prefix. <code>AlarmNames</code> cannot be specified if
      * this parameter is specified.
@@ -202,8 +203,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
         this.alarmNamePrefix = alarmNamePrefix;
         return this;
     }
-    
-    
+
     /**
      * The state value to be used in matching alarms.
      * <p>
@@ -251,8 +251,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
         this.stateValue = stateValue;
         return this;
     }
-    
-    
+
     /**
      * The state value to be used in matching alarms.
      * <p>
@@ -286,7 +285,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
         this.stateValue = stateValue.toString();
         return this;
     }
-    
+
     /**
      * The action name prefix.
      * <p>
@@ -328,8 +327,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
         this.actionPrefix = actionPrefix;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of alarm descriptions to retrieve.
      * <p>
@@ -371,8 +369,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * The token returned by a previous call to indicate that there is more
      * data available.
@@ -411,8 +408,7 @@ public class DescribeAlarmsRequest extends AmazonWebServiceRequest implements Se
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

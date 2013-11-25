@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudfront.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -64,8 +66,7 @@ public class UpdateDistributionResult implements Serializable {
         this.distribution = distribution;
         return this;
     }
-    
-    
+
     /**
      * The current version of the configuration. For example: E2QWRUHAPOMQZL.
      *
@@ -98,8 +99,7 @@ public class UpdateDistributionResult implements Serializable {
         this.eTag = eTag;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#describeEvents(DescribeEventsRequest) DescribeEvents operation}.
@@ -193,8 +195,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.sourceIdentifier = sourceIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The event source to retrieve events for. If no value is specified, all
      * events are returned. <p>Constraints: <p>If <i>SourceType</i> is
@@ -302,8 +303,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.sourceType = sourceType;
         return this;
     }
-    
-    
+
     /**
      * The event source to retrieve events for. If no value is specified, all
      * events are returned. <p>Constraints: <p>If <i>SourceType</i> is
@@ -377,7 +377,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.sourceType = sourceType.toString();
         return this;
     }
-    
+
     /**
      * The beginning of the time interval to retrieve events for, specified
      * in ISO 8601 format. For more information about ISO 8601, go to the <a
@@ -428,8 +428,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.startTime = startTime;
         return this;
     }
-    
-    
+
     /**
      * The end of the time interval for which to retrieve events, specified
      * in ISO 8601 format. For more information about ISO 8601, go to the <a
@@ -480,8 +479,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.endTime = endTime;
         return this;
     }
-    
-    
+
     /**
      * The number of minutes prior to the time of the request for which to
      * retrieve events. For example, if the request is sent at 18:00 and you
@@ -532,8 +530,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.duration = duration;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records to include in the response. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -590,8 +587,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned from a previous <b>DescribeEvents</b>
      * request. If this parameter is specified, the response includes only
@@ -642,8 +638,7 @@ public class DescribeEventsRequest extends AmazonWebServiceRequest implements Se
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

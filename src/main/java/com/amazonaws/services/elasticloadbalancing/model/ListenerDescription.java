@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticloadbalancing.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,7 @@ public class ListenerDescription implements Serializable {
         this.listener = listener;
         return this;
     }
-    
-    
+
     /**
      * A list of policies enabled for this listener. An empty list indicates
      * that no policies are enabled.
@@ -81,7 +82,6 @@ public class ListenerDescription implements Serializable {
      *         that no policies are enabled.
      */
     public java.util.List<String> getPolicyNames() {
-        
         if (policyNames == null) {
               policyNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               policyNames.setAutoConstruct(true);
@@ -149,7 +149,7 @@ public class ListenerDescription implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

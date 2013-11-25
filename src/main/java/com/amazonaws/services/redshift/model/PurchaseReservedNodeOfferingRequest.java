@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#purchaseReservedNodeOffering(PurchaseReservedNodeOfferingRequest) PurchaseReservedNodeOffering operation}.
@@ -85,8 +87,7 @@ public class PurchaseReservedNodeOfferingRequest extends AmazonWebServiceRequest
         this.reservedNodeOfferingId = reservedNodeOfferingId;
         return this;
     }
-    
-    
+
     /**
      * The number of reserved nodes you want to purchase. <p>Default:
      * <code>1</code>
@@ -125,8 +126,7 @@ public class PurchaseReservedNodeOfferingRequest extends AmazonWebServiceRequest
         this.nodeCount = nodeCount;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

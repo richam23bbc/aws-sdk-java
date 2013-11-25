@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -87,8 +89,7 @@ public class Reservation implements Serializable {
         this.reservationId = reservationId;
         return this;
     }
-    
-    
+
     /**
      * The AWS Access Key ID of the user who owns the reservation.
      *
@@ -121,8 +122,7 @@ public class Reservation implements Serializable {
         this.ownerId = ownerId;
         return this;
     }
-    
-    
+
     /**
      * The unique ID of the user who requested the instances in this
      * reservation.
@@ -161,8 +161,7 @@ public class Reservation implements Serializable {
         this.requesterId = requesterId;
         return this;
     }
-    
-    
+
     /**
      * The list of security groups requested for the instances in this
      * reservation.
@@ -171,7 +170,6 @@ public class Reservation implements Serializable {
      *         reservation.
      */
     public java.util.List<GroupIdentifier> getGroups() {
-        
         if (groups == null) {
               groups = new com.amazonaws.internal.ListWithAutoConstructFlag<GroupIdentifier>();
               groups.setAutoConstruct(true);
@@ -239,7 +237,7 @@ public class Reservation implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The list of security groups requested for the instances in this
      * reservation.
@@ -248,7 +246,6 @@ public class Reservation implements Serializable {
      *         reservation.
      */
     public java.util.List<String> getGroupNames() {
-        
         if (groupNames == null) {
               groupNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               groupNames.setAutoConstruct(true);
@@ -316,14 +313,13 @@ public class Reservation implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The list of Amazon EC2 instances included in this reservation.
      *
      * @return The list of Amazon EC2 instances included in this reservation.
      */
     public java.util.List<Instance> getInstances() {
-        
         if (instances == null) {
               instances = new com.amazonaws.internal.ListWithAutoConstructFlag<Instance>();
               instances.setAutoConstruct(true);
@@ -385,7 +381,7 @@ public class Reservation implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

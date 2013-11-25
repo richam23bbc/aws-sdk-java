@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#listDomains(ListDomainsRequest) ListDomains operation}.
@@ -147,8 +149,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.nextPageToken = nextPageToken;
         return this;
     }
-    
-    
+
     /**
      * Specifies the registration status of the domains to list.
      * <p>
@@ -196,8 +197,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.registrationStatus = registrationStatus;
         return this;
     }
-    
-    
+
     /**
      * Specifies the registration status of the domains to list.
      * <p>
@@ -231,7 +231,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.registrationStatus = registrationStatus.toString();
         return this;
     }
-    
+
     /**
      * The maximum number of results returned in each page. The default is
      * 100, but the caller can override this value to a page size
@@ -303,8 +303,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.maximumPageSize = maximumPageSize;
         return this;
     }
-    
-    
+
     /**
      * When set to <code>true</code>, returns the results in reverse order.
      * By default the results are returned in ascending alphabetical order of
@@ -349,8 +348,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
         this.reverseOrder = reverseOrder;
         return this;
     }
-    
-    
+
     /**
      * When set to <code>true</code>, returns the results in reverse order.
      * By default the results are returned in ascending alphabetical order of
@@ -363,7 +361,7 @@ public class ListDomainsRequest extends AmazonWebServiceRequest implements Seria
     public Boolean getReverseOrder() {
         return reverseOrder;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

@@ -13,10 +13,12 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
+import java.io.Serializable;
+
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.ReplaceNetworkAclEntryRequestMarshaller;
-import java.io.Serializable;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#replaceNetworkAclEntry(ReplaceNetworkAclEntryRequest) ReplaceNetworkAclEntry operation}.
@@ -107,8 +109,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.networkAclId = networkAclId;
         return this;
     }
-    
-    
+
     /**
      * Rule number of the entry to replace.
      *
@@ -141,8 +142,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.ruleNumber = ruleNumber;
         return this;
     }
-    
-    
+
     /**
      * IP protocol the rule applies to. Valid Values: <code>tcp</code>,
      * <code>udp</code>, <code>icmp</code> or an IP protocol number.
@@ -181,8 +181,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.protocol = protocol;
         return this;
     }
-    
-    
+
     /**
      * Whether to allow or deny traffic that matches the rule.
      * <p>
@@ -230,8 +229,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.ruleAction = ruleAction;
         return this;
     }
-    
-    
+
     /**
      * Whether to allow or deny traffic that matches the rule.
      * <p>
@@ -265,7 +263,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.ruleAction = ruleAction.toString();
         return this;
     }
-    
+
     /**
      * Whether this rule applies to egress traffic from the subnet
      * (<code>true</code>) or ingress traffic (<code>false</code>).
@@ -304,8 +302,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.egress = egress;
         return this;
     }
-    
-    
+
     /**
      * Whether this rule applies to egress traffic from the subnet
      * (<code>true</code>) or ingress traffic (<code>false</code>).
@@ -316,7 +313,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
     public Boolean getEgress() {
         return egress;
     }
-    
+
     /**
      * The CIDR range to allow or deny, in CIDR notation (e.g.,
      * <code>172.16.0.0/24</code>).
@@ -355,8 +352,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.cidrBlock = cidrBlock;
         return this;
     }
-    
-    
+
     /**
      * ICMP values.
      *
@@ -389,8 +385,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.icmpTypeCode = icmpTypeCode;
         return this;
     }
-    
-    
+
     /**
      * Port ranges.
      *
@@ -423,8 +418,7 @@ public class ReplaceNetworkAclEntryRequest extends AmazonWebServiceRequest imple
         this.portRange = portRange;
         return this;
     }
-    
-    
+
     /**
      * This method is intended for internal use only.
      * Returns the marshaled request configured with additional parameters to

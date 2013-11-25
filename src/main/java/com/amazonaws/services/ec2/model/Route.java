@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
+
 import java.io.Serializable;
+
 
 /**
  * Route
@@ -65,8 +67,7 @@ public class Route implements Serializable {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the GatewayId property for this object.
      *
@@ -99,8 +100,7 @@ public class Route implements Serializable {
         this.gatewayId = gatewayId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the InstanceId property for this object.
      *
@@ -133,8 +133,7 @@ public class Route implements Serializable {
         this.instanceId = instanceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the InstanceOwnerId property for this object.
      *
@@ -167,8 +166,7 @@ public class Route implements Serializable {
         this.instanceOwnerId = instanceOwnerId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the NetworkInterfaceId property for this object.
      *
@@ -201,12 +199,16 @@ public class Route implements Serializable {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, blackhole
      *
      * @return The value of the State property for this object.
+     *
+     * @see RouteState
      */
     public String getState() {
         return state;
@@ -214,8 +216,13 @@ public class Route implements Serializable {
     
     /**
      * Sets the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, blackhole
      *
      * @param state The new value for the State property for this object.
+     *
+     * @see RouteState
      */
     public void setState(String state) {
         this.state = state;
@@ -225,18 +232,56 @@ public class Route implements Serializable {
      * Sets the value of the State property for this object.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, blackhole
      *
      * @param state The new value for the State property for this object.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
+     *
+     * @see RouteState
      */
     public Route withState(String state) {
         this.state = state;
         return this;
     }
+
+    /**
+     * Sets the value of the State property for this object.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, blackhole
+     *
+     * @param state The new value for the State property for this object.
+     *
+     * @see RouteState
+     */
+    public void setState(RouteState state) {
+        this.state = state.toString();
+    }
     
-    
+    /**
+     * Sets the value of the State property for this object.
+     * <p>
+     * Returns a reference to this object so that method calls can be chained together.
+     * <p>
+     * <b>Constraints:</b><br/>
+     * <b>Allowed Values: </b>active, blackhole
+     *
+     * @param state The new value for the State property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained 
+     *         together.
+     *
+     * @see RouteState
+     */
+    public Route withState(RouteState state) {
+        this.state = state.toString();
+        return this;
+    }
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

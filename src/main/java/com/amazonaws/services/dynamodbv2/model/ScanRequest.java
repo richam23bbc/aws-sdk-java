@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.dynamodbv2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.dynamodbv2.AmazonDynamoDB#scan(ScanRequest) Scan operation}.
@@ -295,8 +297,6 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
      */
     public ScanRequest() {}
     
-
-
     /**
      * Constructs a new ScanRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -308,8 +308,6 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         setTableName(tableName);
     }
 
-    
-    
     /**
      * The name of the table containing the requested items.
      * <p>
@@ -354,8 +352,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.tableName = tableName;
         return this;
     }
-    
-    
+
     /**
      * The names of one or more attributes to retrieve. If no attribute names
      * are specified, then all attributes will be returned. If any of the
@@ -371,7 +368,6 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
      *         result.
      */
     public java.util.List<String> getAttributesToGet() {
-        
         return attributesToGet;
     }
     
@@ -456,7 +452,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
 
         return this;
     }
-    
+
     /**
      * The maximum number of items to evaluate (not necessarily the number of
      * matching items). If Amazon DynamoDB processes the number of items up
@@ -564,8 +560,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.limit = limit;
         return this;
     }
-    
-    
+
     /**
      * The attributes to be returned in the result. You can retrieve all item
      * attributes, specific item attributes, the count of matching items, or
@@ -799,8 +794,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.select = select;
         return this;
     }
-    
-    
+
     /**
      * The attributes to be returned in the result. You can retrieve all item
      * attributes, specific item attributes, the count of matching items, or
@@ -958,7 +952,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.select = select.toString();
         return this;
     }
-    
+
     /**
      * Evaluates the scan results and returns only the desired values.
      * Multiple conditions are treated as "AND" operations: all conditions
@@ -1634,8 +1628,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         setScanFilter(scanFilter);
         return this;
     }
-    
-   	
+
     /**
      * Evaluates the scan results and returns only the desired values.
      * Multiple conditions are treated as "AND" operations: all conditions
@@ -1762,7 +1755,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
 		this.scanFilter.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into ScanFilter.
 	 * <p>
@@ -1848,8 +1841,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         setExclusiveStartKey(exclusiveStartKey);
         return this;
     }
-    
-   	
+
     /**
      * The primary key of the first item that this operation will evaluate.
      * Use the value that was returned for <i>LastEvaluatedKey</i> in the
@@ -1896,12 +1888,12 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
      *
      * @param hashKey Primary hash key.
      * @param rangeKey Primary range key. (null if it a hash-only table)
-     */    
+     */
     public ScanRequest withExclusiveStartKey(java.util.Map.Entry<String, AttributeValue> hashKey, java.util.Map.Entry<String, AttributeValue> rangeKey) throws IllegalArgumentException {
     	setExclusiveStartKey(hashKey, rangeKey);
     	return this;
     }
-	
+
     /**
      * The primary key of the first item that this operation will evaluate.
      * Use the value that was returned for <i>LastEvaluatedKey</i> in the
@@ -1928,7 +1920,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
 		this.exclusiveStartKey.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into ExclusiveStartKey.
 	 * <p>
@@ -1998,8 +1990,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
     }
-    
-    
+
     /**
      * If set to <code>TOTAL</code>, <i>ConsumedCapacity</i> is included in
      * the response; if set to <code>NONE</code> (the default),
@@ -2041,7 +2032,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.returnConsumedCapacity = returnConsumedCapacity.toString();
         return this;
     }
-    
+
     /**
      * For a parallel <i>Scan</i> request, <i>TotalSegments</i> represents
      * the total number of segments into which the <i>Scan</i> operation will
@@ -2137,8 +2128,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.totalSegments = totalSegments;
         return this;
     }
-    
-    
+
     /**
      * For a parallel <i>Scan</i> request, <i>Segment</i> identifies an
      * individual segment to be scanned by an application worker. <p>Segment
@@ -2246,8 +2236,7 @@ public class ScanRequest extends AmazonWebServiceRequest implements Serializable
         this.segment = segment;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

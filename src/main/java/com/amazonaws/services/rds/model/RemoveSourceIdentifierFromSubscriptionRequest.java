@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.rds.AmazonRDS#removeSourceIdentifierFromSubscription(RemoveSourceIdentifierFromSubscriptionRequest) RemoveSourceIdentifierFromSubscription operation}.
@@ -77,8 +79,7 @@ public class RemoveSourceIdentifierFromSubscriptionRequest extends AmazonWebServ
         this.subscriptionName = subscriptionName;
         return this;
     }
-    
-    
+
     /**
      * The source identifier to be removed from the subscription, such as the
      * <b>DB instance identifier</b> for a DB instance or the name of a
@@ -123,8 +124,7 @@ public class RemoveSourceIdentifierFromSubscriptionRequest extends AmazonWebServ
         this.sourceIdentifier = sourceIdentifier;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

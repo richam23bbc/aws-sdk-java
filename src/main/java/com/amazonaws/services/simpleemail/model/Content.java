@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleemail.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -42,8 +44,6 @@ public class Content implements Serializable {
      */
     public Content() {}
     
-
-
     /**
      * Constructs a new Content object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -55,8 +55,6 @@ public class Content implements Serializable {
         setData(data);
     }
 
-    
-    
     /**
      * The textual data of the content.
      *
@@ -89,8 +87,7 @@ public class Content implements Serializable {
         this.data = data;
         return this;
     }
-    
-    
+
     /**
      * The character set of the content.
      *
@@ -123,8 +120,7 @@ public class Content implements Serializable {
         this.charset = charset;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

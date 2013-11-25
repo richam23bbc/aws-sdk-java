@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.redshift.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.redshift.AmazonRedshift#describeClusters(DescribeClustersRequest) DescribeClusters operation}.
@@ -100,8 +102,7 @@ public class DescribeClustersRequest extends AmazonWebServiceRequest implements 
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of records that the response can include. If more
      * records exist than the specified <code>MaxRecords</code> value, a
@@ -164,8 +165,7 @@ public class DescribeClustersRequest extends AmazonWebServiceRequest implements 
         this.maxRecords = maxRecords;
         return this;
     }
-    
-    
+
     /**
      * An optional marker returned by a previous <b>DescribeClusters</b>
      * request to indicate the first cluster that the current
@@ -222,8 +222,7 @@ public class DescribeClustersRequest extends AmazonWebServiceRequest implements 
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

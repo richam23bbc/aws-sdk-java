@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -107,8 +109,7 @@ public class AccessKeyMetadata implements Serializable {
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * The ID for this access key.
      * <p>
@@ -153,8 +154,7 @@ public class AccessKeyMetadata implements Serializable {
         this.accessKeyId = accessKeyId;
         return this;
     }
-    
-    
+
     /**
      * The status of the access key. <code>Active</code> means the key is
      * valid for API calls, while <code>Inactive</code> means it is not.
@@ -208,8 +208,7 @@ public class AccessKeyMetadata implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The status of the access key. <code>Active</code> means the key is
      * valid for API calls, while <code>Inactive</code> means it is not.
@@ -247,7 +246,7 @@ public class AccessKeyMetadata implements Serializable {
         this.status = status.toString();
         return this;
     }
-    
+
     /**
      * The date when the access key was created.
      *
@@ -280,8 +279,7 @@ public class AccessKeyMetadata implements Serializable {
         this.createDate = createDate;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

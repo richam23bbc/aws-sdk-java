@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.route53.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -71,8 +73,6 @@ public class ChangeInfo implements Serializable {
      */
     public ChangeInfo() {}
     
-
-
     /**
      * Constructs a new ChangeInfo object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -97,8 +97,6 @@ public class ChangeInfo implements Serializable {
         setSubmittedAt(submittedAt);
     }
 
-    
-    
     /**
      * Constructs a new ChangeInfo object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -122,7 +120,7 @@ public class ChangeInfo implements Serializable {
         this.status = status.toString();
         this.submittedAt = submittedAt;
     }
-    
+
     /**
      * The ID of the request. Use this ID to track when the change has
      * completed across all Amazon Route 53 DNS servers.
@@ -170,8 +168,7 @@ public class ChangeInfo implements Serializable {
         this.id = id;
         return this;
     }
-    
-    
+
     /**
      * The current state of the request. <code>PENDING</code> indicates that
      * this request has not yet been applied to all Amazon Route 53 DNS
@@ -231,8 +228,7 @@ public class ChangeInfo implements Serializable {
         this.status = status;
         return this;
     }
-    
-    
+
     /**
      * The current state of the request. <code>PENDING</code> indicates that
      * this request has not yet been applied to all Amazon Route 53 DNS
@@ -274,7 +270,7 @@ public class ChangeInfo implements Serializable {
         this.status = status.toString();
         return this;
     }
-    
+
     /**
      * The date and time the change was submitted, in the format
      * <code>YYYY-MM-DDThh:mm:ssZ</code>, as specified in the ISO 8601
@@ -337,8 +333,7 @@ public class ChangeInfo implements Serializable {
         this.submittedAt = submittedAt;
         return this;
     }
-    
-    
+
     /**
      * A complex type that describes change information about changes made to
      * your hosted zone. <p>This element contains an ID that you use when
@@ -398,8 +393,7 @@ public class ChangeInfo implements Serializable {
         this.comment = comment;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

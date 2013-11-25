@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudformation.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.cloudformation.AmazonCloudFormation#listStackResources(ListStackResourcesRequest) ListStackResources operation}.
@@ -30,8 +32,11 @@ import java.io.Serializable;
 public class ListStackResourcesRequest extends AmazonWebServiceRequest implements Serializable {
 
     /**
-     * The name or the unique identifier associated with the stack.
-     * <p>Default: There is no default value.
+     * The name or the unique identifier associated with the stack, which are
+     * not always interchangeable: <ul> <li>Running stacks: You can specify
+     * either the stack's name or its unique stack ID.</li> <li>Deleted
+     * stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     * There is no default value.
      */
     private String stackName;
 
@@ -45,35 +50,53 @@ public class ListStackResourcesRequest extends AmazonWebServiceRequest implement
     private String nextToken;
 
     /**
-     * The name or the unique identifier associated with the stack.
-     * <p>Default: There is no default value.
+     * The name or the unique identifier associated with the stack, which are
+     * not always interchangeable: <ul> <li>Running stacks: You can specify
+     * either the stack's name or its unique stack ID.</li> <li>Deleted
+     * stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     * There is no default value.
      *
-     * @return The name or the unique identifier associated with the stack.
-     *         <p>Default: There is no default value.
+     * @return The name or the unique identifier associated with the stack, which are
+     *         not always interchangeable: <ul> <li>Running stacks: You can specify
+     *         either the stack's name or its unique stack ID.</li> <li>Deleted
+     *         stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     *         There is no default value.
      */
     public String getStackName() {
         return stackName;
     }
     
     /**
-     * The name or the unique identifier associated with the stack.
-     * <p>Default: There is no default value.
+     * The name or the unique identifier associated with the stack, which are
+     * not always interchangeable: <ul> <li>Running stacks: You can specify
+     * either the stack's name or its unique stack ID.</li> <li>Deleted
+     * stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     * There is no default value.
      *
-     * @param stackName The name or the unique identifier associated with the stack.
-     *         <p>Default: There is no default value.
+     * @param stackName The name or the unique identifier associated with the stack, which are
+     *         not always interchangeable: <ul> <li>Running stacks: You can specify
+     *         either the stack's name or its unique stack ID.</li> <li>Deleted
+     *         stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     *         There is no default value.
      */
     public void setStackName(String stackName) {
         this.stackName = stackName;
     }
     
     /**
-     * The name or the unique identifier associated with the stack.
-     * <p>Default: There is no default value.
+     * The name or the unique identifier associated with the stack, which are
+     * not always interchangeable: <ul> <li>Running stacks: You can specify
+     * either the stack's name or its unique stack ID.</li> <li>Deleted
+     * stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     * There is no default value.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param stackName The name or the unique identifier associated with the stack.
-     *         <p>Default: There is no default value.
+     * @param stackName The name or the unique identifier associated with the stack, which are
+     *         not always interchangeable: <ul> <li>Running stacks: You can specify
+     *         either the stack's name or its unique stack ID.</li> <li>Deleted
+     *         stacks: You must specify the unique stack ID.</li> </ul> <p>Default:
+     *         There is no default value.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -82,8 +105,7 @@ public class ListStackResourcesRequest extends AmazonWebServiceRequest implement
         this.stackName = stackName;
         return this;
     }
-    
-    
+
     /**
      * String that identifies the start of the next list of stack resource
      * summaries, if there is one. <p>Default: There is no default value.
@@ -131,8 +153,7 @@ public class ListStackResourcesRequest extends AmazonWebServiceRequest implement
         this.nextToken = nextToken;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

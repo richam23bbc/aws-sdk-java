@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.ec2.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.ec2.AmazonEC2#assignPrivateIpAddresses(AssignPrivateIpAddressesRequest) AssignPrivateIpAddresses operation}.
@@ -64,15 +66,13 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the PrivateIpAddresses property for this object.
      *
      * @return The value of the PrivateIpAddresses property for this object.
      */
     public java.util.List<String> getPrivateIpAddresses() {
-        
         if (privateIpAddresses == null) {
               privateIpAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               privateIpAddresses.setAutoConstruct(true);
@@ -134,7 +134,7 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
         return this;
     }
-    
+
     /**
      * Returns the value of the SecondaryPrivateIpAddressCount property for
      * this object.
@@ -173,8 +173,7 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AllowReassignment property for this object.
      *
@@ -207,8 +206,7 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
         this.allowReassignment = allowReassignment;
         return this;
     }
-    
-    
+
     /**
      * Returns the value of the AllowReassignment property for this object.
      *
@@ -217,7 +215,7 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
     public Boolean getAllowReassignment() {
         return allowReassignment;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

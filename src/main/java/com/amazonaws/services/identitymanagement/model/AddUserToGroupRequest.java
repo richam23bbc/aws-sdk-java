@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#addUserToGroup(AddUserToGroupRequest) AddUserToGroup operation}.
@@ -50,8 +52,6 @@ public class AddUserToGroupRequest extends AmazonWebServiceRequest implements Se
      */
     public AddUserToGroupRequest() {}
     
-
-
     /**
      * Constructs a new AddUserToGroupRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -65,8 +65,6 @@ public class AddUserToGroupRequest extends AmazonWebServiceRequest implements Se
         setUserName(userName);
     }
 
-    
-    
     /**
      * Name of the group to update.
      * <p>
@@ -111,8 +109,7 @@ public class AddUserToGroupRequest extends AmazonWebServiceRequest implements Se
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * Name of the user to add.
      * <p>
@@ -157,8 +154,7 @@ public class AddUserToGroupRequest extends AmazonWebServiceRequest implements Se
         this.userName = userName;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

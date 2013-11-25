@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -116,8 +118,7 @@ public class OptionGroupOption implements Serializable {
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * The description of the option.
      *
@@ -150,8 +151,7 @@ public class OptionGroupOption implements Serializable {
         this.description = description;
         return this;
     }
-    
-    
+
     /**
      * Engine name that this option can be applied to.
      *
@@ -184,8 +184,7 @@ public class OptionGroupOption implements Serializable {
         this.engineName = engineName;
         return this;
     }
-    
-    
+
     /**
      * Indicates the major engine version that the option is available for.
      *
@@ -218,8 +217,7 @@ public class OptionGroupOption implements Serializable {
         this.majorEngineVersion = majorEngineVersion;
         return this;
     }
-    
-    
+
     /**
      * The minimum required engine version for the option to be applied.
      *
@@ -252,8 +250,7 @@ public class OptionGroupOption implements Serializable {
         this.minimumRequiredMinorEngineVersion = minimumRequiredMinorEngineVersion;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the option requires a port.
      *
@@ -286,8 +283,7 @@ public class OptionGroupOption implements Serializable {
         this.portRequired = portRequired;
         return this;
     }
-    
-    
+
     /**
      * Specifies whether the option requires a port.
      *
@@ -296,7 +292,7 @@ public class OptionGroupOption implements Serializable {
     public Boolean getPortRequired() {
         return portRequired;
     }
-    
+
     /**
      * If the option requires a port, specifies the default port for the
      * option.
@@ -335,15 +331,13 @@ public class OptionGroupOption implements Serializable {
         this.defaultPort = defaultPort;
         return this;
     }
-    
-    
+
     /**
      * List of all options that are prerequisites for this option.
      *
      * @return List of all options that are prerequisites for this option.
      */
     public java.util.List<String> getOptionsDependedOn() {
-        
         if (optionsDependedOn == null) {
               optionsDependedOn = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               optionsDependedOn.setAutoConstruct(true);
@@ -405,7 +399,7 @@ public class OptionGroupOption implements Serializable {
 
         return this;
     }
-    
+
     /**
      * A persistent option cannot be removed from the option group once the
      * option group is used, but this option can be removed from the db
@@ -456,8 +450,7 @@ public class OptionGroupOption implements Serializable {
         this.persistent = persistent;
         return this;
     }
-    
-    
+
     /**
      * A persistent option cannot be removed from the option group once the
      * option group is used, but this option can be removed from the db
@@ -472,7 +465,7 @@ public class OptionGroupOption implements Serializable {
     public Boolean getPersistent() {
         return persistent;
     }
-    
+
     /**
      * A permanent option cannot be removed from the option group once the
      * option group is used, and it cannot be removed from the db instance
@@ -517,8 +510,7 @@ public class OptionGroupOption implements Serializable {
         this.permanent = permanent;
         return this;
     }
-    
-    
+
     /**
      * A permanent option cannot be removed from the option group once the
      * option group is used, and it cannot be removed from the db instance
@@ -531,7 +523,7 @@ public class OptionGroupOption implements Serializable {
     public Boolean getPermanent() {
         return permanent;
     }
-    
+
     /**
      * Specifies the option settings that are available (and the default
      * value) for each option in an option group.
@@ -540,7 +532,6 @@ public class OptionGroupOption implements Serializable {
      *         value) for each option in an option group.
      */
     public java.util.List<OptionGroupOptionSetting> getOptionGroupOptionSettings() {
-        
         if (optionGroupOptionSettings == null) {
               optionGroupOptionSettings = new com.amazonaws.internal.ListWithAutoConstructFlag<OptionGroupOptionSetting>();
               optionGroupOptionSettings.setAutoConstruct(true);
@@ -608,7 +599,7 @@ public class OptionGroupOption implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

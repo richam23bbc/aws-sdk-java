@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.rds.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -23,7 +25,7 @@ import java.io.Serializable;
 public class EngineDefaults implements Serializable {
 
     /**
-     * Specifies the name of the DB Parameter Group Family which the engine
+     * Specifies the name of the DB parameter group family which the engine
      * default parameters apply to.
      */
     private String dBParameterGroupFamily;
@@ -42,10 +44,10 @@ public class EngineDefaults implements Serializable {
     private com.amazonaws.internal.ListWithAutoConstructFlag<Parameter> parameters;
 
     /**
-     * Specifies the name of the DB Parameter Group Family which the engine
+     * Specifies the name of the DB parameter group family which the engine
      * default parameters apply to.
      *
-     * @return Specifies the name of the DB Parameter Group Family which the engine
+     * @return Specifies the name of the DB parameter group family which the engine
      *         default parameters apply to.
      */
     public String getDBParameterGroupFamily() {
@@ -53,10 +55,10 @@ public class EngineDefaults implements Serializable {
     }
     
     /**
-     * Specifies the name of the DB Parameter Group Family which the engine
+     * Specifies the name of the DB parameter group family which the engine
      * default parameters apply to.
      *
-     * @param dBParameterGroupFamily Specifies the name of the DB Parameter Group Family which the engine
+     * @param dBParameterGroupFamily Specifies the name of the DB parameter group family which the engine
      *         default parameters apply to.
      */
     public void setDBParameterGroupFamily(String dBParameterGroupFamily) {
@@ -64,12 +66,12 @@ public class EngineDefaults implements Serializable {
     }
     
     /**
-     * Specifies the name of the DB Parameter Group Family which the engine
+     * Specifies the name of the DB parameter group family which the engine
      * default parameters apply to.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param dBParameterGroupFamily Specifies the name of the DB Parameter Group Family which the engine
+     * @param dBParameterGroupFamily Specifies the name of the DB parameter group family which the engine
      *         default parameters apply to.
      *
      * @return A reference to this updated object so that method calls can be chained 
@@ -79,8 +81,7 @@ public class EngineDefaults implements Serializable {
         this.dBParameterGroupFamily = dBParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * An optional pagination token provided by a previous EngineDefaults
      * request. If this parameter is specified, the response includes only
@@ -131,15 +132,13 @@ public class EngineDefaults implements Serializable {
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Contains a list of engine default parameters.
      *
      * @return Contains a list of engine default parameters.
      */
     public java.util.List<Parameter> getParameters() {
-        
         if (parameters == null) {
               parameters = new com.amazonaws.internal.ListWithAutoConstructFlag<Parameter>();
               parameters.setAutoConstruct(true);
@@ -201,7 +200,7 @@ public class EngineDefaults implements Serializable {
 
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

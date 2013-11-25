@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.sqs.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.sqs.AmazonSQS#createQueue(CreateQueueRequest) CreateQueue operation}.
@@ -51,8 +53,6 @@ public class CreateQueueRequest extends AmazonWebServiceRequest implements Seria
      */
     public CreateQueueRequest() {}
     
-
-
     /**
      * Constructs a new CreateQueueRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -64,8 +64,6 @@ public class CreateQueueRequest extends AmazonWebServiceRequest implements Seria
         setQueueName(queueName);
     }
 
-    
-    
     /**
      * The name for the queue to be created.
      *
@@ -98,8 +96,7 @@ public class CreateQueueRequest extends AmazonWebServiceRequest implements Seria
         this.queueName = queueName;
         return this;
     }
-    
-    
+
     /**
      * A map of attributes with their corresponding values.
      *
@@ -136,8 +133,7 @@ public class CreateQueueRequest extends AmazonWebServiceRequest implements Seria
         setAttributes(attributes);
         return this;
     }
-    
-   	
+
     /**
      * A map of attributes with their corresponding values.
      * <p>
@@ -157,7 +153,7 @@ public class CreateQueueRequest extends AmazonWebServiceRequest implements Seria
 		this.attributes.put(key, value);
 		return this;
 	}
-	
+
 	/**
 	 * Removes all the entries added into Attributes.
 	 * <p>

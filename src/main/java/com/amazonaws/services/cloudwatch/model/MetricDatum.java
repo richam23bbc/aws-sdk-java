@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.cloudwatch.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -109,8 +111,7 @@ public class MetricDatum implements Serializable {
         this.metricName = metricName;
         return this;
     }
-    
-    
+
     /**
      * A list of dimensions associated with the metric.
      * <p>
@@ -120,7 +121,6 @@ public class MetricDatum implements Serializable {
      * @return A list of dimensions associated with the metric.
      */
     public java.util.List<Dimension> getDimensions() {
-        
         if (dimensions == null) {
               dimensions = new com.amazonaws.internal.ListWithAutoConstructFlag<Dimension>();
               dimensions.setAutoConstruct(true);
@@ -191,7 +191,7 @@ public class MetricDatum implements Serializable {
 
         return this;
     }
-    
+
     /**
      * The time stamp used for the metric. If not specified, the default
      * value is set to the time the metric data was received.
@@ -230,8 +230,7 @@ public class MetricDatum implements Serializable {
         this.timestamp = timestamp;
         return this;
     }
-    
-    
+
     /**
      * The value for the metric. <important>Although the <code>Value</code>
      * parameter accepts numbers of type <code>Double</code>, Amazon
@@ -294,8 +293,7 @@ public class MetricDatum implements Serializable {
         this.value = value;
         return this;
     }
-    
-    
+
     /**
      * A set of statistical values describing the metric.
      *
@@ -328,8 +326,7 @@ public class MetricDatum implements Serializable {
         this.statisticValues = statisticValues;
         return this;
     }
-    
-    
+
     /**
      * The unit of the metric.
      * <p>
@@ -377,8 +374,7 @@ public class MetricDatum implements Serializable {
         this.unit = unit;
         return this;
     }
-    
-    
+
     /**
      * The unit of the metric.
      * <p>
@@ -412,7 +408,7 @@ public class MetricDatum implements Serializable {
         this.unit = unit.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

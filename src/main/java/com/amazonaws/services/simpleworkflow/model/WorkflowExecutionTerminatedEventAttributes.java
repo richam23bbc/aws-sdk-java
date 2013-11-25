@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -106,8 +108,7 @@ public class WorkflowExecutionTerminatedEventAttributes implements Serializable 
         this.reason = reason;
         return this;
     }
-    
-    
+
     /**
      * The details provided for the termination (if any).
      * <p>
@@ -149,8 +150,7 @@ public class WorkflowExecutionTerminatedEventAttributes implements Serializable 
         this.details = details;
         return this;
     }
-    
-    
+
     /**
      * The policy used for the child workflow executions of this workflow
      * execution. The supported child policies are: <ul>
@@ -246,8 +246,7 @@ public class WorkflowExecutionTerminatedEventAttributes implements Serializable 
         this.childPolicy = childPolicy;
         return this;
     }
-    
-    
+
     /**
      * The policy used for the child workflow executions of this workflow
      * execution. The supported child policies are: <ul>
@@ -313,7 +312,7 @@ public class WorkflowExecutionTerminatedEventAttributes implements Serializable 
         this.childPolicy = childPolicy.toString();
         return this;
     }
-    
+
     /**
      * If set, indicates that the workflow execution was automatically
      * terminated, and specifies the cause. This happens if the parent
@@ -379,8 +378,7 @@ public class WorkflowExecutionTerminatedEventAttributes implements Serializable 
         this.cause = cause;
         return this;
     }
-    
-    
+
     /**
      * If set, indicates that the workflow execution was automatically
      * terminated, and specifies the cause. This happens if the parent
@@ -426,7 +424,7 @@ public class WorkflowExecutionTerminatedEventAttributes implements Serializable 
         this.cause = cause.toString();
         return this;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

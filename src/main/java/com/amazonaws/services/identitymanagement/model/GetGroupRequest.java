@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.identitymanagement.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.identitymanagement.AmazonIdentityManagement#getGroup(GetGroupRequest) GetGroup operation}.
@@ -52,7 +54,8 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      * Use this only when paginating results to indicate the maximum number
      * of user names you want in the response. If there are additional user
      * names beyond the maximum you specify, the <code>IsTruncated</code>
-     * response element is <code>true</code>.
+     * response element is <code>true</code>. This parameter is optional. If
+     * you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -65,8 +68,6 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      */
     public GetGroupRequest() {}
     
-
-
     /**
      * Constructs a new GetGroupRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -78,8 +79,6 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
         setGroupName(groupName);
     }
 
-    
-    
     /**
      * Name of the group.
      * <p>
@@ -124,8 +123,7 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
         this.groupName = groupName;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results, and only in a subsequent
      * request after you've received a response where the results are
@@ -188,13 +186,13 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
         this.marker = marker;
         return this;
     }
-    
-    
+
     /**
      * Use this only when paginating results to indicate the maximum number
      * of user names you want in the response. If there are additional user
      * names beyond the maximum you specify, the <code>IsTruncated</code>
-     * response element is <code>true</code>.
+     * response element is <code>true</code>. This parameter is optional. If
+     * you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -202,7 +200,8 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      * @return Use this only when paginating results to indicate the maximum number
      *         of user names you want in the response. If there are additional user
      *         names beyond the maximum you specify, the <code>IsTruncated</code>
-     *         response element is <code>true</code>.
+     *         response element is <code>true</code>. This parameter is optional. If
+     *         you do not include it, it defaults to 100.
      */
     public Integer getMaxItems() {
         return maxItems;
@@ -212,7 +211,8 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      * Use this only when paginating results to indicate the maximum number
      * of user names you want in the response. If there are additional user
      * names beyond the maximum you specify, the <code>IsTruncated</code>
-     * response element is <code>true</code>.
+     * response element is <code>true</code>. This parameter is optional. If
+     * you do not include it, it defaults to 100.
      * <p>
      * <b>Constraints:</b><br/>
      * <b>Range: </b>1 - 1000<br/>
@@ -220,7 +220,8 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      * @param maxItems Use this only when paginating results to indicate the maximum number
      *         of user names you want in the response. If there are additional user
      *         names beyond the maximum you specify, the <code>IsTruncated</code>
-     *         response element is <code>true</code>.
+     *         response element is <code>true</code>. This parameter is optional. If
+     *         you do not include it, it defaults to 100.
      */
     public void setMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
@@ -230,7 +231,8 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      * Use this only when paginating results to indicate the maximum number
      * of user names you want in the response. If there are additional user
      * names beyond the maximum you specify, the <code>IsTruncated</code>
-     * response element is <code>true</code>.
+     * response element is <code>true</code>. This parameter is optional. If
+     * you do not include it, it defaults to 100.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      * <p>
@@ -240,7 +242,8 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
      * @param maxItems Use this only when paginating results to indicate the maximum number
      *         of user names you want in the response. If there are additional user
      *         names beyond the maximum you specify, the <code>IsTruncated</code>
-     *         response element is <code>true</code>.
+     *         response element is <code>true</code>. This parameter is optional. If
+     *         you do not include it, it defaults to 100.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together.
@@ -249,8 +252,7 @@ public class GetGroupRequest extends AmazonWebServiceRequest implements Serializ
         this.maxItems = maxItems;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

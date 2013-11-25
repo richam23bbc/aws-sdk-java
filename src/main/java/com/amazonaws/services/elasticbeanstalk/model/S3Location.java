@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticbeanstalk.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -44,8 +46,6 @@ public class S3Location implements Serializable {
      */
     public S3Location() {}
     
-
-
     /**
      * Constructs a new S3Location object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -59,8 +59,6 @@ public class S3Location implements Serializable {
         setS3Key(s3Key);
     }
 
-    
-    
     /**
      * The Amazon S3 bucket where the data is located.
      * <p>
@@ -102,8 +100,7 @@ public class S3Location implements Serializable {
         this.s3Bucket = s3Bucket;
         return this;
     }
-    
-    
+
     /**
      * The Amazon S3 key where the data is located.
      * <p>
@@ -145,8 +142,7 @@ public class S3Location implements Serializable {
         this.s3Key = s3Key;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

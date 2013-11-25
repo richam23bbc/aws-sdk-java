@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.elasticache.AmazonElastiCache#modifyCacheCluster(ModifyCacheClusterRequest) ModifyCacheCluster operation}.
@@ -134,8 +136,6 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
      */
     public ModifyCacheClusterRequest() {}
     
-
-
     /**
      * Constructs a new ModifyCacheClusterRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -148,8 +148,6 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         setCacheClusterId(cacheClusterId);
     }
 
-    
-    
     /**
      * The cache cluster identifier. This value is stored as a lowercase
      * string.
@@ -188,8 +186,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheClusterId = cacheClusterId;
         return this;
     }
-    
-    
+
     /**
      * The number of cache nodes that the cache cluster should have. If the
      * value for <i>NumCacheNodes</i> is greater than the existing number of
@@ -258,8 +255,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.numCacheNodes = numCacheNodes;
         return this;
     }
-    
-    
+
     /**
      * A list of cache node IDs to be removed. A node ID is a numeric
      * identifier (0001, 0002, etc.). This parameter is only valid when
@@ -276,7 +272,6 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
      *         and the value of <i>NumCacheNodes</i> in the request.
      */
     public java.util.List<String> getCacheNodeIdsToRemove() {
-        
         if (cacheNodeIdsToRemove == null) {
               cacheNodeIdsToRemove = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               cacheNodeIdsToRemove.setAutoConstruct(true);
@@ -368,7 +363,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * A list of cache security group names to authorize on this cache
      * cluster. This change is asynchronously applied as soon as possible.
@@ -385,7 +380,6 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
      *         "Default".
      */
     public java.util.List<String> getCacheSecurityGroupNames() {
-        
         if (cacheSecurityGroupNames == null) {
               cacheSecurityGroupNames = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               cacheSecurityGroupNames.setAutoConstruct(true);
@@ -477,7 +471,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * Specifies the VPC Security Groups associated with the cache cluster.
      * <p>This parameter can be used only with clusters that are created in
@@ -488,7 +482,6 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
      *         an Amazon Virtual Private Cloud (VPC).
      */
     public java.util.List<String> getSecurityGroupIds() {
-        
         if (securityGroupIds == null) {
               securityGroupIds = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
               securityGroupIds.setAutoConstruct(true);
@@ -562,7 +555,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
 
         return this;
     }
-    
+
     /**
      * The weekly time range (in UTC) during which system maintenance can
      * occur. Note that system maintenance may result in an outage. This
@@ -619,8 +612,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
     }
-    
-    
+
     /**
      * The Amazon Resource Name (ARN) of the SNS topic to which notifications
      * will be sent. <note> The SNS topic owner must be same as the cache
@@ -665,8 +657,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.notificationTopicArn = notificationTopicArn;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache parameter group to apply to this cache cluster.
      * This change is asynchronously applied as soon as possible for
@@ -717,8 +708,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
     }
-    
-    
+
     /**
      * The status of the Amazon SNS notification topic. Notifications are
      * sent only if the status is <i>active</i>. <p>Valid values:
@@ -763,8 +753,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.notificationTopicStatus = notificationTopicStatus;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, this parameter causes the modifications in this
      * request and any pending modifications to be applied, asynchronously
@@ -839,8 +828,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.applyImmediately = applyImmediately;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, this parameter causes the modifications in this
      * request and any pending modifications to be applied, asynchronously
@@ -863,7 +851,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
     public Boolean getApplyImmediately() {
         return applyImmediately;
     }
-    
+
     /**
      * The upgraded version of the cache engine to be run on the cache
      * cluster nodes.
@@ -902,8 +890,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, then minor engine upgrades will be applied
      * automatically to the cache cluster during the maintenance window.
@@ -954,8 +941,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
     }
-    
-    
+
     /**
      * If <code>true</code>, then minor engine upgrades will be applied
      * automatically to the cache cluster during the maintenance window.
@@ -970,7 +956,7 @@ public class ModifyCacheClusterRequest extends AmazonWebServiceRequest implement
     public Boolean getAutoMinorVersionUpgrade() {
         return autoMinorVersionUpgrade;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

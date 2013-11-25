@@ -13,8 +13,10 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.simpleworkflow.model;
-import com.amazonaws.AmazonWebServiceRequest;
+
 import java.io.Serializable;
+
+import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * Container for the parameters to the {@link com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow#listActivityTypes(ListActivityTypesRequest) ListActivityTypes operation}.
@@ -149,8 +151,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.domain = domain;
         return this;
     }
-    
-    
+
     /**
      * If specified, only lists the activity types that have this name.
      * <p>
@@ -192,8 +193,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.name = name;
         return this;
     }
-    
-    
+
     /**
      * Specifies the registration status of the activity types to list.
      * <p>
@@ -241,8 +241,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.registrationStatus = registrationStatus;
         return this;
     }
-    
-    
+
     /**
      * Specifies the registration status of the activity types to list.
      * <p>
@@ -276,7 +275,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.registrationStatus = registrationStatus.toString();
         return this;
     }
-    
+
     /**
      * If on a previous call to this method a <code>NextResultToken</code>
      * was returned, the results have more than one page. To get the next
@@ -336,8 +335,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.nextPageToken = nextPageToken;
         return this;
     }
-    
-    
+
     /**
      * The maximum number of results returned in each page. The default is
      * 100, but the caller can override this value to a page size
@@ -409,8 +407,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.maximumPageSize = maximumPageSize;
         return this;
     }
-    
-    
+
     /**
      * When set to <code>true</code>, returns the results in reverse order.
      * By default the results are returned in ascending alphabetical order of
@@ -455,8 +452,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
         this.reverseOrder = reverseOrder;
         return this;
     }
-    
-    
+
     /**
      * When set to <code>true</code>, returns the results in reverse order.
      * By default the results are returned in ascending alphabetical order of
@@ -469,7 +465,7 @@ public class ListActivityTypesRequest extends AmazonWebServiceRequest implements
     public Boolean getReverseOrder() {
         return reverseOrder;
     }
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

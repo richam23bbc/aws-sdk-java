@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.glacier.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -75,8 +77,7 @@ public class CompleteMultipartUploadResult implements Serializable {
         this.location = location;
         return this;
     }
-    
-    
+
     /**
      * The checksum of the archive computed by Amazon Glacier.
      *
@@ -109,8 +110,7 @@ public class CompleteMultipartUploadResult implements Serializable {
         this.checksum = checksum;
         return this;
     }
-    
-    
+
     /**
      * The ID of the archive. This value is also included as part of the
      * location.
@@ -149,8 +149,7 @@ public class CompleteMultipartUploadResult implements Serializable {
         this.archiveId = archiveId;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.

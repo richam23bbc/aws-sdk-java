@@ -13,7 +13,9 @@
  * permissions and limitations under the License.
  */
 package com.amazonaws.services.elasticache.model;
+
 import java.io.Serializable;
+
 
 /**
  * <p>
@@ -80,8 +82,7 @@ public class CacheEngineVersion implements Serializable {
         this.engine = engine;
         return this;
     }
-    
-    
+
     /**
      * The version number of the cache engine.
      *
@@ -114,8 +115,7 @@ public class CacheEngineVersion implements Serializable {
         this.engineVersion = engineVersion;
         return this;
     }
-    
-    
+
     /**
      * The name of the cache parameter group family associated with this
      * cache engine.
@@ -154,8 +154,7 @@ public class CacheEngineVersion implements Serializable {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
     }
-    
-    
+
     /**
      * The description of the cache engine.
      *
@@ -188,8 +187,7 @@ public class CacheEngineVersion implements Serializable {
         this.cacheEngineDescription = cacheEngineDescription;
         return this;
     }
-    
-    
+
     /**
      * The description of the cache engine version.
      *
@@ -222,8 +220,7 @@ public class CacheEngineVersion implements Serializable {
         this.cacheEngineVersionDescription = cacheEngineVersionDescription;
         return this;
     }
-    
-    
+
     /**
      * Returns a string representation of this object; useful for testing and
      * debugging.
